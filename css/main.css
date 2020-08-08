@@ -1,5 +1,6 @@
 body {
-	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+	font-size: 14px;
 	margin: 60px auto;
 	width: 70%;
 }
@@ -34,6 +35,11 @@ p {
 	font-size: 1.5em;
 	line-height: 1.4em;
 	color: #333;
+}
+
+div.tagline p {
+	font-style: italic;
+	margin-top: 0;
 }
 
 ul li {
