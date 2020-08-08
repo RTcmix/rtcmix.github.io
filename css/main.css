@@ -37,7 +37,7 @@ p {
 	color: #333;
 }
 
-div.tagline p {
+p.tagline {
 	font-style: italic;
 	margin-top: 0;
 }
