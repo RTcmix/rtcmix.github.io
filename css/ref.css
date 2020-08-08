@@ -27,6 +27,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+div.container {
+	margin.top = 20px;
+}
+
 h1 {
 	font-size: 2.5em;
 	margin-bottom: 0;
