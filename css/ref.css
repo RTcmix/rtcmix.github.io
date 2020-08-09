@@ -34,11 +34,14 @@ div.container {
 h1 {
 	font-size: 2.5em;
 	margin-bottom: 0;
+	color: #333;
 }
 
-// headings
+// headings via pandoc
 h3 {
+	font-size: 1.2em;
 	margin-top: 0px;
+	color: #333;
 }
 
 hr {
