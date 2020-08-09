@@ -3,7 +3,7 @@ body {
 	font-size: 16px;
 	color: #333;
 	margin: 40px auto;
-	width: 90%;
+	width: 80%;
 }
 
 nav ul, footer ul {
@@ -37,7 +37,11 @@ h1 {
 	margin-bottom: 0;
 }
 
-/* headings via pandoc */
+h2 {
+	font-size: 1.8em;
+	margin-bottom: 0;
+}
+
 h3 {
 	font-size: 1.2em;
 	margin-top: 2px;
