@@ -2,7 +2,7 @@ body {
 	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 	font-size: 16px;
 	margin: 60px auto;
-	width: 70%;
+	width: 80%;
 }
 
 nav ul, footer ul {
@@ -36,15 +36,16 @@ h1 {
 	margin-bottom: 0;
 }
 
-p {
-//	font-size: 1.5em;
-//	line-height: 1.4em;
-	color: #333;
+hr {
+	height: 2px;
+	border-width: 0;
+	background-color: gray;
+	margin-top: 25px;
+	margin-bottom: 0;
 }
 
-p.tagline {
-	font-style: italic;
-	margin-top: 0;
+p {
+	color: darkgray;
 }
 
 ul li {
@@ -53,7 +54,3 @@ ul li {
 	margin-bottom: 1em;
 }
 
-footer {
-	border-top: 1px solid #d5d5d5;
-	font-size: .8em;
-}
