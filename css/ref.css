@@ -1,6 +1,7 @@
 body {
 	font-family: 'Helvetica', 'Arial', 'Sans-Serif';
 	font-size: 16px;
+	color: #333;
 	margin: 60px auto;
 	width: 80%;
 }
@@ -34,14 +35,12 @@ div.container {
 h1 {
 	font-size: 2.5em;
 	margin-bottom: 0;
-	color: #333;
 }
 
 // headings via pandoc
 h3 {
 	font-size: 1.2em;
 	margin-top: 0px;
-	color: #333;
 }
 
 hr {
@@ -53,12 +52,10 @@ hr {
 }
 
 p {
-	color: #333;
 }
 
 ul li {
 	list-style-type: square;
-	color: #333;
 	margin-bottom: 1em;
 }
 
