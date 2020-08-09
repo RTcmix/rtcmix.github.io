@@ -36,12 +36,17 @@ h1 {
 	margin-bottom: 0;
 }
 
+// headings
+h3 {
+	margin-top: 0px;
+}
+
 hr {
 	height: 2px;
 	border-width: 0;
 	background-color: gray;
 	margin-top: 25px;
-	margin-bottom: 0;
+	margin-bottom: 2px;
 }
 
 p {
