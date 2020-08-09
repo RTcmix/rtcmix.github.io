@@ -37,10 +37,10 @@ h1 {
 	margin-bottom: 0;
 }
 
-// headings via pandoc
+/* headings via pandoc */
 h3 {
 	font-size: 1.2em;
-	margin-top: 0px;
+	margin-top: 2px;
 }
 
 hr {
