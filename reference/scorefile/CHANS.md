@@ -3,7 +3,9 @@ title: CHANS()
 layout: ref
 ---
 
-**CHANS** - return input soundfile channel information
+## CHANS
+
+*return input soundfile channel information*
 
 -----
 
@@ -22,7 +24,7 @@ stream opened by a previous [rtinput](rtinput.html) command.
 
 ### Examples
 
-``` 
+```c
    rtinput("somesoundfile")
    val = CHANS()
 ```
