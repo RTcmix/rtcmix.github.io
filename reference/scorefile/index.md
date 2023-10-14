@@ -101,23 +101,23 @@ object](../interface/RTcmix-embed.html).
 
   - [cpslet](cpslet.html) &mdash; convert from text-string note letter
     representation to frequency (Hz)
-  - [cpsmidi](cpsmidi.html) &mdash; convert from midi note \# to frequency
+  - [cpsmidi](cpsmidi.html) &mdash; convert from MIDI note \# to frequency
     (Hz)
   - [cpsoct](cpsoct.html) &mdash; convert from linear octaves to Hz
     specification
   - [cpspch](cpspch.html) &mdash; convert from *oct.pc* to Hz specification
-  - [midipch](midipch.html) &mdash; convert *oct.pc* to midi note \#
+  - [midipch](midipch.html) &mdash; convert *oct.pc* to MIDI note \#
   - [octcps](octcps.html) &mdash; convert from Hz specification to linear
     octaves
   - [octlet](octlet.html) &mdash; convert from text-string note letter
     representation to linear octaves
-  - [octmidi](octmidi.html) &mdash; convert from midi note \# to linear
+  - [octmidi](octmidi.html) &mdash; convert from MIDI note \# to linear
     octaves
   - [octpch](octpch.html) &mdash; convert from *oct.pc* to linear octaves
   - [pchcps](pchcps.html) &mdash; convert from Hz to *oct.pc* specification
   - [pchlet](pchlet.html) &mdash; convert from text-string note letter
     representation to *oct.pc* specification
-  - [pchmidi](pchmidi.html) &mdash; convert from midi note \# to *oct.pc*
+  - [pchmidi](pchmidi.html) &mdash; convert from MIDI note \# to *oct.pc*
   - [pchoct](pchoct.html) &mdash; convert from linear octaves to *oct.pc*
 
 ### Random-Number Commands
