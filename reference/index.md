@@ -1,3 +1,8 @@
+---
+title: Reference Documentation
+layout: ref
+---
+
 # Reference Documentation
 
 ## Using RTcmix
