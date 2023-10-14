@@ -16,7 +16,7 @@ scorefile, they can also be used as part of an embedded application,
 working in conjunction with the [RTcmix
 object](../interface/RTcmix-embed.html).
 
-## <span id="sort_topic">Topic</span>
+## <span id="sort_topic">Listed by Topic</span>  
 
 ### General
 
@@ -208,7 +208,8 @@ object](../interface/RTcmix-embed.html).
 
 There are a few older, disk-based cmix commands that are not documented here (commands like open, input, output, etc.). They have all been superceded by RTcmix commands, and it isn't guaranteed that they work very well. See the source code if you are Seriously Interested.
 
-## <span id="sort_alphabetical">Alphabetical Listing</span>
+  
+## <span id="sort_alphabetical">Listed in Alphabetical Order</span>
 
   - [abs](abs.html)
   - [add](add.html)
