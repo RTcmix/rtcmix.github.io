@@ -16,12 +16,9 @@ scorefile, they can also be used as part of an embedded application,
 working in conjunction with the [RTcmix
 object](../interface/RTcmix-embed.html).
 
-**Arrange by: [Topic](#sort_topic)  · 
-[Alphabetical](#sort_alphabetical)**
+## <span id="sort_topic">Topic</span>
 
-<span id="topic" style="display:block"> </span>
-
-## General
+### General
 
   - [Minc](Minc.html) &mdash; overview of the default Minc scorefile parsing
     language
@@ -61,7 +58,7 @@ object](../interface/RTcmix-embed.html).
     within RTcmix
   - [type](type.html) &mdash; return the Minc data-type of its argument
 
-## Soundfile/Audio Information
+### Soundfile/Audio Information
 
   - [CHANS](CHANS.html) &mdash; return \# of channels of input soundfile
   - [DUR](DUR.html) &mdash; return duration of input soundfile
@@ -82,7 +79,7 @@ object](../interface/RTcmix-embed.html).
   - [getpch](getpch.html) &mdash; retrieve pitch value from an LPC analysis
     file
 
-## Math/Data/Numerical Conversion
+### Math/Data/Numerical Conversion
 
   - [abs](abs.html) &mdash; absolute value of argument
   - [ampdb](ampdb.html) &mdash; convert decibels to amplitude
@@ -100,7 +97,7 @@ object](../interface/RTcmix-embed.html).
   - [translen](translen.html) &mdash; calculate duration from a transposition
     value (*oct.pc*)
 
-## Pitch-Specification Conversion
+### Pitch-Specification Conversion
 
   - [cpslet](cpslet.html) &mdash; convert from text-string note letter
     representation to frequency (Hz)
@@ -123,7 +120,7 @@ object](../interface/RTcmix-embed.html).
   - [pchmidi](pchmidi.html) &mdash; convert from midi note \# to *oct.pc*
   - [pchoct](pchoct.html) &mdash; convert from linear octaves to *oct.pc*
 
-## Random-Number Commands
+### Random-Number Commands
 
   - [irand](irand.html) &mdash; return a random number within a specified
     range
@@ -142,7 +139,7 @@ object](../interface/RTcmix-embed.html).
   - [get\_spray](get_spray.html) &mdash; retrieve a value from a ["spray
     table"](spray_init.html)
 
-## Envelope/Control (Function tables, Interface connections, PField variables)
+### Envelope/Control (Function tables, Interface connections, PField variables)
 
   - [makeconnection](makeconnection.html) &mdash; create PField connection to
     an interface or device:
@@ -211,7 +208,7 @@ object](../interface/RTcmix-embed.html).
 
 There are a few older, disk-based cmix commands that are not documented here (commands like open, input, output, etc.). They have all been superceded by RTcmix commands, and it isn't guaranteed that they work very well. See the source code if you are Seriously Interested.
 
-## <span id="alphabetical">Alphabetical Listing</span>
+## <span id="sort_alphabetical">Alphabetical Listing</span>
 
   - [abs](abs.html)
   - [add](add.html)
@@ -301,3 +298,4 @@ There are a few older, disk-based cmix commands that are not documented here (co
   - [trunc](trunc.html)
   - [type](type.html)
   - [wrap](wrap.html)
+
