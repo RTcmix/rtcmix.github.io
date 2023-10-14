@@ -24,7 +24,7 @@ stream opened by a previous [rtinput](rtinput.html) command.
 
 ### Examples
 
-```c
+```
    rtinput("somesoundfile")
    val = CHANS()
 ```
