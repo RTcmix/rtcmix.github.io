@@ -83,30 +83,30 @@ pfield-handles.
     This has a slightly different syntax:
     <!-- end list -->
 
-*frequency*  
+  - *frequency*  
 
-The frequency (in Hz) determines the rate at which random values will be
-generetated through the *pfield-handle* This should be less than the
-[reset](reset.html) rate.
+    The frequency (in Hz) determines the rate at which random values will
+    be generetated through the *pfield-handle* This should be less than the
+    [reset](reset.html) rate.
 
-*min*  
+  - *min*  
 
-*max*  
+  - *max*  
 
-These two arguments define the range of random values that will be
-produced by the random-number generator through the *pfield-handle*.
-*min* will set the minimum value of the range, and *max* will set the
-upper bound.
+    These two arguments define the range of random values that will be
+    produced by the random-number generator through the *pfield-handle*.
+    *min* will set the minimum value of the range, and *max* will set the
+    upper bound.
 
-*seed*  
+  - *seed*  
 
-This optional argument sets the 'seed' (or initial value) for the
-pseudorandom number algorithm used by RTcmix. Each seed value will
-generate a unique sequence of "random" numbers. If the *seed* argument
-is 0, then the 'seed' for the psuedorandom number algorithm comes from
-the microsecond system clock, otherwise the value of *seed* is used as
-the 'seed'. If no seed argument is present, the 'seed' used is 0 (i.e.
-the 'seed' will come from the system clock).
+    This optional argument sets the 'seed' (or initial value) for the
+    pseudorandom number algorithm used by RTcmix. Each seed value will
+    generate a unique sequence of "random" numbers. If the *seed* argument
+    is 0, then the 'seed' for the psuedorandom number algorithm comes from
+    the microsecond system clock, otherwise the value of *seed* is used as
+    the 'seed'. If no seed argument is present, the 'seed' used is 0 (i.e.
+    the 'seed' will come from the system clock).
 
 -----
 
