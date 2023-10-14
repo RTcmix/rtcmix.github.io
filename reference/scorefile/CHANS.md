@@ -5,7 +5,7 @@ layout: ref
 
 ## CHANS
 
-return input soundfile channel information
+Return input soundfile channel information.
 
 -----
 
