@@ -46,7 +46,7 @@ This turns on printing at *print\_level* 5.
 
 ```
    print_on(3)
-	printf("Print my name: %s\n", myname)
+   printf("Print my name: %s\n", myname)
 ```
 
 This prints the value of *myname*, but does not print all the
