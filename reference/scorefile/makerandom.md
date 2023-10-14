@@ -42,7 +42,7 @@ pfield-handles.
 
 ### Arguments
 
-  - <span id="type" class="internallink">*type*</span>  
+  - *type*  
       
     This string value (i.e. enclosed in "double quotes" in the
     scorefile) determines the type of random-number distribution to use
@@ -83,22 +83,22 @@ pfield-handles.
     This has a slightly different syntax:
     <!-- end list -->
 
-<span id="frequency" class="internallink">*frequency*</span>  
+*frequency*  
 
 The frequency (in Hz) determines the rate at which random values will be
 generetated through the *pfield-handle* This should be less than the
 [reset](reset.html) rate.
 
-<span id="min" class="internallink">*min*</span>  
+*min*  
 
-<span id="max" class="internallink">*max*</span>  
+*max*  
 
 These two arguments define the range of random values that will be
 produced by the random-number generator through the *pfield-handle*.
 *min* will set the minimum value of the range, and *max* will set the
 upper bound.
 
-<span id="seed" class="internallink">*seed*</span>  
+*seed*  
 
 This optional argument sets the 'seed' (or initial value) for the
 pseudorandom number algorithm used by RTcmix. Each seed value will
