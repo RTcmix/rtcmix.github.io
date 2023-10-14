@@ -145,10 +145,33 @@ object](../interface/RTcmix-embed.html).
 ## Envelope/Control (Function tables, Interface connections, PField variables)
 
   - [makeconnection](makeconnection.html) &mdash; create PField connection to
-    an interface or device
+    an interface or device:
+    - [mouse](makeconnection.html#mouse) &mdash; connect to the mouse position
+    - [midi](makeconnection.html#midi) &mdash; connect to MIDI controller
+    - [datafile](makeconnection.html#datafile) &mdash; open and read data from an existing file
+    - [inlet](makeconnection.html#inlet) &mdash; connect to a Max or Pd [rtcmix~](../../rtcmix~/index.html) object inlet
   - [maketable](maketable.html) &mdash; create a table using the table-handle
     scheme:
+    - [textfile](maketable.html#textfile) &mdash; fill a table with values from a text file
+    - [soundfile](maketable.html#soundfile) &mdash; fill a table with samples taken from a sound file
+    - [literal](maketable.html#literal) &mdash; fill a table with specified values
+    - [datafile](maketable.html#datafile) &mdash; fill a table with values from a binary data file
+    - [curve](maketable.html#curve) &mdash; fill a table using line segments with adjustable curvature
+    - [expbrk](maketable.html#expbrk) &mdash; fill a table using exponential line segments
+    - [line](maketable.html#line) &mdash; fill a table using straight line segments
+    - [linebrk](maketable.html#linebrk) &mdash; fill a table using a linear break-point function (value/#-of-points/value)
+    - [spline](maketable.html#spline) &mdash; fill a table using a spline curve
+    - [wave3](maketable.html#wave3) &mdash; fill a table with 1 cycle of a waveform specified using partial-#/amplitude/phase
+    - [wave](maketable.html#wave) &mdash; fill a table with 1 cycle of a waveform using harmonic amplitudes
+    - [cheby](maketable.html#cheby) &mdash; fill a table using a Chebyshev polynomial
+    - [random](maketable.html#random) &mdash; fill a table using random numbers
+    - [window](maketable.html#window) &mdash; fill a table with a Hanning or Hamming window function
   - [modtable](modtable.html) &mdash; modify a table given a table-handle:
+    - [concat](modtable.html#concat) &mdash; concatenate two tables
+    - [draw](modtable.html#draw) &mdash; insert new values into a table at run-time
+    - [normalize](modtable.html#normalize) &mdash; scale table to fit within a peak value
+    - [reverse](modtable.html#reverse) &mdash; reverse the order of values within a table
+    - [shift](modtable.html#shift) &mdash; shift the order of values within a table
   - [add](add.html) &mdash; add to a table-handle table given constant or
     another table-handle table
   - [copytable](copytable.html) &mdash; copy and optionally resize a table
@@ -163,6 +186,14 @@ object](../interface/RTcmix-embed.html).
     change PField data format
   - [makefilter](makefilter.html) &mdash; establish a filter to transform
     PField variable data:
+    - [clip](makefilter#clip) &mdash; limit data to a specified range
+    - [constrain](makefilter#constrain) &mdash; use pfield data values to select within a table-handle table
+    - [delay](makefilter#delay) &mdash; delay data values by a specified amount
+    - [fitrange](makefilter#fitrange) &mdash; expand data to a specified range
+    - [invert](makefilter#invert) &mdash;  invert (mirror) data around an axis of symmetry
+    - [map](makefilter#map) &mdash; modify data through a transfer-function table
+    - [quantize](makefilter#quantize) &mdash; round data to nearest integer multiples of a quantum value
+    - [smooth](makefilter#smooth) &mdash; apply a simple averaging filter to an incoming data stream
   - [makemonitor](makemonitor.html) &mdash; display or record PField control
     data
   - [makerandom](makerandom.html) &mdash; set up a periodic random-number
@@ -178,7 +209,9 @@ object](../interface/RTcmix-embed.html).
   - [tablelen](tablelen.html) &mdash; return the size of a table from a
     table-handle
 
-<span id="alphabetical" style="display:none;"> </span>
+There are a few older, disk-based cmix commands that are not documented here (commands like open, input, output, etc.). They have all been superceded by RTcmix commands, and it isn't guaranteed that they work very well. See the source code if you are Seriously Interested.
+
+<span id="alphabetical" style="display:none;">Alphabetical Listing</span>
 
   - [Minc](Minc.html)
   - [CHANS](CHANS.html)
