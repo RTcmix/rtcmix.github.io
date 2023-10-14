@@ -25,14 +25,15 @@ stop RTcmix printing.
 Here are the values for the optional *print\_level* argument, which lets
 you specify what kinds of information will print:
 
-| *print\_level* | what prints |
-|: 0 :| fatal errors           |
-|: 1 :| rterrors               |
-|: 2 :| warn errors            |
-|: 3 :| print and printf's     |
-|: 4 :| advise notifications   |
-|: 5 :| all the rest           |
-|: 6 :| internal debug info    |
+| *print\_level* | what prints            |
+|      :---:     |                   ---: |
+| 0              | fatal errors           |
+| 1              | rterrors               |
+| 2              | warn errors            |
+| 3              | print and printf's     |
+| 4              | advise notifications   |
+| 5              | all the rest           |
+| 6              | internal debug info    |
 
 -----
 
