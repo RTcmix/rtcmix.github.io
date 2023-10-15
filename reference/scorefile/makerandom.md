@@ -86,6 +86,19 @@ pfield-handles.
     makerandom("prob", frequency, min, max, mid, tight[, seed])
     ```
 
+    *min* and *max* set the range within which the random numbers fall,
+    as before. *mid* sets the mid-point of the range, which is used when
+    *tight* is not 1. *tight* governs the degree to which the random numbers
+    adhere either to the mid-point set by *mid* or to the extremes of the
+    range set by *min* and *max*:
+
+    | tight | effect |
+    | :---: | ---    |
+    | 0     | only *min* and *max* appear |
+    | 1     | even distribution |
+    | >1    | numbers cluster ever more tightly around *mid* |
+    | 100   | almost all numbers are equal to *mid* |
+
   - *frequency*  
 
     The frequency (in Hz) determines the rate at which random values will
