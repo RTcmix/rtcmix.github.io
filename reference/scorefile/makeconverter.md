@@ -52,7 +52,7 @@ pfield-handles.
 
 -----
 
-## Converter Types
+### Converter Types
 
 The string argument for the converter to operate on the *input\_handle*
 data stream can be any of the following:
