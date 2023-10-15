@@ -63,9 +63,9 @@ pfield-handles.
 	 The values for *table2* are appended to those of *table_handle*
 	 and stored into a new table. The syntax is:
 
-```
+    ```
     table = modtable(table_handle, "concat", table2)
-```
+    ```
     
     The values of the table are not altered in any other way. The
     size of the new table is the total of the two input tables. This
@@ -78,9 +78,9 @@ pfield-handles.
     possibly while an Instrument might be accessing the table. The
     syntax is:
 
-```
+    ```
     table = modtable(table_handle, "draw", ["literal",] index, value[, width])
-```
+    ```
     
     The elements of the table referenced by *table\_handle* will be
     replaced by this command whenever an Instrument asks for a value
@@ -113,9 +113,9 @@ pfield-handles.
     using the the optional *peak* argument as the desired peak value for
     the elements in the new table. The syntax is:
 
-```
+    ```
     table = modtable(table_handle, "normalize"[, peak])
-```
+    ```
     
     If the optional *peak* argument is missing, then 1.0 will be used as
     the desired peak value.
@@ -123,11 +123,11 @@ pfield-handles.
     Tables can have both positive and negative values. This is what
     happens, depending on the sign of the values in the table:  
 
-    | sign of values        | resulting range of values            |
-    | --------------------- | ------------------------------------ |
-    | all positive          | between 0.0 and <i>peak</i>          |
-    | all negative          | between 0.0 and <i>-peak</i>         |
-    | positive and negative | between <i>-peak</i> and <i>peak</i> |
+    | sign of values        | resulting range of values   |
+    | --------------------- | --------------------------- |
+    | all positive          | between 0.0 and *peak*      |
+    | all negative          | between 0.0 and *-peak*     |
+    | positive and negative | between *-peak* and *peak*  |
     
     A new table-handle will be returned for subsequent use in the
     scorefile referring to the normalized table values.
@@ -138,9 +138,9 @@ pfield-handles.
     table associated with *table\_handle*, essentially the same as
     reading through the original table backwards. The syntax is:
 
-```
+    ```
     table = modtable(table_handle, "reverse")
-```
+    ```
     
     The values will be interpolated depending upon the original setting
     of the optional specifier for interpolation used in the
@@ -158,9 +158,9 @@ pfield-handles.
     backwards (depending on whether *shift\_amount* is positive or
     negative) in the table. The syntax is:
 
-```
+    ```
     table = modtable(table_handle, "shift", shift_amount)
-```
+    ```
     
     The elements in the table array will be moved *shift\_amount* array
     locations. Positive values of *shift\_amount* shift to the right;
@@ -179,8 +179,8 @@ pfield-handles.
 Using these scorefile commands:
 
 ``` 
-   table = maketable("line", "nonorm", 1000, 0,0, 1,10, 2, -5)
-   newtable = modtable(table, "normalize", 1.0)
+table = maketable("line", "nonorm", 1000, 0,0, 1,10, 2, -5)
+newtable = modtable(table, "normalize", 1.0)
 ```
 
 *newtable* will be associated with a new table that will start at 0.0,
@@ -189,36 +189,36 @@ go up to 1.0, and then down to -0.5 over the 1000 elements in the table.
 In this set of commands:
 
 ``` 
-   table = maketable("literal", "nonorm", 5, 1.0, 2.0, 3.0, 4.0, 5.0)
-   newtable = modtable(table, "reverse")
+table = maketable("literal", "nonorm", 5, 1.0, 2.0, 3.0, 4.0, 5.0)
+newtable = modtable(table, "reverse")
 ```
 
 the table-handle *newtable* will be associated with a new table that
 will contain the following sequence of elements:
 
 ``` 
-   5.0, 4.0, 3.0, 2.0, 1.0
+5.0, 4.0, 3.0, 2.0, 1.0
 ``` 
 
 And this scorefile fragment:
 
 ``` 
-   table = maketable("literal", "nonorm", 5, 1.0, 2.0, 3.0, 4.0, 5.0)
-   newtable1 = modtable(table, "shift", 3)
-   newtable2 = modtable(table, "shift", -1)
+table = maketable("literal", "nonorm", 5, 1.0, 2.0, 3.0, 4.0, 5.0)
+newtable1 = modtable(table, "shift", 3)
+newtable2 = modtable(table, "shift", -1)
 ```
 
 will result in the table-handle *newtable1* being associated with a new
 table that will contain the following sequence of elements:
 
 ``` 
-   3.0, 4.0, 5.0, 1.0, 2.0
+3.0, 4.0, 5.0, 1.0, 2.0
 ``` 
 
 and the elements of *newtable2* being in the following order:
 
 ``` 
-   2.0, 3.0, 4.0, 5.0, 1.0
+2.0, 3.0, 4.0, 5.0, 1.0
 ``` 
 
 
