@@ -113,10 +113,9 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
       
     Fill a table with numbers read from a text file. The syntax is:
 
-```
+    ```
     table = maketable("textfile", size, "filename")
-```
-    
+    ```
     The function loads as many as *size* numbers into the table. If
     there are not that many numbers in the text file, it zeros out the
     extra table values. The function reports one warning if at least one
@@ -139,9 +138,9 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
       
     Fill a table with numbers read from a sound file. The syntax is:
 
-```
+    ```
     table = maketable("soundfile", size, "filename"[, duration[, inskip[, inchan]]])
-```
+    ```
 
     The *size* argument is ignored; set it to zero.
     
@@ -184,9 +183,9 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     Fill a table with just the values specified as arguments. The syntax
     is:
 
-```
+    ```
     table = maketable("literal", "nonorm", size, n1, n2, n3, n4 ...)
-```
+    ```
 
     *n1, n2, n3,* etc. are the numbers that go into the table. The
     "nonorm" tag is recommended, unless you want the numbers to be
@@ -210,9 +209,9 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
       
     Fill a table with numbers read from a data file. The syntax is:
 
-```
+    ```
     table = maketable("datafile", size, "filename"[, number_type])
-```
+    ```
 
     The function loads as many as *size* numbers into the table. This is
     very similar in function to the [textfile](#textfile) table type
@@ -241,10 +240,10 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     Fill a table with line or curve segments, defined by arguments. The
     syntax is:
 
-```
+    ```
     table = maketable("curve", size, time1, value1, curvature1,
             [ timeN-1, valueN-1, curvatureN-1, ] timeN, valueN)
-```
+    ```
     
     *curvature* controls the curvature of the each line segment from
     *valueN* to *valueN+1* over the interval *timeN* to *timeN+1*. The
@@ -273,9 +272,9 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     Fill a table using an exponential break-point function. The syntax
     is:
 
-```
+    ```
     table = maketable("expbrk", size, value1, npoints1, [ valueN-1, npointsN-1, ] valueN)
-```
+    ```
     
     This table type fills the table with exponential line-segments in
     the same way that the older makegen function [gen 5](old/gen5.html)
@@ -291,9 +290,9 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     Create a function table comprising straight line segments, specified
     by using any number of \[time, value\] pairs. The syntax is:
 
-```
+    ```
     table = maketable("line", size, time1, value1, [ timeN-1, valueN-1, ] timeN, valueN)
-```
+    ```
     
     This is like the [curve](#curve) syntax, except that straight
     line-segments are used to interpolate values over the time between
@@ -312,9 +311,10 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
       
     Fill a table using a linear break-point function. The syntax is:
 
-```
-    table = maketable("linebrk", size, value1, npoints1, [ valueN-1, npointsN-1, ] valueN)
-```
+    ```
+    table = maketable("linebrk", size, value1, npoints1, 
+                      [ valueN-1, npointsN-1, ] valueN)
+    ```
     
     This table type fills the table with straight line-segments. The
     endpoints of the line segments are defined by each *valueN* to
@@ -335,10 +335,10 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     value\] points. The curve travels smoothly between the points, and
     all points lie on the curve. The syntax is:
 
-```
+    ```
     table = maketable("spline", size, ["closed",] curvature, time1, value1,
             time2, value2, [ timeN-1, valueN-1, ] timeN, valueN)
-```
+    ```
     
     The *curvature* argument controls the character of the slope between
     points. A value of 0 will produce a relatively flat curve
@@ -361,10 +361,10 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     partials. The partials are specified by a multiplier of the
     fundamental, amplitude and phase. The syntax is:
 
-```
+    ```
     table = maketable("wave3", size, partial_multiplier1, amplitude1, phase1
             [, ... partial_multiplierN, amplitudeN, phaseN])
-```
+    ```
     
     The *partial\_multiplier* adds a component to the waveform being
     constructed in the table. The fundamental frequency that the
@@ -390,40 +390,40 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     What does all this mean? For example, the following use of
     **maketable**:
 
-```
+    ```
     table = maketable("wave3", 1000, 1, 1, 0)
-```
+    ```
     
 	 will create a single cyle of a sine wave (the fundamental frequency
 	 multiplied by 1.0, relative amplitude of 1.0, and phase shift of 0.0) and
 	 store it &mdash; in digital form of course\! &mdash; in a 1000-point
 	 table. Changing the above scorefile command to this:
 
-```
+    ```
     table = maketable("wave3", 1000, 1, 1, 90)
-```
+    ```
     
     will create a cosine wave &mdash; the sine wave is shifted in phase by 90
     degrees in the table. This specification:
 
-```
+    ```
     table = maketable("wave3", 1000, 2, 1, 0)
-```
+    ```
     
     builds a waveform in the table that has two complete cycles of a
     sine wave; the *partial\_multiplier* causes a partial to be built
     that is twice the fundamental frequency. And the following:
 
-```
+    ```
     table = maketable("wave3", 1000, 3.14, 1, 0)
-```
+    ```
     
     will place exactly 3.14 cycles of a sine wave into the table. These
     specifications can be mixed:
 
-```
+    ```
     table = maketable("wave3", 1000, 1, 1, 0, 2, 0.4, 90, 3.14, 0.01, 0)
-```
+    ```
     
     creates a waveform with the fundamental at relative amplitude 1, the
     second harmonic with an amplitude of 0.4 and a 90-degree phase
@@ -449,15 +449,15 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     parameter corresponding to the relative amplitude of each partial
     included in the waveform construction. The syntax is:
 
-```
+    ```
     table = maketable("wave", size, partial1_amp [, partial2_amp, ... , partialN_amp])
-```
+    ```
 
     or
 
-```
+    ```
     table = maketable("wave", size, "wave_string")
-```
+    ```
     
     In the first use, each *partialN\_amp* relative amplitude will
     contribute the *Nth* harmonic at the specified amplitude to the
@@ -468,23 +468,23 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     
     For example:
 
-```
+    ```
     table = maketable("wave", 2000, 1)
-```
+    ```
     
     will build a 2000-element table containing a single cycle of a sine
     wave (harmonic 1 at amplitude 1),
 
-```
+    ```
     table = maketable("wave", 2000, 0, 0, 1)
-```
+    ```
     
     will build a table containing three cycles of a sine wave (harmonic
     3 at amplitude 1), and
 
-```
+    ```
     table = maketable("wave", 2000, 1.0, 0.5, 0.1)
-```
+    ```
     
     will create a composite waveform with the amplitudes 1.0, 0.5, and
     0.1 of the first, second and third harmonics (respectively).
@@ -548,9 +548,9 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     for it allows the used to specify the harmonics that will occur in
     the output sound. The syntax is:
 
-```
+    ```
     table = maketable("cheby", size, index, harmonic1[, ... harmonicN])
-```
+    ```
     
     The *harmonicN* arguments determine the relative amplitude of that
     harmonic in the output spectrum when the table-lookup index is at
@@ -567,9 +567,9 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     Fill a table with random (pseudorandom) numbers. The syntax (with
     one exception) is:
 
-```
+    ```
     table = maketable("random", size, type, min, max[, seed])
-```
+    ```
     
     The random numbers filling the table will be between the *min* value
     and the *max* value. Both of these are required arguments. The table
@@ -619,10 +619,9 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     *6 / "prob"* &mdash; Mara Helmuth's configurable probability distribution.
     This has a slightly different syntax:
 
-```
+    ```
     table = maketable("random", size, "prob", min, max, mid, tight[, seed])
-```
-    
+    ```
       
     For all of the above, if the optional *seed* argument is 0, then the
     seed for the psuedorandom number algorithm comes from the
@@ -673,14 +672,14 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
 ### Examples
 
 ``` 
-   ampenv = maketable("line", 1000, 0,0, 1,1)
+ampenv = maketable("line", 1000, 0,0, 1,1
 ```
 
 The *ampenv* table-handle variable will reference a table containing a
 straight line from 0 to 1; the table will have 1000 elements.
 
 ``` 
-   wave = maketable("wave", "nonorm", 2000, 0.5)
+wave = maketable("wave", "nonorm", 2000, 0.5)
 ```
 
 The *wave* table-handle variable will reference a table containing a
@@ -693,13 +692,13 @@ arithmetically to operate upon other parameters in an instrument (in
 this case the [WAVETABLE](../instruments/WAVETABLE.html) instrument):
 
 ``` 
-   env = maketable("line", 1000, 0,0, 1,1, 3,1, 4,0)
-   penv = maketable("line", 1000, 0,1, 1,1, 2,2, 3,2, 8,.15)
-   vib = maketable("wave3", "nonorm", 1000, 4.0*10, 4, 0)
-   pan = maketable("line", 100, 0,0, 1,1, 2,0.5)
-   wavt = maketable("wave", 4000, 1, 0.5, 0.3, 0.2, 0.1, 0.1)
+env = maketable("line", 1000, 0,0, 1,1, 3,1, 4,0)
+penv = maketable("line", 1000, 0,1, 1,1, 2,2, 3,2, 8,.15)
+vib = maketable("wave3", "nonorm", 1000, 4.0*10, 4, 0)
+pan = maketable("line", 100, 0,0, 1,1, 2,0.5)
+wavt = maketable("wave", 4000, 1, 0.5, 0.3, 0.2, 0.1, 0.1)
 
-   WAVETABLE(0, 4.0, 20000 * env, (440.0 * penv) + vib, pan, wavt)
+WAVETABLE(0, 4.0, 20000 * env, (440.0 * penv) + vib, pan, wavt)
 ```
 
 -----
@@ -709,11 +708,11 @@ this case the [WAVETABLE](../instruments/WAVETABLE.html) instrument):
 The table-handle variables can be re-used during score parsing, i.e.
 
 ``` 
-   for (st = 0; st < 10; st = st+1) {
-      amp = maketable("curve", 1000, 0, 0, -2.0,  2.5, 1, 1.4, 3.5, 0)
-      wave = maketable("wave", 1000, random(), random(), random())
-      WAVETABLE(st, 3.5, 10000 * amp, irand(100.0, 1000.0), random(), wave)
-   }
+for (st = 0; st < 10; st = st+1) {
+   amp = maketable("curve", 1000, 0, 0, -2.0,  2.5, 1, 1.4, 3.5, 0)
+   wave = maketable("wave", 1000, random(), random(), random())
+   WAVETABLE(st, 3.5, 10000 * amp, irand(100.0, 1000.0), random(), wave)
+}
 ```
 
 Be aware, though that memory for these tables is allocated for each use.

@@ -330,10 +330,10 @@ pfield-handles.
 ### Examples
 
 ``` 
-   pan = makeconnection("mouse", "x", 1, 0, .5, lag=50, "pan")
-   deltime = makeconnection("mouse", "x", 0.0002, .5, .5, lag=90, "delay time", "", 5)
-   feedback = makeconnection("mouse", "y", 0, 1, 0, lag=20, "feedback")
-   DELAY(0, 0, 10, 1.0, deltime, feedback, 1.0, 0, pan)
+pan = makeconnection("mouse", "x", 1, 0, .5, lag=50, "pan")
+deltime = makeconnection("mouse", "x", .2, .5, .5, lag=90, "delay time", "", 5)
+feedback = makeconnection("mouse", "y", 0, 1, 0, lag=20, "feedback")
+DELAY(0, 0, 10, 1.0, deltime, feedback, 1.0, 0, pan)
 ```
 
 This scorefile uses three different *pfield-handle* variables: *pan*,
@@ -359,7 +359,7 @@ containing the interface code used for each connection type. For
 example:
 
 ``` 
-   makeconnection("mouse", ...)
+makeconnection("mouse", ...)
 ```
 
 will look for the dynamic library <u>libmouse.so</u>. As discussed
