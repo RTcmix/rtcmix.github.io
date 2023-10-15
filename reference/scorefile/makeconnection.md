@@ -151,38 +151,98 @@ pfield-handles.
     
       - *chan* &mdash; the MIDI channel to use (1-16).  
     
-      - *type* &mdash; the MIDI parameter to monitor. This string value will
-        deliver data as follows:
+      - *type* &mdash; the type of MIDI channel-voice message to monitor,
+        as one of the type strings in the table below.
         
-            value                     MIDI data
-            ---------------------------------------------------------------
-            "noteonpitch"             MIDI note # for noteon events
-            "noteonvel"               MIDI velocity for noteon events
-            "noteooffpitch"           MIDI note # for noteoff events
-            "noteoffvel"              MIDI velocity for noteoff events
-            "cntl"                    use "subtype" to specify
-                                         which MIDI controller to use
-            "prog"                    MIDI program change #
-            "bend"                    MIDI pitch-bend data
-            "chanpress"               MIDI channel change value
-            "polypress"               use "subtype" somehow
+		  | Type string  | Event type                   |
+		  | ---          | ---                          |
+		  | "noteon"     | MIDI note on events          |
+		  | "noteoff"    | MIDI note off events         |
+		  | "cntl"       | MIDI control change events   |
+		  | "prog"       | MIDI program change events   |
+		  | "bend"       | MIDI pitch-bend events       |
+		  | "chanpress"  | MIDI channel pressure events |
+		  | "polypress"  | MIDI poly pressure events    |
+
+      - *subtype* &mdash; the type of data to use. This depends on
+        the *type* parameter and is needed only for those messages
+        that have more than one data byte. The right column below
+        shows valid subtypes for the type of message in the left
+        column. Subtypes can be integers or strings, depending
+        on the type string.
+
+		  | Type string  | Subtype values               |
+		  | ---          | ---                          |
+		  | "noteon"     | "pitch" or "velocity"        |
+		  | "noteoff"    | "pitch" or "velocity"        |
+		  | "cntl"       | MIDI cc numbers or strings\* |
+		  | "prog"       | &mdash; (no subtypes)        |
+		  | "bend"       | &mdash;                      |
+		  | "chanpress"  | &mdash;                      |
+		  | "polypress"  | MIDI note number (integer)   |
+
+        \* If *type* is set to *"cntl"*, then *subtype* is used to specify
+        which MIDI controller is monitored. This can be set using a symbol
+        (string) or the corresponding MIDI controller number (integer).
+        These are listed in the table below.
         
-      - *subtype* &mdash; if *type* is set to *"cntl"*, then *subtype* is
-        used to specify which MIDI controller is monitored. This can be
-        set using a string symbol or the corresponding MIDI controller
-        \#:
-        
-            subtype                   MIDI controller
-            ---------------------------------------------------------------
-            "mod"                     modulator wheel
-            "foot"                    foot pedal
-            "breath"                  breath controller
-            "data"                    data slider
-            "volume"                  volume slider
-            "pan"                     pan silder
-        
-        If *type* is set to *"polypress"*, then somehow a MIDI note
-        number is used for something.
+		  | Symbol         | cc number | Controller name              |
+		  | ---            | :---:     | ---                          |
+		  | "mod"          | 1         | modulation wheel             |
+		  | "breath"       | 2         | breath controller            |
+		  | "foot"         | 4         | foot controller              |
+		  | "port time"    | 5         | portamento time              |
+		  | "data"         | 6         | data entry                   |
+		  | "volume"       | 7         | volume                       |
+		  | "balance"      | 8         | balance                      |
+		  | "pan"          | 10        | pan                          |
+		  | "expression"   | 11        | expression controller        |
+		  | "fxctl1"       | 12        | effects control 1            |
+		  | "fxctl2"       | 13        | effects control 2            |
+		  | "gp1"          | 16        | general purpose controller 1 |
+		  | "gp2"          | 17        | general purpose controller 2 |
+		  | "gp3"          | 18        | general purpose controller 3 |
+		  | "gp4"          | 19        | general purpose controller 4 |
+		  | "sustainsw"    | 64        | sustain pedal                |
+		  | "portamentosw" | 65        | portamento switch            |
+		  | "sostenutosw"  | 66        | sostenuto switch             |
+		  | "softpedsw"    | 67        | soft pedal switch            |
+		  | "legatosw"     | 68        | legato switch                |
+		  | "hold2sw"      | 69        | hold 2 switch                |
+		  | "sc1"          | 70        | sound control 1 (variation)  |
+		  | "sc2"          | 71        | sound control 2 (timbre)     |
+		  | "sc3"          | 72        | sound control 3 (release)    |
+		  | "sc4"          | 73        | sound control 4 (attack)     |
+		  | "sc5"          | 74        | sound control 5 (brightness) |
+		  | "sc6"          | 75        | sound control 6              |
+		  | "sc7"          | 76        | sound control 7              |
+		  | "sc8"          | 77        | sound control 8              |
+		  | "sc9"          | 78        | sound control 9              |
+		  | "sc10"         | 79        | sound control 10             |
+		  | "gp5"          | 80        | general purpose controller 5 |
+		  | "gp6"          | 81        | general purpose controller 6 |
+		  | "gp7"          | 82        | general purpose controller 7 |
+		  | "gp8"          | 83        | general purpose controller 8 |
+		  | "portamento"   | 84        | portamento control (pitch)   |
+		  | "fx1depth"     | 91        | effects 1 depth              |
+		  | "fx2depth"     | 92        | effects 2 depth              |
+		  | "fx3depth"     | 93        | effects 4 depth              |
+		  | "fx4depth"     | 94        | effects 4 depth              |
+		  | "fx5depth"     | 95        | effects 5 depth              |
+		  | "dataincr"     | 96        | data increment               |
+		  | "datadecr"     | 97        | data decrement               |
+		  | "nrplsb"       | 98        | non-registered parameter LSB |
+		  | "nrpmsb"       | 99        | non-registered parameter MSB |
+		  | "rplsb"        | 100       | registered parameter LSB     |
+		  | "rpmsb"        | 101       | registered parameter MSB     |
+		  | "sound off"    | 120       | all sound off                |
+		  | "reset cntl"   | 121       | reset controllers            |
+		  | "local cntl"   | 122       | local controll               |
+		  | "notes off"    | 123       | all notes off                |
+		  | "omni off"     | 124       | omni mode off                |
+		  | "omni on"      | 125       | omni mode on                 |
+		  | "mono on"      | 126       | mono mode on                 |
+		  | "poly on"      | 127       | poly mode on                 |
 
   - <span id="datafile" class="internallink">*datafile*</span>  
       
