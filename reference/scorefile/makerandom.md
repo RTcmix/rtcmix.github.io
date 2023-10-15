@@ -48,40 +48,43 @@ pfield-handles.
     scorefile) determines the type of random-number distribution to use
     in generating the periodic values. The different types currently
     supported are:
-    *"even"/"linear"* -- randomly select numbers between *min* and
+    *"even"/"linear"* &mdash; randomly select numbers between *min* and
     *max*.  
       
-    *"low"* -- randomly select numbers between *min* and *max*, but with
+    *"low"* &mdash; randomly select numbers between *min* and *max*, but with
     a higher probability of choosing numbers nearer the *min* value.  
       
-    *"high"* -- randomly select numbers between *min* and *max*, but
+    *"high"* &mdash; randomly select numbers between *min* and *max*, but
     with a higher probability of choosing numbers nearer the *max*
     value.  
       
-    *"triangle"* -- randomly select numbers between *min* and *max*, but
+    *"triangle"* &mdash; randomly select numbers between *min* and *max*, but
     with the probability of choosing a value determined by a triangular
     curve with the apex at the midpoint between the *min* and *max*
     values. In other words, numbers near either *min* or *max* will have
     a very low probability of being generated, but numbers half-way
     between will have a high probability of being chosen.  
       
-    *"gaussian"* -- randomly select numbers between *min* and *max*, but
+    *"gaussian"* &mdash; randomly select numbers between *min* and *max*, but
     with the probability of choosing a value determined using a
     [Gaussian](http://mathworld.wolfram.com/NormalDistribution.html)
-    ('normal'; 'bell curve') probability distribution with the apex at
+    ("normal"; "bell curve") probability distribution with the apex at
     the midpoint between the *min* and *max* values. Similar to how the
     *"triangle"* specifier operates.  
       
-    *"cauchy"* -- randomly select numbers between *min* and *max*, but
+    *"cauchy"* &mdash; randomly select numbers between *min* and *max*, but
     with the probability of choosing a value determined using a
     [Cauchy](http://www.itl.nist.gov/div898/handbook/eda/section3/eda3663.htm)
     function with the apex at the midpoint between the *min* and *max*
     values. Similar to how the *"triangle"* and *"gaussian"* specifiers
     operate.  
       
-    *"prob"* -- Mara Helmuth's configurable probability distribution.
+    *"prob"* &mdash; Mara Helmuth's configurable probability distribution.
     This has a slightly different syntax:
-    <!-- end list -->
+
+    ```
+    makerandom("prob", frequency, min, max, mid, tight[, seed])
+    ```
 
   - *frequency*  
 
@@ -100,24 +103,24 @@ pfield-handles.
 
   - *seed*  
 
-    This optional argument sets the 'seed' (or initial value) for the
+    This optional argument sets the seed (or initial value) for the
     pseudorandom number algorithm used by RTcmix. Each seed value will
     generate a unique sequence of "random" numbers. If the *seed* argument
-    is 0, then the 'seed' for the psuedorandom number algorithm comes from
+    is 0, then the seed for the psuedorandom number algorithm comes from
     the microsecond system clock, otherwise the value of *seed* is used as
-    the 'seed'. If no seed argument is present, the 'seed' used is 0 (i.e.
-    the 'seed' will come from the system clock).
+    the seed. If no seed argument is present, the seed used is 0 (i.e.,
+    the seed will come from the system clock).
 
 -----
 
 ### Examples
 
 ``` 
-   pitch1 = makerandom("low", 10, 8.00, 8.11)
-   pitch2 = makerandom("high", 15, 8.00, 8.11)
-   wave = maketable("wave", 1000, 1.0, 0.2, 0.1)
-   WAVETABLE(0, 4.9, 15000, pitch1, 0.0, wave)
-   WAVETABLE(0, 4.9, 15000, pitch2, 1.0, wave)
+pitch1 = makerandom("low", 10, 8.00, 8.11)
+pitch2 = makerandom("high", 15, 8.00, 8.11)
+wave = maketable("wave", 1000, 1.0, 0.2, 0.1)
+WAVETABLE(0, 4.9, 15000, pitch1, 0.0, wave)
+WAVETABLE(0, 4.9, 15000, pitch2, 1.0, wave)
 ```
 
 This scorefile uses two random-number PField generators, one operating
