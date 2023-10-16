@@ -1,0 +1,5 @@
+---
+title: LPCIN()
+layout: ref
+---
+
