@@ -1,5 +1,17 @@
+/*
+  THIS DOES NOT SEEM TO WORK
 .highlight {
-  background-color: #f8f8f8; /* Change this color to the shade of gray you prefer */
+  background-color: #f8f8f8;
   padding: 10px;
+}
+*/
+
+code {
+	display: block;
+	font-family: monospace;
+	background-color: #f8f8f8;
+	white-space-collapse: preserve;
+	text-wrap: nowrap;
+	margin: 1em 0px;
 }
 
