@@ -3,3 +3,6 @@ markdown: GFM
 kramdown:
     syntax_highlighter: rouge
     input: GFM
+extra_css:
+  - css/custom.css
+
