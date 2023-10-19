@@ -74,7 +74,7 @@ over time.
 NOTE: This is an older RTcmix instrument, the newer
 [SPECTACLE2](SPECTACLE2.html) instrument is probably better to use. The
 parameter time-variation can be accomplished using the
-[pfield-enabled](pfield-enabled-2.html) capabilities of
+[pfield-enabled](pfield-enabled.html) capabilities of
 [SPECTACLE2](SPECTACLE2.html). <span id="usage_notes"></span>
 
 ### Usage Notes

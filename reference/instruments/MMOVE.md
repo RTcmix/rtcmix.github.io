@@ -43,8 +43,8 @@ sound\_x-coordN, sound\_y-coordN)
 
 CAPITALIZED parameters are [pfield-enabled](pfield-enabled.html) for
 table or dynamic control (see the
-[maketable](../scorefile/maketable-2.html) or
-[makeconnection](../scorefile/makeconnection-2.html) scorefile
+[maketable](../scorefile/maketable.html) or
+[makeconnection](../scorefile/makeconnection.html) scorefile
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
@@ -57,7 +57,7 @@ characteristics, the sound-source trajectory and one sub-instrument
 
 NOTE: This is an older RTcmix instrument, the newer [DMOVE](DMOVE.html)
 instrument allows the sound trajectory to be controlled using
-[pfield-enabled](pfield-enabled-2.html) parameters.  
+[pfield-enabled](pfield-enabled.html) parameters.  
   
   
 <span id="MMOVE"></span> **MMOVE**  
@@ -227,7 +227,7 @@ processing.
 
 NOTE: This is an older RTcmix instrument, the newer [DMOVE](DMOVE.html)
 instrument allows the sound trajectory to be controlled using
-[pfield-enabled](pfield-enabled-2.html) parameters.
+[pfield-enabled](pfield-enabled.html) parameters.
 <span id="usage_notes"></span>
 
 ### Usage Notes

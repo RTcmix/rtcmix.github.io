@@ -34,7 +34,7 @@ Utility instrument used to output values in Max.
   
 **MAXMESSAGE** will send a list of values out the right outlet of the
 [rtcmix\~](../../rtcmix_/index.html) object. It can also be used in
-[iRTcmix](../../iRTcmix/index-2.html) for iOS.
+[iRTcmix](../../iRTcmix/index.html) for iOS.
 
 ### Usage Notes
 
@@ -45,7 +45,7 @@ has been set. If it has, it sends a list of the values set in the
 [rtcmix\~](../../rtcmix_/index.html) object.
 
 **MAXMESSAGE** can also be used in
-[iRTcmix](../../iRTcmix/index-2.html). (the check\_vals() function is
+[iRTcmix](../../iRTcmix/index.html). (the check\_vals() function is
 called directly in the application developer code).
 
 **MAXMESSAGE** is limited by the vector or buffer size, so it is not
@@ -73,4 +73,4 @@ very basic:
 
   
 [MAXBANG](MAXBANG.html), [rtcmix\~](../../rtcmix_/index.html),
-[iRTcmix](../../iRTcmix/index-2.html)
+[iRTcmix](../../iRTcmix/index.html)

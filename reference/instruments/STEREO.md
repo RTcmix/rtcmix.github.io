@@ -19,8 +19,8 @@ assigns)
 
 CAPITALIZED parameters are [pfield-enabled](pfield-enabled.html) for
 table or dynamic control (see the
-[maketable](../scorefile/maketable-2.html) or
-[makeconnection](../scorefile/makeconnection-2.html) scorefile
+[maketable](../scorefile/maketable.html) or
+[makeconnection](../scorefile/makeconnection.html) scorefile
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
@@ -69,7 +69,7 @@ played. Note that you cannot send a channel to more than one output pan
 location.
 
 Each of these individual input pan values can received dynamic updates
-through the [pfield-enabled](pfield-enabled-2.html) control system.
+through the [pfield-enabled](pfield-enabled.html) control system.
 
 **STEREO** requires stereo output (obviously).
 

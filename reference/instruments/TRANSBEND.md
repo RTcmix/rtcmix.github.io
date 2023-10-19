@@ -50,7 +50,7 @@ envelope sysystem.
 
 ### Usage Notes
 
-Because of the new [pfield-enabled](pfield-enabled-2.html) control
+Because of the new [pfield-enabled](pfield-enabled.html) control
 envelope system, **TRANSBEND** has now been largely superceded by the
 [TRANS](TRANS.html) and [TRANS3](TRANS3.html) instruments. The paramters
 of **TRANSBEND** are the same as with these instruments. See the [TRANS

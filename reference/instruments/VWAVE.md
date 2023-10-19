@@ -18,8 +18,8 @@ Vector wavetable synthesis with arbitrary number of wavetables.
 
 CAPITALIZED parameters are [pfield-enabled](pfield-enabled.html) for
 table or dynamic control (see the
-[maketable](../scorefile/maketable-2.html) or
-[makeconnection](../scorefile/makeconnection-2.html) scorefile
+[maketable](../scorefile/maketable.html) or
+[makeconnection](../scorefile/makeconnection.html) scorefile
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
@@ -78,7 +78,7 @@ p4 value of 0.2 will use only p7, 0.4 only p8, etc. A p4 value of 0.1
 will mix half of p6 and half of p7. Moving p4 from 0.0 -- 1.0 will
 'slide through' all five waveforms.
 
-Because p4 is [pfield-enabled](pfield-enabled-2.html), this 'vector' can
+Because p4 is [pfield-enabled](pfield-enabled.html), this 'vector' can
 be dynamically controlled throughout the **VWAVE** note.
 
 The output of **VWAVE** will be played at pitch p2 ("PITCH"). p2 can be

@@ -41,7 +41,7 @@ dynamically as a note is executing.
 ### Usage Notes
 
 The **PFSCHED** instrument takes advantage of the
-[pfield-enabled](pfield-enabled-2.html) control capabilities of RTcmix
+[pfield-enabled](pfield-enabled.html) control capabilities of RTcmix
 instruments to arbitrarily schedule pfield controls during execution of
 a note. It uses an internal set of "pfield busses" (up to 1024) for the
 routing of pfield information to instruments/notes. This is useful in

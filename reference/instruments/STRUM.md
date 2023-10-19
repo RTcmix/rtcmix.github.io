@@ -262,7 +262,7 @@ distortion/feedback additions.
 The **STRUM** instruments are older, reflected in the separate
 instruments for doing vibrato (**VSTART1** and **VFRET1**) and
 pitch-bending (**BEND**, **BEND1**). This can now be done using
-[pfield-enabled](pfield-enabled-2.html) parameters. There are two newer
+[pfield-enabled](pfield-enabled.html) parameters. There are two newer
 versions of the **STRUM** instruments, [STRUM2](STRUM2.html) (for doing
 the basic Karplus-Strong algorithm) and [STRUMFB](STRUMFB.html) (with
 the Sullivan distortion/feedback extensions). These are probably better

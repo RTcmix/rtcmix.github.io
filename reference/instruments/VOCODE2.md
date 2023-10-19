@@ -20,8 +20,8 @@ NOISEAMP, noiserate, PAN, CFREQTABLE\])
 
 CAPITALIZED parameters are [pfield-enabled](pfield-enabled.html) for
 table or dynamic control (see the
-[maketable](../scorefile/maketable-2.html) or
-[makeconnection](../scorefile/makeconnection-2.html) scorefile
+[maketable](../scorefile/maketable.html) or
+[makeconnection](../scorefile/makeconnection.html) scorefile
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
@@ -75,8 +75,8 @@ input channel (the carrier). The two filter banks have identical
 characteristics, but there is a way to shift all of the center
 frequencies of the carrier's bank.
 
-The [VOCODE3](VOCODE3-2.html) instrument may be better to use; it is
-fully updated with [pfield-enabled](pfield-enabled-2.html) parameters.
+The [VOCODE3](VOCODE3.html) instrument may be better to use; it is
+fully updated with [pfield-enabled](pfield-enabled.html) parameters.
 
 ### Usage Notes
 

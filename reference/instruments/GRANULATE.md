@@ -21,8 +21,8 @@ TRANSPTABLE, PITCHJITTER, seed, MINPAN, MAXPAN, INTERPTYPE\])
 
 CAPITALIZED parameters are [pfield-enabled](pfield-enabled.html) for
 table or dynamic control (see the
-[maketable](../scorefile/maketable-2.html) or
-[makeconnection](../scorefile/makeconnection-2.html) scorefile
+[maketable](../scorefile/maketable.html) or
+[makeconnection](../scorefile/makeconnection.html) scorefile
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 

@@ -19,8 +19,8 @@ BOWVELENV, BOWPRESSENV, BOWPOSENV, VIBTABLE)
 
 CAPITALIZED parameters are [pfield-enabled](pfield-enabled.html) for
 table or dynamic control (see the
-[maketable](../scorefile/maketable-2.html) or
-[makeconnection](../scorefile/makeconnection-2.html) scorefile
+[maketable](../scorefile/maketable.html) or
+[makeconnection](../scorefile/makeconnection.html) scorefile
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
@@ -66,7 +66,7 @@ ToolKit.
 Info from the original STK instrument source code:
 
 This instrument was coded before the new
-[pfield-enabled](pfield-enabled-2.html) capabilities were introduced to
+[pfield-enabled](pfield-enabled.html) capabilities were introduced to
 RTcmix, so the vibrato is built-in to the instrument. The vibrato will
 vary randomly in frequency between p4 ("vibfreqlo") and p5
 ("vibfreqhi"), with the amount controlled by p6 ("VIBDEPTH"). The

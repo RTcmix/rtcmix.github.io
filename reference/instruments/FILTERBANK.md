@@ -19,8 +19,8 @@ CFREQ1, BANDWIDTH1, RELAMP1, ... CFREQN, BANDWITHN, RELAMPN)
 
 CAPITALIZED parameters are [pfield-enabled](pfield-enabled.html) for
 table or dynamic control (see the
-[maketable](../scorefile/maketable-2.html) or
-[makeconnection](../scorefile/makeconnection-2.html) scorefile
+[maketable](../scorefile/maketable.html) or
+[makeconnection](../scorefile/makeconnection.html) scorefile
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
@@ -73,7 +73,7 @@ first, the elimination of the **setup** subcommand for designing the
 filter in favor of extended pfield-parameters in the main **FILTERBANK**
 note specification. This leads to the second main difference: each of
 the center-frequency/bandwith/relative-amplitude may be dynamically
-modified using the [pfield-enabled](pfield-enabled-2.html) control
+modified using the [pfield-enabled](pfield-enabled.html) control
 system. This gives the **FILTERBANK** instrument a high degree of
 flexibility.
 

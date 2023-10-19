@@ -33,8 +33,8 @@ Pfield-enabled moving source room-simulation.
 
 CAPITALIZED parameters are [pfield-enabled](pfield-enabled.html) for
 table or dynamic control (see the
-[maketable](../scorefile/maketable-2.html) or
-[makeconnection](../scorefile/makeconnection-2.html) scorefile
+[maketable](../scorefile/maketable.html) or
+[makeconnection](../scorefile/makeconnection.html) scorefile
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
@@ -153,7 +153,7 @@ intended for this information to be specified in the "DIST-XPOS" and
 -----
 
   
-**DMOVE** is a [pfield-enabled](pfield-enabled-2.html) version of the
+**DMOVE** is a [pfield-enabled](pfield-enabled.html) version of the
 [MMOVE](MMOVE.html) room-simulation program, allowing the sound source
 trajectory to be controlled using
 [maketable](../scorefile/maketable.html) tables or dynamically via the

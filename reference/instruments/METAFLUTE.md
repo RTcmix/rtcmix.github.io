@@ -154,7 +154,7 @@ variants: a simple flute model (**SFLUTE**), a model with pitch-bending
 These could be consolidated into a single instrument with pfield
 control. Hasn't happened yet, but probably should, because there really
 isn't an equivalent in the STK instruments
-([MBLOWBOTL](MBLOWBOTL-2.html), etc.).
+([MBLOWBOTL](MBLOWBOTL.html), etc.).
 
 **LSFLUTE** does the same thing as **SFLUTE**, but without
 reinitializing the internal buffers, allowing you to get legato and
