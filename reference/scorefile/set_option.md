@@ -177,7 +177,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         allows RTcmix to use a direct-access of static table functions
         for certain instruments, thus increasing the efficiency of these
         instruments. Using this option will disable the
-        [PField-updating](../instruments/pfield-enabled-2.html) scheme,
+        [PField-updating](../instruments/pfield-enabled.html) scheme,
         however. Tables for waveforms and envelopes need to be
         pre-created using *fast\_update*.
         

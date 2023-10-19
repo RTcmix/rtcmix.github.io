@@ -33,7 +33,7 @@ run RTcmix from [Perl](../../tutorials/perl.html) and [Python](../../tutorials/p
 **Minc** is also
 used to parse buffer-scripts in the Max/MSP
 [rtcmix\~](../../rtcmix_/index.html) object and in the
-[iRTcmix](../../iRTcmix/index-2.html) package for iOS devices.
+[iRTcmix](../../iRTcmix/index.html) package for iOS devices.
 
 **Minc** takes much of its functionality from the **C** programming
 language, including flow-of-control features such as *for* and *while*
@@ -634,7 +634,7 @@ printf("array b: %z\n", b)
 When **Minc** encounters a parsing error, it generally exits
 (for command-line CMIX) or returns a FATAL\_ERROR value (embedded apps like
 [rtcmix\~](../../rtcmix_/index.html) or
-[iRTcmix](../../iRTcmix/index-2.html)) with an attempt to identify
+[iRTcmix](../../iRTcmix/index.html)) with an attempt to identify
 the number of the line with the syntax error. As mentioned above, supplying
 semicolons at the end of score lines will assist in accurately determining the
 line location for the error.

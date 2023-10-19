@@ -19,7 +19,7 @@ inst\_arg1, ...*);
 ### Description
 
 **makeinstrument** is used to create handles for instruments that will
-become the arguments to the [CHAIN](../instruments/CHAIN-2.html)
+become the arguments to the [CHAIN](../instruments/CHAIN.html)
 instrument. These are functionally identical to instruments created in
 the normal fashion.
 

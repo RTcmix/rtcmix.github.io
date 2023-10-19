@@ -29,7 +29,7 @@ the original [maketable](maketable.html#item_optional_specifiers)
 scorefile command that was used to create the table.
 
 NOTE: The functionality of **div** has largely been duplicated by the
-[pfield-enabled](../instruments/pfield-enabled-2.html) capabilities of
+[pfield-enabled](../instruments/pfield-enabled.html) capabilities of
 RTcmix instruments. However, the **div** function is still useful for
 Perl and shell-script front-ends to RTcmix.
 

@@ -21,7 +21,7 @@ This provides a way to do from an RTcmix script most anything you could
 do from a UNIX shell. The directory in which the command will execute is
 the directory in which RTcmix was invoked.
 
-NOTE: This feature is disabled in [iRTcmix](../../iRTcmix/index-2.html)
+NOTE: This feature is disabled in [iRTcmix](../../iRTcmix/index.html)
 because of restrictions on iOS apps placed by Apple.
 
 -----

@@ -29,7 +29,7 @@ optional specifier for interpolation used in the original
 that was used to create the table.
 
 NOTE: The functionality of **mul** has largely been duplicated by the
-[pfield-enabled](../instruments/pfield-enabled-2.html) capabilities of
+[pfield-enabled](../instruments/pfield-enabled.html) capabilities of
 RTcmix instruments. However, the **mul** function is still useful for
 Perl and shell-script front-ends to RTcmix.
 
