@@ -179,7 +179,7 @@ print(samptable(lineTimes7,10000))
 	7    // last value in table, now 7 x what it was
 ```
 
-#### struct
+#### <a name="struct"></a>struct
 
 **structs** allow you to define and use custom data types which are very much like the "struct" concept in the **C** and **C++** languages:  It allows you to group a bunch of variables together into a named container which you can pass around. In **Minc**, like in **C**, a struct type must be named as part of its definition: 
 	
@@ -208,9 +208,9 @@ instrumentData.array = {}
 	
 printf("Instrument %f: %s\n", instrumentData.number, instrumentData.name)
 ```
-For more details, see [More About Structs](#More%20About%20Structs) below.
+For more details, see [More About Structs](#more-about-structs) below.
 
-#### map
+#### <a name="map"></a>map
 
 **maps** in **Minc** allows you to use one piece of score information as a key to access another. A simple example should help explain. Imagine you have a set of sound files that you wish to use in your score, but you have specific durations you want to read from them (i.e., not their full duration). You can create a map to associate the paths to the files to the durations you want:
 
@@ -236,11 +236,11 @@ MIX(inskip=0,
 ```
 **Minc** maps are extremely flexible; both the stored item and the key *can be any type* supported by **Minc**.
 
-#### mfunction
+#### <a name="mfunction"></a>mfunction
 
-**mfunction** supports an advanced feature which allows a score to pass score-defined **Minc** functions around as variables - which could then be passed as an argument to another function, or stored in a **Minc** array, etc. See the section [Score-defined Minc Functions](#Score-defined%20(custom)%20Minc%20Functions), below.
+**mfunction** supports an advanced feature which allows a score to pass score-defined **Minc** functions around as variables - which could then be passed as an argument to another function, or stored in a **Minc** array, etc. See the section [Score-defined Minc Functions](#minc-functions), below.
 
-### A note about declaring variables
+### <a name="declaring-vars"></a>A note about declaring variables
 
 **Minc** differs from **C** in how variable declarations work.  In the latter, the declaration of a variable and the assignment of a value to it can happen in a single statement:
 
@@ -344,7 +344,7 @@ The purpose of the explicit declarations will be discussed later.
 		[1100, 1200, 1300]
 	```
 
-### More About Structs
+### <a name="more-about-structs"></a>More About Structs
 
 
 - All struct member variables are set to 0 or NULL by default. You cannot auto-declare struct variables unless you are assigning from one to another:
@@ -366,7 +366,7 @@ The purpose of the explicit declarations will be discussed later.
 	autoStructData.name = "something" // cannot auto-declare 'autoStructData'!!
 	```
 
-- Struct variables may be used as arguments and return types for custom functions. This is a very convenient way to get lots of different variables into [custom function calls](#Score-defined%20(custom)%20Minc%20Functions) without having to create long lists of arguments. 
+- Struct variables may be used as arguments and return types for custom functions. This is a very convenient way to get lots of different variables into [custom function calls](#minc-functions) without having to create long lists of arguments. 
 
 	```
 	struct EasyArgs { float outskip, float inskip, float dur, float amp }
@@ -386,7 +386,7 @@ The purpose of the explicit declarations will be discussed later.
 
 	```
 
-### Score-defined (custom) **Minc** Functions
+### <a name="minc-functions"></a>Score-defined (custom) **Minc** Functions
 
 
   - **Minc** supports the ability to create custom functions right in
@@ -423,7 +423,7 @@ The purpose of the explicit declarations will be discussed later.
         (recursively).
       - A function must be defined before (i.e., above) the place where
         it is first called (except when it is calling itself).
-      - Functions can be defined in a separate file which is pulled into another score using [include](#The%20'include'%20statement). This makes it easy to create and re-use function "libraries"\!
+      - Functions can be defined in a separate file which is pulled into another score using [include](#the-include-statement). This makes it easy to create and re-use function "libraries"\!
       - Variable visibility rules. These are a bit complicated.
           - Any variable declared globally in the main score (outside of
             any function) is visible inside the body of all functions.
@@ -510,7 +510,7 @@ The purpose of the explicit declarations will be discussed later.
       
 ### More Useful Minc Commands and Features
 
-#### The 'include' statement
+#### <a name="the-include-statement"></a>The 'include' statement
 
 The include statement can be used to embed one (or more) **Minc** score files within another.  This can be very helpful in creating a single file where parameters (like sampling rate and audio device) are set and then included by multiple other scores.  Changing the values in the one file will then affect all files which include it.
 
