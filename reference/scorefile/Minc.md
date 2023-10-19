@@ -158,7 +158,7 @@ for (i = 0; i < 10; i += 1) {
     b[i] = i * 3
 }
 ```
-For more information, see [More About Arrays](#More%20About%20Arrays) below.
+For more information, see [More About Arrays](More%20About%20Arrays) below.
 
 #### handle
 
@@ -262,7 +262,7 @@ string s = "Hello"		// THIS WILL GENERATE A COMPILER ERROR
 ```
 The purpose of the explicit declarations will be discussed later.
 
-### More About Arrays
+### <a name="More About Arrays"></a>More About Arrays
 
 
 - **Minc** arrays can contain 'mixed' data types:
