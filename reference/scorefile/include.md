@@ -52,7 +52,9 @@ This is similar to the *\#include* directive in C/C++.
 
   - *filename*  
     An absolute or relative pathname to a scorefile or scorefile
-    fragment. At present this filename should not contain spaces or
+    fragment. If your installed **RTcmix** package has an *minclude* directory,
+    any scorefile in that directory may be accessed without need of a full path.
+    At present the included filename cannot contain spaces or
     other white-space characters (quotes around *filename* will not
     work).
 

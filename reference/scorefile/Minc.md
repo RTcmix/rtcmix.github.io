@@ -158,7 +158,7 @@ for (i = 0; i < 10; i += 1) {
     b[i] = i * 3
 }
 ```
-For more information, see [More About Arrays](#More About Arrays) below.
+For more information, see [More About Arrays](#More%20About%20Arrays) below.
 
 #### handle
 
@@ -172,11 +172,11 @@ line = maketable(“line", “nonorm", 10000, 0,0, 1,1)
 // ‘line’ is now a Minc handle referring to that table
 	
 print(samptable(line, 10000))
-1   // last value in table
+	1   // last value in table
 	
 lineTimes7 = 7 * line;   // it’s this simple
 print(samptable(lineTimes7,10000))
-7    // last value in table, now 7 x what it was
+	7    // last value in table, now 7 x what it was
 ```
 
 #### struct
@@ -208,7 +208,7 @@ instrumentData.array = {}
 	
 printf("Instrument %f: %s\n", instrumentData.number, instrumentData.name)
 ```
-For more details, see [More About Structs](#More About Structs) below.
+For more details, see [More About Structs](#More%20About%20Structs) below.
 
 #### map
 
@@ -238,7 +238,7 @@ MIX(inskip=0,
 
 #### mfunction
 
-**mfunction** supports an advanced feature which allows a score to pass score-defined **Minc** functions around as variables - which could then be passed as an argument to another function, or stored in a **Minc** array, etc. See the section [Score-defined Minc Functions](#Score-defined (custom) Minc Functions), below.
+**mfunction** supports an advanced feature which allows a score to pass score-defined **Minc** functions around as variables - which could then be passed as an argument to another function, or stored in a **Minc** array, etc. See the section [Score-defined Minc Functions](#Score-defined%20(custom)%20Minc%20Functions), below.
 
 ### A note about declaring variables
 
@@ -294,20 +294,19 @@ The purpose of the explicit declarations will be discussed later.
 	print(len(str))
 	print(len(mylist))
 	
-	1
-	5
-	3
+		1
+		5
+		3
 	```
 
 - Arrays can be passed as an argument to any built-in function or instrument call. When this is done, the elements in the list become the next N arguments to the function:
 
 	```
-	d = { 0,0, 1,1, 3,1, 5.5,0 }
+	// Note: To be passed as function arguments, all the array's items must be floats
+	remaining_args = { 0,0, 1,1, 3,1, 5.5,0 }
 	
-	// This next line is the same as calling
-	// maketable(“line", 1000, 0,0, 1,1, etc.
-	
-	env = maketable("line", 1000, d)
+	// This next line is the same as calling maketable(“line", 1000, 0,0, 1,1, etc.
+	env = maketable("line", 1000, remaining_args)
 	```
 
 - Array elements may also be other arrays. To access the sub-arrays, you just “double-index” (this is new):
@@ -322,7 +321,7 @@ The purpose of the explicit declarations will be discussed later.
 	}
 	```
 
-- Note that arrays of different lengths may be stored in a 'super' array. The len built-in function is used to determine the length of an array (as well as lengths of other **Minc** data-types).
+- Note that arrays of different lengths may be stored in a 'super' array. The [len](len.html) built-in function is used to determine the length of an array (as well as lengths of other **Minc** data-types).
  
 - Arrays can be concatenated using the '+' operator: 
 
@@ -367,7 +366,7 @@ The purpose of the explicit declarations will be discussed later.
 	autoStructData.name = "something" // cannot auto-declare 'autoStructData'!!
 	```
 
-- Struct variables may be used as arguments and return types for custom functions. This is a very convenient way to get lots of different variables into [custom function calls](#Score-defined (custom) Minc Functions) without having to create long lists of arguments. 
+- Struct variables may be used as arguments and return types for custom functions. This is a very convenient way to get lots of different variables into [custom function calls](#Score-defined%20(custom)%20Minc%20Functions) without having to create long lists of arguments. 
 
 	```
 	struct EasyArgs { float outskip, float inskip, float dur, float amp }
@@ -424,7 +423,7 @@ The purpose of the explicit declarations will be discussed later.
         (recursively).
       - A function must be defined before (i.e., above) the place where
         it is first called (except when it is calling itself).
-      - Functions can be defined in a separate file which is pulled into another score using [include](#The 'include' statement). This makes it easy to create and re-use function "libraries"\!
+      - Functions can be defined in a separate file which is pulled into another score using [include](#The%20'include'%20statement). This makes it easy to create and re-use function "libraries"\!
       - Variable visibility rules. These are a bit complicated.
           - Any variable declared globally in the main score (outside of
             any function) is visible inside the body of all functions.
@@ -475,14 +474,15 @@ The purpose of the explicit declarations will be discussed later.
     // happening
     
     listCount = countList(listToCount);
-    ============================
-    countList: [3, 19, 4, [1, 2, 3]]
-    hi there - counting the list
-	============================
-	countList: [1, 2, 3]
-	hi there - counting the list
+	    ============================
+	    countList: [3, 19, 4, [1, 2, 3]]
+	    hi there - counting the list
+		============================
+		countList: [1, 2, 3]
+		hi there - counting the list
+	
 	print(listCount);
-	6
+		6
     
     varDeclaredBelowFunctionCall = {}	// but this variable is not visible to the function
     ```
@@ -498,14 +498,14 @@ The purpose of the explicit declarations will be discussed later.
 	
 	// call the function to see it work
 	pluralFunction(“cat")
-	Many cats
+		Many cats
 	
 	// assign the function to a variable
 	funVar = pluralFunction	// ‘funVar’ is now an mfunction
 	
 	// call the function on the newly-created mfunction variable
 	funVar(“meatball")
-	Many meatballs
+		Many meatballs
 	```
       
 ### More Useful Minc Commands and Features
@@ -582,7 +582,7 @@ The [type](type.html) command returns a **Minc** string which specifies the **Mi
 ```
 myList = { 1, 2, 3 }
 print(type(myList))
-“list"
+	“list"
 ```
 
 #### index()
@@ -601,7 +601,7 @@ b = { 123, afloat, "blabber", astring, foo + bar } // mixed array
 
 idx = index(b, astring) // Return a zero-based index into array (arg 1) of item (arg 2)
 print(idx)
-3
+	3
 ````
 
 [index](index.html) returns -1 if the specified item is not found.
@@ -686,9 +686,9 @@ print(myCounter.increment())
 print(myCounter.increment())
 print(myCounter.increment())
 
-101
-102
-103
+	101
+	102
+	103
 
 ```
 

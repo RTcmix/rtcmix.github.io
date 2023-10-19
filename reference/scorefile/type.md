@@ -25,6 +25,9 @@ present the following are valid [Minc](Minc.html) data-types:
   - string
   - handle
   - list
+  - struct
+  - map
+  - function
   - instrument
 
 -----
