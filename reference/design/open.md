@@ -1,0 +1,6 @@
+---
+title: open()
+layout: ref
+---
+
+
