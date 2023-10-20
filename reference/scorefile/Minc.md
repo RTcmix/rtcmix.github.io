@@ -54,7 +54,7 @@ useful for large, complex scores!
     functions used to perform score file calculations. Return values are assigned to **Minc** 
     variables with the "=" assignment operator:
     
-    ``` 
+    ```cpp
        aval = somecalculation(anotherval, something_else)
     
        thisone = thatone + those
