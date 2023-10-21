@@ -1,75 +1,7 @@
 ---
-title: About RTcmix
+title: The Ancient History of RTcmix
 layout: ref
 ---
-
-# About RTcmix
-
-RTcmix compiles and runs on most Unix-like systems, including various
-flavors of Linux, macOS, IRIX, FreeBSD. A windows port is available
-making use of the max/msp [rtcmix\~](../rtcmix_/index.html) object.
-
-RTcmix currently includes the following components:
-
-  - a library of low-level C/C++ functions and objects for performing
-    most contemporary digital audio and signal-processing tasks
-  - a substantial set of pre-coded "instruments" instantiating a variety
-    of DSP and sound-synthesis algorithms (click
-    [here](../reference/instruments/index.html) for a list)
-  - a fully-featured command-parsing langauge to allow easy
-    incorporation of algorthmic control procedures in sound generation
-  - an option to allow the perl or python programming languages to be
-    used as the control/command-parsing environment for RTcmix
-  - a robust and sample-accurate scheduler for timing and arbitrary
-    event-scheduling
-  - an 'embedded' RTcmix object and associated library to enable the
-    entire RTcmix language (scheduler too\!) to be compiled and used
-    seamlessly within other C/C++ applications
-  - a TCP/IP socket interface for external control of RTcmix from other
-    processes or machines
-  - the physical model and PhISEM routines from Perry Cook and Gary
-    Scavone's [Synthesis ToolKit
-    (STK)](http://www-ccrma.stanford.edu/software/stk/) as well as
-    affiliated RTcmix instruments using the stk routines
-  - the ability to read/write most contemporary soundfile formats by via
-    Bill Schottstaedt's
-    [sndlib](http://www-ccrma.stanford.edu/software/snd/snd/sndlib.html)
-  - a package of examples showing RTcmix use with MIDI, X11/motif,
-    wxWindows, Lisp, Open Sound Control (OSC), OpenGL, etc.
-  - a set of command-line utility programs for playing and manipulating
-    soundfiles
-  - a Max/MSP [rtcmix\~](../rtcmix_/index.html) object, available for
-    both macOS and Windows versions of max/msp  
-  - dynamic p-field modification (in version 4.0)  
-  - "pull"-model for audio i/o (JACK, PortAudio, etc.)
-
-RTcmix is derived from the original CMIX language, developed at
-Princeton University by [Paul
-Lansky](http://paul.mycpanel.princeton.edu/).
-
-## Contributors
-
-[Brad Garton](http://bradgarton.com/)
-
-[Dave Topper](http://www.davetopper.com/)
-
-[John Gibson](http://john-gibson.com/)
-
-[Doug Scott](http://music.columbia.edu/~doug)
-
-[Luke DuBois](http://www.lukedubois.com/)
-
-[Mara Helmuth](http://www.marahelmuth.com/)
-
-[Chris Bailey](http://music.columbia.edu/~chris)
-
-[Stanko Juzbasic](http://music.columbia.edu/~stanko)
-
-[Ico Bukvic](http://ico.bukvic.net/)
-
-[Joel Matthys](http://joel.matthysmusic.com/)
-
-[Damon Holzborn](http://damonholzborn.com/)
 
 ## The Ancient History of RTcmix
 
@@ -86,7 +18,7 @@ usage. As noted in Luke's document, it was ported to Linux and was
 further developed by a core group of RTcmix users who also adopted Linux
 for musical work. Dave Topper and John Gibson at the University of
 Virginia (John is presently at Indiana University) and Doug Scott
-(formerly of SGI, now with Apple) in particular added extensive new
+(formerly of Apple, now retired) in particular added extensive new
 features to the language and greatly expanded RTcmix capabilities --
 perl/python interface, instrument interconnecting ability, much larger
 instrument base, etc.
@@ -126,7 +58,7 @@ programmers-musicians-audio people. Please browse through the
 documentation here (especially the
 [tutorials](../tutorials/index.html)), [download](../rtcmix/index.html)
 and try a few instruments, join the [RTcmix discussion
-list](https://lists.columbia.edu/mailman/listinfo/rtcmix-discuss), etc.
+list](https://listserv.cuit.columbia.edu/scripts/wa.exe?SUBED1=rtcmix-discuss&A=1), etc.
 
 We hope you find the language useful\!
 
