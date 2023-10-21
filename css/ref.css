@@ -34,6 +34,7 @@ div.container {
 
 .highlight {
 	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
 }
 
 h1 {

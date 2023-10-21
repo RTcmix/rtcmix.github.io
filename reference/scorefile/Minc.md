@@ -11,13 +11,13 @@ layout: ref
 
 **Minc** is the default interface for RTcmix. Invoking the command
 
-``` 
-       CMIX < some_score.file
+```cpp 
+CMIX < some_score.file
 ```
 or
 
-``` 
-       CMIX -f some_score.file
+```cpp 
+CMIX -f some_score.file
 ```
 
 will use **Minc** in "standalone" mode to parse the score and make the appropriate function
@@ -55,17 +55,17 @@ useful for large, complex scores!
     variables with the "=" assignment operator:
     
     ```cpp
-       aval = somecalculation(anotherval, something_else)
+   aval = somecalculation(anotherval, something_else)
     
-       thisone = thatone + those
+   thisone = thatone + those
     
-       ANINSTRUMENT(with, many, different, parameters)
+   ANINSTRUMENT(with, many, different, parameters)
     ```
     
     In addition, operations and functions may be embedded (or 'nested'):
     
-    ``` 
-       ANINSTRUMENT(somefunction(var1, var2), val^3.2, aval, 3.1654, func1(func2(array[3])))
+    ```cpp 
+	ANINSTRUMENT(somefunction(var1, var2), val^3.2, aval, 3.1654, func1(func2(array[3])))
     ```
 
   - Several **C** conditional-branching statements are included in
@@ -74,8 +74,8 @@ useful for large, complex scores!
     the conditional comparison. Using parentheses to group and determine
     precedence of evaluation is also supported:
     
-    ``` 
-       if ((val > 2.0) && < (val2 != 0)) { ... }
+    ```cpp 
+    if ((val > 2.0) && < (val2 != 0)) { ... }
     ```
     
     Note that the "do...while" and "switch" statements are not supported
@@ -84,15 +84,15 @@ useful for large, complex scores!
   - Comments may be included in **Minc** scripts using **C** comment
     syntax:
     
-    ``` 
-       /* a comment may be between two slash-asterisk markers */
+    ```cpp 
+    /* a comment may be between two slash-asterisk markers */
     
-       /* and it
-          may also span
-	      several lines
-       */
+    /* and it
+    	may also span
+    	several lines
+    */
     
-       // anything after two backslashes on a line will be construed as a comment
+    // anything after two backslashes on a line will be construed as a comment
     ```
 
 ### **Minc** Data Types
@@ -103,14 +103,14 @@ Data types are different “flavors” of variables used to store different kind
 
 **floats** are all numbers such as -15.4 and 0.0125, and includes whole number (integer) values like 3 or 99.  All are stored and passed around as floating point. They can be declared and then set:
 
-```
+```cpp
 float instVolume;
 instVolume = get_inst_volume()
 ```
 	
 or auto-declared:
 
-```
+```cpp
 instVolume = 7
 instPitch = some_function_which_returns_a_float();
 ```
@@ -124,20 +124,20 @@ guarantee a correct 'integer' value.
 
 **strings** are any form of text, like comments, file names, names of instruments, etc.  These are stored in string variables. Like floats, they can be declared:
 
-```
+```cpp
 string soundPath;
 ```
 	
 or auto-declared:
 
-```
+```cpp
 soundPath = “/tmp/recording.wav"
 soundPath = some_function_which_returns_a_string();
 ```
 
 Strings can be concatenated using the ‘+’ operator:
 	
-```
+```cpp
 sentence = “hello" + “ “ + “world!"
 print(sentence)
     “hello world!"
@@ -146,7 +146,7 @@ print(sentence)
 
 **lists** or, as they are often called, **Minc arrays**, store a set of variables of any type which can be accessed by indexing into the list using the [] operator. These are extremely useful in a score. The following are acceptable Minc constructions:
 
-```
+```cpp
 // auto-declare an array filled with floats
 a = { 1, 2, 3, 4, 5 }
 	
@@ -165,7 +165,7 @@ For more information, see [More About Arrays](#more-about-arrays) below.
 **handles** are a type used to store references to special objects returned from other **Minc** functions such as maketable() and makeinstrument(). Quite often variables of this type will be handed to Instrument calls to set up dynamic p-fields.
 Handles to RTcmix tables have the extremely powerful ability to be combined with each other and with other arithmetic operators to create new tables which can then be accessed using functions like samptable():
 
-```
+```cpp
 // create a line table between 0.0 and 1.0
 line = maketable(“line", “nonorm", 10000, 0,0, 1,1)
 	
@@ -183,12 +183,12 @@ print(samptable(lineTimes7,10000))
 
 **structs** allow you to define and use custom data types which are very much like the "struct" concept in the **C** and **C++** languages:  It allows you to group a bunch of variables together into a named container which you can pass around. In **Minc**, like in **C**, a struct type must be named as part of its definition: 
 	
-```
+```cpp
 struct MyData { ... }
 ```
 What goes between the curly braces is called a member list, and it consists of a comma-separated list of variable declarations:
 
-```
+```cpp
 struct MyData { string name,
                 float number,
                 list array
@@ -196,12 +196,12 @@ struct MyData { string name,
 ```
 These members can be any **Minc** data type, and there is no limit on the number of member variables. Their names must all be unique within the struct definition. For now, structs cannot be nested within each other. To declare a variable in your score to be a struct, just use the struct type as follows:
 
-```
+```cpp
 struct MyData instrumentData
 ```
 To assign and read from the members, use the "dot" syntax:
 
-```
+```cpp
 instrumentData.name = "Loud Instrument"
 instrumentData.number = 1
 instrumentData.array = {}
@@ -214,7 +214,7 @@ For more details, see [More About Structs](#more-about-structs) below.
 
 **maps** in **Minc** allows you to use one piece of score information as a key to access another. A simple example should help explain. Imagine you have a set of sound files that you wish to use in your score, but you have specific durations you want to read from them (i.e., not their full duration). You can create a map to associate the paths to the files to the durations you want:
 
-```
+```cpp
 map durationMap;  // creates empty map
 	
 // Assign three duration floats into the map using three string keys
@@ -244,19 +244,19 @@ MIX(inskip=0,
 
 **Minc** differs from **C** in how variable declarations work.  In the latter, the declaration of a variable and the assignment of a value to it can happen in a single statement:
 
-```
+```cpp
 // C ALLOWS (AND PREFERS) THIS
 float volume = 10000;
 ```
 in **Minc**, when you *auto-declare* a variable, the parser "knows" what type it is by what you assign to it:
 
-```
+```cpp
 x = "A string"		// x is now a string variable
 y = { 1, 2, 3 }		// y is now a list variable
 ```
 Explicit (non-auto) declarations in **Minc** must be just a bare declaration:
 
-```
+```cpp
 float x, y, z, q		// x, y, z, q all declared to be float variables
 string s = "Hello"		// THIS WILL GENERATE A COMPILER ERROR
 ```
@@ -267,14 +267,14 @@ The purpose of the explicit declarations will be discussed later.
 
 - **Minc** arrays can contain 'mixed' data types:
 	
-	```
+	```cpp
 	afloat = 1.2345
 	astring = "hey hey!"
 	b = { 123, afloat, "ho ho", astring }
 	```
 - Arrays can contain pfield-handle handles for tables, etc.:
 
-	```
+	```cpp
 	e = {}
 	x = 1
 	for (i = 0; i < 10; i += 1) {
@@ -285,7 +285,7 @@ The purpose of the explicit declarations will be discussed later.
 
 - The [len](len.html) built-in function is used to determine the length of an array (as well as lengths of other **Minc** data-types).
 
-	```
+	```cpp
 	f = 90
 	str = "hello"
 	mylist = { 1, 2, 3 }
@@ -301,7 +301,7 @@ The purpose of the explicit declarations will be discussed later.
 
 - Arrays can be passed as an argument to any built-in function or instrument call. When this is done, the elements in the list become the next N arguments to the function:
 
-	```
+	```cpp
 	// Note: To be passed as function arguments, all the array's items must be floats
 	remaining_args = { 0,0, 1,1, 3,1, 5.5,0 }
 	
@@ -311,8 +311,7 @@ The purpose of the explicit declarations will be discussed later.
 
 - Array elements may also be other arrays. To access the sub-arrays, you just “double-index” (this is new):
 
-	```
-	
+	```cpp	
 	arr1 = { 1, 2, 3, 4, 5, 6, 7 }
 	arr2 = { 77, 87, 97, 107 }
 	superarr = { arr1, arr2 }
@@ -325,7 +324,7 @@ The purpose of the explicit declarations will be discussed later.
  
 - Arrays can be concatenated using the '+' operator: 
 
-	```
+	```cpp
 	first = { 1, 2, 3 }
 	second = { 4, 5, 6 }
 	third = first + second
@@ -334,7 +333,7 @@ The purpose of the explicit declarations will be discussed later.
 	```
 - All the elements of an array can be modified via operators +, -, *, and / followed a float variable:
 
-	```
+	```cpp
 	arr = { 1, 2, 3 }
 	arr = arr + 10		// add 10 to all elements
 	print(arr)
@@ -351,7 +350,7 @@ The purpose of the explicit declarations will be discussed later.
 
 	OK:
 
-	```
+	```cpp
 	struct MyData someData;
 		
 	// initialize members of 'someData'...
@@ -362,13 +361,13 @@ The purpose of the explicit declarations will be discussed later.
 	
 	NOT OK:
 	
-	```
+	```cpp
 	autoStructData.name = "something" // cannot auto-declare 'autoStructData'!!
 	```
 
 - Struct variables may be used as arguments and return types for custom functions. This is a very convenient way to get lots of different variables into [custom function calls](#minc-functions) without having to create long lists of arguments. 
 
-	```
+	```cpp
 	struct EasyArgs { float outskip, float inskip, float dur, float amp }
 		
 	float myMixWrapper(struct EasyArgs theArgs)
@@ -393,7 +392,7 @@ The purpose of the explicit declarations will be discussed later.
     your score. The format for these functions is nearly identical to
     that used to define functions in the **C** programming language:
     
-	```
+	```cpp
 	return_type function_name(arg0_type arg0_name, arg1_type arg1_name, ..., argN_type, argN_name)
 	{
 	    <function body>
@@ -435,7 +434,7 @@ The purpose of the explicit declarations will be discussed later.
     
     Here is an example of some of these rules:
     
-    ```
+    ```cpp
     varDeclaredAboveFun = 89;		// this is visible to the function
     
     // A custom function declared to take a list and return a float count of its items
@@ -488,7 +487,7 @@ The purpose of the explicit declarations will be discussed later.
     ```
   - Custom functions can be stored into variables, lists, maps and structs using the [mfunction](#mfunction) data type discussed above:
 
-	```
+	```cpp
 	// a custom function
 	float pluralFunction(string arg) {
 	    combinedString = "Many " + arg + "s";		// Making use of the "+" operator to concatenate strings
@@ -516,7 +515,7 @@ The include statement can be used to embed one (or more) **Minc** score files wi
 
 Here we create a score file to be included in other files.  This file calls [rtsetparams](rtsetparams.html) for us, and makes two global variables available to any score which includes this one.  We'll name this "setup\_48K\_stereo.sco".
 
-```
+```cpp
 sample_rate = 48000
 channel_count = 2
 rtsetparams(sample_rate, channel_count)
@@ -524,7 +523,7 @@ rtsetparams(sample_rate, channel_count)
 ```
 When we include that score in another score, the **Minc** parser will automatically run the commands in the included score and set those variables.
 
-```
+```cpp
 include "setup_48K_stereo.sco"
 
 rtinput("some_file.wav");	// open a file
@@ -546,12 +545,12 @@ Number and string values can be specified on the ‘CMIX’ command line and use
 
 With a command line execution like this:
 
-```
+```cpp
 CMIX —-sample_rate=48000 —-filename=“input.wav" < scorefile
 ```
 and a score set up like this:
 
-```
+```cpp
 // ‘$’ marks a variable as something set via the command line
 rtsetparams($sample_rate, 2);
 rtinput($filename);
@@ -559,18 +558,18 @@ rtinput($filename);
 
 **Minc** will set $sample_rate to 48000 and $filename to “input.wav”.  It’s an error to use a $variable you have not specified on the command line, but you can check if it has been set by using the boolean expression ?variable:
 
-```
+```cpp
 rate = 44100;  // this will be the default
 if (?sample_rate) { rate = $sample_rate } // use '$sample_rate' if set
 ```
 You can even pass in a list via named argument!  You just have to remember to quote it and leave no spaces between the characters (all this to get around problems with your shell).  With a this score:
 
-```
+```cpp
 printf("The passed-in list was: %l\n", $listargument);
 ```
 This command runs as follows.  Note that the string is not quoted:
 
-```
+```cpp
 CMIX -f listarg.sco --listargument="{1,2,BuckleMyShoe}"
 The passed-in list was: [1, 2, "BuckleMyShoe"]
 ```
@@ -579,7 +578,7 @@ The passed-in list was: [1, 2, "BuckleMyShoe"]
 
 The [type](type.html) command returns a **Minc** string which specifies the **Minc** data type of a particular variable:
 
-```
+```cpp
 myList = { 1, 2, 3 }
 print(type(myList))
 	“list"
@@ -589,7 +588,7 @@ print(type(myList))
 
 The [index](index.html) command is also very useful with **Minc** arrays., and reports the particular index in the array which holds an item.
 
-````
+```cpp`
 foo = "foo";
 bar = "bar"
 afloat = 1.2345;
@@ -602,7 +601,7 @@ b = { 123, afloat, "blabber", astring, foo + bar } // mixed array
 idx = index(b, astring) // Return a zero-based index into array (arg 1) of item (arg 2)
 print(idx)
 	3
-````
+```
 
 [index](index.html) returns -1 if the specified item is not found.
 
@@ -610,7 +609,7 @@ print(idx)
 
 Minc supports a simplified version of the formatted [printf](printf.html)() as found in **C** and **C++**
 
-```
+```cpp
 foo = "foo";
 bar = "bar"
 afloat = 1.2345;
@@ -641,7 +640,7 @@ line location for the error.
 
 If you wish to do your own additional error checking in your score, you can use the exit() function:
 
-```
+```cpp
 if ($entered_sample_rate < 8000)
 {
 	error("entered sample rate (%f) is an illegal value!")
@@ -661,7 +660,7 @@ For programmers, the term "object" usually refers to a chunk of information (the
   - they are called using the "dot" operator on a variable that has the struct type
   - they can access, modify, and return the value of any of the member variables that are part of the struct
 
-```
+```cpp
 // Simple struct object which contains a count
 
 struct Counter
@@ -702,6 +701,7 @@ The following is from the original cmix **Minc** documentation. Some is a bit da
 
 The following is Lars Graf's formal statement of the language:
 
+```cpp
      Order of precedents:
 
      ||
