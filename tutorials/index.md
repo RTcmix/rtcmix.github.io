@@ -28,4 +28,4 @@ See the the [Reference](../reference/index.html) and
 [Links](../links/index.html) sections for more learning materials. If
 you have questions about using RTcmix, you can ask the [RTcmix
 Discussion
-List](https://lists.columbia.edu/mailman/listinfo/rtcmix-discuss).
+List](https://listserv.cuit.columbia.edu/scripts/wa.exe?SUBED1=rtcmix-discuss&A=1)

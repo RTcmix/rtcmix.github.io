@@ -7,7 +7,7 @@ layout: ref
 
 ## Discussion List
 
-  - [Subscribe](https://lists.columbia.edu/mailman/listinfo/rtcmix-discuss)
+  - [Subscribe](https://listserv.cuit.columbia.edu/scripts/wa.exe?SUBED1=rtcmix-discuss&A=1)
   - [Archives](https://lists.columbia.edu/mailman/private/rtcmix-discuss/)
 
 ## Educational
@@ -50,7 +50,7 @@ layout: ref
 
   - [Lots and lots of music](http://music.columbia.edu/~brad/music/) by
     [Brad Garton](http://bradgarton.com/)
-  - [Piano Project](https://soundcloud.com/dascott/sets/piano-project)
+  - [Several RTcmix Compositions](https://soundcloud.com/dascott/sets/my-electronic-compositions)
     by [Doug Scott](http://music.columbia.edu/~doug)
   - [Day Trip](http://john-gibson.com/pieces/daytrip.htm) by [John
     Gibson](http://john-gibson.com/)
@@ -89,6 +89,6 @@ layout: ref
   - [Stanko Juzbasic](http://music.columbia.edu/~stanko)
   - [Joel Matthys](http://joel.matthysmusic.com/)
   - [David McDonnell](http://davidmcdonnellmusic.com/)
-  - [Doug Scott](http://music.columbia.edu/~doug)
+  - [Doug Scott](https://www.soundcloud.com/dascott)
   - [Jerod Sommerfeldt](http://www.jerodsommerfeldt.com/)
   - [Dave Topper](http://www.davetopper.com/)

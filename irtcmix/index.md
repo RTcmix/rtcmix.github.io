@@ -17,7 +17,7 @@ available at GitHub:
   - [Demo Projects](https://github.com/RTcmix/iRTcmix-demos)
 
 If you have any questions, the [RTcmix discussion
-list](https://lists.columbia.edu/mailman/listinfo/rtcmix-discuss) will
+list](https://listserv.cuit.columbia.edu/scripts/wa.exe?SUBED1=rtcmix-discuss&A=1) will
 be able to help you out.
 
 ## Apps Made with iRTcmix
