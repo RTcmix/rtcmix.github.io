@@ -39,7 +39,7 @@ layout: ref
 ## More Resources
 
   - Doug Scott's
-    [MiXViews](http://www.music.columbia.edu/~doug/MiXViews/MiXViews.html)
+    [MiXViews](http://www.music.columbia.edu/~doug/MixViews/MiXViews.html)
     sound editor (very useful for LPC analysis, among other things).
   - Neil Thornock's
     [CMixRun](https://sourceforge.net/projects/cmixrun/files/), an
