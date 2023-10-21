@@ -32,6 +32,10 @@ div.container {
 	margin-top: 40px;
 }
 
+.highlight {
+	background-color: #f8f8f8;
+}
+
 h1 {
 	font-size: 2.0em;
 	margin-bottom: 0;
