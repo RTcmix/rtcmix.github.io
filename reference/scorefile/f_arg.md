@@ -44,7 +44,7 @@ contains 2 floating-point arguments and 1 string argument.
 
 ### Examples
 
-``` 
+```cpp
    floatval = f_arg(3)
    stringval = s_arg(1)
    nargs = n_arg()

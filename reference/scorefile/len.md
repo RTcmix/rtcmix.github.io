@@ -36,7 +36,7 @@ returns the number of characters in the string. For other types it returns
 
 After parsing he following scorefile segment:
 
-``` 
+```cpp
    arr = { 1, 2, 3 }
    val1 = len(arr)
    val2 = len("hey there")

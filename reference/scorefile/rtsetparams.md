@@ -74,20 +74,20 @@ saying set\_option("audio = off")).
 
 ### Examples
 
-``` 
+```cpp
    rtsetparams(44100, 2)
 ```
 
 sets up the session for 44100 sampling rate and two output channels.
 
-``` 
+```cpp
    rtsetparams(44100, 4, 128)
 ```
 
 sets up the session for 44100 sampling rate, four output channels, and a
 buffer size of 128 sample frames.
 
-``` 
+```cpp
    set_option("record=TRUE")
    rtsetparams(44100, 2, 64)
    rtinput("AUDIO")

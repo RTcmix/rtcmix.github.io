@@ -41,7 +41,7 @@ present the following are valid [Minc](Minc.html) data-types:
 
 ### Examples
 
-``` 
+```cpp
    datatype= type(arbitrary_var)
    print(datatype)
 ```

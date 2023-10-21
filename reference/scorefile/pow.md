@@ -40,7 +40,7 @@ i.e.:
 
 ### Examples
 
-``` 
+```cpp
    val = pow(3.5, 3)
    val = pow(4, 0.7)
    val = pow(7.8, 2.597)

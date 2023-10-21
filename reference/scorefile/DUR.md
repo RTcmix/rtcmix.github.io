@@ -24,7 +24,7 @@ the [rtinput](rtinput.html) command.
 
 ### Examples
 
-``` 
+```cpp
    rtinput("somesoundfile")
    val = DUR()
 ```

@@ -46,7 +46,7 @@ may be an absolute or relative pathname to the LPC analysis file.
 
 ### Examples
 
-``` 
+```cpp
    ampval = getamp("/some/LPC/analysis_file.lpc", 268)
 ```
 

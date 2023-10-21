@@ -46,7 +46,7 @@ If you don't use **srand**, RTcmix uses 1 as the random seed.
 
 ### Examples
 
-``` 
+```cpp
    srand(1)
    value = rand()
    print(value)
@@ -54,7 +54,7 @@ If you don't use **srand**, RTcmix uses 1 as the random seed.
 
 prints 0.02770996 every time you run the script.
 
-``` 
+```cpp
    srand()
    value = rand()
    print(value)
@@ -63,7 +63,7 @@ prints 0.02770996 every time you run the script.
 prints a different number every time you run the script, because the
 seed is never the same (since it comes from the microsecond counter).
 
-``` 
+```cpp
    srand(777)
    for (start = 0; start < 10; start = start + 0.5) {
       frequency = (random() * 200) + 300

@@ -36,7 +36,7 @@ See also [mod](mod.html) which apparently does the same thing.
 
 ### Examples
 
-``` 
+```cpp
    wrappedval = wrap(7, 12)
 ```
 

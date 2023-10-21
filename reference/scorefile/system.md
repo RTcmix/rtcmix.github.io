@@ -54,7 +54,7 @@ work.
 
 ### Examples
 
-``` 
+```cpp
    system("rm -f pvoctest.aif")
    system("ls -l *.aif")
 ```

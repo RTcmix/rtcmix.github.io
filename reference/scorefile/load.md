@@ -111,7 +111,7 @@ this\!).
 
 ### Examples
 
-``` 
+```cpp
    load("WAVETABLE")
    load("/usr/local/src/myinstruments/TESTINST/libTESTINST.so")
 ```

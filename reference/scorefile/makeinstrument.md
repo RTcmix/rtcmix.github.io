@@ -41,7 +41,7 @@ the normal fashion.
 
 Example: Create a TRANS instrument handle:
 
-``` 
+```cpp
     outskip = 0;
     inskip = 0;
     dur = 2;

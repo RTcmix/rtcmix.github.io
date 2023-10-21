@@ -329,7 +329,7 @@ pfield-handles.
 
 ### Examples
 
-``` 
+```cpp
 pan = makeconnection("mouse", "x", 1, 0, .5, lag=50, "pan")
 deltime = makeconnection("mouse", "x", .2, .5, .5, lag=90, "delay time", "", 5)
 feedback = makeconnection("mouse", "y", 0, 1, 0, lag=20, "feedback")
@@ -358,7 +358,7 @@ The **makeconnection** command will dynamically-load the library
 containing the interface code used for each connection type. For
 example:
 
-``` 
+```cpp
 makeconnection("mouse", ...)
 ```
 

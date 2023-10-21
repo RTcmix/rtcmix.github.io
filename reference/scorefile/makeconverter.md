@@ -81,7 +81,7 @@ etc. (See the [SEE ALSO](#see%20also) section below.)
 
 ### Examples
 
-``` 
+```cpp
    mpfield = makeconnection("midi", 1, 127, 60, 0, 1, "noteonpitch")
    octpfield = makeconverter(mpfield, "pchmidi")
 ```

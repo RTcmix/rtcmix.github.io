@@ -61,7 +61,7 @@ Returns a table-handle referring to the modified table.
 
 ### Examples
 
-``` 
+```cpp 
    table1 = maketable("literal", "nonorm", 5, 1.0, 2.0, 3.0, 4.0, 5.0)
    table2 = maketable("literal", "nonorm", 5, 2.0, 4.0, 5.0, 8.0, 10.0)
    newtable1 = add(table1, 2.0)

@@ -115,7 +115,7 @@ pfield-handles.
 
 ### Examples
 
-``` 
+```cpp
    vib = makeLFO("sine", 3.5, 10.0)
    pan = makeLFO("tri", 0.5, 0.0, 1.0)
    wave = maketable("wave", 1000, 1.0, 0.2, 0.1)

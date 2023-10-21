@@ -65,7 +65,7 @@ Returns to the script the value at the *index* (or interpolated between
 
 ### Examples
 
-``` 
+```cpp
    table = maketable("literal", "nonorm", 0, 8.00, 8.02, 8.03, 8.05, 8.07)
    tablelength = tablelen(table)
 

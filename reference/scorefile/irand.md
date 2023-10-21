@@ -40,7 +40,7 @@ used.
 
 ### Examples
 
-``` 
+```cpp
    srand(0)
    min = -30
    max = 10

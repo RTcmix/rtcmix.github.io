@@ -22,7 +22,7 @@ For instruments that are designed to use *resetval* in updating control
 functions and envelopes (pfields), **reset** determines how many
 times/second the control function/envelope is 'sampled'. For example,
 
-``` 
+```cpp
    reset(48000)
 ```
 
@@ -56,7 +56,7 @@ noticeable in amplitude envelopes.
 
 ### Examples
 
-``` 
+```cpp
    reset(10000)
    control_rate(22050)
 ```

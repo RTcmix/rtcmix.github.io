@@ -70,7 +70,7 @@ Returns a table-handle for the new, copied and (possibly) resized table
 
 ### Examples
 
-``` 
+```cpp
    table = maketable("wave", 4000, 1.0, 0.2, 0.1)
    newtable = copytable(table, 1000, "interp")
 ```

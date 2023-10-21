@@ -178,7 +178,7 @@ pfield-handles.
 
 Using these scorefile commands:
 
-``` 
+```cpp
 table = maketable("line", "nonorm", 1000, 0,0, 1,10, 2, -5)
 newtable = modtable(table, "normalize", 1.0)
 ```
@@ -188,7 +188,7 @@ go up to 1.0, and then down to -0.5 over the 1000 elements in the table.
 
 In this set of commands:
 
-``` 
+```cpp
 table = maketable("literal", "nonorm", 5, 1.0, 2.0, 3.0, 4.0, 5.0)
 newtable = modtable(table, "reverse")
 ```
@@ -196,13 +196,13 @@ newtable = modtable(table, "reverse")
 the table-handle *newtable* will be associated with a new table that
 will contain the following sequence of elements:
 
-``` 
+```cpp
 5.0, 4.0, 3.0, 2.0, 1.0
-``` 
+```cpp
 
 And this scorefile fragment:
 
-``` 
+```cpp
 table = maketable("literal", "nonorm", 5, 1.0, 2.0, 3.0, 4.0, 5.0)
 newtable1 = modtable(table, "shift", 3)
 newtable2 = modtable(table, "shift", -1)
@@ -211,15 +211,15 @@ newtable2 = modtable(table, "shift", -1)
 will result in the table-handle *newtable1* being associated with a new
 table that will contain the following sequence of elements:
 
-``` 
+```cpp
 3.0, 4.0, 5.0, 1.0, 2.0
-``` 
+```cpp
 
 and the elements of *newtable2* being in the following order:
 
-``` 
+```cpp
 2.0, 3.0, 4.0, 5.0, 1.0
-``` 
+```cpp
 
 
 -----

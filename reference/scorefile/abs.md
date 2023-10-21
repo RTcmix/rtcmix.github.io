@@ -30,7 +30,7 @@ ARGUMENTS
 
 EXAMPLES
 
-``` 
+```cpp 
    posval = abs(arbitrary_val)
 ```
 

@@ -52,7 +52,7 @@ have appeared once.
 
 ### Examples
 
-``` 
+```cpp
    seed = 78
    spray_init(3, 7, seed) // initialize table 3 with 7 elements
 

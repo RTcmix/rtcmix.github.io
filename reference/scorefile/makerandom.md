@@ -128,7 +128,7 @@ pfield-handles.
 
 ### Examples
 
-``` 
+```cpp
 pitch1 = makerandom("low", 10, 8.00, 8.11)
 pitch2 = makerandom("high", 15, 8.00, 8.11)
 wave = maketable("wave", 1000, 1.0, 0.2, 0.1)

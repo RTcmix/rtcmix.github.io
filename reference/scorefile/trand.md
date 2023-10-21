@@ -58,7 +58,7 @@ used.
 
 ### Examples
 
-``` 
+```cpp
    srand(0)
    min = -30
    max = 10
@@ -70,7 +70,7 @@ used.
 
 another useful example:
 
-``` 
+```cpp
    array = { 1, 2, 3, 4, 5, 6, 7 }
    len_array = len(array)
    for (i = 0; i < 14; i += 1) {

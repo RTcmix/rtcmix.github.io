@@ -36,7 +36,7 @@ previously opened by the [rtinput](rtinput.html) command.
 
 ### Examples
 
-``` 
+```cpp
    nchannels = filechans("somesoundfile")
 ```
 

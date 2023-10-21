@@ -199,7 +199,7 @@ pfield-handles.
 
 ### Examples
 
-``` 
+```cpp
 rpfield = makerandom("even", 7.0, 0.0, 100.0)
 smpfield = makefilter("smooth", 20)
 qpfield = makefilter("quantize", 20)
@@ -216,7 +216,7 @@ closest integer multiple of 20 (the output will be \[0.0, 20.0, 40.0,
 60.0, 80.0, 100.0\] depending on the value of the input). *rpfield* will
 take the \[0.0, 100.0\] range and scale it to fit between 0.0 and 1.0.
 
-``` 
+```cpp
 table = maketable("literal", "nonorm", 0, 8.00, 8.02, 8.04, 8.05, 8.07)
 rpfield = makerandom("even", 10.0, 8.00, 8.07)
 pitches = makefilter(rpfield, "constrain", table, 1.0)
@@ -227,7 +227,7 @@ coming through *rpfield* and cause them to generate one of the specific
 values in the *table* set of values. The result will be assigned through
 the p-field variable *pitches*
 
-``` 
+```cpp
 table = maketable("expbrk", 1000, 0.0001, 1000, 1.0)
 newpfield = makefilter("invert", table)
 ```

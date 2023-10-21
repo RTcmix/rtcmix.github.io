@@ -40,7 +40,7 @@ Returns to the script an integer value, the size of the table.
 
 ### Examples
 
-``` 
+```cpp
    table = maketable("literal", "nonorm", 0, 8.00, 8.02, 8.03, 8.05, 8.07)
    size = tablelen(table)
 ```

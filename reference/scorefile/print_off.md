@@ -26,7 +26,7 @@ especially when large numbers of notes are being scheduled.
 
 ### Examples
 
-``` 
+```cpp
    print_off()
 ```
 

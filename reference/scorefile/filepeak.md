@@ -58,7 +58,7 @@ returned.
 
 ### Examples
 
-``` 
+```cpp
    peak = filepeak("somesoundfile")
    peak = filepeak("somesoundfile", 77.8, 98.2, 1))
 ```

@@ -31,7 +31,7 @@ in oct.pc form ("pch") and the return value will be in cps ("cps").
 
 The various format specifiers are:
 
-``` 
+```cpp
    amp = linear amplitude (16-bit, 0-32767)
    cps = cycles per second (Hz)
    db = decibels
@@ -54,7 +54,7 @@ The various format specifiers are:
 
 ### Examples
 
-``` 
+```cpp
    freq = cpsmidi(72)
    freq = cpsmidi(60.0)
 ```

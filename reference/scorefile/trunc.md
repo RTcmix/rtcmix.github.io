@@ -21,7 +21,7 @@ val = **trunc**(*someval*)
 all Minc functions, however, it returns it as a double (floating-point)
 value. For example
 
-``` 
+```cpp
 val = trunc(14.154978)
 ```
 
@@ -42,7 +42,7 @@ decimal point.
 
 ### Examples
 
-``` 
+```cpp
    truncval = trunc(arbitrary_val)
 ```
 

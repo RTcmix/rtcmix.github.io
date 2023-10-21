@@ -48,7 +48,7 @@ will be scanned. They do not work on a real-time audio input device.
 
 ### Examples
 
-``` 
+```cpp 
    rtinput("somesoundfile")
    peakval = PEAK()
 

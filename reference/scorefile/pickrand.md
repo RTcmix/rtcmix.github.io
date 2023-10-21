@@ -45,7 +45,7 @@ One of the arguments to **pickrand**, selected randomly.
 
 ### Examples
 
-``` 
+```cpp
    srand(1)
    for (i = 0; i < 10; i = i + 1) {
       pitch = pickrand(8.00, 8.02, 8.04, 8.05, 8.07, 8.09, 8.11)

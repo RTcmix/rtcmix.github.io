@@ -30,7 +30,7 @@ val = **log**(*someval*)
 
 ### Examples
 
-``` 
+```cpp
    lval = log(3.414)
 ```
 

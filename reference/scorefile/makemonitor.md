@@ -106,7 +106,7 @@ will be performed. The arguments vary depending on each
 
 ### Examples
 
-``` 
+```cpp
    xval = makeconnection("mouse", "x", 0, 100, 50, lag=50)
    makemonitor(xval, "display", "x-value", "pts")
 ```

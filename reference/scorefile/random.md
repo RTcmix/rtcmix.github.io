@@ -29,7 +29,7 @@ There are no arguments to **random**.
 
 ### Examples
 
-``` 
+```cpp
    srand(1)
    for (i = 0; i < 10; i = i + 1) {
       randval = random() * 1000
@@ -44,7 +44,7 @@ pitch, sprayed randomly across the stereo field. This is easy to do,
 because the *stereo\_loc* argument to most instruments has the same
 range as the value returned by **random**.
 
-``` 
+```cpp
    rtsetparams(48000, 2)
    load("WAVETABLE")
 

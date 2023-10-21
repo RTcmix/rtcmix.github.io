@@ -58,7 +58,7 @@ for *gnuplot* to run correctly.
 
 ### Examples
 
-``` 
+```cpp
    table = maketable("wave", 1000, 1, 0.1, 0.3)
    plottable(table, 30)
 ```
@@ -73,7 +73,7 @@ will appear for 30 seconds on non-macOS systems):
   
 This scorefile:
 
-``` 
+```cpp
    table = maketable("wave", 1000, 1, 0.1, 0.3)
    plottable(table, 15, "with points")
 ```
@@ -88,7 +88,7 @@ will produce this plot:
 and display it for 15 seconds (on non-macOS systems). The following
 scorefile:
 
-``` 
+```cpp
    table = maketable("wave", 1000, 1, 0.1, 0.3)
    plottable(table, "with impulses")
 ```

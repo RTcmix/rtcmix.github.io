@@ -64,20 +64,20 @@ file, such as the header type and sampling rate (unless the
 
 ### Examples
 
-``` 
+```cpp
    rtinput("myfile.aif")
 ```
 
 Opens "myfile.aif,'' an AIFF file in the current directory, for reading
 by any instruments that follow this line in the script.
 
-``` 
+```cpp
    rtinput("/home/bubba/snd/trouble.wav")
 ```
 
 Opens "trouble.wav'' using a full path name.
 
-``` 
+```cpp
    rtinput("AUDIO)"
 ```
 

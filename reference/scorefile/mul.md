@@ -61,7 +61,7 @@ Returns a table-handle referring to the mutliplied table.
 
 ### Examples
 
-``` 
+```cpp
    table1 = maketable("literal", "nonorm", 5, 1.0, 2.0, 3.0, 4.0, 5.0)
    table2 = maketable("literal", "nonorm", 5, 0.1, 0.2, 0.3, 0.4, 0.5)
    newtable1 = mul(table1, 2.0)

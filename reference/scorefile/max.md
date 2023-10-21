@@ -32,7 +32,7 @@ passed to it.
 
 ### Examples
 
-``` 
+```cpp
    mval = max(7, 0, 8.9, -14, 78.7878)
 ```
 

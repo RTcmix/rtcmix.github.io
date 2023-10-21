@@ -29,7 +29,7 @@ placed.
 The syntax is easy, although it differs slightly from the standard
 [Minc](Minc.html) or other parser-interface syntax:
 
-``` 
+```cpp
    include otherfile.sco
 ```
 
@@ -62,7 +62,7 @@ This is similar to the *\#include* directive in C/C++.
 
 ### Examples
 
-``` 
+```cpp
    dice = random()
 
    if (dice > 0.5) {

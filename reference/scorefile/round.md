@@ -35,7 +35,7 @@ ignores the values after the decimal point.
 
 ### Examples
 
-``` 
+```cpp
    roundedval = round(arbitrary_val)
 ```
 

@@ -29,7 +29,7 @@ There are no arguments to **rand**.
 
 ### Examples
 
-``` 
+```cpp
    srand(1)
    for (i = 0; i < 20; i = i + 1) {
       randval = rand() * 10
@@ -44,7 +44,7 @@ pitch. The attack times of the notes vary randomly from an even grid
 whose lines are spaced 0.14 seconds apart, and the amplitudes range from
 400 to 3600.
 
-``` 
+```cpp
    rtsetparams(48000, 1)
    load("WAVETABLE")
 

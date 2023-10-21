@@ -25,7 +25,7 @@ input audio device.
 
 ### Examples
 
-``` 
+```cpp 
    rtinput("somesoundfile")
    srate = SR()
 ```

@@ -48,7 +48,7 @@ index (starting at 0) of *sometime* will be returned/
 
 After parsing he following scorefile segment:
 
-``` 
+```cpp
    list = { 1, 2, "three", 4 }
    val = index(list, 2)
 ```

@@ -41,7 +41,7 @@ after the other, in an appropriately irritating way. Each pitch appears
 exactly once during the first 12 notes, and once again during the second
 12 notes.
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("WAVETABLE")
 
@@ -73,7 +73,7 @@ occur when starting to read the table for a second time, for example.
 (The last value returned during the first read could be the value
 returned at the start of the second read.)
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("WAVETABLE")
 

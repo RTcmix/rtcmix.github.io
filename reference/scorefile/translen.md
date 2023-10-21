@@ -33,14 +33,14 @@ input sound, regardless of the duration of the resulting output. Say you
 had a one-second recording of someone saying "RTcmix rocks\!" If you
 want to transpose this down an octave, you could do it two ways:
 
-``` 
+```cpp
    duration = 1
    TRANS(start, inskip, duration, amp, transp)
 ```
 
 ...or...
 
-``` 
+```cpp
    duration = 1
    TRANS(start, inskip, translen(duration, transp), amp, transp)
 ```
@@ -79,7 +79,7 @@ envelope, causing a click.
 
 ### Examples
 
-``` 
+```cpp
    newlength = translen(7.8, -0.05)
 ```
 

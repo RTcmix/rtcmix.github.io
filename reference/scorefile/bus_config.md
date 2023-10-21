@@ -103,7 +103,7 @@ instances of the same instrument by calling **bus\_config** again.
 
 ### Examples
 
-``` 
+```cpp
    bus_config("WAVETABLE", "out 0-1")
 ```
 
@@ -112,26 +112,26 @@ This sends the output of subsequent
 channels of the audio device, or to a file, if [rtoutput](rtoutput.html)
 has been called.
 
-``` 
+```cpp
    bus_config("WAVETABLE", "out 0", "out 1")
 ```
 
 This means the same thing.
 
-``` 
+```cpp
    bus_config("WAVETABLE", "out 3", "out 7")
 ```
 
 Output goes to channels 3 and 7 (counting from zero).
 
-``` 
+```cpp
    bus_config("WAVETABLE", "aux 0-1 out")
 ```
 
 Output goes to aux buses 0 and 1. Unless another instrument reads these
 and sends output to the audio device, you'll hear nothing.
 
-``` 
+```cpp
    bus_config("INPUTSIG", "aux 4-5 in", "out 0-1")
 ```
 
@@ -142,14 +142,14 @@ Notice that the instrument name is not the family name
 ([IIR](../instruments/IIR.html)), but the name of the function you call
 to make sound.
 
-``` 
+```cpp
    bus_config("FILTSWEEP", "aux 2 in", "aux 5 in",
                            "aux 1 out", "aux 7 out")
 ```
 
 Reads from aux buses 2 and 5; writes to aux buses 1 and 7.
 
-``` 
+```cpp
    bus_config("STEREO", "in 0", "out 0-1")
 ```
 
@@ -159,7 +159,7 @@ a file. (See below for more about this inconsistency.) If the last
 [rtinput](rtinput.html) call gives the source as "MIC", then the
 instrument does read just from the first channel.
 
-``` 
+```cpp
    bus_config("WAVETABLE", "out 3")
    WAVETABLE(start, dur, amp, freq)
    bus_config("WAVETABLE", "out 7")
@@ -179,7 +179,7 @@ RTcmix/docs/sample\_scos\_3.0/.
 If you don't call bus\_config before using an instrument, you'll get a
 default configuration roughly equal to:
 
-``` 
+```cpp
    bus_config("FOO", "in 0-1", "out 0-1")
 ```
 

@@ -50,14 +50,14 @@ Returns 0.0 if the printing is successful, -1.0 if there was an error.
 
 ### Examples
 
-``` 
+```cpp
    table = maketable("wave", 10, 1)
    dumptable(table)
 ```
 
 The above score will produce the following output to the screen:
 
-``` 
+```cpp
    0 0.000000
    1 0.618034
    2 1.000000

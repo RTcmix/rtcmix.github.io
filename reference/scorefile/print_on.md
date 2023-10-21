@@ -39,7 +39,7 @@ you specify what kinds of information will print:
 
 ### Examples
 
-``` 
+```cpp
    print_on()
 ```
 This turns on printing at *print\_level* 5.

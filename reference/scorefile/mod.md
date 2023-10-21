@@ -36,7 +36,7 @@ The [wrap](wrap.html) command apparently does the same thing.
 
 ### Examples
 
-``` 
+```cpp
    modout = mod(3, 12)
 ```
 

@@ -95,14 +95,14 @@ files, maybe because they assume these are always compressed.
 
 ### Examples
 
-``` 
+```cpp
    rtsetparams(22050, 2)
    rtoutput("mysound")
 ```
 
 writes a stereo, 16-bit linear AIFF file with 22050 sampling rate.
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    set_option("audio = off", "clobber = on")
    rtoutput("myothersound", "wav", "float")

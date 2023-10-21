@@ -25,7 +25,7 @@ with sqrt taper.
 
 Examples of values returned by **boost**:
 
-``` 
+```cpp
    boost(0) => 1
    boost(1) => 1
    boost(0.25) => 1.265
@@ -43,7 +43,7 @@ Examples of values returned by **boost**:
 
 ### Examples
 
-``` 
+```cpp 
    pan = 0.53
    powcorrection = boost(pan)
    STEREO(0, 0, 3.4, 1.0 * powcorrection, pan)

@@ -55,7 +55,7 @@ accordance with the given probabilities.
 
 ### Examples
 
-``` 
+```cpp
    srand(0)
    while (outskip < ending_time) {
       stereo_loc = pickwrand(0.0, 10,  0.5, 80,  1.0, 10)

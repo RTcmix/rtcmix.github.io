@@ -671,14 +671,14 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
 
 ### Examples
 
-``` 
+```cpp
 ampenv = maketable("line", 1000, 0,0, 1,1
 ```
 
 The *ampenv* table-handle variable will reference a table containing a
 straight line from 0 to 1; the table will have 1000 elements.
 
-``` 
+```cpp
 wave = maketable("wave", "nonorm", 2000, 0.5)
 ```
 
@@ -691,7 +691,7 @@ The following score shows how the table-handle can be used
 arithmetically to operate upon other parameters in an instrument (in
 this case the [WAVETABLE](../instruments/WAVETABLE.html) instrument):
 
-``` 
+```cpp
 env = maketable("line", 1000, 0,0, 1,1, 3,1, 4,0)
 penv = maketable("line", 1000, 0,1, 1,1, 2,2, 3,2, 8,.15)
 vib = maketable("wave3", "nonorm", 1000, 4.0*10, 4, 0)
@@ -707,7 +707,7 @@ WAVETABLE(0, 4.0, 20000 * env, (440.0 * penv) + vib, pan, wavt)
 
 The table-handle variables can be re-used during score parsing, i.e.
 
-``` 
+```cpp
 for (st = 0; st < 10; st = st+1) {
    amp = maketable("curve", 1000, 0, 0, -2.0,  2.5, 1, 1.4, 3.5, 0)
    wave = maketable("wave", 1000, random(), random(), random())

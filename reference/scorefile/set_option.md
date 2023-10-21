@@ -44,7 +44,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
     does not matter in the *option\_name* string, and spaces are
     ignored. For example:
     
-    ``` 
+    ```cpp
        set_option("audio = on")
        set_option("AUDIO=yes")
        set_option("AUDIO= TRUE")
@@ -334,7 +334,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
 
 ### Examples
 
-``` 
+```cpp
    set_option("audio = off", "clobber=1")
    rtoutput("myfile.aif")
 ```
@@ -342,7 +342,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
 turns off audio playback and enables overwriting of existing files. This
 is the standard way to make a script that writes a sound file.
 
-``` 
+```cpp
    set_option("audio=false")
    set_option("clobber = YES")
    rtoutput("myfile.aif")
@@ -350,7 +350,7 @@ is the standard way to make a script that writes a sound file.
 
 this does exactly the same thing.
 
-``` 
+```cpp
    set_option("record = on")
    rtsetparams(44100, 2, 128)
    rtinput("AUDIO")
