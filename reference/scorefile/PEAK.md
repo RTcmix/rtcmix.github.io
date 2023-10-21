@@ -3,7 +3,7 @@ title: PEAK()
 layout: ref
 ---
 
-##PEAK / RIGHT\_PEAK / LEFT\_PEAK
+## PEAK / RIGHT\_PEAK / LEFT\_PEAK
 
 Return amplitude peak information.
 

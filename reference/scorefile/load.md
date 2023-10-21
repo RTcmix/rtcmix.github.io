@@ -59,6 +59,10 @@ example, you will end up with a file called libMYINSTRUMENT.so, where
 "MYINSTRUMENT" is whatever you named your instrument. To use it, just
 put a line:
 
+```
+load("./libMYINSTRUMENT.so");
+```
+
 at the top of your score. Note that this is specified as a file name,
 where the *FMINST* was not. Any pre-existing RTcmix instrument which has
 a pre-installed DSO can use the first form; custom DSOs use the latter
@@ -75,7 +79,7 @@ object to see if it has the magic "profile" and/or "rtprofile"
 functions. It it does, it calls them -- and this makes all the RTcmix
 functions in that DSO available to CMIX\!
 
-The only instrument that does not require an explicit **load** command
+The only instruments that does not require an explicit **load** command
 in the scorefile is [MIX](../instruments/MIX.html) because it is the
 'foundation' instrument for RTcmix.
 
@@ -96,9 +100,11 @@ this\!).
     *"dsoPATHNAME"* can be an absolute or relative pathname to an
     instrument DSO. These are usually named "libINSTRUMENT.so". If it is
     a relative pathname, it will be relative to the directory in which
-    the CMIX command was invoked. *note: for many embedded applications
-    such as [rtcmix\~](../../rtcmix_/index.html) and
-    [iRTcmix](../../irtcmix/index.html) the instruments are
+    the CMIX command was invoked. 
+    
+    *NOTE: for many embedded applications
+    such as [rtcmix\~](../../rtcmix~/index.html) and
+    [iRTcmix](../../irtcmix/index.html), the instruments are
     'compiled-in' and do not have to be loaded.*
 
 -----

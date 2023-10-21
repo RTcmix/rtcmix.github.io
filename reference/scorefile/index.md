@@ -9,7 +9,8 @@ RTcmix scorefile commands are used to set up and control the execution
 of RTcmix. They also include a number of utility commands for
 algorithmic music-creation work using the default [Minc](Minc.html)
 scorefile parser. RTcmix commands generally return values that are type
-"double".
+"double".  Descriptions below ending in "(legacy)" indicate older, replaced
+commands with newer equivalents described along with the command.
 
 Although these commands are designed to be used within an RTcmix
 scorefile, they can also be used as part of an embedded application,
@@ -38,23 +39,23 @@ object](../interface/RTcmix-embed.html).
   - [control\_rate](reset.html) &mdash; set the control function/envelope
     update rate
   - [include](include.html) &mdash; embed one scorefile within another
-  - [index](index_command.html) &mdash; return the index of an item in a list
+  - [index](index-command.html) &mdash; return the index of an item in a list
   - [exit](exit.html) &mdash; terminate RTcmix
-  - [f\_arg](f_arg.html) &mdash; return a floating-point argument to the CMIX
+  - [f\_arg](f_arg.html) &mdash; return a floating-point argument to the CMIX (legacy)
     command
-  - [i\_arg](f_arg.html) &mdash; return an integer argument to the CMIX
+  - [i\_arg](f_arg.html) &mdash; return an integer argument to the CMIX (legacy)
     command
-  - [n\_arg](f_arg.html) &mdash; return the number of arguments to the CMIX
+  - [n\_arg](f_arg.html) &mdash; return the number of arguments to the CMIX (legacy)
     command
-  - [s\_arg](f_arg.html) &mdash; return a string argument to the CMIX command
+  - [s\_arg](f_arg.html) &mdash; return a string argument to the CMIX command (legacy)
   - [print](print.html) &mdash; print values
-  - [makeinstrument](makeinstrument.html) - create handle for CHAIN
+  - [makeinstrument](makeinstrument.html) - create an instrument handle for CHAIN
   - [printf](printf.html) &mdash; print formatted values
   - [print\_off](print_off.html) &mdash; stop printing of RTcmix stats to the
     screen
   - [print\_on](print_on.html) &mdash; allow printing of RTcmix stats to the
     screen
-  - [stringify](stringify.html) &mdash; return a pointer to a string argument
+  - [stringify](stringify.html) &mdash; return a pointer to a string argument (legacy)
   - [system](system.html) &mdash; execute Terminal or Shell commands from
     within RTcmix
   - [type](type.html) &mdash; return the Minc data-type of its argument

@@ -11,8 +11,9 @@ Set the update rate for control functions and envelopes.
 
 ### Synopsis
 
-**control\_rate**(*sampling\_rate*)
-**reset**(*sampling\_rate*)  
+**control\_rate**(*update\_rate*)
+
+**reset**(*update\_rate*)  
 
 -----
 
@@ -47,10 +48,11 @@ noticeable in amplitude envelopes.
 
 ### Arguments
 
-  - *sample\_rate*  
-    Any number, floating point or integer represetig how many
+  - *update\_rate*  
+    Any number, floating point or integer represeting how many
     times/second the control/envelope (pfield) information will be
-    updated during note execution.
+    updated during note execution.  Values greater than the current
+    sampling rate will produce unpredictable results.
 
 -----
 

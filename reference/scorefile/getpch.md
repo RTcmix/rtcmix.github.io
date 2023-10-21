@@ -54,4 +54,5 @@ may be an absolute or relative pathname to the LPC analysis file.
 
 ### See Also
 
-[getamp](getamp.html)
+[getamp](getamp.html), [LPCPLAY](../instruments/LPCPLAY.html)
+

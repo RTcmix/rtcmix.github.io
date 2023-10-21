@@ -540,7 +540,7 @@ if (channel_count == 2) {
 STEREO(inskip=0, outskip=0, DUR(), 1, pan)
 ```
 
-#### Command-line "named arguments" ("standalone" mode only)
+#### <a name="command-line-named-args"></a>Command-line "named arguments" ("standalone" mode only)
 
 Number and string values can be specified on the ‘CMIX’ command line and used as named variables within the score.  This lets you create one score with named argument variables for all its important parameters, and then you can experiment with changing those parameters on the command line.  So, one score instead of 25 separate scores!
 

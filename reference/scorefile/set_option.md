@@ -78,7 +78,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         **set\_option** used the parameters *"audio\_on"* and
         *"audio\_off"* to control this option.
         
-        The default is *"AUDIO = ON"*.
+        The default is *"audio = on"*.
     
       - <span id="play">*play = \[0|1\]*</span>  
           
@@ -87,7 +87,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         older-style **set\_option** used the parameters *"play\_on"* and
         *"play\_off"* to control this option.
         
-        The default is *"PLAY = ON"*.
+        The default is *"play = on"*.
     
       - <span id="record">*record = \[0|1\]*</span>  
           
@@ -104,10 +104,18 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         older-style **set\_option** used the parameters *"record\_on"*
         and *"record\_off"* to change this option.
         
-        The default is *"RECORD = OFF"*, except in the
-        [rtcmix\~](../../rtcmix_/index.html) object; *"RECORD = ON"* is
+        The default is *"record = off"*, except in the
+        [rtcmix\~](../../rtcmix_/index.html) object; *"record = on"* is
         always enabled for the object.
     
+      - <span id="require_sample_rate">*require\_sample\_rate = \[0|1\]*</span>  
+          
+        determines whether RTcmix will fail if it cannot set the device
+        sampling rate to what the score requests, or if it should allow
+        whatever it is able to set it to.  Note that any input sounds will
+        be played at the wrong pitch if the sample rate does not match
+        that of the sounds.
+  
       - <span id="clobber">*clobber = \[0|1\]*</span>  
           
         controls whether RTcmix overwrites existing sound files without
@@ -116,7 +124,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         used the parameters *"clobber\_on"* and *"clobber\_off"* to
         control this option.
         
-        The default is *"CLOBBER = OFF"*.
+        The default is *"clobber = off"*.
     
       - <span id="print">*print = \[0|1\]*</span>  
           
@@ -127,8 +135,18 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         [print\_on](print_on.html) and [print\_off](print_off.html)
         scorefile commands.
         
-        The default is *"PRINT = ON"*.
+        The default is *"print = on"*.
     
+      - <span id="print">*print\_list\_limit = n\_items*</span>  
+          
+        determines how many items will be displayed when RTcmix prints
+        the contents of a Minc list during [print](print.html),
+        [printf](printf.html), and Minc command parsing.  Sometimes
+        complex scores can use *very long* lists, and limiting what
+        is displayed can keep the text information readable.
+        
+        The default is *"print\_list\_limit = 16"*.
+
       - <span id="report_clipping">*report\_clipping = \[0|1\]*</span>  
           
         controls whether RTcmix reports samples that exceed the range
@@ -136,7 +154,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         **set\_option** used the parameters *"report\_clipping\_on"* and
         *"report\_clipping\_off"* to set this option.
         
-        The default is *"REPORT\_CLIPPING = ON"*.
+        The default is *"report\_clipping = on"*.
     
       - <span id="check_peaks">*check\_peaks = \[0|1\]*</span>  
           
@@ -145,7 +163,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         **set\_option** used the parameters *"check\_peaks\_on"* and
         *"check\_peaks\_off"* to alter this option.
         
-        The default is *"CHECK\_PEAKS = ON"*.
+        The default is *"check\_peaks = on"*.
     
       - <span id="exit_on_error">*exit\_on\_error = \[0|1\]*</span>  
           
@@ -155,11 +173,20 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         application](../../tutorials/embed.html), then a full exit may
         not be appropriate.
         
-        The default is *"EXIT\_ON\_ERROR = ON"*, except in the
-        [rtcmix\~](../../rtcmix_/index.html) object; *"EXIT\_ON\_ERROR =
-        OFF"* is set because shutting down the entire max/msp patch or
+        The default is *"exit\_on\_error = on"*, except in the
+        [rtcmix\~](../../rtcmix_/index.html) object; *"exit\_on\_error =
+        off"* is set because shutting down the entire max/msp patch or
         application for an RTcmix error probably isn't a good idea.
     
+      - <span id="bail_on_parser_warning">*bail\_on\_parser\_warning = \[0|1\]*</span>  
+          
+        determines whether or not RTcmix exits the process when the
+        parser generates a 'warning' message. Generally this is not necessary,
+        but if your score does not behave as you expect, sometimes exiting
+        for minor mistakes is the best way to find the problem.
+        
+        The default is *"bail\_on\_parser\_warning = 0"*.
+
       - <span id="auto_load">*auto\_load = \[0|1\]*</span>  
           
         sets the ability of RTcmix to automatically load Instruments if
@@ -170,7 +197,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         different directory can be set using the [dsopath](#dsopath)
         option.
         
-        The default is *"AUTO\_LOAD = OFF"*.
+        The default is *"auto\_load = off"*.
     
       - <span id="fast_update">*fast\_update = \[0|1\]*</span>  
           
@@ -188,7 +215,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         [STEREO](../instruments/STEREO.html) and
         [TRANS](../instruments/TRANS.html).
         
-        The default is *"FAST\_UPDATE = OFF"*.
+        The default is *"fast\_update = off"*.
     
       - <span id="full_duplex">*full\_duplex\_on,
         full\_duplex\_off*</span>  
@@ -199,9 +226,9 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         prior to a call to the [rtsetparams](rtsetparams.html) scorefile
         command, like the *record* option.
         
-        The default is *"FULL\_DUPLEX = OFF"*, except in the
-        [rtcmix\~](../../rtcmix_/index.html) object; *"FULL\_DUPLEX =
-        ON"* is always enabled for the object.
+        The default is *"full\_duplex = off"*, except in the
+        [rtcmix\~](../../rtcmix_/index.html) object; *"full\_duplex =
+        on"* is always enabled for the object.
     
       - <span id="buffer_frames">*buffer\_frames = nsamps*</span>  
           
@@ -215,7 +242,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         [rtsetparams](rtsetparams.html) will override this default
         setting.
         
-        The default is *"BUFFER\_FRAMES = 4096"*, except in the
+        The default is *"buffer\_frames = 4096"*, except in the
         [rtcmix\~](../../rtcmix_/index.html) object. The value for
         *nsamps* is determined by max/msp.
     
@@ -225,7 +252,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         conversion device. It is, in fact, a rather esoteric parameter,
         although it can have an effect on RTcmix perfoprmance.
         
-        The default is *"BUFFER\_COUNT = 2"*.
+        The default is *"buffer\_count = 2"*.
     
       - <span id="device">*device = audio\_device\_name*</span>  
           

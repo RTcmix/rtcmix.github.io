@@ -5,7 +5,7 @@ layout: ref
 
 ## f\_arg / i\_arg / s\_arg / n\_arg
 
-Return command-line arguments.
+Legacy functions for returning command-line arguments.
 
 -----
 
@@ -49,6 +49,10 @@ contains 2 floating-point arguments and 1 string argument.
    stringval = s_arg(1)
    nargs = n_arg()
 ```
+-----
+
+*Note:  These functions have been replaced in [Minc](Minc.html) by the 
+much-more-flexible command-line named arguments described* [here](Minc.html:#command-line-args).
 
 -----
 
@@ -56,4 +60,4 @@ contains 2 floating-point arguments and 1 string argument.
 
 [print](print.html), [printf](printf.html),
 [rtsetparams](rtsetparams.html), [set\_option](set_option.html),
-[stringify](stringify.html), [type](type.html)
+[stringify](stringify.html), [type](type.html), [Minc](Minc.html)
