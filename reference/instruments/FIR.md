@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -60,7 +60,7 @@ FIR coefficients given a frequency-graph type of specification.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("FIR")
 

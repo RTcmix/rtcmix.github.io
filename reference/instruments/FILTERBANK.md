@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -97,7 +97,7 @@ The output of **FILTERBANK** can be either mono or stereo.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("FILTERBANK")
    
@@ -124,7 +124,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("FILTERBANK")
    

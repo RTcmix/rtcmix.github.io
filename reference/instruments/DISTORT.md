@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -74,7 +74,7 @@ comes after the distortion in the signal chain.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("DISTORT")
 
@@ -94,7 +94,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("WAVETABLE")
    load("DISTORT")

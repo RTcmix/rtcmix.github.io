@@ -22,7 +22,7 @@ seed\])
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = amplitude multiplier (relative multiplier of input signal)
@@ -74,7 +74,7 @@ significant effect on the output of this instrument.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("SGRANR")
 

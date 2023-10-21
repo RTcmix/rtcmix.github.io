@@ -40,7 +40,7 @@ commands). Parameters after the \[bracket\] are optional and default to
   
 <span id="ellset"></span> **ellset**
 
-``` 
+```cpp
    for lowpass filter:
    p0 = passband cutoff (Hz) (< stopband)
    p1 = stopband cutoff (Hz)
@@ -66,7 +66,7 @@ commands). Parameters after the \[bracket\] are optional and default to
   
 <span id="ELL"></span> **ELL**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -121,7 +121,7 @@ very steep cutoff and very little ripple, you may see this.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("ELL")
    
@@ -148,7 +148,7 @@ very basic:
   
 another one:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("STEREO")
    load("ELL")
@@ -199,7 +199,7 @@ another one:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("ELL")
    
@@ -242,7 +242,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("ELL")
    

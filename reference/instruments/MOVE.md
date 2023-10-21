@@ -55,7 +55,7 @@ are probably better to use.
   
 <span id="MOVE"></span> **MOVE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (or endtime if negative) (seconds)
@@ -69,7 +69,7 @@ are probably better to use.
   
 <span id="space"></span> **space**  
 
-``` 
+```cpp
    p0 = distance to front wall of room (feet)
    p1 = distance to right-hand wall of room (feet)
    p2 = distance to back wall of room (feet) [< 0.0]
@@ -84,7 +84,7 @@ are probably better to use.
   
 <span id="path"></span> **path**  
 
-``` 
+```cpp
    The pfields for path are triples, the first being the relative time
    during processing to reach this point, and the other two of each triple being
    polar coordinates of the sound source location (distance to sound [feet]
@@ -96,7 +96,7 @@ are probably better to use.
   
 <span id="cpath"></span> **cpath**  
 
-``` 
+```cpp
    The pfields for cpath are triples, the first being the relative time
    during processing to reach this point, and the other two of each triple being
    the x- and y- cartesian coordinates of the sound source location (feet,
@@ -109,7 +109,7 @@ are probably better to use.
   
 <span id="param"></span> **param**  
 
-``` 
+```cpp
    p0 = function table reference for polar coordinate distance to sound source (feet) values
    p1 = function table reference for polar coordinate angle to sound source (degrees) values
 
@@ -127,7 +127,7 @@ are probably better to use.
   
 <span id="cparam"></span> **cparam**  
 
-``` 
+```cpp
    p0 = function table reference for x-coordinate location of sound source (feet)
    p1 = function table reference for y-coordinate location of sound source (feet)
 
@@ -145,7 +145,7 @@ are probably better to use.
   
 <span id="threshold"></span> **threshold**  
 
-``` 
+```cpp
    p0 = time interval (seconds) for trajectory updates (typically < 0.01)
 
    NOTE: this subcommand is optional for MOVE to function (the default is
@@ -155,7 +155,7 @@ are probably better to use.
   
 <span id="mikes"></span> **mikes**  
 
-``` 
+```cpp
    p0 = microphone angle (degrees, 0 degrees is straight in front)
    p1 = microphone pattern (0-1; 0 == omnidirectional, 1 == highly directional)
 
@@ -165,7 +165,7 @@ are probably better to use.
   
 <span id="mikes_off"></span> **mikes\_off**  
 
-``` 
+```cpp
    no pfields, this defeats the microphone angle and pattern settings for binaural simulation
 
    NOTE: this subcommand is optional for MOVE to function
@@ -174,7 +174,7 @@ are probably better to use.
   
 <span id="matrix"></span> **matrix**  
 
-``` 
+```cpp
    p0 = total matrix gain (relative multiplier of input signal)
    p1-p145 = 12 x 12 matrix amp/feedback coefficients [optional; defaults to internal matrix]
 
@@ -211,7 +211,7 @@ for doing this processing.
 
 basic use:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MOVE")
 

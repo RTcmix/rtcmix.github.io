@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -106,7 +106,7 @@ in or an aux bus, p1 ("inskip") has to be 0.
 
 ### Sample Scores
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("NOISE")
    load("REVERBIT")

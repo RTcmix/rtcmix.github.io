@@ -21,7 +21,7 @@ decimation, interpolation\[, pitchmult, npoles, oscthreshold\])
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -92,7 +92,7 @@ shift the entire spectrum up one octave, a value of 0.25 will shift it
 down two octaves. The following score fragment can be used to calculate
 an oct.pc transposition:
 
-``` 
+```cpp
    transposition = 0.05   // shift up 5 semitones
    pitch_multiplier = cpspch(transposition) / cpspch(0.0)
 ```
@@ -126,7 +126,7 @@ output.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1, 512)
    load("PVOC")
 
@@ -140,7 +140,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("PVOC")
 
@@ -155,7 +155,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("PVOC")
 

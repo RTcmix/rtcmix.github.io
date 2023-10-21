@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -84,7 +84,7 @@ The differences between **JDELAY** and [DELAY](DELAY.html) are:
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("JDELAY")
 
@@ -97,7 +97,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("JDELAY")
    

@@ -29,7 +29,7 @@ trajectory.
 <span id="timeset"></span> **timeset**  
   
 
-``` 
+```cpp
    p0 = timepoint (seconds)
    p1 = x location (feet, Cartesian coordinates)
    p2 = y location (feet, Cartesian coordinates)
@@ -38,7 +38,7 @@ trajectory.
   
 <span id="MROOM"></span> **MROOM**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -149,7 +149,7 @@ set by the [reset](../scorefile/reset.html) scorefile command.
 
 As an example of how this works, consider the following scorefile:
 
-``` 
+```cpp
    timeset(0, 17, 19)
    timeset(17, -10, 15)
    timeset(29, -11, -7)
@@ -164,7 +164,7 @@ The call to **timeset** specify a trajectory for the sound source
 through the room that looks approximately like this (each 'X' represents
 a timepoint in the **timeset** specification:
 
-``` 
+```cpp
 
                                  |+49
                                  |
@@ -194,7 +194,7 @@ a timepoint in the **timeset** specification:
 
 basic use:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MROOM")
 

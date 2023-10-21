@@ -45,7 +45,7 @@ characteristics and one sub-instrument (**RVB**) to operate.
   
 <span id="MPLACE"></span> **MPLACE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (or endtime if negative) (seconds)
@@ -64,7 +64,7 @@ characteristics and one sub-instrument (**RVB**) to operate.
   
 <span id="RVB"></span> **RVB**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (or endtime if negative) (seconds) 
@@ -78,7 +78,7 @@ characteristics and one sub-instrument (**RVB**) to operate.
   
 <span id="space"></span> **space**  
 
-``` 
+```cpp
    p0 = distance to front wall of room (feet)
    p1 = distance to right-hand wall of room (feet)
    p2 = distance to back wall of room (feet) [< 0.0]
@@ -93,7 +93,7 @@ characteristics and one sub-instrument (**RVB**) to operate.
   
 <span id="mikes"></span> **mikes**  
 
-``` 
+```cpp
    p0 = microphone angle (degrees, 0 degrees is straight in front)
    p1 = microphone pattern (0-1; 0 == omnidirectional, 1 == highly directional)
 
@@ -103,7 +103,7 @@ characteristics and one sub-instrument (**RVB**) to operate.
   
 <span id="mikes_off"></span> **mikes\_off**  
 
-``` 
+```cpp
    no pfields, this defeats the microphone angle and pattern settings for binaural simulation
 
    NOTE: this subcommand is optional for MPLACE to function
@@ -112,7 +112,7 @@ characteristics and one sub-instrument (**RVB**) to operate.
   
 <span id="set_attenuation_params"></span> **set\_attenuation\_params**  
 
-``` 
+```cpp
    p0 = minimum distance (feet)
    p1 = maximum distance (feet)
    p2 = distance attentuation exponent
@@ -123,7 +123,7 @@ characteristics and one sub-instrument (**RVB**) to operate.
   
 <span id="matrix"></span> **matrix**  
 
-``` 
+```cpp
    p0 = total matrix gain (relative multiplier of input signal)
    p1-p145 = 12 x 12 matrix amp/feedback coefficients [optional; defaults to internal matrix]
 
@@ -154,7 +154,7 @@ The room design for **MPLACE** depends on parameters specified in the
 the four walls are specified in this x,y coordinate system ("front",
 "right", "-back", "-left"):
 
-``` 
+```cpp
                                   y
                                   |
                              -x---0---x
@@ -172,7 +172,7 @@ actual length depends on the size of the room).
 distance to the sound ("dist-xpos") and the angle ("angle\_ypos") of the
 sound:
 
-``` 
+```cpp
 
                                   0.0    source
                                    |    /
@@ -234,7 +234,7 @@ with the maximum distance. Default is infinite.
 The attentation factor (p2) determines the amount sound will decay over
 the distance traveled. Sounds will attenuate according to the formula:
 
-``` 
+```cpp
    a = 1.0 / ((d/mindistance) ** (factor))
 ```
 
@@ -258,7 +258,7 @@ instrument for more efficient processing.
 
 basic use:
 
-``` 
+```cpp
    rtsetparams(44100,2,4096)
    load("MPLACE")
 

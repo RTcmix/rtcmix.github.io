@@ -29,7 +29,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -141,7 +141,7 @@ The output of **VOCODE2** can be either mono or stereo.
 
 one example:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
 
    load("VOCODE2")
@@ -197,7 +197,7 @@ one example:
   
 another example:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("VOCODE2")
 

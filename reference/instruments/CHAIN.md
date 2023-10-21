@@ -19,7 +19,7 @@ Group instruments.
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (-endtime)
    p2 = number of instruments to follow
@@ -45,7 +45,7 @@ output channel counts. To do this, there is a special bus type called
 out, or aux bus logic. So, if you wished to place WAVETABLE and DELAY in
 a **CHAIN**, you could configure each instrument like so:
 
-``` 
+```cpp
     // run WAVETABLE in monaural mode
     bus_config("WAVETABLE", "chain 0 out");
     // run DELAY 1-channel in, 2-channel out            
@@ -57,7 +57,7 @@ a **CHAIN**, you could configure each instrument like so:
 If the first instrument in the chain reads from disk, its input bus is
 configured just the way it would be in an unchained system:
 
-``` 
+```cpp
     // read from file input, 2-channel out
     bus_config("TRANS", "in 0", "chain 0-1 out");
     // run DELAY 2-channel in, 2-channel out
@@ -76,7 +76,7 @@ be filled with zeros.
 
 very basic:
 
-``` 
+```cpp
     rtsetparams(44100, 2)
     load("ELL")
     load("TRANS");

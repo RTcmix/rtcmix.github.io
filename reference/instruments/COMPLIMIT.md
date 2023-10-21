@@ -29,7 +29,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = input start time (seconds)
    p2  = duration (seconds)
@@ -76,7 +76,7 @@ where some of the decay is above the threshold.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("COMPLIMIT")
    
@@ -105,7 +105,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("COMPLIMIT")
    

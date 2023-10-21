@@ -36,7 +36,7 @@ through the modeled placements (**NPAN**).
   
 <span id="NPANspeakers"></span> **NPANspeakers**  
 
-``` 
+```cpp
    p0 = mode ("polar" or "xy" (or "cartesian"))
    p1, p2, ... pN-1, pN
       starting with p1, the next N pfields are pairs specifying the locations
@@ -48,7 +48,7 @@ through the modeled placements (**NPAN**).
   
 <span id="NPAN"></span> **NPAN**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -118,7 +118,7 @@ scores all specify multiple channel outputs.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 4)
    load("WAVETABLE")
    load("NPAN")
@@ -152,7 +152,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 8)
    load("NPAN")
 
@@ -188,7 +188,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 8, 512)
    load("WAVETABLE")
    load("NPAN")

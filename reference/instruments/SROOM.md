@@ -27,7 +27,7 @@ room-simulation.
   
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -110,7 +110,7 @@ to do this).
 
 basic use:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("SROOM")
 

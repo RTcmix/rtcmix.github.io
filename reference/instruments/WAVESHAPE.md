@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = start time (seconds)
    p1 = duration (seconds)
    p2 = pitch (Hz or oct.pc *) (see note below)
@@ -143,7 +143,7 @@ linear octaves instead.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("WAVESHAPE")
 
@@ -160,7 +160,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("WAVESHAPE")
 

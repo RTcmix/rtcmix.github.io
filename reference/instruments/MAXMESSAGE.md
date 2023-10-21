@@ -20,7 +20,7 @@ Utility instrument used to output values in Max.
 
   
 
-``` 
+```cpp
    p0 = time to send out the values (seconds)
    p1-pn = the values to be sent
 
@@ -57,7 +57,7 @@ or buffer will only send out the values in the most-recently-scheduled
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("MAXMESSAGE")      // note:  the "load" is not necessary in rtcmix~/iRTcmix
 

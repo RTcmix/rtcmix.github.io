@@ -45,7 +45,7 @@ NOTE: This is an older RTcmix instrument, the newer
   
 <span id="PLACE"></span> **PLACE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (or endtime if negative) (seconds)
@@ -65,7 +65,7 @@ NOTE: This is an older RTcmix instrument, the newer
   
 <span id="space"></span> **space**  
 
-``` 
+```cpp
    p0 = distance to front wall of room (feet)
    p1 = distance to right-hand wall of room (feet)
    p2 = distance to back wall of room (feet) [< 0.0]
@@ -80,7 +80,7 @@ NOTE: This is an older RTcmix instrument, the newer
   
 <span id="mikes"></span> **mikes**  
 
-``` 
+```cpp
    p0 = microphone angle (degrees, 0 degrees is straight in front)
    p1 = microphone pattern (0-1; 0 == omnidirectional, 1 == highly directional)
 
@@ -90,7 +90,7 @@ NOTE: This is an older RTcmix instrument, the newer
   
 <span id="mikes_off"></span> **mikes\_off**  
 
-``` 
+```cpp
    no pfields, this defeats the microphone angle and pattern settings for binaural simulation
 
    NOTE: this subcommand is optional for PLACE to function
@@ -99,7 +99,7 @@ NOTE: This is an older RTcmix instrument, the newer
   
 <span id="matrix"></span> **matrix**  
 
-``` 
+```cpp
    p0 = total matrix gain (relative multiplier of input signal)
    p1-p145 = 12 x 12 matrix amp/feedback coefficients [optional; defaults to internal matrix]
 
@@ -131,7 +131,7 @@ The room design for **PLACE** depends on parameters specified in the
 the four walls are specified in this x,y coordinate system ("front",
 "right", "-back", "-left"):
 
-``` 
+```cpp
                                   y
                                   |
                              -x---0---x
@@ -149,7 +149,7 @@ actual length depends on the size of the room).
 distance to the sound ("dist-xpos") and the angle ("angle\_ypos") of the
 sound:
 
-``` 
+```cpp
 
                                   0.0    source
                                    |    /
@@ -207,7 +207,7 @@ to use.
 
 basic use:
 
-``` 
+```cpp
    rtsetparams(44100,  2)
    load("PLACE")
    

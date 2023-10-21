@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
@@ -101,7 +101,7 @@ expressions that can be used by **WAVY** in combining the two
 oscillators:  
   
 
-``` 
+```cpp
   The function string understood by the class is very similar to the C-syntax.
   Arithmetic float expressions can be created from float literals, variables
   or functions using the following operators in this order of precedence:
@@ -204,7 +204,7 @@ expression.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2, 256)
    load("WAVY")
 
@@ -230,7 +230,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2, 256)
    load("WAVY")
 
@@ -257,7 +257,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2, 256)
    load("WAVY")
 

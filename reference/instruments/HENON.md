@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time
    p1 = duration
    p2 = amplitude multiplier
@@ -65,7 +65,7 @@ rate divided by 5 are valid.
 
 ### Sample Score
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("HENON")
 

@@ -41,7 +41,7 @@ vibrato (**VSFLUTE**), and an 'unarticulated' (legato) attack
   
 <span id="SFLUTE"></span> **SFLUTE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = noise amplitude (relative to overall amplitude; usually 0-1)
@@ -65,7 +65,7 @@ vibrato (**VSFLUTE**), and an 'unarticulated' (legato) attack
   
 <span id="VSFLUTE"></span> **VSFLUTE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = noise amplitude (relative to overall amplitude; usually 0-1)
@@ -97,7 +97,7 @@ vibrato (**VSFLUTE**), and an 'unarticulated' (legato) attack
   
 <span id="BSFLUTE"></span> **BSFLUTE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = noise amplitude (relative to overall amplitude; usually 0-1)
@@ -125,7 +125,7 @@ vibrato (**VSFLUTE**), and an 'unarticulated' (legato) attack
   
 <span id="LSFLUTE"></span> **LSFLUTE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = noise amplitude (relative to overall amplitude; usually 0-1)
@@ -175,7 +175,7 @@ the model was constructed. (remember this was one of the first ones
 Perry did) Here is a rough tuning-table for length1 and length2 to
 produce a given note:
 
-``` 
+```cpp
   c8 == middle "C", 8.00 in oct.pc
 
   note   length1   length2
@@ -223,7 +223,7 @@ functions properly).
 
 **SFLUTE**:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("METAFLUTE")
 
@@ -237,7 +237,7 @@ functions properly).
   
 **VSFLUTE**:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("METAFLUTE")
    
@@ -253,7 +253,7 @@ functions properly).
   
 **BSFLUTE**:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("METAFLUTE")
 
@@ -268,7 +268,7 @@ functions properly).
   
 **LSFLUTE**:
 
-``` 
+```cpp
    rtsetparams(44100, 2) 
    load("METAFLUTE")
    

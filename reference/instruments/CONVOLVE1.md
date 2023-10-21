@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -102,7 +102,7 @@ response is longer than about 20 milliseconds.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("CONVOLVE1")
    
@@ -138,7 +138,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    // This is an example of walking slowly through both input and impulse
    // response files, convolving a little bit at a time.    -JG
    rtsetparams(44100, 2)

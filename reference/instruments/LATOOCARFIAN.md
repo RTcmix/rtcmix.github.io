@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time
    p1 = duration
    p2 = amplitude multiplier
@@ -66,7 +66,7 @@ p4, and values of 0.5 to 1.5 for p4 and p5.
 
 ### Sample Score
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("LATOOCARFIAN")
 

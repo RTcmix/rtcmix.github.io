@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time
    p1 = duration
    p2 = overall amplitude multiplier
@@ -95,7 +95,7 @@ After the frequency/wavetable pairs, we specify their connections in
 sets of three numbers. For example, we can indicate connections as
 follows:
 
-``` 
+```cpp
    1, 0, 1,
    2, 0, 0.5,
    2, 1, 5,
@@ -114,7 +114,7 @@ Oscillator 2 with an index of 4.
 Any kinds of connections are possible. Using five oscillators, we could
 specify connections as follows:
 
-``` 
+```cpp
    1, 0, 1,
    2, 1, 3,
    3, 2, 4,
@@ -130,7 +130,7 @@ into an oscillator upstream.
 
 ### Sample Score
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MULTIFM")
 

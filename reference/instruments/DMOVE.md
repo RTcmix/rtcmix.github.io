@@ -53,7 +53,7 @@ intended for this information to be specified in the "DIST-XPOS" and
   
 <span id="DMOVE"></span> **DMOVE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (or endtime if negative) (seconds)
@@ -72,7 +72,7 @@ intended for this information to be specified in the "DIST-XPOS" and
   
 <span id="RVB"></span> **RVB**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (or endtime if negative) (seconds)
@@ -86,7 +86,7 @@ intended for this information to be specified in the "DIST-XPOS" and
   
 <span id="space"></span> **space**  
 
-``` 
+```cpp
    p0 = distance to front wall of room (feet)
    p1 = distance to right-hand wall of room (feet)
    p2 = distance to back wall of room (feet) [< 0.0]
@@ -101,7 +101,7 @@ intended for this information to be specified in the "DIST-XPOS" and
   
 <span id="threshold"></span>**threshold**  
 
-``` 
+```cpp
    p0 = time interval (seconds) for trajectory updates
 
    NOTE: this subcommand is optional for MMOVE to function (the default is
@@ -111,7 +111,7 @@ intended for this information to be specified in the "DIST-XPOS" and
   
 <span id="mikes"></span> **mikes**  
 
-``` 
+```cpp
    p0 = microphone angle (degrees, 0 degrees is straight in front)
    p1 = microphone pattern (0-1; 0 == omnidirectional, 1 == highly directional)
 
@@ -121,7 +121,7 @@ intended for this information to be specified in the "DIST-XPOS" and
   
 <span id="mikes_off"></span> **mikes\_off**  
 
-``` 
+```cpp
    no pfields, this defeats the microphone angle and pattern settings for binaural simulation
 
    NOTE: this subcommand is optional for MPLACE to function
@@ -130,7 +130,7 @@ intended for this information to be specified in the "DIST-XPOS" and
   
 <span id="set_attenuation_params"></span> **set\_attenuation\_params**  
 
-``` 
+```cpp
    p0 = minimum distance (feet)
    p1 = maximum distance (feet)
    p2 = distance attentuation exponent
@@ -141,7 +141,7 @@ intended for this information to be specified in the "DIST-XPOS" and
   
 <span id="matrix"></span> **matrix**  
 
-``` 
+```cpp
    p0 = total matrix gain (relative multiplier of input signal)
    p1-p145 = 12 x 12 matrix amp/feedback coefficients [optional; defaults to internal matrix]
 
@@ -190,7 +190,7 @@ requires stereo output.
 
 basic use:
 
-``` 
+```cpp
    rtsetparams(44100, 2, 256)
    load("DMOVE")
    

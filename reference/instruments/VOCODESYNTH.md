@@ -30,7 +30,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -115,14 +115,14 @@ An example of this second method for center frequency specification:
 
   - Make a table containing the desired center frequencies:
     
-    ``` 
+    ```cpp
        numbands = 5
        cftable - maketable("literal", "nonorm", numbands, 8.00, 8.07, 9.00, 9.07, 10.02)
     ```
     
     or specify the table as direct frequencies:
     
-    ``` 
+    ```cpp
        numbands = 9
        cftable - maketable("literal", "nonorm", numbands, 100, 200, 300, 400, 500, 600, 700, 800, 900)
     ```
@@ -153,7 +153,7 @@ interpreted as \[frequency, amplitude\] pairs.
 
 one example:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("VOCODESYNTH")
 

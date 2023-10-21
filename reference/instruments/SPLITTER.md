@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -65,7 +65,7 @@ be routed through several seperate processing chains simultaneously.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    
    load("WAVETABLE")
@@ -95,7 +95,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    
    load("STRUM2")

@@ -29,7 +29,7 @@ commands). Parameters after the \[bracket\] are optional and default to
   
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = output duration (seconds)
@@ -72,7 +72,7 @@ if you want to ensure that your sound will not be cut off prematurely.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2) // output has to be stereo
    load("DEL1")
 
@@ -86,7 +86,7 @@ very basic:
   
 more advanced:
 
-``` 
+```cpp
    set_option("full_duplex_on")
    rtsetparams(44100, 2, 512)
    load("DEL1")

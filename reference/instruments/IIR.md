@@ -41,7 +41,7 @@ commands). Parameters after the \[bracket\] are optional and default to
   
 <span id="setup"></span> **setup**  
 
-``` 
+```cpp
    The pfields for setup are triples, the first being the center frequency
    of an IIR filter "hump" (in Hz), the second being the bandwidth of the
    "hump" (Hz, or if negative a multiplier of the center frequency), and
@@ -52,7 +52,7 @@ commands). Parameters after the \[bracket\] are optional and default to
   
 <span id="INPUTSIG"></span> **INPUTSIG**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -67,7 +67,7 @@ commands). Parameters after the \[bracket\] are optional and default to
   
 <span id="IINOISE"></span> **IINOISE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = amp (absolute, for 16-bit soundfiles: 0-32768)
@@ -80,7 +80,7 @@ commands). Parameters after the \[bracket\] are optional and default to
   
 <span id="BUZZ"></span> **BUZZ**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = amp (absolute, for 16-bit soundfiles: 0-32768)
@@ -97,7 +97,7 @@ commands). Parameters after the \[bracket\] are optional and default to
   
 <span id="PULSE"></span> **PULSE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = amp (absolute, for 16-bit soundfiles: 0-32768)
@@ -164,7 +164,7 @@ RTcmix instrument [NOISE](NOISE.html), so the name was changed.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("IIR")
 
@@ -182,7 +182,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("IIR")
 
@@ -200,7 +200,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("IIR")
 

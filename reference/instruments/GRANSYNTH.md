@@ -29,7 +29,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = total duration (seconds)
    p2  = amplitude (absolute, for 16-bit soundfiles: 0-32768)
@@ -118,7 +118,7 @@ Parameters that determine the character of individual grains:
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2, 128)
    load("GRANSYNTH")
    
@@ -150,7 +150,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2, 128)
    load("GRANSYNTH")
    

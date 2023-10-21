@@ -20,7 +20,7 @@ Utility instrument used to generate a Max "bang" message.
 
   
 
-``` 
+```cpp
    p0 = time to generate the bang (seconds)
 
    Author Brad Garton, 1/2004
@@ -54,7 +54,7 @@ buffer will only result in one 'bang' at the vector/buffer boundary.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("MAXBANG")      // note:  the "load" is not necessary in rtcmix~/iRTcmix
 

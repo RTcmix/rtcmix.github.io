@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -64,7 +64,7 @@ efficient, though.
 
 The reverb types are:  
 
-``` 
+```cpp
      (1) PRCRev (Perry R. Cook)
            2 allpass units in series followed by 2 comb filters in parallel.
 
@@ -86,7 +86,7 @@ The reverb types are:
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("REV")
    

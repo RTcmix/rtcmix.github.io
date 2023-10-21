@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = overall amplitude (absolute, for 16-bit soundfiles: 0-32768)
@@ -78,7 +78,7 @@ rate higher than the default 1000 times/second. Use the
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MULTIWAVE")
 
@@ -108,7 +108,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MULTIWAVE")
 
@@ -135,7 +135,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MULTIWAVE")
    reset(5000)
@@ -172,7 +172,7 @@ fun stuff\!
   
 more fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2, 128)
    load("MULTIWAVE")
 
@@ -230,7 +230,7 @@ more fun stuff\!
   
 even *more* fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MULTIWAVE")
 

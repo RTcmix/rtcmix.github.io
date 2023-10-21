@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = start time (seconds)
    p1 = duration (seconds)
    p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
@@ -90,7 +90,7 @@ of the index envelope).
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("FMINST")
    
@@ -113,7 +113,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("FMINST")
    

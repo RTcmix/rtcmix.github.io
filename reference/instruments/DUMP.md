@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
   
   
 
-``` 
+```cpp
    p0 = output start time
    p1 = duration
    p2 = amp
@@ -63,7 +63,7 @@ table is printed at each interval.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("DUMP")
 
@@ -75,7 +75,7 @@ very basic:
   
 more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("DUMP")
 

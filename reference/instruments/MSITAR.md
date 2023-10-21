@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
@@ -69,7 +69,7 @@ pfield-table reference in p2 ("AMP").
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("MSITAR")
 
@@ -82,7 +82,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MSITAR")
 

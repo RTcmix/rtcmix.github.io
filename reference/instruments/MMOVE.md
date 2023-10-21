@@ -62,7 +62,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="MMOVE"></span> **MMOVE**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (or endtime if negative) (seconds)
@@ -76,7 +76,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="RVB"></span> **RVB**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (or endtime if negative) (seconds)
@@ -90,7 +90,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="space"></span> **space**  
 
-``` 
+```cpp
    p0 = distance to front wall of room (feet)
    p1 = distance to right-hand wall of room (feet)
    p2 = distance to back wall of room (feet) [< 0.0]
@@ -105,7 +105,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="path"></span> **path**  
 
-``` 
+```cpp
    The pfields for path are triples, the first being the relative time
    during processing to reach this point, and the other two of each triple being
    polar coordinates of the sound source location (distance to sound [feet]
@@ -117,7 +117,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="cpath"></span> **cpath**  
 
-``` 
+```cpp
    The pfields for cpath are triples, the first being the relative time
    during processing to reach this point, and the other two of each triple being
    the x- and y- cartesian coordinates of the sound source location (feet,
@@ -130,7 +130,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="param"></span> **param**  
 
-``` 
+```cpp
    p0 = function table reference for polar coordinate distance to sound source (feet) values
    p1 = function table reference for polar coordinate angle to sound source (degrees) values
 
@@ -148,7 +148,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="cparam"></span> **cparam**  
 
-``` 
+```cpp
    p0 = function table reference for x-coordinate location of sound source (feet)
    p1 = function table reference for y-coordinate location of sound source (feet)
 
@@ -166,7 +166,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="threshold"></span> **threshold**  
 
-``` 
+```cpp
    p0 = time interval (seconds) for trajectory updates (typically < 0.01)
 
    NOTE: this subcommand is optional for MMOVE to function (the default is
@@ -176,7 +176,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="mikes"></span> **mikes**  
 
-``` 
+```cpp
    p0 = microphone angle (degrees, 0 degrees is straight in front)
    p1 = microphone pattern (0-1; 0 == omnidirectional, 1 == highly directional)
 
@@ -186,7 +186,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="mikes_off"></span> **mikes\_off**  
 
-``` 
+```cpp
    no pfields, this defeats the microphone angle and pattern settings for binaural simulation
 
    NOTE: this subcommand is optional for MMOVE to function
@@ -195,7 +195,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="set_attenuation_params"></span> **set\_attenuation\_params**  
 
-``` 
+```cpp
    p0 = minimum distance (feet)
    p1 = maximum distance (feet)
    p2 = distance attentuation exponent
@@ -206,7 +206,7 @@ instrument allows the sound trajectory to be controlled using
   
 <span id="matrix"></span> **matrix**  
 
-``` 
+```cpp
    p0 = total matrix gain (relative multiplier of input signal)
    p1-p145 = 12 x 12 matrix amp/feedback coefficients [optional; defaults to internal matrix]
 
@@ -260,7 +260,7 @@ requires stereo output.
 
 basic use:
 
-``` 
+```cpp
    rtsetparams(44100, 2, 1024)
    load("MMOVE")
 

@@ -52,7 +52,7 @@ different set of performance parameters.
   
 <span id="START"></span> **START**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = pitch (oct.pc)
@@ -71,7 +71,7 @@ different set of performance parameters.
 
 <span id="BEND"></span> **BEND**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = pitch0 (oct.pc)
@@ -90,7 +90,7 @@ different set of performance parameters.
 
 <span id="FRET"></span> **FRET**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = pitch (oct.pc)
@@ -107,7 +107,7 @@ stem should be used:
 
 <span id="START1"></span> **START1**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = pitch (oct.pc)
@@ -131,7 +131,7 @@ stem should be used:
 
 <span id="BEND1"></span> **BEND1**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = pitch0 (oct.pc)
@@ -156,7 +156,7 @@ stem should be used:
 
 <span id="FRET1"></span> **FRET1**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = pitch (oct.pc)
@@ -178,7 +178,7 @@ stem should be used:
 
 <span id="VSTART1"></span> **VSTART1**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = pitch (oct.pc)
@@ -207,7 +207,7 @@ stem should be used:
 
 <span id="VFRET1"></span> **VFRET1**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = pitch (oct.pc)
@@ -381,7 +381,7 @@ All of these instruments can produce mono or stereo output.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("STRUM")
 
@@ -394,7 +394,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("STRUM")
 
@@ -415,7 +415,7 @@ slightly more advanced:
   
 another one:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("STRUM")
 
@@ -440,7 +440,7 @@ another one:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("STRUM")
 

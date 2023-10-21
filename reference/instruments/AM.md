@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -69,7 +69,7 @@ To make a unipolar sine wave, you have to add a DC component to shift
 the sine wave out of the negative area. For example, the following
 creates a sine wave that oscillates between 0 and 1:
 
-``` 
+```cpp
 
       wave = maketable("wave3", 1000, 0,.5,0, 1,.5,0)
 ```
@@ -80,7 +80,7 @@ The output of **AM** can be either mono or stereo.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("AM")
 
@@ -94,7 +94,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("AM")
 
@@ -115,7 +115,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("AM")
 

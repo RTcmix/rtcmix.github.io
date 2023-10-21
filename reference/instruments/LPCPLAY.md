@@ -49,7 +49,7 @@ the LPC synthesis. Several of them necessarily need to precede the
   
 **LPCPLAY**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = amplitude multiplier (relative multiplier of original signal)
@@ -68,7 +68,7 @@ the LPC synthesis. Several of them necessarily need to precede the
   
 **LPCIN**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -86,7 +86,7 @@ the LPC synthesis. Several of them necessarily need to precede the
   
 **dataset**  
 
-``` 
+```cpp
    p0 = dataset name (the file with LPC analysis data)
    p1 = number of filter poles in the original analysis [optional; the default value
       0 will cause the number of filter poles to be read from the analysis file]
@@ -97,7 +97,7 @@ the LPC synthesis. Several of them necessarily need to precede the
   
 **lpcstuff**  
 
-``` 
+```cpp
    p0 = voice/unvoiced threshold (usually <= 0.1 for normal resynthesis)
    p1 = noise amplitude (usually <= 0.1 for normal resynthesis)
    p2 = unvoiced frame rate [optional; the default value 0 will cause voiced and
@@ -116,7 +116,7 @@ the LPC synthesis. Several of them necessarily need to precede the
   
 **set\_thresh**  
 
-``` 
+```cpp
    p0 = voiced (buzz) threshold (usually close to 0.1)
    p1 = unvoiced (noise) threshold (usually close to 0.1 also)
 
@@ -126,7 +126,7 @@ the LPC synthesis. Several of them necessarily need to precede the
   
 **set\_hnfactor**  
 
-``` 
+```cpp
    p0 = harmonic count in buzz (voiced) signal (should be > 0)
 
    NOTE: this subcommand is optional for LPCPLAY to function
@@ -134,7 +134,7 @@ the LPC synthesis. Several of them necessarily need to precede the
 
 **setdevfactor**  
 
-``` 
+```cpp
    p0 = this sort-of works like set_dev,but not sure exactly how
 
    NOTE: this subcommand is optional for LPCPLAY to function
@@ -143,7 +143,7 @@ the LPC synthesis. Several of them necessarily need to precede the
   
 **freset**  
 
-``` 
+```cpp
    p0 = resets how often the frames are reinitialized.  Not sure what effect this has...
 
    NOTE: this subcommand is optional for LPCPLAY to function
@@ -152,7 +152,7 @@ the LPC synthesis. Several of them necessarily need to precede the
   
 **use\_autocorrect**  
 
-``` 
+```cpp
    p0 = 0 or 1, turns this on or off.  It looks unimplemented, though.
 
    NOTE: this subcommand is optional for LPCPLAY to function
@@ -234,7 +234,7 @@ NOTE: **LPCPLAY** is a mono-output instrument.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("LPCPLAY")
 
@@ -251,7 +251,7 @@ very basic:
   
 another basic one:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("LPCPLAY")
 
@@ -268,7 +268,7 @@ another basic one:
   
 an LPCIN example:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("LPCPLAY")
 
@@ -286,7 +286,7 @@ an LPCIN example:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("LPCPLAY")
 
@@ -306,7 +306,7 @@ slightly more advanced:
   
 another slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("LPCPLAY")
 
@@ -326,7 +326,7 @@ another slightly more advanced:
   
 an older score, showing various aspects:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("LPCPLAY")
 

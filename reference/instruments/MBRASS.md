@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
@@ -71,7 +71,7 @@ and the simulated air pressure in the model (p6, "maxpressure" and p8,
 inexact. Here is a rough tuning-table (done by ear\!) for the **MBRASS**
 instrument:
 
-``` 
+```cpp
    note (oct.pc)   slide length (p4)   lip filter (p5)   max pressure (p6)
      7.00               103                140               0.045
      7.01               103                150               0.05
@@ -126,7 +126,7 @@ The 'physics' have to work correctly\!
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MBRASS")
 
@@ -141,7 +141,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MBRASS")
 
@@ -159,7 +159,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MBRASS")
 

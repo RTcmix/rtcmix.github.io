@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = output duration (or endtime if negative) (seconds)
@@ -64,7 +64,7 @@ information.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("TRANS") // note that TRANS3 is loaded in the TRANS library
 
@@ -80,7 +80,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("TRANS")
 

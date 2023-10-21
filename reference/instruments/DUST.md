@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time
    p1 = duration
    p2 = amplitude multiplier
@@ -58,7 +58,7 @@ Output may be mono or stereo.
 
 ### Sample Score
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("DUST")
 

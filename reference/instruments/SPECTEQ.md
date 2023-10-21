@@ -25,7 +25,7 @@ NOTE: This is an older RTcmix instrument, the newer
   
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = input start time (seconds)
    p2  = input duration (seconds)
@@ -84,7 +84,7 @@ are then the amount of boost or cut for each FFT band (in relative dB --
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("SPECTEQ")
    

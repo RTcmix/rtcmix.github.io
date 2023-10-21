@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (or endtime if negative) (seconds)
@@ -79,7 +79,7 @@ parallel role), and thus does not need to be dynamically-loaded. It is
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
 
    rtinput("mystereosound.aiff")
@@ -95,7 +95,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 1) // note rtsetparams() sets *output* channels
 
    rtinput("myquadsound.aiff")
@@ -107,7 +107,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    // granular-like!
    rtsetparams(44100, 2)
    

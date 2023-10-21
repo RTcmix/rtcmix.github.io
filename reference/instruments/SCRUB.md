@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = output duration (or endtime if negative) (seconds)
@@ -80,7 +80,7 @@ The output of **SCRUB** can be either mono or stereo
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("SCRUB")
    
@@ -97,7 +97,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2, 2048)
    load("SCRUB")
 
@@ -114,7 +114,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2, 256)
    load("SCRUB")
 

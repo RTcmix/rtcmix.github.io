@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = output duration (or endtime if negative) (seconds)
@@ -89,7 +89,7 @@ this using the [translen](../scorefile/translen.html) scorefile command.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("TRANS")
 
@@ -105,7 +105,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("TRANS")
    

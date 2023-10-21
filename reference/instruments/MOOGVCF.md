@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -71,7 +71,7 @@ an infinite output -- the result is no sound).
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("WAVETABLE")
    load("MOOGVCF")

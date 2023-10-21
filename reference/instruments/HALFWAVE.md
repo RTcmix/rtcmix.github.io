@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = pitch (Hz or oct.pc)
@@ -80,7 +80,7 @@ will be "squished" to the right.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("HALFWAVE")
 
@@ -96,7 +96,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("HALFWAVE")
 

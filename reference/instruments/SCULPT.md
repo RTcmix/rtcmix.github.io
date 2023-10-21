@@ -20,7 +20,7 @@ Breakpoint oscillator resynthesis.
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration of each segment (seconds)
    p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
@@ -68,7 +68,7 @@ in the table. Each value holds constant for the length of each segment.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("SCULPT")
 

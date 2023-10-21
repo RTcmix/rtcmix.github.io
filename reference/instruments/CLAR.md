@@ -23,7 +23,7 @@ outputamp, d2gain\[, pan\])
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = noise amplitude (0-1)
@@ -68,7 +68,7 @@ control has not been implemented for this instrument.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("CLAR")
 
@@ -82,7 +82,7 @@ very basic:
   
 more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("CLAR")
 

@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = duration (seconds)
    p2  = carrier amplitude (absolute, for 16-bit soundfiles: 0-32768)
@@ -119,7 +119,7 @@ system. This really isn't used much anymore*
   
 Sample scorefile 1:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("WIGGLE")
 
@@ -154,7 +154,7 @@ Sample scorefile 1:
   
 Sample scorefile 2:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("WIGGLE")
 
@@ -205,7 +205,7 @@ Sample scorefile 2:
   
 Sample scorefile 3:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("WIGGLE")
    load("FREEVERB")
@@ -256,7 +256,7 @@ Sample scorefile 3:
   
 Sample scorefile 4:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("WIGGLE")
 

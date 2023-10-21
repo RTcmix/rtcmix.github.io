@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = input start time (seconds)
    p2  = input duration (seconds)
@@ -83,7 +83,7 @@ Input can be mono or stereo; output can be mono or stereo.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("FREEVERB")
    
@@ -110,7 +110,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("FREEVERB")
    

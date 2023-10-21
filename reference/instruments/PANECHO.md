@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -83,7 +83,7 @@ simultaneously. **PANECHO** assumes stereo output.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("PANECHO")
 
@@ -100,7 +100,7 @@ very basic:
   
 another basic score:
 
-``` 
+```cpp
    set_option("full_duplex_on")
    rtsetparams(44100, 2)
    load("PANECHO")

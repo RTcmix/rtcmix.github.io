@@ -31,7 +31,7 @@ characteristics.
   
 <span id="roomset"></span> **roomset**  
 
-``` 
+```cpp
    p0 = x-dimension size (feet)
    p1 = y-dimension size (feet)
    p2 = x-coordinate of virtual source (0.0-1.0) [0.0: left, 1.0: right, 0.5: center]
@@ -47,7 +47,7 @@ characteristics.
   
 <span id="ROOM"></span> **ROOM**  
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -127,7 +127,7 @@ argument, "seed" (p9).
 
 basic use:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("ROOM")
 

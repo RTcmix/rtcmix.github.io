@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
@@ -90,7 +90,7 @@ much more effective using the "squish" parameter.
 
 basic use:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("STRUM2")
 
@@ -101,7 +101,7 @@ basic use:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("STRUM2")
 
@@ -122,7 +122,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("STRUM2")
 

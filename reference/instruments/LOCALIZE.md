@@ -29,7 +29,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output skip time
    p1 = input skip time
    p2 = duration
@@ -127,7 +127,7 @@ LOCALIZE requires a stereo output.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("LOCALIZE")
 

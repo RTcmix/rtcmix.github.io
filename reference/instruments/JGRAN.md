@@ -29,7 +29,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = duration (seconds)
    p2  = amplitude multiplier (relative multiplier of grain intensity (p14, p15)
@@ -104,7 +104,7 @@ output, p17 ("PAN") and p18 ("PANRANDOM") need to be specified.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("JGRAN")
 
@@ -156,7 +156,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("JGRAN")
 
@@ -218,7 +218,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2, 256)
    load("JGRAN")
 

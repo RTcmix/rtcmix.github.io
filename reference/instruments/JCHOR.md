@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = input start time (seconds)
    p2  = output duration (seconds)
@@ -101,7 +101,7 @@ randomly distributes the voices across the stereo field.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("JCHOR")
    
@@ -134,7 +134,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("JCHOR")
    

@@ -29,7 +29,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = input start time (seconds)
    p2  = duration (seconds)
@@ -95,7 +95,7 @@ The output of **FLANGE** can be either mono or stereo.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("FLANGE")
    
@@ -124,7 +124,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("FLANGE")
    
@@ -165,7 +165,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    /* This script imposes a trill of a major 2nd onto the input file. */
    rtsetparams(44100, 2)
    load("FLANGE")

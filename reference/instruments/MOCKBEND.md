@@ -20,7 +20,7 @@ Cubic spline dynamic pitch-shifter.
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = output duration (or endtime if negative) (seconds)
@@ -64,7 +64,7 @@ this table are expressed in linear octaves ([makegen(2,
 
 basic use:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("MOCKBEND")
 

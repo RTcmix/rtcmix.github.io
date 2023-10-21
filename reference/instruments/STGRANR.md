@@ -22,7 +22,7 @@ seed\])
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -77,7 +77,7 @@ output.
 
 very basic:
 
-``` 
+```cpp
    set_option("FULL_DUPLEX_ON")
    rtsetparams(44100, 2)
    load("STGRANR")

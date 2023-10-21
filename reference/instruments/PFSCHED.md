@@ -20,7 +20,7 @@ Dynamically schedule pfield controls.
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = duration (seconds)
    p2 = pfield bus number to use
@@ -65,7 +65,7 @@ it).
     using
     [makeconnection("pfbus")...](../scorefile/makeconnection.html#pfbus):
     
-    ``` 
+    ```cpp
        pfield_var = makeconnection("pfbus", 1, 1.0)
     ```
     
@@ -78,7 +78,7 @@ it).
     long duration, and the pfield variable "pfield\_var" set to control
     the amplitude of the note:
     
-    ``` 
+    ```cpp
        WAVETABLE(0, 7.0, 20000 * pfield_var, 8.00)
     ```
     
@@ -91,7 +91,7 @@ it).
   - Then create an envelope that will fade down and assign it to a
     different pfield variable:
     
-    ``` 
+    ```cpp
        delayed_envelope = maketable("line", 1000, 0,1.0,  1,0.0)
     ```
     
@@ -107,7 +107,7 @@ it).
   - This control envelope -- using the pfield variable it assigned --
     can now be scheduled through the "pfbus" using **PFSCHED**:
     
-    ``` 
+    ```cpp
        PFSCHED(2.5, 2.1, 1, delayed_envelope)
     ```
     
@@ -147,7 +147,7 @@ One feature of the
 command that is very useful in conjunction with **PFSCHED** is the use
 of the "curval" token with the "dynamic" optional specifier:
 
-``` 
+```cpp
    fadenv = maketable("line", "dynamic", 1000, 0,"curval", 1,0.0)
 ```
 
@@ -163,7 +163,7 @@ when the pfield control is scheduled using **PFSCHED**
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("PFSCHED")
    load("WAVETABLE")
@@ -180,7 +180,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 1)
    load("PFSCHED")
    load("WAVETABLE")
@@ -203,7 +203,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("PFSCHED")
    load("WAVETABLE")

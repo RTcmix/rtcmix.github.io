@@ -26,7 +26,7 @@ control) is probably better to use.
   
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = input start time (seconds)
    p2  = input duration (seconds)

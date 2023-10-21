@@ -30,7 +30,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = input start time (seconds, will be constrained to window, p5-6)
    p2  = total duration (seconds)
@@ -109,7 +109,7 @@ table start, and for the window end to be a little before the table end.
 p10 ("TRAVERSERATE") sets the speed for reading through the input sound.
 Here are some sample values:
 
-``` 
+```cpp
    0     no movement
    1     move forward at normal rate
    2.5   move forward at a rate that is 2.5 times normal
@@ -169,7 +169,7 @@ The following parameters determine the character of individual grains.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2, 512)
    load("GRANULATE")
    
@@ -219,7 +219,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2, 512)
    load("GRANULATE")
    

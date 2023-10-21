@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (or endtime if negative) (seconds)
@@ -77,7 +77,7 @@ through the [pfield-enabled](pfield-enabled.html) control system.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("STEREO")
 
@@ -91,7 +91,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("STEREO")
 
@@ -108,7 +108,7 @@ slightly more advanced:
   
 fun stuff\!
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("STEREO")
 

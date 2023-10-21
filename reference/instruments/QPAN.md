@@ -27,7 +27,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = duration (seconds)
@@ -63,7 +63,7 @@ independent audio streams is obviously required.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 4)
    load("WAVETABLE")
    load("QPAN")

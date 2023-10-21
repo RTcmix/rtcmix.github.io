@@ -30,7 +30,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0  = output start time (seconds)
    p1  = input start time (seconds)
    p2  = input duration (seconds)
@@ -124,7 +124,7 @@ Don't you wish you had passed zero here to ignore this feature?
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("SPECTACLE2")
 
@@ -186,7 +186,7 @@ very basic:
   
 slightly more advanced:
 
-``` 
+```cpp
    // This shows how to "draw" randomly into the delay time table.  This
    // is an experimental feature, so don't rely on it yet.  -JGG, 6/22/05
 

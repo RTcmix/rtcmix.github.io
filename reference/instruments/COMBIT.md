@@ -28,7 +28,7 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 
-``` 
+```cpp
    p0 = output start time (seconds)
    p1 = input start time (seconds)
    p2 = input duration (seconds)
@@ -73,7 +73,7 @@ ensure that your sound will not be cut off prematurely.
 
 very basic:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("COMBIT")
 
@@ -89,7 +89,7 @@ very basic:
   
 more advanced:
 
-``` 
+```cpp
    rtsetparams(44100, 2)
    load("COMBIT")
    control_rate(1000)
