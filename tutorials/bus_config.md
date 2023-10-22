@@ -5,9 +5,7 @@ layout: ref
 
 # Using bus\_config
 
-RTcmix version 3.0 adds a major feature: the ability to route signals
-between instruments and to multiple outputs. A new instrument by Dave
-Topper, MIXN, takes full advantage of multiple outputs.
+RTcmix has the ability to route signals between instruments and to multiple outputs.
 
 ## Bus architecture
 
@@ -83,8 +81,9 @@ bus can be an input or an output, you have to say which. Some examples
 > > If the last rtinput call gives the source as "MIC", then the inst
 > > does read just from the first channel.
 
-There are 16 "aux" buses available (defined as MAXBUS in H/bus.h). You
-set the maximum number of "out" buses in the call to rtsetparams.
+There are 64 "aux" buses available for non-embedded builds (defined by
+DEFAULT_MAXBUS in H/bus.h) and 16 for embedded. You set the maximum number
+of "out" buses in the call to rtsetparams.
 
 If you don't call bus\_config before using an instrument, you'll get a
 default configuration roughly equal to:
@@ -135,7 +134,7 @@ delays its output enough to "catch up" with its input.)
 
 ## For instrument designers
 
-Please see "README.inst\_porting" for instructions on making your
+Please see "README.inst\_porting" in the source code for instructions on making your
 instruments compatible with this version of RTcmix.
 
 John Gibson  

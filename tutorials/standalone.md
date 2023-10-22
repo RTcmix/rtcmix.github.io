@@ -23,8 +23,8 @@ Unix-like systems. Suppose that you create a scorefile called
 painstakingly entered and saved in the "greatmusic.score" file, all you
 need to do is to say (from a Terminal or Shell window):
 
-``` 
-       CMIX < greatmusic.sco
+```cpp
+CMIX < greatmusic.sco
 ```
 
 Of course, this makes several basic assumptions -- we are assuming that
@@ -51,20 +51,20 @@ incredibly Great Music you wanted to create using your
 440 Hz. An RTcmix scorefile that would specify this might contain the
 following text:
 
-``` 
-       rtsetparams(44100, 2)
-       load("WAVETABLE")
+```cpp
+rtsetparams(44100, 2)
+load("WAVETABLE")
 
-       waveform = maketable("wave", 1000, "tri")
+waveform = maketable("wave", 1000, "tri")
 
-       WAVETABLE(0, 3.5, 20000, 440.0, 0.5, waveform)
+WAVETABLE(0, 3.5, 20000, 440.0, 0.5, waveform)
 ```
 
 Easy as pie, eh? We'll take a closer look at each line in the above.
 First of all, there is
 
-``` 
-       rtsetparams(44100, 2)
+```cpp
+rtsetparams(44100, 2)
 ```
 
 You will need an [rtsetparams](../reference/scorefile/rtsetparams.html)
@@ -89,8 +89,8 @@ commands require literal or string arguments, specified in
 
 The next line
 
-``` 
-       load("WAVETABLE")
+```cpp
+load("WAVETABLE")
 ```
 
 tells RTcmix that we will be using the
@@ -109,8 +109,8 @@ parameters, etc. These are represented in RTcmix by special variables
 called *pfield-handles* or *table-handles* (both of these terms are used
 somewhat somewhat interchangeably). The command in our scorefile:
 
-``` 
-       waveform = maketable("wave", 1000, "tri")
+```cpp
+waveform = maketable("wave", 1000, "tri")
 ```
 
 creates one of these 'table-handles'. The
@@ -133,8 +133,8 @@ We could use *maketable* to create other waveforms for the WAVETABLE
 instrument to use. For example, the following assignment to the
 *waveform* variable:
 
-``` 
-       waveform = maketable("wave", 1000, 1.0, 0.4, 0.2)
+```cpp
+waveform = maketable("wave", 1000, 1.0, 0.4, 0.2)
 ```
 
 takes advantage of the *"wave"* specifier's ability to design a wave
@@ -153,8 +153,8 @@ resulting waveform looks like this:
 Finally, we get to the WAVETABLE command itself. After setting up the
 two function-tables, the parameters for WAVETABLE are very simple.
 
-``` 
-       WAVETABLE(0, 3.5, 20000, 440.0, 0.5, waveform)
+```cpp
+WAVETABLE(0, 3.5, 20000, 440.0, 0.5, waveform)
 ```
 
 Consulting the [WAVETABLE](../reference/instruments/WAVETABLE.html)
@@ -170,8 +170,8 @@ value of 0.2 will place more of the signal in the left, etc. This
 parameter is described as an optional parameter. We could have left it
 out of our WAVETABLE command:
 
-``` 
-       WAVETABLE(0, 3.5, 20000, 440.0)
+```cpp
+WAVETABLE(0, 3.5, 20000, 440.0)
 ```
 
 but this would have two consequences for our "greatmusic.sco" sound. The
@@ -193,15 +193,15 @@ specified precisely what we want -- a note that starts at the beginning
 of the CMIX command execution, running for 3.5 seconds, with an
 amplitude of 20000 and a frequency of 440.0 Hz. Typing the command
 
-``` 
-       CMIX < greatmusic.sco
+```cpp
+CMIX < greatmusic.sco
 ```
 
 will give you exactly that, using as a timbre the waveform we specified
 in the
 
-``` 
-       waveform = maketable("wave", 1000, "tri")
+```cpp
+waveform = maketable("wave", 1000, "tri")
 ```
 
 scorefile command.  
@@ -264,14 +264,14 @@ both Hz and oct.pc by arbitrarily choosing that a value of "15.00" is
 probably at the lowest end for a Hz-specification and at the highest end
 for an oct.pc specification. WAVETABLE listings of
 
-``` 
-       WAVETABLE(0, 3.5, 20000, 8.09, 0.5, waveform)
+```cpp
+WAVETABLE(0, 3.5, 20000, 8.09, 0.5, waveform)
 ```
 
 and
 
-``` 
-       WAVETABLE(0, 3.5, 20000, 440.0, 0.5, waveform)
+```cpp
+WAVETABLE(0, 3.5, 20000, 440.0, 0.5, waveform)
 ```
 
 will produce identical results.
@@ -290,21 +290,21 @@ time, p1 is usually the input start time, and p2 is the duration.
 This set of RTcmix scorefile commands will amplitude-modulate an input
 soundfile using the [AM](../reference/instruments/AM.html) instrument:
 
-``` 
-       rtsetparams(44100, 2)
-       load("AM")
+```cpp
+rtsetparams(44100, 2)
+load("AM")
 
-       rtinput("/snd/somesoundfile.aiff")
-       rtoutput("/snd/amsound.aiff")
+rtinput("/snd/somesoundfile.aiff")
+rtoutput("/snd/amsound.aiff")
 
-       ampenv = maketable("line", 1000, 0,0, 1,1, 9,1, 10,0)
-       amwave = maketable("wave", 1000, "sine")
+ampenv = maketable("line", 1000, 0,0, 1,1, 9,1, 10,0)
+amwave = maketable("wave", 1000, "sine")
 
-       AM(0, 0.5, 4.34, ampenv, 478.98, 0, 0.2, amwave)
-       AM(5.43, 0.5, 4.34, ampenv, 487.98, 1., 0.8, amwave)
+AM(0, 0.5, 4.34, ampenv, 478.98, 0, 0.2, amwave)
+AM(5.43, 0.5, 4.34, ampenv, 487.98, 1., 0.8, amwave)
 
-       amwave = maketable("wave", 1000, 1, 0.4, 0.7, 1.4, 0, 0, 0.33334)
-       AM(2, 0, 21, 0.2*ampenv, 6.05, 0, 0.5, amwave)
+amwave = maketable("wave", 1000, 1, 0.4, 0.7, 1.4, 0, 0, 0.33334)
+AM(2, 0, 21, 0.2*ampenv, 6.05, 0, 0.5, amwave)
 ```
 
 Most of this scorefile is similar to the simple WAVETABLE scorefile
@@ -333,8 +333,8 @@ and not overwrite the file. This behavior can also be changed using the
 
 The use of the amplitude envelope specified by
 
-``` 
-       ampenv = maketable("line", 1000, 0,0, 1,1, 9,1, 10,0)
+```cpp
+ampenv = maketable("line", 1000, 0,0, 1,1, 9,1, 10,0)
 ```
 
 by the AM commands needs a little explanation. The duration for the AM
@@ -356,8 +356,8 @@ command.
 
 Note also the final use of the *ampenv* envelope:
 
-``` 
-       AM(2, 0, 21, 0.2*ampenv, 6.05, 0, 0.5, amwave)
+```cpp
+AM(2, 0, 21, 0.2*ampenv, 6.05, 0, 0.5, amwave)
 ```
 
 *table-handles* and *pfield-handles* can generally be treated
@@ -370,8 +370,8 @@ multiplier for the input sound. Suppose that we didn't want to process
 this sound at full amplitude (i.e. multiply it by 1.0), but instead
 wanted to lower the amplitude to 20% of the input level. The item
 
-``` 
-       AM(..., 0.2*ampenv, ...)
+```cpp
+AM(..., 0.2*ampenv, ...)
 ```
 
 will do this -- all of the values of the *maketable* envelope
@@ -386,15 +386,15 @@ the amplitude in a *maketable* control signal (check the optional
 The waveform used by the AM instrument is referred to by the
 table-handle variable *amwave* -- a sine wave initially:
 
-``` 
-       amwave = maketable("wave", 1000, "sine")
+```cpp
+amwave = maketable("wave", 1000, "sine")
 ```
 
 This variable is then reassigned to a more harmonically-complex waveform
 towards the end of the scorefile:
 
-``` 
-       amwave = maketable("wave", 1000, 1, 0.4, 0.7, 1.4, 0, 0, 0.33334)
+```cpp
+amwave = maketable("wave", 1000, 1, 0.4, 0.7, 1.4, 0, 0, 0.33334)
 ```
 
 This is perfectly fine. You may reassign variables at any time in an
@@ -406,16 +406,16 @@ encountered (parsed) in the scorefile* is the value that will be used in
 a note command, regardless of when the note will actually occur in time.
 In our AM scorefile, the first two AM commands listed:
 
-``` 
-       AM(0, 0.5, 4.34, 0.7, 478.98, 0, 0.2, amwave)
-       AM(5.43, 0.5, 4.34, 0.7, 487.98, 1. 0.8, amwave)
+```cpp
+AM(0, 0.5, 4.34, 0.7, 478.98, 0, 0.2, amwave)
+AM(5.43, 0.5, 4.34, 0.7, 487.98, 1. 0.8, amwave)
 ```
 
 will use the simple sine wave as a modulation waveform, but the third
 command:
 
-``` 
-       AM(2, 0, 21, 0.2*ampenv, 6.05, 0, 0.5, amwave)
+```cpp
+AM(2, 0, 21, 0.2*ampenv, 6.05, 0, 0.5, amwave)
 ```
 
 which will be the second sonic event entrance, will draw upon the
@@ -435,34 +435,34 @@ more detailed information.
 Going back to our the first simple WAVETABLE scorefile above
 ("greatmusic.sco"), running the
 
-``` 
-       CMIX < greatmusic.sco
+```cpp
+CMIX < greatmusic.sco
 ```
 
 command will result in something like the following output on the
 Terminal or Shell window:
 
-``` 
-       --------> RTcmix 4.0.0 (CMIX) <--------
-       ============================
-       rtsetparams:  44100 2 
-       Audio set:  44100 sampling rate, 2 channels
-       ============================
-       load:  "WAVETABLE" 
-       Loaded RT functions from shared library:
-               '/usr/local/src/RTcmix/shlib/libWAVETABLE.so'.
-       ============================
-       maketable:  "wave" 1000 "tri" 
-       ===============
-       WAVETABLE:  0 3.5 20000 440 0.5 PF:[-1,...,-0.996] 
-       
-       *** WARNING:  No bus_config defined, setting default (in/out).
-       
-       closing ...
-       
-       Peak amplitudes of output:
-         channel 0: 10000.000000 (-10.31 dBFS) at frame 8192 (0.18576 seconds)
-         channel 1: 10000.000000 (-10.31 dBFS) at frame 8192 (0.18576 seconds)
+```cpp
+--------> RTcmix 4.0.0 (CMIX) <--------
+============================
+rtsetparams:  44100 2 
+Audio set:  44100 sampling rate, 2 channels
+============================
+load:  "WAVETABLE" 
+Loaded RT functions from shared library:
+       '/usr/local/src/RTcmix/shlib/libWAVETABLE.so'.
+============================
+maketable:  "wave" 1000 "tri" 
+===============
+WAVETABLE:  0 3.5 20000 440 0.5 PF:[-1,...,-0.996] 
+   
+*** WARNING:  No bus_config defined, setting default (in/out).
+   
+closing ...
+   
+Peak amplitudes of output:
+     channel 0: 10000.000000 (-10.31 dBFS) at frame 8192 (0.18576 seconds)
+     channel 1: 10000.000000 (-10.31 dBFS) at frame 8192 (0.18576 seconds)
 ```
 
 This output should be fairly self-explanatory. The main thing to realize
@@ -487,22 +487,22 @@ instrument. The hard way to do this would be to type in all 36 WAVETABLE
 note commands "by hand". The easy way would be to use the following
 scorefile:
 
-``` 
-       rtsetparams(44100, 2)
-       load("WAVETABLE")
-       reset(44100)
+```cpp
+rtsetparams(44100, 2)
+load("WAVETABLE")
+reset(44100)
 
-       env = maketable("line", 1000, 0,0, 1,1, 2,1, 3,0)
-       wave = maketable("wave", 1000, 1.0, 0.3, 0.2, 0.1, 0.15)
+env = maketable("line", 1000, 0,0, 1,1, 2,1, 3,0)
+wave = maketable("wave", 1000, 1.0, 0.3, 0.2, 0.1, 0.15)
 
-       start = 0.0
-       pitch = 7.00
-       for (i = 0; i < 36; i = i+1)
-       {
-              WAVETABLE(start, 0.5, 10000*env, pitch, 0.5, wave)
-              start = start+0.3
-              pitch = pitch+0.01
-       }
+start = 0.0
+pitch = 7.00
+for (i = 0; i < 36; i = i+1)
+{
+      WAVETABLE(start, 0.5, 10000*env, pitch, 0.5, wave)
+      start = start+0.3
+      pitch = pitch+0.01
+}
 ```
 
 The basic functioning of this scorefile should be pretty easy to
@@ -511,8 +511,8 @@ understand, although a few particulars are new. The
 often RTcmix will update control functions (like amplitude envelopes)
 within instruments designed to take advantage of this capability. Saying
 
-``` 
-       reset(44100)
+```cpp
+reset(44100)
 ```
 
 will guarantee smooth amplitude transitions in our notes. Updating will
@@ -554,21 +554,21 @@ them like nested functions. By making use of the
 generate unique timbres (waveforms) for every note in our chromatic
 scale scorefile:
 
-``` 
-       rtsetparams(44100, 2)
-       load("WAVETABLE")
+```cpp
+rtsetparams(44100, 2)
+load("WAVETABLE")
 
-       env = maketable("line", 1000, 0,0, 1,1, 2,1, 3,0)
+env = maketable("line", 1000, 0,0, 1,1, 2,1, 3,0)
 
-       start = 0.0
-       pitch = 7.00
-       for (i = 0; i < 36; i = i+1)
-       {
-        wave = maketable("wave", 1000, random(), random(), random(), random(), random())
-         WAVETABLE(start, 0.5, 10000*env, pitch, 0.5, wave)
-         start = start+0.3
-         pitch = pitch+0.01
-       }
+start = 0.0
+pitch = 7.00
+for (i = 0; i < 36; i = i+1)
+{
+wave = maketable("wave", 1000, random(), random(), random(), random(), random())
+ WAVETABLE(start, 0.5, 10000*env, pitch, 0.5, wave)
+ start = start+0.3
+ pitch = pitch+0.01
+}
 ```
 
 Saving the above information in a scorefile and executing it with the
@@ -589,21 +589,21 @@ algorthmic structure can yield relatively complex output.
 
 Consider the following scorefile:
 
-``` 
-       rtsetparams(44100, 2)
-       load("STRUM")
+```cpp
+rtsetparams(44100, 2)
+load("STRUM")
 
-       pitches = { 7.07, 7.09, 7.10, 8.00, 8.02, 8.03, 8.05, 8.07, 8.09 }
-       plength = len(pitches)
+pitches = { 7.07, 7.09, 7.10, 8.00, 8.02, 8.03, 8.05, 8.07, 8.09 }
+plength = len(pitches)
 
-       st = 0
-       for (i = 0; i < 1000; i = i+1)
-       {
-              pchindex = trunc(irand(0, plength))
-              pitch = pitches[pchindex]
-              START(st, 1.0, pitch, 1.0, 0.1, 10000, 1, random())
-              st = st + irand(0.01, 0.3)
-       }
+st = 0
+for (i = 0; i < 1000; i = i+1)
+{
+      pchindex = trunc(irand(0, plength))
+      pitch = pitches[pchindex]
+      START(st, 1.0, pitch, 1.0, 0.1, 10000, 1, random())
+      st = st + irand(0.01, 0.3)
+}
 ```
 
 In this scorefile, we are storing pitch values (in oct.pc form) in a
@@ -618,9 +618,9 @@ pitch for each note by randomly choosing one of the elements in the
 *pitches* array. We accomplish this with these two lines in the *for*
 loop:
 
-``` 
-              pchindex = trunc(irand(0, plength))
-              pitch = pitches[pchindex]
+```cpp
+pchindex = trunc(irand(0, plength))
+pitch = pitches[pchindex]
 ```
 
 The first line uses the RTcmix scorefile command
@@ -643,8 +643,8 @@ each of the 1000 notes we generate, using the optional p-field 7 in the
 
 And finally, we are randomizing the spacing of the notes with the line:
 
-``` 
-              st = st + irandom(0.01, 0.3)
+```cpp
+st = st + irandom(0.01, 0.3)
 ```
 
 This will cause each note to follow the preceding note with a delay
@@ -679,21 +679,21 @@ already:
     output of one RTcmix instrument directly into the input of another.
     For example, the scorefile:
     
-    ``` 
-           rtsetparams(44100, 2)
-           load("WAVETABLE")
-           load("AM")
+    ```cpp
+   rtsetparams(44100, 2)
+   load("WAVETABLE")
+   load("AM")
     
-           bus_config("WAVETABLE", "aux 0 out")
-           bus_config("AM", "aux 0 in", "out 0-1")
+   bus_config("WAVETABLE", "aux 0 out")
+   bus_config("AM", "aux 0 in", "out 0-1")
     
-           amp = maketable("line", 1000, 0,1, 3.5,1)
-           wave = maketable("wave", 1000, 1.0, 0.4, 0.2)
-           WAVETABLE(0, 3.5, 20000*amp, 440.0, 0.0, wave)
+   amp = maketable("line", 1000, 0,1, 3.5,1)
+   wave = maketable("wave", 1000, 1.0, 0.4, 0.2)
+   WAVETABLE(0, 3.5, 20000*amp, 440.0, 0.0, wave)
     
-           amamp = maketable("line", 1000, 0,0, 1,1, 9,1, 10,0)
-           amwave = maketable("wave", 1000, "sine")
-           AM(0, 0, 3.5, 0.7*amamp, 478.98, 0, 0.2, amwave)
+   amamp = maketable("line", 1000, 0,0, 1,1, 9,1, 10,0)
+   amwave = maketable("wave", 1000, "sine")
+   AM(0, 0, 3.5, 0.7*amamp, 478.98, 0, 0.2, amwave)
     ```
     
     will generate a 3.5-second long sound via WAVETABLE, and then

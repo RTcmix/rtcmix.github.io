@@ -22,8 +22,7 @@ object](../interface/RTcmix-embed.html).
 
 ### General
 
-  - [Minc](Minc.html) &mdash; overview of the default Minc scorefile parsing
-    language
+  - [Minc](Minc.html) &mdash; overview of the default Minc scorefile parsing language
   - [rtsetparams](rtsetparams.html) &mdash; set basic audio parameters
     (sampling rate, number of channels, etc.)
   - [len](len.html) &mdash; return the length of the argument

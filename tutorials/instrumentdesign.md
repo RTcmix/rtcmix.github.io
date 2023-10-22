@@ -98,20 +98,19 @@ SIMPLEOSC instrument:
 1\. Rename the files "TEMPLATE.cpp" and "TEMPLATE.h" to "SIMPLEOSC.cpp"
 and "SIMPLEOSC.h"  
 2\. Edit the file "SIMPLEOSC.cpp" and change <u>every</u> occurence of
-the word *TEMPLATE* to *SIMPLEOSC*.
-
+the word *TEMPLATE* to *SIMPLEOSC*.  
 3\. Edit the file "SIMPLEOSC.h" and change <u>every</u> occurence of the
 word *TEMPLATE* to *SIMPLEOSC*.  
 4\. Edit the file "Makefile" and change the line:
 
-``` 
-       NAME = TEMPLATE
+```cpp
+NAME = TEMPLATE
 ```
 
 to
 
-``` 
-       NAME = SIMPLEOSC
+```cpp
+NAME = SIMPLEOSC
 ```
 
 You are now set to design and build SIMPLEOSC.
@@ -125,18 +124,18 @@ floating-point numbers (*p\[\]*) and the second is an integer variable
 (*n\_args*). The values in these variables is determined by the
 scorefile. If RTcmix parses the following line in a scorefile:
 
-``` 
-       SIMPLEOSC(0, 3.5, 20000, 478.0)
+```cpp
+SIMPLEOSC(0, 3.5, 20000, 478.0)
 ```
 
 then the *SIMPLEOSC::init()* function will be called with *n\_args* set
 to 4 and the *p\[\]* array set to these values:
 
-``` 
-       p[0] = 0.0;
-       p[1] = 3.5;
-       p[2] = 20000.0;
-       p[3] = 478.0;
+```cpp
+p[0] = 0.0;
+p[1] = 3.5;
+p[2] = 20000.0;
+p[3] = 478.0;
 ```
 
 This is how data passes into instruments for particular notes from an
@@ -168,14 +167,14 @@ the *Instrument* class variable *nsamps*. *p\[0\]* is our start time and
 *p\[1\]* is our duration, so the first addition we will make to the
 *SIMPLEOSC::init()* function will be:
 
-``` 
-       int SIMPLEOSC::init(float p[], int n_args)
-       {
-              // p0 = start, p1 = duration
+```cpp
+int SIMPLEOSC::init(float p[], int n_args)
+{
+    // p0 = start, p1 = duration
 
-              nsamps = rtsetoutput(p[0], p[1], this);
+    nsamps = rtsetoutput(p[0], p[1], this);
 
-       ...
+    ...
 ```
 
 This is such a common operation in RTcmix instrument design that we have
@@ -188,16 +187,16 @@ We will call the variable *amp* and the addition to the
 *SIMPLEOSC::init()* function to transfer the value from *p\[2\]* to the
 variable is trivial:
 
-``` 
-       int SIMPLEOSC::init(float p[], int n_args)
-       {
-              // p0 = start, p1 = duration, p2 = amplitude
+```cpp
+int SIMPLEOSC::init(float p[], int n_args)
+{
+      // p0 = start, p1 = duration, p2 = amplitude
 
-              nsamps = rtsetoutput(p[0], p[1], this);
+      nsamps = rtsetoutput(p[0], p[1], this);
 
-              amp = p[2];
+      amp = p[2];
 
-       ...
+...
 ```
 
 *amp*, however, is not an *Instrument* class variable, so we need to
@@ -206,14 +205,14 @@ declare it. Since *amp* will be used in both the *SIMPLEOSC::init()* and
 these SIMPLEOSC functions have access to it. This is done by putting the
 declaration for *amp* in the "SIMPLEOSC.h" header file:
 
-``` 
-       class SIMPLEOSC : public Instrument {
-              float amp;
+```cpp
+class SIMPLEOSC : public Instrument {
+      float amp;
 
-       public:
-              SIMPLEOSC();
+public:
+      SIMPLEOSC();
 
-       ...
+...
 ```
 
 Notice that *amp* is declared as type "float". Sample values in RTcmix
@@ -231,7 +230,7 @@ now provides a handy object, [Ooscili](../reference/design/Ooscil.html)
 that makes our job much easier. All we have to do is instantiate the
 object with the desired frequency and function-slot table \#:
 
-``` 
+```cpp
        int SIMPLEOSC::init(float p[], int n_args)
        {
               // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
@@ -251,34 +250,34 @@ we have to declare *theOscil*, this is also done in "SIMPLEOSC.h"
 because it will be used in both *SIMPLEOSC::init()* and
 *SIMPLEOSC::run()*:
 
-``` 
-       class SIMPLEOSC : public Instrument {
-              float amp;
-              Ooscili *theOscil;
+```cpp
+class SIMPLEOSC : public Instrument {
+      float amp;
+      Ooscili *theOscil;
 
-       public:
-              SIMPLEOSC();
+public:
+      SIMPLEOSC();
 
-       ...
+...
 ```
 
 All we have to do now is to return how many sample frames we need to
 compute for the note, and our definition of the *SIMPLEOSC::init()* is
 complete:
 
-``` 
-       int SIMPLEOSC::init(float p[], int n_args)
-       {
-              // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
+```cpp
+int SIMPLEOSC::init(float p[], int n_args)
+{
+      // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
 
-              nsamps = rtsetoutput(p[0], p[1], this);
+      nsamps = rtsetoutput(p[0], p[1], this);
 
-              amp = p[2];
+      amp = p[2];
 
-              theOscil = new Ooscili(p[3], 2);
+      theOscil = new Ooscili(p[3], 2);
 
-              return(nsamps);
-       }
+      return(nsamps);
+}
 ```
 
 ## The SIMPLEOSC::run() Member Function
@@ -291,10 +290,10 @@ first is that we will need to create a loop that will generate one
 sample value every time it gets iterated. This appears as the skeleton
 for a *for* loop already in the *SIMPLEOSC::run()* function:
 
-``` 
-              for (i = 0; i < framesToRun(); i++) {
-              ...
-              }
+```cpp
+      for (i = 0; i < framesToRun(); i++) {
+      ...
+      }
 ```
 
 The variable *i* has already been declared (locally, it is only used in
@@ -309,20 +308,20 @@ the *for* loop is the statment *Instrument::run()*. This will cause
 RTcmix to "do" that "stuff". Our *SIMPLEOSC::run()* function now looks
 like this:
 
-``` 
-       int SIMPLEOSC::run()
-       {
-              int i;
+```cpp
+int SIMPLEOSC::run()
+{
+      int i;
 
-              Instrument::run();
+      Instrument::run();
 
-              for (i = 0; i < framesToRun(); i++) {
+      for (i = 0; i < framesToRun(); i++) {
 
-              ...
-                     increment();
-              }
+      ...
+             increment();
+      }
 
-       ...
+...
 ```
 
 All we need to do now is to get our *Ooscili* object (*theOscil* in our
@@ -341,29 +340,29 @@ values between -1.0 and 1.0, so we want to scale them (multiply them) by
 *amp* in order to get our desired amplitude. Putting this all together,
 we have the following:
 
-``` 
-       int SIMPLEOSC::run()
-       {
-              int i;
-              float out[2];
+```cpp
+int SIMPLEOSC::run()
+{
+      int i;
+      float out[2];
 
-              Instrument::run();
+      Instrument::run();
 
-              for (i = 0; i < framesToRun(); i++) {
-                     out[0] = theOscil->next() * amp;
-                     out[1] = out[0];
+      for (i = 0; i < framesToRun(); i++) {
+             out[0] = theOscil->next() * amp;
+             out[1] = out[0];
 
-                     increment();
-              }
+             increment();
+      }
 
-       ...
+...
 ```
 
 Why did we say "out\[1\] = out\[0\]"? Why didn't we do:
 
-``` 
-                     out[0] = theOscil->next() * amp;
-                     out[1] = theOscil->next() * amp;
+```cpp
+     out[0] = theOscil->next() * amp;
+     out[1] = theOscil->next() * amp;
 ```
 
 The problem with the above is that <u>every</u> time the *next()*
@@ -380,8 +379,8 @@ that gets sent to the digital-to-analog convertors in the computer. We
 do this by using the [rtaddout](../reference/design/rtaddout.html)
 function:
 
-``` 
-                     rtaddout(out);
+```cpp
+     rtaddout(out);
 ```
 
 Guess what? We're done\! We've now designed a
@@ -389,52 +388,52 @@ fully-fledged-and-functional RTcmix instrument. Adding a return value to
 the *SIMPLEOSC::run()* function, our whole listing of
 *SIMPLEOSC::init()* and *SIMPLEOSC::run()* looks like this:
 
-``` 
-       int SIMPLEOSC::init(float p[], int n_args)
-       {
-              // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
+```cpp
+int SIMPLEOSC::init(float p[], int n_args)
+{
+      // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
 
-              nsamps = rtsetoutput(p[0], p[1], this);
+      nsamps = rtsetoutput(p[0], p[1], this);
 
-              amp = p[2];
+      amp = p[2];
 
-              theOscil = new Ooscili(p[3], 2);
+      theOscil = new Ooscili(p[3], 2);
 
-              return(nsamps);
-       }
+      return(nsamps);
+}
 
 
-       int SIMPLEOSC::run()
-       {
-              int i;
-              float out[2];
+int SIMPLEOSC::run()
+{
+      int i;
+      float out[2];
 
-              Instrument::run();
+      Instrument::run();
 
-              for (i = 0; i < framesToRun(); i++) {
-                     out[0] = theOscil->next() * amp;
-                     out[1] = out[0];
+      for (i = 0; i < framesToRun(); i++) {
+             out[0] = theOscil->next() * amp;
+             out[1] = out[0];
 
-                     rtaddout(out);
+             rtaddout(out);
 
-                     increment();
-              }
+             increment();
+      }
 
-              return i;
-       }
+      return i;
+}
 ```
 
 The corresponding declarations in the "SIMPLEOSC.h" file are:
 
-``` 
-       class SIMPLEOSC : public Instrument {
-              float amp;
-              Ooscili *theOscil;
+```cpp
+class SIMPLEOSC : public Instrument {
+      float amp;
+      Ooscili *theOscil;
 
-       public:
-              SIMPLEOSC();
+public:
+      SIMPLEOSC();
 
-       ...
+...
 ```
 
 All of the other text in the "SIMPLEOSC.C" and "SIMPLEOSC.h" files
@@ -447,16 +446,16 @@ properly build the instrument.
 We've already modified the Makefile to compile *SIMPLEOSC*. All you
 should have to do at this point is say:
 
-``` 
-       make
+```cpp
+make
 ```
 
 and the Makefile should build the dynamically-loaded instrument library
 "libSIMPLEOSC.so". Be sure that the file "package.conf" is set to list
 your installation of RTcmix. The default contents of this file:
 
-``` 
-       include /usr/local/src/RTcmix/makefile.conf
+```cpp
+include /usr/local/src/RTcmix/makefile.conf
 ```
 
 will work if in fact you have installed RTcmix in
@@ -467,12 +466,12 @@ number of p-fields and constraints we have placed on the parameters in
 the design of our instrument, this scorefile is very simple, indeed.
 We'll create a text file, "S1.sco", with the following contents:
 
-``` 
-       rtsetparams(44100, 2)
-       load("./libSIMPLEOSC.so")
+```cpp
+rtsetparams(44100, 2)
+load("./libSIMPLEOSC.so")
 
-       makegen(2, 10, 1000, 1.0, 0.3, 0.1)
-       SIMPLEOSC(0, 3.5, 20000, 387.14)
+makegen(2, 10, 1000, 1.0, 0.3, 0.1)
+SIMPLEOSC(0, 3.5, 20000, 387.14)
 ```
 
 Notice that the *load* scorefile command is instructed to load
@@ -482,8 +481,8 @@ shared library ("/usr/local/src/RTcmix/shlib").
 
 Running the CMIX command with this score:
 
-``` 
-    CMIX < S1.sco
+```cpp
+CMIX < S1.sco
 ```
 
 should yield a Glorious 387.14 Hz sound with an amplitude of 20000 and a
@@ -497,8 +496,8 @@ up and down the sample amplitude as we generate each sample. Here is the
 code in the *SIMPLEOSC::run()* member function that does in fact produce
 the samples:
 
-``` 
-                     out[0] = theOscil->next() * amp;
+```cpp
+	out[0] = theOscil->next() * amp;
 ```
 
 What we need to do is obvious -- we have to find a way of dynamically
@@ -535,34 +534,34 @@ frequency are reciprocals).
 So in the "SIMPLEOSC.h" header file we declare another *Ooscili*
 variable:
 
-``` 
-       class SIMPLEOSC : public Instrument {
-              float amp;
-              Ooscili *theOscil;
-              Ooscili *theEnv;
+```cpp
+class SIMPLEOSC : public Instrument {
+      float amp;
+      Ooscili *theOscil;
+      Ooscili *theEnv;
 
-       public:
-              SIMPLEOSC();
+public:
+      SIMPLEOSC();
 
-       ...
+...
 ```
 
 and we initialize it in the *SIMPLEOSC::init()* member function:
 
-``` 
-       int SIMPLEOSC::init(float p[], int n_args)
-       {
-              // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
+```cpp
+int SIMPLEOSC::init(float p[], int n_args)
+{
+      // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
 
-              nsamps = rtsetoutput(p[0], p[1], this);
+      nsamps = rtsetoutput(p[0], p[1], this);
 
-              amp = p[2];
+      amp = p[2];
 
-              theOscil = new Ooscili(p[3], 2);
-              theEnv = new Ooscili(1.0/p[1], 1);
+      theOscil = new Ooscili(p[3], 2);
+      theEnv = new Ooscili(1.0/p[1], 1);
 
-              return(nsamps);
-       }
+      return(nsamps);
+}
 ```
 
 Notice that we are using function-table slot \#1 for our amplitude
@@ -574,60 +573,60 @@ this).
 
 Using *theEnv* to shape our amplitude evolution is trivial:
 
-``` 
-                     out[0] = theOscil->next() * amp * theEnv->next();
+```cpp
+	out[0] = theOscil->next() * amp * theEnv->next();
 ```
 
 So our modified SIMPLEOSC now looks like this:
 
-``` 
-       int SIMPLEOSC::init(float p[], int n_args)
-       {
-              // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
+```cpp
+int SIMPLEOSC::init(float p[], int n_args)
+{
+      // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
 
-              nsamps = rtsetoutput(p[0], p[1], this);
+      nsamps = rtsetoutput(p[0], p[1], this);
 
-              amp = p[2];
+      amp = p[2];
 
-              theOscil = new Ooscili(p[3], 2);
-              theEnv = new Ooscili(1.0/p[1], 1);
+      theOscil = new Ooscili(p[3], 2);
+      theEnv = new Ooscili(1.0/p[1], 1);
 
-              return(nsamps);
-       }
+      return(nsamps);
+}
 
 
-       int SIMPLEOSC::run()
-       {
-              int i;
-              float out[2];
+int SIMPLEOSC::run()
+{
+      int i;
+      float out[2];
 
-              Instrument::run();
+      Instrument::run();
 
-              for (i = 0; i < framesToRun(); i++) {
-                     out[0] = theOscil->next() * amp * theEnv->next();
-                     out[1] = out[0];
+      for (i = 0; i < framesToRun(); i++) {
+             out[0] = theOscil->next() * amp * theEnv->next();
+             out[1] = out[0];
 
-                     rtaddout(out);
+             rtaddout(out);
 
-                     increment();
-              }
+             increment();
+      }
 
-              return i;
-       }
+      return i;
+}
 ```
 
 The declarations in the "SIMPLEOSC.h" file are:
 
-``` 
-       class SIMPLEOSC : public Instrument {
-              float amp;
-              Ooscili *theOscil;
-              Ooscili *theEnv;
+```cpp
+class SIMPLEOSC : public Instrument {
+      float amp;
+      Ooscili *theOscil;
+      Ooscili *theEnv;
 
-       public:
-              SIMPLEOSC();
+public:
+      SIMPLEOSC();
 
-       ...
+...
 ```
 
 Compiling this code will give you a versatile and powerful SIMPLEOSC,
@@ -642,23 +641,23 @@ with the [RTcmix scorefile](../reference/scorefile/index.html)
 capabilities, SIMPLEOSC can build interesting granular-synthesis
 textures. Try the following scorefile using SIMPLEOSC just for fun:
 
-``` 
-       rtsetparams(44100, 2)
-       load("./libSIMPLEOSC.so")
+```cpp
+rtsetparams(44100, 2)
+load("./libSIMPLEOSC.so")
 
-       makegen(1, 24, 1000, 0.0,0.0, 0.1,1.0, 0.2,0.0)
-       makegen(2, 10, 1000, 1.0, 0.3, 0.1)
+makegen(1, 24, 1000, 0.0,0.0, 0.1,1.0, 0.2,0.0)
+makegen(2, 10, 1000, 1.0, 0.3, 0.1)
 
-       start = 0.0
-       basefreq = 200.0
-       for (i = 0; i < 1500; i=i+1)
-       {
-              freq = irand(basefreq, basefreq+300)
-              SIMPLEOSC(start, 0.2, 4000, freq)
+start = 0.0
+basefreq = 200.0
+for (i = 0; i < 1500; i=i+1)
+{
+      freq = irand(basefreq, basefreq+300)
+      SIMPLEOSC(start, 0.2, 4000, freq)
 
-              start = start + 0.01
-              basefreq = basefreq + 2.0
-       }
+      start = start + 0.01
+      basefreq = basefreq + 2.0
+}
 ```
 
 ## Reading an Input Soundfile
@@ -705,35 +704,35 @@ SIMPLEOSC), we will declare this in our "SIMPLEMIX.h" file.
 With these changes, our finished *SIMPLEMIX::init()* member function
 becomes:
 
-``` 
-       int SIMPLEMIX::init(float p[], int n_args)
-       {
-              // p0 = start, p1 = input skip, p2 = duration, p3 = amplitude
+```cpp
+int SIMPLEMIX::init(float p[], int n_args)
+{
+      // p0 = start, p1 = input skip, p2 = duration, p3 = amplitude
 
-              nsamps = rtsetoutput(p[0], p[2], this);
-              rtsetinput(p[1], this); // we're being bad, not checking for errors
-              theIn = new Ortgetin(this);
+      nsamps = rtsetoutput(p[0], p[2], this);
+      rtsetinput(p[1], this); // we're being bad, not checking for errors
+      theIn = new Ortgetin(this);
 
-              amp = p[3];
+      amp = p[3];
 
-              theEnv = new Ooscili(1.0/p[2], 1);
+      theEnv = new Ooscili(1.0/p[2], 1);
 
-              return(nsamps);
-       }
+      return(nsamps);
+}
 ```
 
 and "SIMPLEMIX.h" is:
 
-``` 
-       class SIMPLEMIX : public Instrument {
-              float amp;
-              Ortgetin *theIn;
-              Ooscili *theEnv;
+```cpp
+class SIMPLEMIX : public Instrument {
+      float amp;
+      Ortgetin *theIn;
+      Ooscili *theEnv;
 
-       public:
-              SIMPLEMIX();
+public:
+      SIMPLEMIX();
 
-       ...
+...
 ```
 
 The *SIMPLEMIX::run()* is then easy to code. All we have to do is
@@ -741,28 +740,28 @@ declare an input array that we will use to hold our incoming samples for
 each frame, reading new samples into it using the *Ortgetin::next()*
 method:
 
-``` 
-       int SIMPLEMIX::run()
-       {
-              int i;
-              float out[2];
-              float in[2];
-              float aamp;
+```cpp
+int SIMPLEMIX::run()
+{
+      int i;
+      float out[2];
+      float in[2];
+      float aamp;
 
-              Instrument::run();
+      Instrument::run();
 
-              for (i = 0; i < framesToRun(); i++) {
-                     theIn->next(in);
-                     aamp = amp * theEnv->next();
-                     out[0] = in[0] * aamp;
-                     out[1] = in[1] * aamp;
+      for (i = 0; i < framesToRun(); i++) {
+             theIn->next(in);
+             aamp = amp * theEnv->next();
+             out[0] = in[0] * aamp;
+             out[1] = in[1] * aamp;
 
-                     rtaddout(out);
+             rtaddout(out);
 
-                     increment();
-              }
+             increment();
+      }
 
-              ...
+      ...
 ```
 
 Notice that we are using the variable *aamp* to store the
@@ -779,88 +778,88 @@ does not do this for you.
 
 Given these caveats, our finished SIMPLEMIX instrument is:
 
-``` 
-       int SIMPLEMIX::init(float p[], int n_args)
-       {
-              // p0 = start, p1 = input skip, p2 = duration, p3 = amplitude
+```cpp
+int SIMPLEMIX::init(float p[], int n_args)
+{
+      // p0 = start, p1 = input skip, p2 = duration, p3 = amplitude
 
-              nsamps = rtsetoutput(p[0], p[2], this);
-              rtsetinput(p[1], this); // we're being bad, not checking for errors
-              theIn = new Ortgetin(this);
+      nsamps = rtsetoutput(p[0], p[2], this);
+      rtsetinput(p[1], this); // we're being bad, not checking for errors
+      theIn = new Ortgetin(this);
 
-              amp = p[3];
+      amp = p[3];
 
-              theEnv = new Ooscili(1.0/p[2], 1);
+      theEnv = new Ooscili(1.0/p[2], 1);
 
-              return(nsamps);
-       }
+      return(nsamps);
+}
 
-       int SIMPLEMIX::run()
-       {
-              int i;
-              float out[2];
-              float in[2];
-              float aamp;
+int SIMPLEMIX::run()
+{
+      int i;
+      float out[2];
+      float in[2];
+      float aamp;
 
-              Instrument::run();
+      Instrument::run();
 
-              for (i = 0; i < framesToRun(); i++) {
-                     theIn->next(in);
-                     aamp = amp * theEnv->next();
-                     out[0] = in[0] * aamp;
-                     out[1] = in[1] * aamp;
+      for (i = 0; i < framesToRun(); i++) {
+             theIn->next(in);
+             aamp = amp * theEnv->next();
+             out[0] = in[0] * aamp;
+             out[1] = in[1] * aamp;
 
-                     rtaddout(out);
+             rtaddout(out);
 
-                     increment();
-              }
+             increment();
+      }
 
-              return i;
-       }
+      return i;
+}
 ```
 
 As with SIMPLEOSC, we can use SIMPLEMIX to create some nifty granular
 effects. The following scorefile, for example:
 
-``` 
-       rtsetparams(44100, 2)
-       load("./libSIMPLEMIX.so")
+```cpp
+rtsetparams(44100, 2)
+load("./libSIMPLEMIX.so")
 
-       rtinput("/snd/somesound.aiff")
+rtinput("/snd/somesound.aiff")
 
-       makegen(1, 24, 1000, 0.0, 0.0, 0.1, 1.0, 0.2, 0.0)
+makegen(1, 24, 1000, 0.0, 0.0, 0.1, 1.0, 0.2, 0.0)
 
-       totaldur = DUR()
-       start = 0.0
+totaldur = DUR()
+start = 0.0
 
-       for (i = 0; i < 100; i = i+1)
-       {
-              inskip = irand(0.0, (totaldur-0.2))
-              SIMPLEMIX(start, inskip, 0.2, 1)
-              start = start + 0.1
-       }
+for (i = 0; i < 100; i = i+1)
+{
+      inskip = irand(0.0, (totaldur-0.2))
+      SIMPLEMIX(start, inskip, 0.2, 1)
+      start = start + 0.1
+}
 ```
 
 will randomly grab little chunks of sound throughout a soundfile, while
 this scorefile:
 
-``` 
-       rtsetparams(44100, 2)
-       load("./libSIMPLEMIX.so")
+```cpp
+rtsetparams(44100, 2)
+load("./libSIMPLEMIX.so")
 
-       rtinput("/snd/somesound.wav")
+rtinput("/snd/somesound.wav")
 
-       makegen(1, 25, 1000, 1)
+makegen(1, 25, 1000, 1)
 
-       start = 0.0
-       inskip = 0.0
+start = 0.0
+inskip = 0.0
 
-       for (i = 0; i < 500; i = i+1)
-       {
-              SIMPLEMIX(start, inskip, 0.1, 1)
-              start = start + 0.05
-              inskip = inskip + 0.02
-       }
+for (i = 0; i < 500; i = i+1)
+{
+      SIMPLEMIX(start, inskip, 0.1, 1)
+      start = start + 0.05
+      inskip = inskip + 0.02
+}
 ```
 
 will do a rough granular time-stretching of the original sound.

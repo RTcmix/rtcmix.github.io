@@ -26,14 +26,14 @@ won't really differentiate between the two.
 The best way to get a handle on these *handles* is to see how they are
 used. Suppose that we have what we think is an almost perfect sound:
 
-``` 
-       rtsetparams(44100, 2)
-       load("WAVETABLE")
+```cpp
+rtsetparams(44100, 2)
+load("WAVETABLE")
 
-       amp = maketable("window", 1000, "hanning")
-       wavetable = maketable("wave", 1000, "tri")
+amp = maketable("window", 1000, "hanning")
+wavetable = maketable("wave", 1000, "tri")
 
-       WAVETABLE(0, 3.5, 20000*amp, 7.05, 0.5, wavetable)
+WAVETABLE(0, 3.5, 20000*amp, 7.05, 0.5, wavetable)
 ```
 
 We are using two *table-handles* already: *amp* and *wavetable*.
@@ -62,9 +62,9 @@ pitch, then we need to generate an LFO signal that will travel between
 -0.005 and +0.005, and then add this to our base pitch. *makeLFO* makes
 this trivial to do:
 
-``` 
-       vibsig = makeLFO("sine", 1.5, -0.005, 0.005)
-       WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig, 0.5, wavetable)
+```cpp
+vibsig = makeLFO("sine", 1.5, -0.005, 0.005)
+WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig, 0.5, wavetable)
 ```
 
 The pfield-handle variable *vibsig* will track a sine waveform that
@@ -85,9 +85,9 @@ output channels. A handy *pfield-handle* command called
 [makerandom](../reference/scorefile/makerandom.html) seems like it would
 do the job nicely:
 
-``` 
-       pan = makerandom("linear", 2.0, 0.0, 1.0)
-       WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig, pan, wavetable)
+```cpp
+pan = makerandom("linear", 2.0, 0.0, 1.0)
+WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig, pan, wavetable)
 ```
 
 The problem is that *makerandom* command above generates discrete values
@@ -96,10 +96,10 @@ between the two channels (i.e. clicks). We need a way of smoothing the
 signal coming through the *pan* variable. The *pfield-handle* command
 *makefilter* can accomplish this:
 
-``` 
-       pan = makerandom("linear", 2.0, 0.0, 1.0)
-       smoothpan = makefilter(pan, "smooth", 70)
-       WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig, smoothpan, wavetable)
+```cpp
+pan = makerandom("linear", 2.0, 0.0, 1.0)
+smoothpan = makefilter(pan, "smooth", 70)
+WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig, smoothpan, wavetable)
 ```
 
 This vibrato-ed sound is so wonderful that <u>TWO</u> vibrato-ed notes
@@ -109,16 +109,16 @@ want one note to vibrato in exactly the opposite direction (pitch-wise,
 that is) as the other. We can also use the *makefilter* command to do
 this:
 
-``` 
-       vibsig = makeLFO("sine", 1.5, -0.005, 0.005)
-       pan = makerandom("linear", 2.0, 0.0, 1.0)
-       smoothpan = makefilter(pan, "smooth", 70)
-       WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig, smoothpan, wavetable)
+```cpp
+vibsig = makeLFO("sine", 1.5, -0.005, 0.005)
+pan = makerandom("linear", 2.0, 0.0, 1.0)
+smoothpan = makefilter(pan, "smooth", 70)
+WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig, smoothpan, wavetable)
 
-       vibsig2 = makefilter(vibsig, "invert", 0.0)
-       pan2 = makerandom("linear", 2.0, 0.0, 1.0)
-       smoothpan2 = makefilter(pan2, "smooth", 70)
-       WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig2, smoothpan2, wavetable)
+vibsig2 = makefilter(vibsig, "invert", 0.0)
+pan2 = makerandom("linear", 2.0, 0.0, 1.0)
+smoothpan2 = makefilter(pan2, "smooth", 70)
+WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig2, smoothpan2, wavetable)
 ```
 
 Note the use of separate *pan/pan2* and *smoothpan/smoothpan2* variables
@@ -132,11 +132,11 @@ however, reuse *pfield-handle* variable names in the scorefile, so that
 if you wanted to have two WAVETABLE notes with vibrato operating with
 the same LFO frequency, you could do the following:
 
-``` 
-       vibsig = makeLFO("sine", 1.5, -0.005, 0.005)
-       WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig, 0.0, wavetable)
-       vibsig = makeLFO("sine", 1.5, -0.005, 0.005)
-       WAVETABLE(0, 3.5, 20000*amp, 7.02+vibsig, 1.0, wavetable)
+```cpp
+vibsig = makeLFO("sine", 1.5, -0.005, 0.005)
+WAVETABLE(0, 3.5, 20000*amp, 7.05+vibsig, 0.0, wavetable)
+vibsig = makeLFO("sine", 1.5, -0.005, 0.005)
+WAVETABLE(0, 3.5, 20000*amp, 7.02+vibsig, 1.0, wavetable)
 ```
 
 But *table-handles* don't have this restriction, and *IN THE FUTURE*
@@ -148,8 +148,8 @@ suppose that we want to show off our highly-trained abilities to move a
 mouse/cursor to control the amplitude of our notes. Instead of assigning
 the *amp* variable to a *table-handle* (*maketable*), we can do this:
 
-``` 
-       amp = makeconnection("mouse", "x", minval=0.0, maxval=1.0, default=0.5, lag=80)
+```cpp
+amp = makeconnection("mouse", "x", minval=0.0, maxval=1.0, default=0.5, lag=80)
 ```
 
 and the 0.0-1.0 amplitude range will be determined by the mouse/cursor
@@ -160,89 +160,57 @@ position.
 
 So our final, <u>*Absolutely Amazing and Wonderful*</u> scorefile is:
 
-``` 
-       rtsetparams(44100, 2)
-       load("WAVETABLE")
+```cpp
+rtsetparams(44100, 2)
+load("WAVETABLE")
 
-       amp = makeconnection("mouse", "x", 0.0, 1.0, 0.5, 80)
-       wavetable = maketable("wave", 1000, "tri")
+amp = makeconnection("mouse", "x", 0.0, 1.0, 0.5, 80)
+wavetable = maketable("wave", 1000, "tri")
 
-       vibsig = makeLFO("sine", 1.5, -0.005, 0.005)
-       pan = makerandom("linear", 2.0, 0.0, 1.0)
-       smoothpan = makefilter(pan, "smooth", 70)
-       WAVETABLE(0, 35.0, 20000*amp, 7.05+vibsig, smoothpan, wavetable)
+vibsig = makeLFO("sine", 1.5, -0.005, 0.005)
+pan = makerandom("linear", 2.0, 0.0, 1.0)
+smoothpan = makefilter(pan, "smooth", 70)
+WAVETABLE(0, 35.0, 20000*amp, 7.05+vibsig, smoothpan, wavetable)
 
-       amp2 = makeconnection("mouse", "x", 0.0, 1.0, 0.5, 80)
-       vibsig2 = makefilter(vibsig, "invert", 0.0)
-       pan2 = makerandom("linear", 2.0, 0.0, 1.0)
-       smoothpan2 = makefilter(pan2, "smooth", 70)
-       WAVETABLE(0, 35.0, 20000*amp2, 7.05+vibsig2, smoothpan2, wavetable)
+amp2 = makeconnection("mouse", "x", 0.0, 1.0, 0.5, 80)
+vibsig2 = makefilter(vibsig, "invert", 0.0)
+pan2 = makerandom("linear", 2.0, 0.0, 1.0)
+smoothpan2 = makefilter(pan2, "smooth", 70)
+WAVETABLE(0, 35.0, 20000*amp2, 7.05+vibsig2, smoothpan2, wavetable)
 ```
 
 We have increased the duration to 35.0 seconds because it is just so
 much fun to play around with the amplitude using the mouse. We also
 might have reused the variables *amp, vibsig, pan* and *smoothpan* in
 the second WAVETABLE note, but decided to give them separate names for
-the heck of it.  
+the heck of it.
 
 ## Useful PField Scorefile Commands
 
 The following, in no particular order, are scorefile commands that can
 be used to create and manipulate *pfield-handles* and *table-handles*:
 
-  - [maketable](../reference/scorefile/maketable.html) -- the general
-    command for creating 'tables', or arrays of values that can be used
-    as control functions, waveforms, etc.  
-  - [modtable](../reference/scorefile/modtable.html) -- this command can
-    be used to modify the data from from a *table-handle*.  
-  - [copytable](../reference/scorefile/copytable.html) -- this makes a
-    copy of a table from a *table-handle* variable. Very useful for
-    guaranteeing that you have 'fixed' data... many of the
-    *table-handle* and *pfield-handle* commands operate on data 'on the
-    fly', or as it is being generated. *copytable* can be used to
-    increase execution efficiency, also.  
-  - [tablelen](../reference/scorefile/tablelen.html) -- returns the
-    length (number of elements) of a table from a *table-handle*.  
-  - [add](../reference/scorefile/add.html),
-    [div](../reference/scorefile/div.html),
-    [mul](../reference/scorefile/mul.html),
-    [sub](../reference/scorefile/sub.html) -- arithmetic operations that
-    work on all the data in a table given a *table-handle* variable.  
+  - [maketable](../reference/scorefile/maketable.html) -- the general command for creating 'tables', or arrays of values that can be used as control functions, waveforms, etc.
+  - [modtable](../reference/scorefile/modtable.html) -- this command can be used to modify the data from from a *table-handle*.
+  - [copytable](../reference/scorefile/copytable.html) -- this makes a copy of a table from a *table-handle* variable. Very useful for guaranteeing that you have 'fixed' data... many of the *table-handle* and *pfield-handle* commands operate on data 'on the fly', or as it is being generated. *copytable* can be used to increase execution efficiency, also.
+  - [tablelen](../reference/scorefile/tablelen.html) -- returns the length (number of elements) of a table from a *table-handle*.
+  - [add](../reference/scorefile/add.html), [div](../reference/scorefile/div.html), [mul](../reference/scorefile/mul.html), [sub](../reference/scorefile/sub.html) -- arithmetic operations that work on all the data in a table given a *table-handle* variable.
+      
+####pfield-handle commands
+      
+  - [makeLFO](../reference/scorefile/makeLFO.html) -- generate Low Frequency Oscillation (usually \< 20 Hz) data and feed it through a *pfield-handle* variable.
+  - [makerandom](../reference/scorefile/makerandom.html) -- periodically generate some type of random number and feed it through a *pfield-handle* variable.
+  - [makeconnection](../reference/scorefile/makeconnection.html) -- establish a connection to an 'outside' data source and feed it through a *pfield-handle* variable.
+  - [makefilter](../reference/scorefile/makefilter.html) -- alter the data coming through a *pfield-handle* variable in some way and feed the result through another *pfield-handle* variable.
+  - [makeconverter](../reference/scorefile/makeconverter.html) -- apply a data conversion operation like [octcps](../reference/scorefile/octcps.html), [pchmidi](../reference/scorefile/pchmidi.html), [ampdb](../reference/scorefile/ampdb.html), etc., to the data coming through a *pfield-handle* variable feed the result through another *pfield-handle* variable.
       
       
-    *<u>pfield-handle commands</u>*  
+####data output and display commands
       
-  - [makeLFO](../reference/scorefile/makeLFO.html) -- generate Low
-    Frequency Oscillation (usually \< 20 Hz) data and feed it through a
-    *pfield-handle* variable.  
-  - [makerandom](../reference/scorefile/makerandom.html) -- periodically
-    generate some type of random number and feed it through a
-    *pfield-handle* variable.  
-  - [makeconnection](../reference/scorefile/makeconnection.html) --
-    establish a connection to an 'outside' data source and feed it
-    through a *pfield-handle* variable.  
-  - [makefilter](../reference/scorefile/makefilter.html) -- alter the
-    data coming through a *pfield-handle* variable in some way and feed
-    the result through another *pfield-handle* variable.  
-  - [makeconverter](../reference/scorefile/makeconverter.html) -- apply
-    a data conversion operation (like
-    [octcps](../reference/scorefile/octcps.html),
-    [pchmidi](../reference/scorefile/pchmidi.html),
-    [ampdb](../reference/scorefile/ampdb.html), etc.) to the data coming
-    through a *pfield-handle* variable feed the result through another
-    *pfield-handle* variable.  
-      
-      
-    *<u>data output and display commands</u>*  
-      
-  - [samptable](../reference/scorefile/samptable.html) -- return a value
-    from a table given a *table-handle*.  
-  - [makemonitor](../reference/scorefile/makemonitor.html) -- display or
-    record data coming through a *pfield-handle* variable.  
-  - [plottable](../reference/scorefile/plottable.html) -- plot the data
-    in a table from a *table-handle*.  
-  - [dumptable](../reference/scorefile/dumptable.html) -- print out the
-    contents of a table given a *table-handle*.
+  - [samptable](../reference/scorefile/samptable.html) -- return a value from a table given a *table-handle*.
+  - [makemonitor](../reference/scorefile/makemonitor.html) -- display or record data coming through a *pfield-handle* variable.
+  - [plottable](../reference/scorefile/plottable.html) -- plot the data in a table from a *table-handle*.
+  - [dumptable](../reference/scorefile/dumptable.html) -- print out the contents of a table given a *table-handle*.
 
   
   

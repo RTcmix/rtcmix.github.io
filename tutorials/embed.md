@@ -20,9 +20,9 @@ object](../reference/interface/RTcmix-embed.html). To use this, you will
 need the statements
 
 ``` 
-       #define MAIN
-       #include 
-       #include 
+#define MAIN
+#include 
+#include 
 ```
 
 in the file containing the *main()* entry point. The "globals.h" file
@@ -36,8 +36,8 @@ that certain variable definitions are appropriately included.
 You will also need to put
 
 ``` 
-       #include 
-       #include 
+#include 
+#include 
 ```
 
 in any subsidiary files defining functions or objects that make use of
@@ -47,15 +47,15 @@ statement only goes in the same file where *main()* is defined).
 With these \#include files set, creating the RTcmix object is trivial:
 
 ``` 
-       RTcmix *rrr;
+RTcmix *rrr;
 
-       rrr = new RTcmix();
+rrr = new RTcmix();
 ```
 
 At this point, *rrr* references a fully-functioning RTcmix. The
 
 ``` 
-       rrr = new RTcmix();
+rrr = new RTcmix();
 ```
 
 statement takes the place of the *rtsetparams* scorefile command. The
@@ -67,7 +67,7 @@ All scorefile commands can now be sent to the RTcmix object using this
 syntax:
 
 ``` 
-       rrr->cmd("COMMAND",   NPARAMS,   p0, p1, p2, ...);
+rrr->cmd("COMMAND",   NPARAMS,   p0, p1, p2, ...);
 ```
 
 where *COMMAND* is the name of the scorefile command, *NPARAMS* is the
@@ -85,41 +85,41 @@ For example, the WAVETABLE command we used in our first [simple
 standalone tutorial](standalone.html)
 
 ``` 
-       WAVETABLE(0, 3.5, 20000, 440.0)
+WAVETABLE(0, 3.5, 20000, 440.0)
 ```
 
 would be sent to RTcmix via the *rrr* object we created like this:
 
 ``` 
-       rrr->cmd("WAVETABLE", 4, 0.0, 3.5, 20000.0, 440.0);
+rrr->cmd("WAVETABLE", 4, 0.0, 3.5, 20000.0, 440.0);
 ```
 
 The entire "greatmusic.score" scorefile:
 
 ``` 
-       rtsetparams(44100, 2)
-       load("WAVETABLE")
+rtsetparams(44100, 2)
+load("WAVETABLE")
 
-       makegen(1, 24, 1000, 0,1, 3.5,1)
-       makegen(2, 10, 1000, 1.0, 0.4, 0.2)
+makegen(1, 24, 1000, 0,1, 3.5,1)
+makegen(2, 10, 1000, 1.0, 0.4, 0.2)
 
-       WAVETABLE(0, 3.5, 20000, 440.0)
+WAVETABLE(0, 3.5, 20000, 440.0)
 ```
 
 in an embedded application would be:
 
 ``` 
-       RTcmix *rrr;
+RTcmix *rrr;
 
-       rrr = new RTcmix(44100.0, 2); // not completely necessary -- this is the default
-       sleep(1);
+rrr = new RTcmix(44100.0, 2); // not completely necessary -- this is the default
+sleep(1);
 
-       rrr->cmd("load", 1, "WAVETABLE");
+rrr->cmd("load", 1, "WAVETABLE");
 
-       rrr->cmd("makegen", 7, 1.0, 24.0, 1000.0, 0.0, 1.0, 3.5, 1.0);
-       rrr->cmd("makegen", 6, 2.0, 10.0, 1000.0, 1.0, 0.4, 0.2);
+rrr->cmd("makegen", 7, 1.0, 24.0, 1000.0, 0.0, 1.0, 3.5, 1.0);
+rrr->cmd("makegen", 6, 2.0, 10.0, 1000.0, 1.0, 0.4, 0.2);
 
-       rrr->cmd("WAVETABLE", 4, 0.0, 3.5, 20000.0, 440.0);
+rrr->cmd("WAVETABLE", 4, 0.0, 3.5, 20000.0, 440.0);
 ```
 
 The *sleep(1)* is sometimes needed to allow the computer to fully
@@ -149,7 +149,7 @@ the movement of an interface slider or some other changing data object.
 By designing and adding a method for WAVETABLE like:
 
 ``` 
-       WAVETABLE::changeFrequency(double freq)
+WAVETABLE::changeFrequency(double freq)
 ```
 
 you can use the returned *Instrument \** pointer to access it. *\[note:
@@ -161,22 +161,22 @@ appropriate "WAVETABLE.h" for the required C++ object definition):
 ``` 
        #include 
        #include 
-       #include "WAVETABLE.h"
+#include "WAVETABLE.h"
 
-       // ... all of the RTcmix set-up and use for RTcmix *rrr ...
+// ... all of the RTcmix set-up and use for RTcmix *rrr ...
 
-       RTcmix *rrr;
-       WAVETABLE *theWave;
+RTcmix *rrr;
+WAVETABLE *theWave;
 
-       rrr = new RTcmix();
-       sleep(1);
+rrr = new RTcmix();
+sleep(1);
 
-       rrr->cmd("load", 1, "WAVETABLE");
+rrr->cmd("load", 1, "WAVETABLE");
 
-       rrr->cmd("makegen", 7, 1.0, 24.0, 1000.0, 0.0, 1.0, 3.5, 1.0);
-       rrr->cmd("makegen", 6, 2.0, 10.0, 1000.0, 1.0, 0.4, 0.2);
+rrr->cmd("makegen", 7, 1.0, 24.0, 1000.0, 0.0, 1.0, 3.5, 1.0);
+rrr->cmd("makegen", 6, 2.0, 10.0, 1000.0, 1.0, 0.4, 0.2);
 
-       theWave = (WAVETABLE *)rrr->cmd("WAVETABLE", 4, 0.0, 999.0, 20000.0, 440.0);
+theWave = (WAVETABLE *)rrr->cmd("WAVETABLE", 4, 0.0, 999.0, 20000.0, 440.0);
 ```
 
 At this point, *theWave* can now be used to change the frequency of the
@@ -184,10 +184,10 @@ note (notice that we set the duration to 999.0 seconds so that it will
 be making sound continuously:
 
 ``` 
-       theWave->changeFrequency(314.78);
-       theWave->changeFrequency(249.0);
+theWave->changeFrequency(314.78);
+theWave->changeFrequency(249.0);
 
-       // etc.
+// etc.
 ```
 
 There are, however, some RTcmix scorefile commands (such as *cpspch*
@@ -198,12 +198,12 @@ works the same way that *cmd()* does, except that it returns a
 floating-point value after it executes.
 
 ``` 
-       RTcmix *rrr;
-       float freq;
+RTcmix *rrr;
+float freq;
 
-       rrr = new RTcmix();
+rrr = new RTcmix();
 
-       freq = rrr->cmdval("cpspch", 1, 8.09);
+freq = rrr->cmdval("cpspch", 1, 8.09);
 ```
 
 will assign the value "440.0" to the *freq* variable.
@@ -213,13 +213,13 @@ object has to offer. We have added a few 'shortcuts' that can make your
 programming life a teeny bit easier. For instance,
 
 ``` 
-       rrr->printOn();
+rrr->printOn();
 ```
 
 and
 
 ``` 
-       rrr->printOff();
+rrr->printOff();
 ```
 
 will turn on and off <u>all</u> RTcmix output. You may want to place the
@@ -230,7 +230,7 @@ RTcmix commands that have no arguments may be called without the
 *NPARAMS*:
 
 ``` 
-       avar = rrr->cmd("random");
+avar = rrr->cmd("random");
 ```
 
 Also note that *cmdval()* is not necessary for this 0-pfield scorefile
@@ -253,7 +253,7 @@ library, then you could simply keep it in the same directory with your
 finished RTcmix-embedding app, and call the *load* command like this:
 
 ``` 
-       rrr->cmd("load", 1, "./libMYWAVETABLE.so");
+rrr->cmd("load", 1, "./libMYWAVETABLE.so");
 ```
 
 and it should work just fine. Alternatively, you could build an
@@ -261,7 +261,7 @@ installer that would place "libMYWAVETABLE.so" into some common
 directory, like "/usr/local/lib" and use:
 
 ``` 
-       rrr->cmd("load", 1, "/usr/local/lib/libMYWAVETABLE.so");
+rrr->cmd("load", 1, "/usr/local/lib/libMYWAVETABLE.so");
 ```
 
 *load* should also work fine in this case.
@@ -283,14 +283,14 @@ to occur every 2.4 seconds. In your embedding application the
 *gonotes()* function would be declared:
 
 ``` 
-       void *gonotes();
+void *gonotes();
 ```
 
 and the *RTtimeit()* call to make *gonotoes()* fire every 2,4 seconds
 would be:
 
 ``` 
-    RTtimeit(2.4, (sig_t)gonotes);
+RTtimeit(2.4, (sig_t)gonotes);
 ```
 
 The *RTtimeit()* can be called with a different timing value for
@@ -312,40 +312,40 @@ Here is a Makefile to compiled a C++/OpenGL program called "fredspace",
 with no RTcmix inclusions:
 
 ``` 
-       XINCS = -I/usr/X11R6/include/
-       XFLAGS =  -L/usr/X11R6/lib/ -lXext -lX11 -lGL -lGLU -lm -laux
+XINCS = -I/usr/X11R6/include/
+XFLAGS =  -L/usr/X11R6/lib/ -lXext -lX11 -lGL -lGLU -lm -laux
 
-       fredspace: fredspace.o
-              g++ -o fredspace fredspace.o $(XFLAGS)
+fredspace: fredspace.o
+      g++ -o fredspace fredspace.o $(XFLAGS)
 
-       fredspace.o: fredspace.C
-              g++ -c fredspace.c $(XINCS)
+fredspace.o: fredspace.C
+      g++ -c fredspace.c $(XINCS)
 ```
 
 If we modify the "fredspace.C" program to use the RTcmix object, we only
 need a few changes to the Makefile to compile it:
 
 ``` 
-       include /usr/local/src/RTcmix/makefile.conf
+include /usr/local/src/RTcmix/makefile.conf
 
-       XINCS = -I/usr/X11R6/include/
-       XFLAGS =  -L/usr/X11R6/lib/ -lXext -lX11 -lGL -lGLU -lm -laux
+XINCS = -I/usr/X11R6/include/
+XFLAGS =  -L/usr/X11R6/lib/ -lXext -lX11 -lGL -lGLU -lm -laux
 
-       # So main() will declare RTcmix globals
-       GLOBALS = $(ARCHFLAGS) -I$(CMIXDIR)/H
-       IMBCMIXOBJS += $(PROFILE_O)
+# So main() will declare RTcmix globals
+GLOBALS = $(ARCHFLAGS) -I$(CMIXDIR)/H
+IMBCMIXOBJS += $(PROFILE_O)
 
-       fredspace: fredspace.o
-              g++ -o fredspace fredspace.o $(GLOBALS) $(DYN) $(XFLAGS) $(IMBCMIXOBJS) $(LDFLAGS)
+fredspace: fredspace.o
+      g++ -o fredspace fredspace.o $(GLOBALS) $(DYN) $(XFLAGS) $(IMBCMIXOBJS) $(LDFLAGS)
 
-       fredspace.o: fredspace.C
-              g++ $(GLOBALS) -c fredspace.c $(XINCS)
+fredspace.o: fredspace.C
+      g++ $(GLOBALS) -c fredspace.c $(XINCS)
 ```
 
 The first change to the Makefile, the line:
 
 ``` 
-       include /usr/local/src/RTcmix/makefile.conf
+include /usr/local/src/RTcmix/makefile.conf
 ```
 
 will set up the Makefile with compiler flags and definitions that are
@@ -356,9 +356,9 @@ in the top-level RTcmix directory contains these defintions. etc.
 The Makefile lines:
 
 ``` 
-       # So main() will declare RTcmix globals
-       GLOBALS = $(ARCHFLAGS) -I$(CMIXDIR)/H
-       IMBCMIXOBJS += $(PROFILE_O)
+# So main() will declare RTcmix globals
+GLOBALS = $(ARCHFLAGS) -I$(CMIXDIR)/H
+IMBCMIXOBJS += $(PROFILE_O)
 ```
 
 are probably somewhat redundant, but they guarantee that appropriate
@@ -390,17 +390,17 @@ scorefile error occurs. In the main "RTcmix/makefile.conf" file, the
 following entry can be modified:
 
 ``` 
-    # Comment this out to set the die() function so that it will not exit on
-    # encountering an error (you may want to do this if you are using
-    # RTcmix in the context of another application where you don't want
-    # to terminate the application because of an RTcmix error
-    CMIX_FLAGS += -DEXIT_ON_ERROR
+# Comment this out to set the die() function so that it will not exit on
+# encountering an error (you may want to do this if you are using
+# RTcmix in the context of another application where you don't want
+# to terminate the application because of an RTcmix error
+CMIX_FLAGS += -DEXIT_ON_ERROR
 ```
 
 by commenting out the *CMIX\_FLAGS* line:
 
 ``` 
-    #CMIX_FLAGS += -DEXIT_ON_ERROR
+#CMIX_FLAGS += -DEXIT_ON_ERROR
 ```
 
 Recompiling RTcmix will set it so that instruments returning the value
