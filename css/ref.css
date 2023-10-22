@@ -32,9 +32,9 @@ div.container {
 	margin-top: 40px;
 }
 
-.highlight {
+.highlight pre {
 	background-color: #f8f8f8;
-//	border: 1px solid #cccccc;
+	border: 1px solid #cccccc;
 }
 
 h1 {
