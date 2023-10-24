@@ -11,7 +11,7 @@ to work as commands typed into a Terminal or Shell window. For the
 commands to work it is assumed that your *$path* is set correctly so
 that the "RTcmix/bin" (or similar installed location for RTcmix
 commands) is searched (see the [installation
-guide](../../rtcmix/index.html)).
+guide](../../standalone/index.html)).
 
   - [CMIX/PCMIX/PYCMIX](CMIX.html) -- run RTcmix with the Minc, Perl, or
     Python parsers

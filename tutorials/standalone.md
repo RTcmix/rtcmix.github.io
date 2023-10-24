@@ -679,32 +679,33 @@ already:
     output of one RTcmix instrument directly into the input of another.
     For example, the scorefile:
     
-    ```cpp
-   rtsetparams(44100, 2)
-   load("WAVETABLE")
-   load("AM")
-    
-   bus_config("WAVETABLE", "aux 0 out")
-   bus_config("AM", "aux 0 in", "out 0-1")
-    
-   amp = maketable("line", 1000, 0,1, 3.5,1)
-   wave = maketable("wave", 1000, 1.0, 0.4, 0.2)
-   WAVETABLE(0, 3.5, 20000*amp, 440.0, 0.0, wave)
-    
-   amamp = maketable("line", 1000, 0,0, 1,1, 9,1, 10,0)
-   amwave = maketable("wave", 1000, "sine")
-   AM(0, 0, 3.5, 0.7*amamp, 478.98, 0, 0.2, amwave)
-    ```
-    
-    will generate a 3.5-second long sound via WAVETABLE, and then
-    amplitude modulate this sound before playing it or writing a
-    soundfile. Given that these *bus\_config* chains can contain fairly
-    sophisticated signal-processing instruments, this can be used to
-    create complex audio outputs. This feature is especially useful when
-    RTcmix us used in an embedded context (RTcmix "inside" another
-    application). You can read an early description/tutorial about the
-    *bus\_config* command written by John Gibson and Dave Topper by
-    clicking [here](bus_config.html).  
+	```
+	   rtsetparams(44100, 2)
+	   load("WAVETABLE")
+	   load("AM")
+	    
+	   bus_config("WAVETABLE", "aux 0 out")
+	   bus_config("AM", "aux 0 in", "out 0-1")
+	    
+	   amp = maketable("line", 1000, 0,1, 3.5,1)
+	   wave = maketable("wave", 1000, 1.0, 0.4, 0.2)
+	   WAVETABLE(0, 3.5, 20000*amp, 440.0, 0.0, wave)
+	    
+	   amamp = maketable("line", 1000, 0,0, 1,1, 9,1, 10,0)
+	   amwave = maketable("wave", 1000, "sine")
+	   AM(0, 0, 3.5, 0.7*amamp, 478.98, 0, 0.2, amwave)
+	
+	```
+
+	will generate a 3.5-second long sound via WAVETABLE, and then
+	amplitude modulate this sound before playing it or writing a
+	soundfile. Given that these *bus\_config* chains can contain fairly
+	sophisticated signal-processing instruments, this can be used to
+	create complex audio outputs. This feature is especially useful when
+	RTcmix us used in an embedded context (RTcmix "inside" another
+	application). You can read an early description/tutorial about the
+	*bus\_config* command written by John Gibson and Dave Topper by
+	clicking [here](bus_config.html).  
 
   - The new PField commands such as
     [maketable](../reference/scorefile/maketable.html),
@@ -720,6 +721,9 @@ already:
     are also a good source of examples for using RTcmix instruments.
     Many of them are even wonderful little patches of music -- we hope
     you enjoy them all\!
+    
+  - The documentation for the **Minc** parser [here](../reference/scorefile/Minc.html) is very complete and includes descriptions of a large number of extended and specialized features in the **Minc** language.
+ 
 
   
 Happy RTcmixing\!  

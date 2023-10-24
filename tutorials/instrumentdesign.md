@@ -231,17 +231,17 @@ that makes our job much easier. All we have to do is instantiate the
 object with the desired frequency and function-slot table \#:
 
 ```cpp
-       int SIMPLEOSC::init(float p[], int n_args)
-       {
-              // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
+int SIMPLEOSC::init(float p[], int n_args)
+{
+      // p0 = start, p1 = duration, p2 = amplitude, p3 = frequency
 
-              nsamps = rtsetoutput(p[0], p[1], this);
+      nsamps = rtsetoutput(p[0], p[1], this);
 
-              amp = p[2];
+      amp = p[2];
 
-              theOscil = new Ooscili(p[3], 2);
+      theOscil = new Ooscili(p[3], 2);
 
-       ...
+...
 ```
 
 *Ooscili* takes a floating-point value in Hz for frequency, and an
@@ -361,8 +361,8 @@ int SIMPLEOSC::run()
 Why did we say "out\[1\] = out\[0\]"? Why didn't we do:
 
 ```cpp
-     out[0] = theOscil->next() * amp;
-     out[1] = theOscil->next() * amp;
+out[0] = theOscil->next() * amp;
+out[1] = theOscil->next() * amp;
 ```
 
 The problem with the above is that <u>every</u> time the *next()*
@@ -380,7 +380,7 @@ do this by using the [rtaddout](../reference/design/rtaddout.html)
 function:
 
 ```cpp
-     rtaddout(out);
+rtaddout(out);
 ```
 
 Guess what? We're done\! We've now designed a
@@ -497,7 +497,7 @@ code in the *SIMPLEOSC::run()* member function that does in fact produce
 the samples:
 
 ```cpp
-	out[0] = theOscil->next() * amp;
+out[0] = theOscil->next() * amp;
 ```
 
 What we need to do is obvious -- we have to find a way of dynamically

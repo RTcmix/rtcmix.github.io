@@ -195,7 +195,7 @@ be used to create and manipulate *pfield-handles* and *table-handles*:
   - [copytable](../reference/scorefile/copytable.html) -- this makes a copy of a table from a *table-handle* variable. Very useful for guaranteeing that you have 'fixed' data... many of the *table-handle* and *pfield-handle* commands operate on data 'on the fly', or as it is being generated. *copytable* can be used to increase execution efficiency, also.
   - [tablelen](../reference/scorefile/tablelen.html) -- returns the length (number of elements) of a table from a *table-handle*.
   - [add](../reference/scorefile/add.html), [div](../reference/scorefile/div.html), [mul](../reference/scorefile/mul.html), [sub](../reference/scorefile/sub.html) -- arithmetic operations that work on all the data in a table given a *table-handle* variable.
-      
+
 ####pfield-handle commands
       
   - [makeLFO](../reference/scorefile/makeLFO.html) -- generate Low Frequency Oscillation (usually \< 20 Hz) data and feed it through a *pfield-handle* variable.
@@ -203,7 +203,7 @@ be used to create and manipulate *pfield-handles* and *table-handles*:
   - [makeconnection](../reference/scorefile/makeconnection.html) -- establish a connection to an 'outside' data source and feed it through a *pfield-handle* variable.
   - [makefilter](../reference/scorefile/makefilter.html) -- alter the data coming through a *pfield-handle* variable in some way and feed the result through another *pfield-handle* variable.
   - [makeconverter](../reference/scorefile/makeconverter.html) -- apply a data conversion operation like [octcps](../reference/scorefile/octcps.html), [pchmidi](../reference/scorefile/pchmidi.html), [ampdb](../reference/scorefile/ampdb.html), etc., to the data coming through a *pfield-handle* variable feed the result through another *pfield-handle* variable.
-      
+
       
 ####data output and display commands
       

@@ -1,5 +1,5 @@
 name: RTcmix
-markdown: GFM
+markdown: kramdown
 kramdown:
     syntax_highlighter: rouge
     input: GFM

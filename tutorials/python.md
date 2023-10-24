@@ -7,7 +7,7 @@ layout: ref
 
 Very similar to the [Perl](perl.html) front-end procedure for RTcmix,
 you will need to configure RTcmix using the *--with-python*
-configuration flag (see the [installation guide](../rtcmix/index.html)
+configuration flag (see the [installation guide](../standalone/index.html)
 for information about this). Once you do this and (re-)compile RTcmix,
 you're set to go with a Python front-end. As with Perl, this can be used
 in place of the default scorefile language

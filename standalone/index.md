@@ -54,7 +54,7 @@ it.
 In the RTcmix source code directory ("RTcmix/"), type the shell command:
 
 ``` 
-    ./configure
+./configure
 ```
 
 There are options you may wish to use with the configure command for
@@ -65,7 +65,7 @@ After running the configure command (with any appropriate options), then
 type (in that same "RTcmix/" directory):
 
 ``` 
-    make && make install
+make && make install
 ```
 
 RTcmix should compile, install, and off you go\!
@@ -79,13 +79,13 @@ directories are probably already on your *command search path*. To see
 your command search path, type the command:
 
 ``` 
-    echo $path
+echo $path
 ```
 
 or
 
 ``` 
-    echo $PATH
+echo $PATH
 ```
 
 and you should see a listing of all directories that are searched for
@@ -97,7 +97,7 @@ search path. You will probably need to edit or create a ".tcshrc: or
 of a line in a ".tcshrc" that accomplishes this is:
 
 ``` 
-    set path=(~/bin $path /usr/local/bin /usr/local/src/RTcmix/bin ".")
+set path=(~/bin $path /usr/local/bin /usr/local/src/RTcmix/bin ".")
 ```
 
 Once you do this, you will need to start a new Terminal or Shell window
@@ -109,7 +109,7 @@ If all else fails, you can type the whole pathname as a prefix to the
 RTcmix executable command you want:
 
 ``` 
-    /usr/local/src/RTcmix/bin/CMIX
-    /usr/local/src/RTcmix/bin/sfprint somefile.aiff
-    /usr/local/src/RTcmix/bin/cpspch 8.07 
+/usr/local/src/RTcmix/bin/CMIX
+/usr/local/src/RTcmix/bin/sfprint somefile.aiff
+/usr/local/src/RTcmix/bin/cpspch 8.07 
 ```
