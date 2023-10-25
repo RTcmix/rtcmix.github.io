@@ -1,9 +1,9 @@
 ---
-title: The Ancient History of RTcmix
+title: The History of cmix and RTcmix
 layout: ref
 ---
 
-## The Ancient History of RTcmix
+# <a name=history></a>The "Ancient" History of RTcmix
 
 Luke Dubois wrote a [brief history of
 RTcmix](http://music.columbia.edu/cmix/history.html) back in the
@@ -64,3 +64,72 @@ We hope you find the language useful\!
 
 Brad Garton
 
+# <a name=timeline></a>Timeline of RTcmix Code Development
+
+- \<1985
+	* Paul Lansky develops a **C**-language version of the Fortran-based **MIX**.
+- 1985
+	* Date on oldest known pre-real-time cmix distribution source file.
+- 1995
+	* First work done on what would become **RTcmix** on the Silicon Graphics IRIX platform.
+- 1998
+	* Last development work done on pre-real-time cmix.
+- 1999
+	* First version of **RTcmix** source made available.
+- 2000
+	* Version 2.2.3 introduces new bus architecture.
+	* [Perl](../tutorials/perl.html) support introduced.
+	* Versions 3.0.0 through 3.0.4.
+- 2001
+	* Version 3.0.5.
+	* [Python](../tutorials/python.html) support introduced.
+	* Initial support for MacOS X.
+- 2002
+	* First attempt at real-time pfield control.
+	* Versions 3.1 through 3.3.
+- 2003
+	* Version 3.4.
+- 2004
+	* Full support for dynamic, real-time [pfields](../tutorials/pfields.html)
+	* Version 3.6 (3.5 skipped).
+- 2005
+	* Version 4.0 released!
+- 2006
+	* JACK support added.
+- 2007 - 2008
+	* New instruments, bug fixing
+- 2009
+	* 64-bit MacOS version released.
+- 2010
+- 2011
+	* Multi-threaded MacOS X version released.
+- 2012 - 2013
+	* New instruments, bug fixing
+- 2014
+	* Version 4.1
+	* **RTcmix** source uploaded to [Github](https://github.com/RTcmix)
+- 2015
+	* **Minc** <a href="../reference/scorefile/Minc.html#minc-functions">user-defined function</a> support plus scoped variables.
+	* Version 4.2
+- 2016
+	* <a href="../reference/scorefile/Minc.html#command-line-named-args">Named-argument</a> variable support.
+- 2017
+	* Parser error handling improved.
+- 2018
+- 2019
+	* Version 4.3.2 released.
+	* Support for <a href="../reference/scorefile/Minc.html#struct">struct</a> data type.
+	* Version 4.4
+- 2020
+	* Support for other new **Minc** data types.
+	* Version 4.5
+	* **OSC** support added.
+	* Version 4.6
+	* Version 5.0 released!
+	* Version 5.1
+- 2021
+- 2022
+	* Structs now have "class" behavior with method functions.
+	* Version 5.2
+- 2023
+	* Version 5.2.1
