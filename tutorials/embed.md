@@ -21,8 +21,8 @@ need the statements
 
 ``` 
 #define MAIN
-#include 
-#include 
+#include <globals.h>
+#include <RTcmix.h>
 ```
 
 in the file containing the *main()* entry point. The "globals.h" file
@@ -36,8 +36,8 @@ that certain variable definitions are appropriately included.
 You will also need to put
 
 ``` 
-#include 
-#include 
+#include <globals.h>
+#include <RTcmix.h>
 ```
 
 in any subsidiary files defining functions or objects that make use of

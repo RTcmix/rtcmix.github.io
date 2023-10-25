@@ -52,7 +52,7 @@ contains 2 floating-point arguments and 1 string argument.
 -----
 
 *Note:  These functions have been replaced in [Minc](Minc.html) by the 
-much-more-flexible command-line named arguments described* [here](Minc.html:#command-line-args).
+much-more-flexible command-line named arguments described* <a href="Minc.html#command-line-named-args" >here</a>.
 
 -----
 

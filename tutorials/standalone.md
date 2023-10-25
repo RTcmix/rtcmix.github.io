@@ -5,7 +5,7 @@ layout: ref
 
 # Basic RTcmix Tutorial
 
-Because of its [Ancient History](../about/index.html), RTcmix was
+Because of its [history](../about/index.html), RTcmix was
 developed initially as a *command-line* program. What does this mean for
 you? To use RTcmix as a standalone music creation application, you will
 need to edit a text file (called a **scorefile**) filled with command

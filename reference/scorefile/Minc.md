@@ -99,7 +99,7 @@ useful for large, complex scores!
 
 Data types are different “flavors” of variables used to store different kinds of information. One of the other major differences between **C** and **Minc** is the set of built-in data types available. Variables of the following types can be created in your scores, either by declaring them directly or having them automatically declared.
 
-#### float
+#### <a name="float"></a>float
 
 **floats** are all numbers such as -15.4 and 0.0125, and includes whole number (integer) values like 3 or 99.  All are stored and passed around as floating point. They can be declared and then set:
 
@@ -120,7 +120,7 @@ from causing problems for counting variables that would normally use integers. T
 [trunc](trunc.html) and [round](round.html) built-in functions can be used to
 guarantee a correct 'integer' value.
 
-#### string
+#### <a name="string"></a>string
 
 **strings** are any form of text, like comments, file names, names of instruments, etc.  These are stored in string variables. Like floats, they can be declared:
 
@@ -142,7 +142,7 @@ sentence = “hello" + “ “ + “world!"
 print(sentence)
     “hello world!"
 ```
-#### list
+#### <a name="list"></a>list
 
 **lists** or, as they are often called, **Minc arrays**, store a set of variables of any type which can be accessed by indexing into the list using the [] operator. These are extremely useful in a score. The following are acceptable Minc constructions:
 
@@ -160,7 +160,7 @@ for (i = 0; i < 10; i += 1) {
 ```
 For more information, see [More About Arrays](#more-about-arrays) below.
 
-#### handle
+#### <a name="struct"></a>handle
 
 **handles** are a type used to store references to special objects returned from other **Minc** functions such as maketable() and makeinstrument(). Quite often variables of this type will be handed to Instrument calls to set up dynamic p-fields.
 Handles to RTcmix tables have the extremely powerful ability to be combined with each other and with other arithmetic operators to create new tables which can then be accessed using functions like samptable():
