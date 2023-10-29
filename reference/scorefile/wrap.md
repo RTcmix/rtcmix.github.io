@@ -27,8 +27,8 @@ See also [mod](mod.html) which apparently does the same thing.
 ### Arguments
 
   - *value, range*  
-    The parameters used to perform the "wrapping" (i.e., *a mod b;* in
-    this case, *value mod range*) operation. Essentially **wrap** gives
+    The parameters used to perform the "wrapping" (i.e., *a % b;* in
+    this case, *value % range*) operation. Essentially **wrap** gives
     the remainder of dividing *value* into *range*. *Modular* (or
     "clock") arithmetic is very useful in western, 12-note/octave music.
 
@@ -46,4 +46,4 @@ See also [mod](mod.html) which apparently does the same thing.
 
 [abs](abs.html), [log](log.html), [pow](pow.html), [max](max.html),
 [mod](mod.html), [min](min.html), [round](round.html),
-[trunc](trunc.html)
+[trunc](trunc.html), [fwrap](fwrap.html)

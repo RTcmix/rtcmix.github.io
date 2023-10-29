@@ -730,5 +730,3 @@ Happy RTcmixing\!
   
   
 Brad Garton  
-August, 2003  
-*revised July, 2005 for RTcmix 4.0*

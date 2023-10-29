@@ -9,7 +9,7 @@ layout: ref
 
 ### Introduction to the **Minc** Parser
 
-**Minc** is the default interface for RTcmix. Invoking the command
+**Minc** is the default parsing interface for RTcmix. Invoking the command
 
 ```cpp 
 CMIX < some_score.file
@@ -35,7 +35,8 @@ used to parse buffer-scripts in the Max/MSP
 [rtcmix\~](../../rtcmix_/index.html) object and in the
 [iRTcmix](../../iRTcmix/index.html) package for iOS devices.
 
-**Minc** takes much of its functionality from the **C** programming
+**Minc** is an interpretive (non-compiled), interactive language.  It takes much
+of its functionality from the **C** programming
 language, including flow-of-control features such as *for* and *while*
 loops, *if* decision-constructs, etc. In addition to the many examples below,
 see the [RTcmix tutorial](../../tutorials/standalone.html) (especially the later
@@ -49,40 +50,51 @@ useful for large, complex scores!
 
 ### Some useful features of **Minc**
 
-  - Actions are performed by **Minc** functions or operators ("+", "-", "++",
-    "\*", "/", "^", etc.). Functions may be calls to Instruments, built-in , or score-defined
+- **Minc** Operators modify or combine the value of **Minc** variables:
+	-  '+' add
+	- '-' subtract
+	- '\*' multiply
+	- '/' divide
+	- '^' and '**' power
+	- '++' increment (add 1)
+	- '--' decrement (subtract1)
+	- '%' modulo
+		
+	Many of these are also available in the form '+=', '-=', etc.
+		
+- **Minc** Functions may be calls to Instruments, built-in, or score-defined
     functions used to perform score file calculations. Return values are assigned to **Minc** 
-    variables with the "=" assignment operator:
+    variables with the '=' assignment operator:
     
-    ```cpp
-   aval = somecalculation(anotherval, something_else)
+	```cpp
+	aval = somecalculation(anotherval, something_else)
+	    
+	thisone = thatone + those
+	    
+	ANINSTRUMENT(with, many, different, parameters)
+	```
     
-   thisone = thatone + those
-    
-   ANINSTRUMENT(with, many, different, parameters)
-    ```
-    
-    In addition, operations and functions may be embedded (or 'nested'):
-    
-    ```cpp 
+	In addition, operations and functions may be embedded (or 'nested'):
+	    
+	```cpp 
 	ANINSTRUMENT(somefunction(var1, var2), val^3.2, aval, 3.1654, func1(func2(array[3])))
-    ```
+	```
 
-  - Several **C** conditional-branching statements are included in
-    **Minc** ("if-then-else", "while"). The standard **C** comparison
-    operators ("==", "&&", "||", "\!=", "\>", "\<", etc.) are used for
+- Several **C** conditional-branching statements are included in
+    **Minc** ("if/then/else", "while"). The standard **C** comparison
+    operators ('==', '&&', '||', '\!=', '\>', '\<', etc.) are used for
     the conditional comparison. Using parentheses to group and determine
     precedence of evaluation is also supported:
     
-    ```cpp 
-    if ((val > 2.0) && < (val2 != 0)) { ... }
-    ```
+	```cpp 
+	if ((val > 2.0) && < (val2 != 0)) { ... }
+	```
     
     Note that the "do...while" and "switch" statements are not supported
     in **Minc**.  Postfix (x--) operators are also not supported.
       
-  - Comments may be included in **Minc** scripts using **C** comment
-    syntax:
+- Comments may be included in **Minc** scripts using **C** comment
+syntax:
     
     ```cpp 
     /* a comment may be between two slash-asterisk markers */
@@ -155,7 +167,7 @@ INSTRUMENT(a[3], a[0], ...)
 	
 b = {} // this auto-declares an empty array
 for (i = 0; i < 10; i += 1) {
-    b[i] = i * 3
+    b[i] = i * 3		// the array will grow as elements are added
 }
 ```
 For more information, see [More About Arrays](#more-about-arrays) below.
@@ -309,7 +321,7 @@ The purpose of the explicit declarations will be discussed later.
 	env = maketable("line", 1000, remaining_args)
 	```
 
-- Array elements may also be other arrays. To access the sub-arrays, you just “double-index” (this is new):
+- Array elements may also be other arrays, and can be of different lengths. To access the sub-arrays, you “double-index” the "parent" array:
 
 	```cpp	
 	arr1 = { 1, 2, 3, 4, 5, 6, 7 }
@@ -319,8 +331,6 @@ The purpose of the explicit declarations will be discussed later.
 	    print(superarr[0][i])
 	}
 	```
-
-- Note that arrays of different lengths may be stored in a 'super' array. The [len](len.html) built-in function is used to determine the length of an array (as well as lengths of other **Minc** data-types).
  
 - Arrays can be concatenated using the '+' operator: 
 
@@ -341,6 +351,13 @@ The purpose of the explicit declarations will be discussed later.
 	arr = arr * 100		// multiply all elements by 100
 	print(arr)
 		[1100, 1200, 1300]
+	```
+	Currently the ++ and -- operators do not work on an array or an element indexed on an array:
+	
+	```cpp
+	arr = { 1, 2, 3 }
+	++arr		// NOT OK
+	++arr[1]	// NOT OK
 	```
 
 ### <a name="more-about-structs"></a>More About Structs
@@ -562,16 +579,16 @@ rtinput($filename);
 rate = 44100;  // this will be the default
 if (?sample_rate) { rate = $sample_rate } // use '$sample_rate' if set
 ```
-You can even pass in a list via named argument!  You just have to remember to quote it and leave no spaces between the characters (all this to get around problems with your shell).  With a this score:
+You can even pass in a list via named argument!  You just have to remember to double-quote the entire list. With a this score:
 
 ```cpp
 printf("The passed-in list was: %l\n", $listargument);
 ```
-This command runs as follows.  Note that the string is not quoted:
+This command runs as follows.  Note that the string element is also not internally quoted:
 
 ```cpp
-CMIX -f listarg.sco --listargument="{1,2,BuckleMyShoe}"
-The passed-in list was: [1, 2, "BuckleMyShoe"]
+CMIX -f listarg.sco --listargument="{1, 2, Buckle My Shoe}"
+The passed-in list was: [1, 2, "Buckle My Shoe"]
 ```
 
 #### type()
@@ -638,7 +655,7 @@ the number of the line with the syntax error. As mentioned above, supplying
 semicolons at the end of score lines will assist in accurately determining the
 line location for the error.
 
-If you wish to do your own additional error checking in your score, you can use the exit() function:
+If you wish to do your own additional error checking in your score, you can use the error() function:
 
 ```cpp
 if ($entered_sample_rate < 8000)
@@ -691,7 +708,7 @@ print(myCounter.increment())
 
 ```
 
-## History of Minc
+## History of the Minc Parser
 
 The original Minc parser was coded by Lars Graf. Additional modifications were made by John Gibson, Doug Scott and others.
 

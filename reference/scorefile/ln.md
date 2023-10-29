@@ -1,23 +1,23 @@
 ---
-title: log()
+title: ln()
 layout: ref
 ---
 
-## log
+## ln
 
-Return log<sub>10</sub> of the argument.
+Return the natural log of the argument.
 
 -----
 
 ### Synopsis
 
-val = **log**(*someval*)
+val = **ln**(*someval*)
 
 -----
 
 ### Description
 
-**log** returns the log<sub>10</sub> of its argument.
+**ln** returns the natural log of its argument.
 
 -----
 
@@ -31,13 +31,13 @@ val = **log**(*someval*)
 ### Examples
 
 ```cpp
-lval = log(3.414)
+lval = ln(3.414)
 ```
 
 -----
 
 ### See Also
 
-[ln](ln.html), [abs](abs.html), [pow](pow.html), [max](max.html), [min](min.html),
+[log](log.html), [abs](abs.html), [pow](pow.html), [max](max.html), [min](min.html),
 [mod](mod.html), [round](round.html), [trunc](trunc.html),
 [wrap](wrap.html)

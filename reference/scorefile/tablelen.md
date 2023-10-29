@@ -18,7 +18,7 @@ val = **tablelen**(*table\_handle*)
 
 ### Description
 
-**tablelen** returns the size (length) of the table from the
+**tablelen** returns a float containing the integer size (length) of the table from the
 *table\_handle* variable. *table\_handle* is instantiated using the
 [maketable](maketable.html) scorefile command.
 
@@ -29,12 +29,6 @@ val = **tablelen**(*table\_handle*)
   - *table\_handle*  
       
     The table-handle identifier for the table.
-
------
-
-### RETURN VALUE
-
-Returns to the script an integer value, the size of the table.
 
 -----
 

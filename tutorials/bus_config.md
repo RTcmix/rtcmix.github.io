@@ -9,7 +9,7 @@ RTcmix has the ability to route signals between instruments and to multiple outp
 
 ## Bus architecture
 
-Formerly, all instruments added their output into one master mix bus.
+Long ago, all instruments had to add their output into one master mix bus.
 Now you can tell an instrument to send its output into an intermediate
 bus, called an "aux" bus, and to take its input from another aux bus.
 This lets you create a chain of instruments. For example, you could send

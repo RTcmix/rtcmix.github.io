@@ -411,4 +411,3 @@ RTcmix from halting the execution of the calling application.
   
   
 Brad Garton  
-August, 2003

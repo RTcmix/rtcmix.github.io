@@ -215,4 +215,3 @@ be used to create and manipulate *pfield-handles* and *table-handles*:
   
   
 Brad Garton  
-July, 2005
