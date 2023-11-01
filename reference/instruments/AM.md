@@ -12,40 +12,31 @@ Apply amplitude or ring modulation to an input source.
 
 -----
 
-##### quick syntax:
+##### Quick Syntax:
 
 **AM**(outsk, insk, dur, AMP, MODFREQ\[, inputchan, PAN, MODWAVETABLE\])
 
-CAPITALIZED parameters are [pfield-enabled](pfield-enabled.html) for
+Dynamic parameters are [pfield-enabled](pfield-enabled.html) for
 table or dynamic control (see the
 [maketable](../scorefile/maketable.html) or
 [makeconnection](../scorefile/makeconnection.html) scorefile
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
+PField	| Parameter | Units | Dynamic | Optional
+------ | ------ | ------ | ------ | ------
+p0 | output start time | seconds
+p1 | input start time | seconds
+p2 | duration | seconds
+p3 | amplitude multiplier (relative multiplier of input signal) | - |  Yes
+p4 | modulation oscillator frequency | Hz | | Yes
+p5 | input channel [default is 0] | - | No | Yes
+p6 | pan (0-1 stereo; 0.5 is middle) [default is 0] | - | Yes | Yes
+p7 | reference to AM modulator wavetable [defaults to sine wave] | - | Yes | Yes
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = modulation oscillator frequency (Hz)
-   p5 = input channel [optional; default is 0]
-   p6 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-   p7 = reference to AM modulator wavetable [optional; defaults to sine wave]
-
-   p3 (amplitude), p4 (mod freq) and p6 (pan) can receive dynamic updates
-   from a table or real-time control source.
-
-   p7 (modulator wavetable), if used, should be a reference to a pfield table-handle.
+p7 (modulator wavetable), if used, should be a reference to a pfield table-handle.
 
    Author:  Brad Garton; rev. for v 4.0: John Gibson
-```
-
-  
 
 -----
 
@@ -70,8 +61,7 @@ the sine wave out of the negative area. For example, the following
 creates a sine wave that oscillates between 0 and 1:
 
 ```cpp
-
-      wave = maketable("wave3", 1000, 0,.5,0, 1,.5,0)
+wave = maketable("wave3", 1000, 0,.5,0, 1,.5,0)
 ```
 
 The output of **AM** can be either mono or stereo.
@@ -127,10 +117,6 @@ fun stuff\!
 
    AM(0, 0, 14.0, 1*ampenv, freqenv, 0, 0.5, waveform)
 ```
-
-  
-
------
 
 ### See Also
 
