@@ -5,15 +5,13 @@ layout: ref
 
 ## CHAIN
 
-Group instruments.
-
-  
+Connect a set of instruments together so they execute as one.
 
 -----
 
 ##### quick syntax:
 
-**CHAIN**(outsk, dur, number, handle1...n)
+**CHAIN**(outsk, dur, inst\_count, handle1, ..., handleN)
 
 -----
 
@@ -22,7 +20,7 @@ Group instruments.
 ```cpp
    p0 = output start time (seconds)
    p1 = duration (-endtime)
-   p2 = number of instruments to follow
+   p2 = number of instruments handles to follow
    p3-n = handles for instruments to be chained
 ```
 
@@ -41,7 +39,7 @@ Use the handle that is returned as the argument for that instrument.
 **CHAIN**'d instruments do not use mix buses between them, but you still
 need to use bus\_config() to configure each instrument's input and
 output channel counts. To do this, there is a special bus type called
-"chain", which configures the instrument without invoking any of the in,
+*"chain"*, which configures the instrument without invoking any of the in,
 out, or aux bus logic. So, if you wished to place WAVETABLE and DELAY in
 a **CHAIN**, you could configure each instrument like so:
 

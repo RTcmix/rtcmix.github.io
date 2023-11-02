@@ -1,2 +1,2 @@
 # rtcmix.github.io
-Website for RTcmix and related projects
+Website for RTcmix documentation and related projects

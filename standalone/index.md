@@ -5,29 +5,10 @@ layout: ref
 
 # Standalone RTcmix
 
-RTcmix is availble to run as a standalone app on macOS and Windows
-and in the command line environments of most Unix-like systems,
-including macOS and various flavors of Linux, IRIX, and FreeBSD.
-RTcmix is also available to run in Max and Pd via the [rtcmix\~
-object](../rtcmix_/index.html) and the [iRTcmix
-library](../irtcmix/index.html) is available to use in iOS apps (iPhone,
-iPad, iPod Touch).
-
-  
 
 -----
 
-## RTcmix Standalone Apps
-
-John Gibson has created two apps that will let you run RTcmix scores
-without having to learn Unix shell commands. They are available to
-[download for Mac and PC](https://cecm.indiana.edu/rtcmix/rtcmix.html).
-
-  
-
------
-
-## RTcmix on the Command Line
+## Downloading RTcmix Source
 
 The RTcmix source code lives on GitHub. There are two ways to download
 it.
@@ -37,9 +18,9 @@ it.
     most recent (or other) release, using the "Source code (zip)" or
     "Source code (tar.gz)" buttons. Unpack this archive, if necessary,
     by double-clicking its icon. This should produce a folder called
-    "RTcmix-4.3.1" (or a similar version number). Then move this folder
-    into the place where you keep RTcmix source code. The usual place
-    for such things is /usr/local/src, but it can be anywhere.  
+    "RTcmix-5.2.2" (or a similar version number). Then move this folder
+    into the place where you wish to keep the RTcmix source. The usual place
+    for such things is /usr/local/src, or /opt/local/src, but it can be anywhere.  
       
     **-OR-**
 
@@ -49,7 +30,7 @@ it.
     
         git clone https://github.com/RTcmix/RTcmix
 
-## Compiling RTcmix
+## Configuring RTcmix 
 
 In the RTcmix source code directory ("RTcmix/"), type the shell command:
 
@@ -58,8 +39,10 @@ In the RTcmix source code directory ("RTcmix/"), type the shell command:
 ```
 
 There are options you may wish to use with the configure command for
-your installation -- Perl, Python, X-Windows, fftw-lib, etc. See the
-INSTALL file in the "RTcmix/" directory for a discussion of these.
+your installation -- Perl, Python, X Windows, fftw-lib, etc. See the
+INSTALL file in the top-level RTcmix source directory for a discussion of these.
+
+## Compiling and Installing RTcmix 
 
 After running the configure command (with any appropriate options), then
 type (in that same "RTcmix/" directory):
@@ -68,12 +51,18 @@ type (in that same "RTcmix/" directory):
 make && make install
 ```
 
-RTcmix should compile, install, and off you go\!
+This will compile and install:
 
-## A Note on the command path
+- The dynamic **RTcmix** library referenced by the main command-line tools
+- The main command-line tool *CMIX*, plus *PCMIX* and *PYCMIX* if you have enabled Perl and/or Python support
+- The complete set of loadable dynamic shared objects (DSOs) for the available instruments (see the [load](../reference/scorefile/load.html) command)
+- A number of utility commands for examining and playing soundfiles, etc.
+- On MacOS X, several helper apps used for visual display of some control functions
 
-All RTcmix executable commands, including the *CMIX* command, are placed
-in the "RTcmix/bin" directory. To access these commands, you can
+## Making the New Executables Visible to Your Shell
+
+All **RTcmix** executable commands, including the *CMIX* command, are placed
+in the "RTcmix/bin" directory. To make these commands visible to your shell, you can
 copy/move them to a directory like "/usr/local/bin" or "/usr/bin". These
 directories are probably already on your *command search path*. To see
 your command search path, type the command:
@@ -91,7 +80,7 @@ echo $PATH
 and you should see a listing of all directories that are searched for
 executable commands.
 
-You can also simply add the "RTcmix/bin" directory to your command
+You can also add the "<PATH TO YOUR RTcmix DIRECTORY>/bin" directory to your command
 search path. You will probably need to edit or create a ".tcshrc: or
 ".cshrc" or equivalent shell initialization file to do this. An example
 of a line in a ".tcshrc" that accomplishes this is:

@@ -5,34 +5,16 @@ layout: ref
 
 # Instruments Reference
 
-An RTcmix instrument is a scorefile or interface-object command that
-will create or process sound. When an RTcmix instrument is called, it
-instantiates a unique copy of itself with the parameters for the
-specific 'note' (starting time, duration, etc.) included. This
-instrument/note object is then scheduled for execution at the
-appropriate starting time.
+An RTcmix instrument is a scorefile or interface-object command.  There are two main types: **synthesis instruments**, which generate audio, and **processing instruments**, which accept input audio and output a modified version of it.  There are also a small set of **special-case instruments** which perform other actions (see below). When an RTcmix instrument command is called, **RTcmix** instantiates a unique copy of itself with the parameters for the specific event (starting time, duration, etc.) included. This instrument/note object is then scheduled for execution at the appropriate starting time during playback.
 
 ## <span id="sort_topic">Listed by Topic</span>  
 
-## Synthesis
+## Synthesis Instruments
+These generate audio and send it via an aux or output bus.
 
-- [AMINST](AMINST.html) &mdash; amplitude modulator (synthesis)
-- [BROWN](BROWN.html) &mdash; brown noise instrument
-- [CRACKLE](CRACKLE.html) &mdash; chaotic noise generator
-- [DUST](DUST.html) &mdash; random impulses
-- [FMINST](FMINST.html) &mdash; frequency modulator (synthesis)
-- [GRANSYNTH](GRANSYNTH.html) &mdash; granular synthesis
+### Wavetable
 - [HALFWAVE](HALFWAVE.html) &mdash; constructed wavetable (synthesis)
-- [HENON](HENON.html) &mdash; Henon map noise generator
-- [JGRAN](JGRAN.html) &mdash; granular synthesis
-- [LATOOCARFIAN](LATOOCARFIAN.html) &mdash; chaotic noise generator
-- [LPCPLAY](LPCPLAY.html) &mdash; Linear Predective Coding (LPC) resynthesis
-- [MULTIFM](MULTIFM.html) &mdash; configurable multi-oscillator FM synthesis instrument
 - [MULTIWAVE](MULTIWAVE.html) &mdash; additive synthesis
-- [NOISE](NOISE.html) &mdash; make noise
-- [PINK](PINK.html) &mdash; pink noise instrument
-- [SCULPT](SCULPT.html) &mdash; frequency/amplitude pair-based resynthesis
-- [SGRANR](SGRANR.html) &mdash; stochastic granular synthesis
 - [SYNC](SYNC.html) &mdash; hard sync oscillator synthesis instrument
 - [VWAVE](VWAVE.html) &mdash; vector wavetable synthesis
 - [WAVETABLE](WAVETABLE.html) &mdash; wavetable oscillator
@@ -40,8 +22,30 @@ appropriate starting time.
 - [WAVY](WAVY.html) &mdash; two-oscillator modulating synthesis
 - [WIGGLE](WIGGLE.html) &mdash; wavetable oscillator with frequency modulation and filter
 
-## Physical Models
+### Granular
+- [GRANSYNTH](GRANSYNTH.html) &mdash; granular synthesis
+- [JGRAN](JGRAN.html) &mdash; granular synthesis
+- [SGRANR](SGRANR.html) &mdash; stochastic granular synthesis
 
+### Noise
+- [BROWN](BROWN.html) &mdash; brown noise instrument
+- [CRACKLE](CRACKLE.html) &mdash; chaotic noise generator
+- [DUST](DUST.html) &mdash; random impulses
+- [HENON](HENON.html) &mdash; Henon map noise generator
+- [LATOOCARFIAN](LATOOCARFIAN.html) &mdash; chaotic noise generator
+- [NOISE](NOISE.html) &mdash; make noise
+- [PINK](PINK.html) &mdash; pink noise instrument
+
+### Frequency modulation
+- [FMINST](FMINST.html) &mdash; frequency modulator (synthesis)
+- [MULTIFM](MULTIFM.html) &mdash; configurable multi-oscillator FM synthesis instrument
+
+### Miscellaneous
+- [AMINST](AMINST.html) &mdash; amplitude modulator (synthesis)
+- [LPCPLAY](LPCPLAY.html) &mdash; Linear Predective Coding (LPC) resynthesis
+- [SCULPT](SCULPT.html) &mdash; frequency/amplitude pair-based resynthesis
+
+### Physical Modeling
 - [CLAR](CLAR.html) &mdash; early clarinet physical model
 - [MBANDEDWG](MBANDEDWG.html) &mdash; banded waveguide (bars/modal things, struck & bowed) physical model
 - [MBLOWBOTL](MBLOWBOTL.html) &mdash; simple Helmholtz resonator physical model
@@ -71,28 +75,40 @@ appropriate starting time.
 - [STRUM2](STRUM2.html) &mdash; tuned Karplus-Strong ("plucked string") algorithm
 - [STRUMFB](STRUMFB.html) &mdash; extended Karplus-Strong ("plucked string") algorithm, with distortion and feedback
 
-## Modulators
+## Processing Instruments
+These recieve audio from either an input file or an aux bus and send audio out via an aux or output bus.
 
-- [AM](AM.html) &mdash; amplitude modulator (signal-processor)
-- [COMPLIMIT](COMPLIMIT.html) &mdash; audio compressor/limiter
-- [DECIMATE](DECIMATE.html) &mdash; reduce bit-representation of input sound amplitude
-- [DISTORT](DISTORT.html) &mdash; distortion (clip) signal-procesor
+### Mixing & Panning
+- [MIX](MIX.html) &mdash; simple soundfile mixing command
+- [NPAN](NPAN.html) &mdash; multichannel panning
+- [PAN](PAN.html) &mdash; stereo panning
+- [QPAN](QPAN.html) &mdash; 4-channel panning
+- [REVMIX](REVMIX.html) &mdash; reverse input soundfile
+- [STEREO](STEREO.html) &mdash; stereo mixing
+
+### Transposing & Pitch shifting
 - [MOCKBEND](MOCKBEND.html) &mdash; real-time pitch-shifter with dynamic modification of pitch
 - [SCRUB](SCRUB.html) &mdash; fowards/backwards pitch shifter
-- [SHAPE](SHAPE.html) &mdash; waveshape an input sound
-- [STGRANR](STGRANR.html) &mdash; sampling stochastic granular processing
 - [TRANS](TRANS.html) &mdash; pitch-shifter
 - [TRANS3](TRANS3.html) &mdash; pitch-shifter (3rd-order interpolation)
 - [TRANSBEND](TRANSBEND.html) &mdash; pitch-shifter with dynamic modification of pitch
 
-## Filters
+### Amplitude modulation & Distortion
+- [AM](AM.html) &mdash; amplitude modulator (signal-processor)
+- [COMPLIMIT](COMPLIMIT.html) &mdash; audio compressor/limiter
+- [DECIMATE](DECIMATE.html) &mdash; reduce bit-representation of input sound amplitude
+- [DISTORT](DISTORT.html) &mdash; distortion (clip) signal-procesor
+- [FOLLOWER](FOLLOWER.html) &mdash; simple envelope (amplitude) follower
+- [FOLLOWGATE](FOLLOWGATE.html) &mdash; envelope (amplitude) follower controlling an amplitude gate
+- [SHAPE](SHAPE.html) &mdash; waveshape an input sound
 
+### Filters & Equalizers
 - [BUTTER](BUTTER.html) &mdash; time-varying Butterworth filter (high- or low-pass)
 - [DCBLOCK](DCBLOCK.html) &mdash; remove (most of) DC bias from input signal
 - [ELL](ELL.html) &mdash; elliptical filter
 - [EQ](EQ.html) &mdash; equalizer instrument (peak/notch, shelving and high/low pass types)
 - [FIR](FIR.html) &mdash; finite impulse response filter
-- [FILTERBANK](FILTERBANK.html) &mdash;multi-band reson instrument (with dynamic control)
+- [FILTERBANK](FILTERBANK.html) &mdash; multi-band reson instrument (with dynamic control)
 - [FILTSWEEP](FILTSWEEP.html) &mdash; time-varying biquad filter (band-pass)
 - [FOLLOWBUTTER](FOLLOWBUTTER.html) &mdash; envelope (amplitude) follower controlling a Butterworth filter
 - [HOLO](HOLO.html) &mdash; stereo FIR filter to perform crosstalk cancellation
@@ -106,63 +122,71 @@ appropriate starting time.
 - [LPCIN](LPCPLAY.html) &mdash; Linear Predective Coding (LPC) resynthesis using input sound through the LPC filters
 - [MOOGVCF](MOOGVCF.html) &mdash; dynamic resonant low-pass filter
 - [MULTEQ](MULTEQ.html) &mdash; equalizer instrument with dynamic filter sections
+
+### Vocoders
+- [PVOC](PVOC.html) &mdash; phase vocoder
 - [VOCODE2](VOCODE2.html) &mdash; channel vocoder
 - [VOCODE3](VOCODE3.html) &mdash; a more flexible channel vocoder
 - [VOCODESYNTH](VOCODESYNTH.html) &mdash; channel vocoder with oscillator-bank carrier
 
-## Delays
-
+### Delays & Comb Filters
 - [COMBIT](COMBIT.html) &mdash; comb filter
 - [DEL1](DEL1.html) &mdash; single stereo delay
 - [DELAY](DELAY.html) &mdash; simple regenerating delay
-- [DMOVE](DMOVE.html) &mdash; high-quality room simulation program for moving sources with dynamic control (multiple inputs)
 - [FLANGE](FLANGE.html) &mdash; notch or comb "flange" filter
+- [JDELAY](JDELAY.html) &mdash; regenerating delay + low-pass filter
+- [MULTICOMB](MULTICOMB.html) &mdash; four comb filters simultaneously
+- [PANECHO](PANECHO.html) &mdash; stereo "ping-pong" regenerating delays
+
+### Room simulation & Spacial Placement
+- [DMOVE](DMOVE.html) &mdash; high-quality room simulation program for moving sources with dynamic control (multiple inputs)
 - [FREEVERB](FREEVERB.html) &mdash; good-sounding reverbator
 - [GVERB](GVERB.html) &mdash; good-sounding reverberator with long reverb times
-- [JDELAY](JDELAY.html) &mdash; regenerating delay + low-pass filter
 - [LOCALIZE](LOCALIZE.html) &mdash; delay/amplitude/filter-based localization instrument
 - [MMOVE](MMOVE.html) &mdash; high-quality room simulation program for moving sources (multiple inputs)
 - [MPLACE](MPLACE.html) &mdash; high-quality room simulation program for stationary sources (multiple inputs)
 - [MOVE](MOVE.html) &mdash; high-quality room simulation program for moving sources
 - [MROOM](MROOM.html) &mdash; room simulation program for moving sources
-- [MULTICOMB](MULTICOMB.html) &mdash; four comb filters simultaneously
-- [PANECHO](PANECHO.html) &mdash; stereo "ping-pong" regenerating delays
 - [PLACE](PLACE.html) &mdash; high-quality room simulation program for stationary sources
 - [REV](REV.html) &mdash; three different reverberation algorithms
 - [REVERBIT](REVERBIT.html) &mdash; Schroeder reverb
 - [ROOM](ROOM.html) &mdash; delay line room-simulation model
 - [SROOM](SROOM.html) &mdash; room simulation for stationary sources
 
-## FFT-based
+### FFT-based
 
 - [CONVOLVE1](CONVOLVE1.html) &mdash; FFT convolution
-- [PVOC](PVOC.html) &mdash; phase vocoder
 - [SPECTACLE](SPECTACLE.html) &mdash; FFT-based delay
 - [SPECTACLE2](SPECTACLE2.html) &mdash; FFT-based delay (more real-time control)
 - [SPECTEQ](SPECTEQ.html) &mdash; FFT-based EQ
 - [SPECTEQ2](SPECTEQ2.html) &mdash; FFT-based EQ (more real-time control)
 - [TVSPECTACLE](TVSPECTACLE.html) &mdash; FFT-based delay with time-varying properties
 
-## Miscellaneous
+### Miscellaneous
 
-- [CHAIN](CHAIN.html) &mdash; group instruments
-- [DUMP](DUMP.html) &mdash; print control ('handle') data
-- [FOLLOWER](FOLLOWER.html) &mdash; simple envelope (amplitude) follower
-- [FOLLOWGATE](FOLLOWGATE.html) &mdash; envelope (amplitude) follower controlling an amplitude gate
+- [CHAIN](CHAIN.html) &mdash; connect a set of instruments together so they execute as one
 - [GRANULATE](GRANULATE.html) &mdash; granularize an input soundfile table
 - [JCHOR](JCHOR.html) &mdash; granulated, random-wait chorus (signal-processor)
+- [SPLITTER](SPLITTER.html) &mdash; output routing
+- [STGRANR](STGRANR.html) &mdash; sampling stochastic granular processing
+
+## Special-Case Instruments
+These perform special actions and neither generate nor process audio.
+
+### MIDI
+- [MIDI](MIDI.html) &mdash; real-time scheduled MIDI control of an external device
+  * [NOTE](MIDI.html#NOTE) &mdash; send MIDI note on events
+  * [CONTROLLER](MIDI.html#CONTROLLER) &mdash; send MIDI controller events
+  * [PITCHBEND](MIDI.html#PITCHBEND) &mdash; send MIDI pitch bend events
+  * [PROGRAM](MIDI.html#PROGRAM) &mdash; send MIDI program change events
+
+### Miscellaneous
+- [DUMP](DUMP.html) &mdash; print control ('handle') data
 - [MAXBANG](MAXBANG.html) &mdash; utility to generate a bang message in [rtcmix~](http://rtcmix.org/rtcmix~/) or [iRTcmix](http://rtcmix.org/iRTcmix/)
 - [MAXMESSAGE](MAXMESSAGE.html) &mdash; utility to send a list of values, used in [rtcmix~\>](http://rtcmix.org/rtcmix~/) or [iRTcmix](http://rtcmix.org/iRTcmix/)
-- [MIX](MIX.html) &mdash; simple soundfile mixing command
-- [NPAN](NPAN.html) &mdash; multichannel panning
-- [PAN](PAN.html) &mdash; stereo panning
 - [PFSCHED](PFSCHED.html) &mdash; schedule (real-time) pfield events
-- [QPAN](QPAN.html) &mdash; 4-channel panning
-- [REVMIX](REVMIX.html) &mdash; reverse input soundfile
-- [SPLITTER](SPLITTER.html) &mdash; output routing
-- [STEREO](STEREO.html) &mdash; stereo mixing
 
-## <span id="sort_alphabetical">Listed in Alphabetical Order</span>
+## <span id="sort_alphabetical">All Instruments, Listed in Alphabetical Order</span>
 
 - [AM](AM.html)
 - [AMINST](AMINST.html)
@@ -170,6 +194,7 @@ appropriate starting time.
 - [BUTTER](BUTTER.html)
 - [CHAIN](CHAIN.html)
 - [CLAR](CLAR.html)
+- [COMBFILT](COMBFILT.html)
 - [COMBIT](COMBIT.html)
 - [COMPLIMIT](COMPLIMIT.html)
 - [CONVOLVE1](CONVOLVE1.html)
@@ -184,19 +209,21 @@ appropriate starting time.
 - [DUST](DUST.html)
 - [ELL](ELL.html)
 - [EQ](EQ.html)
-- [FIR](FIR.html)
+- [FEEDBACK](FEEDBACK.html)
 - [FILTERBANK](FILTERBANK.html)
 - [FILTSWEEP](FILTSWEEP.html)
-- [FMINST](FMINST.html)
+- [FIR](FIR.html)
 - [FLANGE](FLANGE.html)
-- [FOLLOWER](FOLLOWER.html)
+- [FMINST](FMINST.html)
 - [FOLLOWBUTTER](FOLLOWBUTTER.html)
+- [FOLLOWER](FOLLOWER.html)
 - [FOLLOWGATE](FOLLOWGATE.html)
 - [FREEVERB](FREEVERB.html)
 - [GRANSYNTH](GRANSYNTH.html)
 - [GRANULATE](GRANULATE.html)
 - [GVERB](GVERB.html)
 - [HALFWAVE](HALFWAVE.html)
+- [HAR](HAR.html)
 - [HENON](HENON.html)
 - [HOLO](HOLO.html)
 - [IIR](IIR.html)
@@ -211,6 +238,7 @@ appropriate starting time.
 - [JGRAN](JGRAN.html)
 - [LATOOCARFIAN](LATOOCARFIAN.html)
 - [LOCALIZE](LOCALIZE.html)
+- [LOOP](LOOP.html)
 - [LPCPLAY](LPCPLAY.html)
 - [LPCIN](LPCPLAY.html)
 - [MAXBANG](MAXBANG.html)
@@ -226,7 +254,13 @@ appropriate starting time.
   * [VSFLUTE](METAFLUTE.html#VSFLUTE)
   * [BSFLUTE](METAFLUTE.html#BSFLUTE)
   * [LSFLUTE](METAFLUTE.html#LSFLUTE)
+- [MIDI](MIDI.html)
+  * [NOTE](MIDI.html#NOTE)
+  * [CONTROLLER](MIDI.html#CONTROLLER)
+  * [PITCHBEND](MIDI.html#PITCHBEND)
+  * [PROGRAM](MIDI.html#PROGRAM)
 - [MIX](MIX.html)
+- [MIXN](MIXN.html)
 - [MMESH2D](MMESH2D.html)
 - [MMODALBAR](MMODALBAR.html)
 - [MMOVE](MMOVE.html)
@@ -238,19 +272,21 @@ appropriate starting time.
 - [MSAXOFONY](MSAXOFONY.html)
 - [MSHAKERS](MSHAKERS.html)
 - [MSITAR](MSITAR.html)
-- [MULTICOMB](MULTICOMB.html)
 - [MULTEQ](MULTEQ.html)
+- [MULTICOMB](MULTICOMB.html)
 - [MULTIFM](MULTIFM.html)
 - [MULTIWAVE](MULTIWAVE.html)
 - [NOISE](NOISE.html)
 - [NPAN](NPAN.html)
 - [PAN](PAN.html)
 - [PANECHO](PANECHO.html)
-- [PINK](PINK.html)
+- [PHASER](PHASER.html)
 - [PFSCHED](PFSCHED.html)
+- [PINK](PINK.html)
 - [PLACE](PLACE.html)
 - [PVOC](PVOC.html)
 - [QPAN](QPAN.html)
+- [RAP](RAP.html)
 - [REV](REV.html)
 - [REVERBIT](REVERBIT.html)
 - [REVMIX](REVMIX.html)
