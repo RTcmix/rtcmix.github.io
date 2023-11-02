@@ -39,7 +39,7 @@ There.  You just made your first score, using the [WAVETABLE](reference/instrume
   - **[Standalone](standalone/index.html)**  
     A command line version for most Unix-like systems, including various flavors of Linux, MacOS X, IRIX, and FreeBSD.
   - **[rtcmix\~](rtcmix_/index.html)**  
-    All functionality, accessible via a public API, compiled into an object for use in the Max/MSP and Pd graphical programming environments.
+    All functionality compiled into an object for use in the Max/MSP and Pd graphical programming environments.
   - **[Embedded](embedded/index.html)**  
     All functionality, accessible via a public API, compiled into a dynamic library which can be linked into a larger application (which then handles audio I/O and rendering callbacks). [RTcmixShell](https://cecm.indiana.edu/rtcmix/rtcmix-app.html) is an example of such an app.
 <!--  - **[iRTcmix](irtcmix/index.html)**   --> 
