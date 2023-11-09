@@ -24,24 +24,17 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = output duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = right channel [channel 1] delay time (seconds)
-   p5 = right channel amplitude multiplier (relative to left channel)
-   p6 = input channel [optional, default is 0]
-   p7 = ring-down duration [optional, default is first delay time value] 
-
-   p3 (amplitude), p4 (delay time) and p5 (delay amplitude) can receive
-   dynamic updates from a table or real-time control source.
-```
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | output duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | right channel [channel 1] delay time | (seconds) | yes | no | 
+p5 | right channel amplitude multiplier | (relative to left channel) | yes | no | 
+p6 | input channel |  -  | no | yes | default is 0 | 
+p7 | ring-down duration |  -  | no | yes | default is first delay time value | 
 
   
 

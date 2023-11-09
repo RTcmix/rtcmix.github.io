@@ -36,38 +36,38 @@ through the modeled placements (**NPAN**).
   
 <span id="NPANspeakers"></span> **NPANspeakers**  
 
-```cpp
-   p0 = mode ("polar" or "xy" (or "cartesian"))
-   p1, p2, ... pN-1, pN
-      starting with p1, the next N pfields are pairs specifying the locations
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | mode | "polar" or "xy" (or "cartesian")) | no | no | 
+p1 | virtual speaker 1 position | angle or x-location | no | no | determined by mode
+p2 | virtual speaker 1 location | distance or y-location | no | no | determined by mode
+...
+pN-1 | virtual speaker N/2 position | angle or x-location | no | no | determined by mode
+pN   | virtual speaker N/2 location | distance or y-location | no | no | determined by mode
+
+      pfields p1,p2, p3,p4, pN-1,pN are pairs specifying the locations
       of the virtual speakers, using angle/distance coordinates (for "polar"
       mode) or x-location/y-location (for "xy" or "cartesian" mode).  Distances
-      are assumed to be in feet.  Up to 16 speakers may be set.
-```
+      are assumed to be in feet.  Up to 16 speakers (32 pairs) may be set.
 
   
 <span id="NPAN"></span> **NPAN**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = global amplitude multiplier (relative multiplier of input signal)
-   p4 = mode: "polar" or "xy" (or "cartesian")
-   If mode is "polar",
-      p5 = angle (in degrees), relative to listener
-      p6 = distance from listener (feet)
-   If mode is "cartesian",
-      p5 = x coordinate (feet)
-      p6 = x coordinate (feet)
-   p7 = input channel [optional, default is 0]
-
-   p3 (amplitude), p5 (x-coordinate/angle) and p6 (y-coordinate/radius) can
-   receive dynamic updates from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | global amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | mode: "polar" or "xy" | (or "cartesian") | no | no | 
+p5 | angle | (degrees relative to listener) | yes | no | If mode is "polar"
+   |  x coordinate | (feet) | yes | no | If mode is "cartesian"
+p6 | distance from listener | (feet) | no | no | If mode is "polar"
+   | y coordinate | (feet) | yes | no | If mode is "cartesian"
+p7 | input channel |  -  | no | yes | default is 0 | 
 
    Author:  John Gibson, 11/13/04
    based on the description in F. R. Moore, "Elements of Computer Music," pp. 353-9
-```
 
   
 

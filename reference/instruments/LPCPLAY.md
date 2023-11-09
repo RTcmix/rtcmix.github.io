@@ -1,3 +1,8 @@
+---
+title: LPCPLAY/LPCIN()
+layout: ref
+---
+
 ## LPCPLAY / LPCIN
 
 Linear-predictive filter coding resynthesis.
@@ -23,14 +28,22 @@ threshcutoff\])
 **set\_thresh**(voiced\_thresh, unvoiced\_thresh)  
   
 **setdev**(dev)  
-  
-**set\_hnfactor**(factor)  
-  
+
 **setdevfactor**(devfactor)  
-  
+
+**set\_hnfactor**(factor)  
+    
 **freset**(param)  
-  
-**use\_autocorrect**(???)
+
+**use\_autocorrect**(flag)
+
+##### Experimental:
+
+**fix\_pitch_octaves**(flag)
+
+**fix\_pitch\_gaps**(flag)
+
+**pitch\_smoothing**(flag)
 
 CAPITALIZED parameters are [pfield-enabled](pfield-enabled.html) for
 table or dynamic control (see the
@@ -39,124 +52,117 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
-
-  
 The subcommands of **LPCPLAY** are used to set various parameters for
 the LPC synthesis. Several of them necessarily need to precede the
 **LPCPLAY** command itself. See the *Usage Notes* below.  
   
   
-**LPCPLAY**  
+<span id="LPCPLAY"></span> **LPCPLAY**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude multiplier (relative multiplier of original signal)
-   p3 = transposition (oct.pc, relative to base pitch of original signal
-      or absolute pitch -- it will try to 'cluster' near the specified pitch)
-   p4 = starting LPC frame
-   p5 = ending LPC frame
-   p6 = warp factor (-1.0 - 1.0)  [optional; default is 0]
-   p7 = reson center frequency [optional; 0 bypasses]
-   p8 = reson bandwidth [optional; used only if p7 is specified]
-
-   p2 (amplitude), p3 (transposition), p6 (warp), p7 (reson cf) and p8 (reson bw)
-   can receive dynamic updates from a table or real-time contol source.
-```
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude multiplier | (relative multiplier of original signal) | yes | no | 
+p3 | transposition | see Usage Notes | yes | no | 
+p4 | starting LPC frame |  -  | no | no | 
+p5 | ending LPC frame |  -  | no | no | 
+p6 | warp factor | (-1.0 - 1.0) | yes | yes | default is 0 | 
+p7 | reson center frequency | Hz  | yes | yes | value of 0 bypasses filter | 
+p8 | reson bandwidth | multiple of center freq | yes | yes | used only if p7 is specified | 
 
   
-**LPCIN**  
+<span id="LPCIN"></span> **LPCIN**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of original signal)
-   p4 = starting LPC frame
-   p5 = ending LPC frame
-   p6 = warp factor (-1.0 - 1.0)  [optional; default is 0]
-   p7 = reson center frequency [optional; 0 bypasses]
-   p8 = reson bandwidth [optional; used only if p7 is specified]
-
-   p2 (amplitude), p3 (transposition), p6 (warp), p7 (reson cf) and p8 (reson bw)
-   can receive dynamic updates from a table or real-time contol source.
-```
-
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of original signal) | yes | no | 
+p4 | starting LPC frame |  -  | no | no | 
+p5 | ending LPC frame |  -  | no | no | 
+p6 | warp factor | (-1.0 - 1.0) | yes | yes | default is 0 | 
+p7 | reson center frequency | Hz  | yes | yes | value of 0 bypasses filter | 
+p8 | reson bandwidth | multiple of center freq | yes | yes | used only if p7 is specified | 
   
-**dataset**  
+<span id="dataset"></span> **dataset**  
 
-```cpp
-   p0 = dataset name (the file with LPC analysis data)
-   p1 = number of filter poles in the original analysis [optional; the default value
-      0 will cause the number of filter poles to be read from the analysis file]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | path to  LPC analysis data file | valid path | no | no | 
+p1 | number of filter poles in the original analysis | 0-64 | no | yes | the default value 0 will cause the number of filter poles to be read from the analysis file]
 
    NOTE: this subcommand is required for LPCPLAY to function
-```
 
   
-**lpcstuff**  
+<span id="lpcstuff"></span> **lpcstuff**  
 
-```cpp
-   p0 = voice/unvoiced threshold (usually <= 0.1 for normal resynthesis)
-   p1 = noise amplitude (usually <= 0.1 for normal resynthesis)
-   p2 = unvoiced frame rate [optional; the default value 0 will cause voiced and
-      unvoiced frames to be synthesized at the same rate]
-   p3 = rise [optional; default 0]
-   p4 = decay [optional; default 0]
-   p5 = threshold cutoff [optional; default 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | voice/unvoiced threshold | (usually <= 0.1 for normal resynthesis) | no | no | 
+p1 | noise amplitude | (usually <= 0.1 for normal resynthesis) | no | no | 
+p2 | unvoiced frame rate |  -  | no | yes | the default value 0 will cause voiced and unvoiced frames to be synthesized at the same rate
+p3 | rise | seconds  | no | yes | default is 0; applies internal gain ramp-up
+p4 | decay | seconds | no | yes | default is 0; applies internal gain ramp-down
+p5 | threshold cutoff |  -  | no | yes | default 0 | frame amplitudes below this value will be muted
 
-   it is unclear what p3, p4 and p5 do (values > 1 may yield hi-pass filtering).
-   it is also unclear if p0 functions in this command.
-   Use the set_thresh subcommand instead.
+Though p0 will work to set the voices/unvoiced threshold, it is advisable the **set_thresh** subcommand instead.
 
-   NOTE: this subcommand is required for LPCPLAY to function
-```
+NOTE: this subcommand is required for **LPCPLAY** to function
 
   
-**set\_thresh**  
+<span id="set_thresh"></span> **set\_thresh**  
 
-```cpp
-   p0 = voiced (buzz) threshold (usually close to 0.1)
-   p1 = unvoiced (noise) threshold (usually close to 0.1 also)
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | voiced | (buzz) | no | no | threshold (usually close to 0.1 | 
+p1 | unvoiced | (noise) | no | no | threshold (usually close to 0.1 also | 
 
-   NOTE: this subcommand is optional for LPCPLAY to function
-```
-
-  
-**set\_hnfactor**  
-
-```cpp
-   p0 = harmonic count in buzz (voiced) signal (should be > 0)
-
-   NOTE: this subcommand is optional for LPCPLAY to function
-```
-
-**setdevfactor**  
-
-```cpp
-   p0 = this sort-of works like set_dev,but not sure exactly how
-
-   NOTE: this subcommand is optional for LPCPLAY to function
-```
+   NOTE: this subcommand is optional for **LPCPLAY** to function
 
   
-**freset**  
+<span id="set_hnfactor"></span> **set\_hnfactor**  
 
-```cpp
-   p0 = resets how often the frames are reinitialized.  Not sure what effect this has...
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | harmonic count in buzz (voiced signal) | no | no | should be > 0 | 
 
-   NOTE: this subcommand is optional for LPCPLAY to function
-```
+   NOTE: this subcommand is optional for **LPCPLAY** to function
+
+<span id="setdevfactor"></span> **setdev**  
+
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | amount of pitch deviation to allow | Hz | no | no | default of 0 disables
+
+   NOTE: this subcommand is optional for **LPCPLAY** to function
+
+<span id="setdevfactor"></span> **setdevfactor**  
+
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | percentage of original pitch deviation |  >= 0  | no | no |  default of 0 disables
+
+   NOTE: this subcommand is optional for **LPCPLAY** to function
 
   
-**use\_autocorrect**  
+<span id="freset"></span> **freset**  
 
-```cpp
-   p0 = 0 or 1, turns this on or off.  It looks unimplemented, though.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | sets how often the resynthesized signal's pitch is recalculated |  -  | no | no | 
 
-   NOTE: this subcommand is optional for LPCPLAY to function
-```
+   NOTE: this subcommand is optional for **LPCPLAY** to function
+
+  
+<span id="use_autocorrect"></span> **use\_autocorrect**  
+
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | 0 or 1: turns automatic unstable-frame filter correction on or off | no | no | 
+
+   NOTE: this subcommand is optional for **LPCPLAY** to function
 
   
 
@@ -202,20 +208,24 @@ with each other. Here are a few of the effects possible:
     ("whispered") output. Setting them both to a value \> 1.0 (the
     unvoiced\_thresh has to be \> the unvoiced\_thresh) will result in
     completely 'voiced' speech.  
-  - The pitch parameter in **LPCPLAY** can be used to specify a relative
-    transposition (in oct.pc) of the original pitch analysis (i.e. 0.02
-    will transpose the sound up 2 semitones, -0.0587 will transpose down
-    5.87 semitones). If an oct.pc pitch is given \> 1.0, the synthesis
-    will use that base as a 'center' for the original pitch analysis and
-    adjust the pitches accordingly.  
-  - **setdev** controls how much an adjusted pitch analysis will
-    'spread' -- a value of 1 will produce almost no spread, i.e. a
-    single pitch. Higher values will start reflecting more and more of
+  - The pitch/transposition parameter (p3) in **LPCPLAY** can be used in many
+    different ways.  In the discussion below, *base frequency* is the calculated
+    average of all the frame frequencies in the specified LPC data frames.
+    - p3 > -1.0 && p3 < 1.0: Pitch transposed by p3 semitones (may be fractional)
+    - p3 > 20.0: Pitch transposed by ratio of p3 (Hz) to base frequency (Hz)
+    - p3 > 0.0 && p3 <= 20.0: Pitch transposed by ratio of p3 (pch) to base frequency (Hz)
+    - p3 < -20.0: Pitch set to flat value of -p3 (Hz)
+    - p3 >= -20 && p3 < -1.0: Pitch set to flat value of -p3 (pch)
+
+  - **setdev** controls how much in Hertz an adjusted pitch analysis will
+    deviate from its *base frequency* -- a value of 1 will produce
+    almost no spread. Higher values will start reflecting more and more of
     the pitch deviation from the original pitch analysis. 0 turns this
     action off.  
   - The warp parameter will shift the filter formants up or down from
     their original values. \> 0.0 causes an upwards shift, \< 0.0 does a
     downward shift.
+  - The three experimental utilities, **fix\_pitch_octaves**, **fix\_pitch\_gaps**, and **pitch\_smoothing**, attempt to auto-correct the pitch frame data in the LPC analysis prior to performing resynthesis.  Each is just a flag to turn the procedure on or off.  All are off by default.
 
 **LPCIN** functions the same way as **LPCPLAY**, except that an input
 soundfile takes the place of the pitched (buzz) signal in the
@@ -226,7 +236,7 @@ wide frequency range represented, as the LPC filters subtract quite a
 bit from the signal.
 
 Care should be taken in the original analysis to fix unstable filter
-frames and "massage" the pitch tracking data for best results.
+frames (or turn on **use\_autocorrect**) and edit the pitch tracking data for best results.
 
 NOTE: **LPCPLAY** is a mono-output instrument.
 
@@ -392,7 +402,6 @@ an older score, showing various aspects:
    LPCPLAY(start,dur,amp,transp=.08,frame1,frame2,warp=0,cf=0,bw=0)
 ```
 
-  
 
 -----
 

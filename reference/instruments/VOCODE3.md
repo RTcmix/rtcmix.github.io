@@ -25,27 +25,24 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of output signal)
-   p4 = table of modulator center frequencies (Hz or linear octaves) 
-   p5 = table of carrier center frequencies (Hz or linear octaves)
-   p6 = table mapping modulator to carrier filter bands (0 == no mapping)
-   p7 = carrier amplitude scaling table (0 == no mapping)
-   p8 = transposition of modulator center frequencies (linear octaves)
-   p9 = transposition of carrier center frequencies (linear octaves)
-   p10 = modulator filter Q (i.e., cf / bandwidth in Hz)
-   p11 = carrier filter Q
-   p12 = filter response time (seconds) [optional; default is 0.01]
-   p13 = hold -- 0: normal, 1: modulator is disengaged and has no further
-      effect on the carrier.  [optional; default is 0]
-   p14 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0.5]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of output signal) | yes | no | 
+p4 | table of modulator center frequencies | (Hz or linear octaves) | yes | no | 
+p5 | table of carrier center frequencies | (Hz or linear octaves) | yes | no | 
+p6 | table mapping modulator to carrier filter bands | (0 == no mapping) | yes | no | 
+p7 | carrier amplitude scaling table | (0 == no mapping) | yes | no | 
+p8 | transposition of modulator center frequencies | (linear octaves) | yes | no | 
+p9 | transposition of carrier center frequencies | (linear octaves) | yes | no | 
+p10 | modulator filter Q | (i.e., cf / bandwidth in Hz) | yes | no | 
+p11 | carrier filter Q |  -  | yes | no | 
+p12 | filter response time | (seconds) | yes | yes | default is 0.01 | 
+p13 | hold | 0: normal, 1: modulator is disengaged and has no further effect on the carrier | yes | yes | default is 0
+p14 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
 
    p3 (amplitude), p8 (modulator center freq transposition), p9 (carrier center freq transposition),
    p10 (modulator filter Q), p11 (carrier filter Q), p12 (filter response time), p13 (hold) and
@@ -56,7 +53,6 @@ commands). Parameters after the \[bracket\] are optional and default to
    p7 (if used, carrier amplitude scaling) should be references to pfield table-handles.
 
    Author:  John Gibson, 6/3/02
-```
 
   
 

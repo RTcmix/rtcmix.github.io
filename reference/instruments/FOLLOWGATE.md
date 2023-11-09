@@ -24,32 +24,23 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0  = output start time (seconds)
-   p1  = input start time (seconds)
-   p2  = duration (seconds)
-   p3  = carrier amplitude multiplier (relative multiplier)
-   p4  = modulator amplitude multiplier (relative multiplier)
-   p5  = power gauge window length (samples; try 100)
-   p6  = smoothness -- how much to smooth the power gauge output (0-1; try .8)
-   p7  = attack time -- how long it takes the gate to fully open once the
-      modulator power rises above the threshold (seconds)
-   p8  = release time -- how long it takes the gate to fully close once the
-      modulator power falls below the threshold (seconds)
-   p9  = pan (0-1 stereo; 0.5 is middle)
-   p10 = power threshold (multiplier of total power, 0.0-1.0 (try 0.5))
-   p11 = range (multiplier of threshold, 0.0-1.0 (usually small, try 0.005))
-
-   p3 (carrier amp), p4 (modulator amp), p6 (smoothness), p7 (attack time),
-   p8 (release time), p9 (pan), p10 (threshold) and p11 (range) can
-   receive dynamic updates from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | carrier amplitude multiplier | (relative multiplier) | yes | no | 
+p4 | modulator amplitude multiplier | (relative multiplier) | yes | no | 
+p5 | power gauge window length | samples | no | no | try 100
+p6 | smoothness | (0-1; try .8) | yes | no | how much to smooth the power gauge output
+p7 | attack time | (seconds) | yes | no | how long it takes the gate to fully open once the modulator power rises above the threshold 
+p8 | release time | (seconds) | yes | no | how long it takes the gate to fully close once the modulator power falls below the threshold
+p9 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p10 | power threshold | multiplier of total power, 0.0-1.0 | yes | no | try 0.5
+p11 | range | multiplier of threshold, 0.0-1.0 | yes | no | usually small, try 0.005
 
    Author: John Gibson, 1/5/03; rev for v4, JGG, 7/24/04
-```
 
   
 

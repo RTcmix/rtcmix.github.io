@@ -16,16 +16,13 @@ Utility instrument used to output values in Max.
 
 **MAXMESSAGE**(time, val1, val2, ... valn)
 
------
 
-  
-
-```cpp
-   p0 = time to send out the values (seconds)
-   p1-pn = the values to be sent
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | time to send out the values | (seconds) | no | no | 
+p1-pn | the values to be sent |  -  | no | no | 
 
    Author Brad Garton, 1/2004
-```
 
   
 

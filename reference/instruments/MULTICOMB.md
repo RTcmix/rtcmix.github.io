@@ -24,26 +24,19 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
-
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = comb frequency range bottom (Hz)
-   p5 = comb frequency range top (Hz)
-   p6 = reverb time (seconds)
-   p7 = input channel [optional; default is 0]
-   p8 = ring-down duration [optional; default is reverb time (p6)]
-
-   p3 (amplitude) and p8 (reverb time) can receive dynamic updates from a
-   table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | comb frequency range bottom | (Hz) | no | no | 
+p5 | comb frequency range top | (Hz) | no | no | 
+p6 | reverb time | (seconds) | yes | no | 
+p7 | input channel |  -  | no | yes | default is 0 | 
+p8 | ring-down duration | (p6)] |  -  | no | yes | 
 
    Author:  Brad Garton; rev. for v4.0 by JGG, 7/10/0
-```
 
   
 

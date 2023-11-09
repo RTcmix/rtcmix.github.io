@@ -52,184 +52,184 @@ different set of performance parameters.
   
 <span id="START"></span> **START**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch (oct.pc)
-   p3 = fundamental decay time (seconds)
-   p4 = nyquist decay time (seconds)
-   p5 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p6 = squish value (0-10)
-   p7 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-   p8 = flag for deleting pluck arrays (used by FRET, BEND, etc.) [optional; default is 0 (no delete)]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch | (oct.pc) | no | no | 
+p3 | fundamental decay time | (seconds) | no | no | 
+p4 | nyquist decay time | (seconds) | no | no | 
+p5 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
+p6 | squish value | (0-10) | no | no | 
+p7 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p8 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | default is 0 (no delete) | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
 
    assumes makegen 1 is the amplitude envelope
-```
 
 <span id="BEND"></span> **BEND**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch0 (oct.pc)
-   p3 = pitch1 (oct.pc)
-   p4 = function table number for pitch glissando
-   p5 = fundamental decay time (seconds)
-   p6 = nyquist decay time (seconds)
-   p7 = update rate (samples) [optional; default is 100)]
-   p8 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch0 | (oct.pc) | no | no | 
+p3 | pitch1 | (oct.pc) | no | no | 
+p4 | function table number for pitch glissando |  -  | no | no | 
+p5 | fundamental decay time | (seconds) | no | no | 
+p6 | nyquist decay time | (seconds) | no | no | 
+p7 | update rate | (samples) | no | yes | default is 100 | 
+p8 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
 
    assumes makegen 1 is the amplitude envelope
-```
 
 <span id="FRET"></span> **FRET**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch (oct.pc)
-   p3 = fundamental decay time (seconds)
-   p4 = nyquist decay time (seconds)
-   p5 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch | (oct.pc) | no | no | 
+p3 | fundamental decay time | (seconds) | no | no | 
+p4 | nyquist decay time | (seconds) | no | no | 
+p5 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sy
 stem should be used:
 
    assumes makegen 1 is the amplitude envelope
-```
 
 <span id="START1"></span> **START1**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch (oct.pc)
-   p3 = fundamental decay time (seconds)
-   p4 = nyquist decay time (seconds)
-   p5 = distortion gain (0-100 (or more!))
-   p6 = feedback gain (0-10 -- values > 1.0 are very 'fed-back')
-   p7 = feedback pitch (oct.pc)
-   p8 = clean signal level (0-1)
-   p9 = distortion signal level (0-1)
-   p10 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p11 = = squish value (0-10)
-   p12 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-   p13 = flag for deleting pluck arrays (used by FRET, BEND, etc.) [optional; default is 0 (no delete)]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch | (oct.pc) | no | no | 
+p3 | fundamental decay time | (seconds) | no | no | 
+p4 | nyquist decay time | (seconds) | no | no | 
+p5 | distortion gain | (0-100 (or more!)) | no | no | 
+p6 | feedback gain | (0-10) | no | no | values > 1.0 are very 'fed-back' |
+p7 | feedback pitch | (oct.pc) | no | no | 
+p8 | clean signal level | (0-1) | no | no | 
+p9 | distortion signal level | (0-1) | no | no | 
+p10 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
+p11 | squish value | (0-10) | no | no | 
+p12 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p13 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | default is 0 (no delete) | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
 
    assumes makegen 1 is the amplitude envelope
-```
 
 <span id="BEND1"></span> **BEND1**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch0 (oct.pc)
-   p3 = pitch1 (oct.pc)
-   p4 = function table number for pitch glissando
-   p5 = fundamental decay time (seconds)
-   p6 = nyquist decay time (seconds)
-   p7 = distortion gain (0-100 (or more!))
-   p8 = feedback gain (0-10 -- values > 1.0 are very 'fed-back')
-   p9 = feedback pitch (oct.pc)
-   p10 = clean signal level (0-1)
-   p11 = distortion signal level (0-1)
-   p12 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p13 = update rate (samples) [optional; default is 100)]
-   p14 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch0 | (oct.pc) | no | no | 
+p3 | pitch1 | (oct.pc) | no | no | 
+p4 | function table number for pitch glissando |  -  | no | no | 
+p5 | fundamental decay time | (seconds) | no | no | 
+p6 | nyquist decay time | (seconds) | no | no | 
+p7 | distortion gain | (0-100 (or more!)) | no | no | 
+p8 | feedback gain | (0-10) | no | no | values > 1.0 are very 'fed-back' |
+p9 | feedback pitch | (oct.pc) | no | no | 
+p10 | clean signal level | (0-1) | no | no | 
+p11 | distortion signal level | (0-1) | no | no | 
+p12 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
+p13 | update rate | (samples) | no | yes | default is 100 | 
+p14 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
 
    assumes makegen 1 is the amplitude envelope
-```
 
 <span id="FRET1"></span> **FRET1**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch (oct.pc)
-   p3 = fundamental decay time (seconds)
-   p4 = nyquist decay time (seconds)
-   p5 = distortion gain (0-100 (or more!))
-   p6 = feedback gain (0-10 -- values > 1.0 are very 'fed-back')
-   p7 = feedback pitch (oct.pc)
-   p8 = clean signal level (0-1)
-   p9 = distortion signal level (0-1)
-   p10 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p11 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch | (oct.pc) | no | no | 
+p3 | fundamental decay time | (seconds) | no | no | 
+p4 | nyquist decay time | (seconds) | no | no | 
+p5 | distortion gain | (0-100 (or more!)) | no | no | 
+p6 | feedback gain | (0-10) | no | no | values > 1.0 are very 'fed-back' |
+p7 | feedback pitch | (oct.pc) | no | no | 
+p8 | clean signal level | (0-1) | no | no | 
+p9 | distortion signal level | (0-1) | no | no | 
+p10 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
+p11 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
 
    assumes makegen 1 is the amplitude envelope
-```
 
 <span id="VSTART1"></span> **VSTART1**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch (oct.pc)
-   p3 = fundamental decay time (seconds)
-   p4 = nyquist decay time (seconds)
-   p5 = distortion gain (0-100 (or more!))
-   p6 = feedback gain (0-10 -- values > 1.0 are very 'fed-back')
-   p7 = feedback pitch (oct.pc)
-   p8 = clean signal level (0-1)
-   p9 = distortion signal level (0-1)
-   p10 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p11 = = squish value (0-10)
-   p12 = low vibrato rate (Hz)
-   p13 = high vibrato rate (Hz)
-   p14 = vibrato depth (Hz)
-   p15 = random seed value
-   p16 = update rate (samples) [optional; default is 100)]
-   p17 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-   p18 = flag for deleting pluck arrays (used by FRET, BEND, etc.) [optional; default is 0 (no delete)]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch | (oct.pc) | no | no | 
+p3 | fundamental decay time | (seconds) | no | no | 
+p4 | nyquist decay time | (seconds) | no | no | 
+p5 | distortion gain | (0-100 (or more!)) | no | no | 
+p6 | feedback gain | (0-10) | no | no | values > 1.0 are very 'fed-back' |
+p7 | feedback pitch | (oct.pc) | no | no | 
+p8 | clean signal level | (0-1) | no | no | 
+p9 | distortion signal level | (0-1) | no | no | 
+p10 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
+p11 | squish value | (0-10) | no | no | 
+p12 | low vibrato rate | (Hz) | no | no | 
+p13 | high vibrato rate | (Hz) | no | no | 
+p14 | vibrato depth | (Hz) | no | no | 
+p15 | random seed value |  -  | no | no | 
+p16 | update rate | (samples) | no | yes | default is 100) | 
+p17 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p18 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | default is 0 (no delete) | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
 
    assumes makegen 1 is the amplitude envelope
-```
 
 <span id="VFRET1"></span> **VFRET1**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch (oct.pc)
-   p3 = fundamental decay time (seconds)
-   p4 = nyquist decay time (seconds)
-   p5 = distortion gain (0-100 (or more!))
-   p6 = feedback gain (0-10 -- values > 1.0 are very 'fed-back')
-   p7 = feedback pitch (oct.pc)
-   p8 = clean signal level (0-1)
-   p9 = distortion signal level (0-1)
-   p10 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p11 = low vibrato rate (Hz)
-   p12 = high vibrato rate (Hz)
-   p13 = vibrato depth (Hz)
-   p14 = update rate (samples) [optional; default is 100)]
-   p15 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch | (oct.pc) | no | no | 
+p3 | fundamental decay time | (seconds) | no | no | 
+p4 | nyquist decay time | (seconds) | no | no | 
+p5 | distortion gain | (0-100 (or more!)) | no | no | 
+p6 | feedback gain | (0-10) | no | no | values > 1.0 are very 'fed-back' |
+p7 | feedback pitch | (oct.pc) | no | no | 
+p8 | clean signal level | (0-1) | no | no | 
+p9 | distortion signal level | (0-1) | no | no | 
+p10 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
+p11 | low vibrato rate | (Hz) | no | no | 
+p12 | high vibrato rate | (Hz) | no | no | 
+p13 | vibrato depth | (Hz) | no | no | 
+p14 | update rate | (samples) | no | yes | default is 100) | 
+p15 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
 
    assumes makegen 1 is the amplitude envelope
-```
 
   
 

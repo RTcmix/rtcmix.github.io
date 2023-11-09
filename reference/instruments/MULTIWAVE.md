@@ -24,31 +24,30 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | overall amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | wavetable | reference to a pfield table-handle | no | no | 
+p4 | oscillator 1 freq | Hz | yes | no | 
+p5 | oscillator 1 amp | relative multiplier of overall amplitude (p2) | yes | no | 
+p6 | oscillator 1 initial phase | 0-360 degrees, not updateable | no | no | 
+p7 | oscillator 1 pan | 0-1 stereo; 0.5 is middle | yes | no | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = overall amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3 = reference to wavetable
-   p4, p5, p6, p7, ... pN-3, pN-2, pN-1, pN
-      starting with p4, the next N pfields are quadruplets describing an individaul oscillator:
-         - frequency (Hz)
-         - amplitude (relative multiplier of overall amplitude (p2))
-         - initial phase (0-360 degrees, not updateable)
-         - pan (0-1 stereo; 0.5 is middle)
-      there is no limit on the number of quadruplets that may be specified.
+The remaining N pfields are quadruplets describing additional oscillators.
+The limit on the number of quadruplets is set by the maximum number of passable arguments (1024).
 
-   p2 (amplitude), p4 (freq), p5 (partial amp), p7 (pan), and the same
-   parameters for additional partials, can receive updates from a table
-   or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+pN-3 | oscillator N/4 freq | Hz | yes | yes | must be part of quadruplet |
+pN-2 | oscillator N/4 amp | relative multiplier of overall amplitude (p2) | yes | yes | must be part of quadruplet |
+pN-1 | oscillator N/4 initial phase | 0-360 degrees, not updateable | no | yes | must be part of quadruplet |
+pN  | oscillator N/4 pan | 0-1 stereo; 0.5 is middle | yes | yes | must be part of quadruplet |
 
-   p3 (wavetable) should be a reference to a pfield table-handle.
 
-   Author: John Gibson, 3/9/06 (<------- john likes to live ahead of his time! BGG, 6/14/2005)
-```
+   Author: John Gibson, 3/9/05
 
   
 
@@ -123,7 +122,7 @@ slightly more advanced:
    freq1 = makefilter(freq1, "smooth", 90)
 
    lag = 60
-   amp1 = makeconnection("mouse", "Y", 0, 1, 0, lag, "amp")
+   amp1 = makeconnection("mouse", "Y", 0, 1, 0, lag, "amp") | no | no | 
    pan1 = makeconnection("mouse", "X", 1, 0, .5, lag, "pan")
 
    MULTIWAVE(0, dur, amp * line, wave,

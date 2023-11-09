@@ -55,84 +55,99 @@ commands). Parameters after the \[bracket\] are optional and default to
 characteristics, the sound-source trajectory and one sub-instrument
 (**RVB**) to operate.
 
-NOTE: This is an older RTcmix instrument, the newer [DMOVE](DMOVE.html)
-instrument allows the sound trajectory to be controlled using
+NOTE: This is an old RTcmix instrument.  If you wish to dynamically control
+the location of a sound source, use the newer [DMOVE](DMOVE.html)
+instrument which allows the sound trajectory to be controlled using
 [pfield-enabled](pfield-enabled.html) parameters.  
   
   
 <span id="MMOVE"></span> **MMOVE**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (or endtime if negative) (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = distance between 'mics' (stereo receivers) in the room (feet)
-   p5 = input channel [optional, default is 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration (or endtime if negative) | seconds | no | no |
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | distance between 'mics' (stereo receivers) in the room | feet | no | no |
+p5 | input channel |  -  | no | yes | default is 0 | 
 
    p3 (amplitude) can receive dynamic updates from a table or real-time control source.
-```
 
   
 <span id="RVB"></span> **RVB**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (or endtime if negative) (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-
-   p3 (amplitude) can receive dynamic updates from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration (or endtime if negative) | seconds | no | no |
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
 
    NOTE: this associated instrument is required for MMOVE to function
-```
 
   
 <span id="space"></span> **space**  
 
-```cpp
-   p0 = distance to front wall of room (feet)
-   p1 = distance to right-hand wall of room (feet)
-   p2 = distance to back wall of room (feet) [< 0.0]
-   p3 = distance to left-hand wall of room (feet) [< 0.0]
-   p4 = distance to ceiling of room (feet)
-   p5 = wall absorption factor (0-10; 0 == more 'dead', 10 == more 'live')
-   p6 = reverberation time (seconds)
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | distance to front wall of room | (feet) | no | no | 
+p1 | distance to right-hand wall of room | (feet) | no | no | 
+p2 | distance to back wall of room | (feet) | no | no | specified as negative | 
+p3 | distance to left-hand wall of room | (feet) | no | no | specified as negative | 
+p4 | distance to ceiling of room | (feet) | no | no | 
+p5 | wall absorption factor | 0-10 | no | no | 0 == more 'dead', 10 == more 'live'
+p6 | reverberation time | (seconds) | no | no | 0 - ~5 work best
 
    NOTE: this subcommand is required for MMOVE to function
-```
 
   
 <span id="path"></span> **path**  
 
-```cpp
-   The pfields for path are triples, the first being the relative time
-   during processing to reach this point, and the other two of each triple being
-   polar coordinates of the sound source location (distance to sound [feet]
-   and angle to sound [degrees]).  Up to 100 triples may be specified.
+The pfields for **path** are triples:
 
-   NOTE: one of the subcommands (path, cpath, param, cparam) is required for MMOVE to function
-```
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | time1 | seconds | no | no | point in time at which sound should be at this location
+p1 | distance1 | feet | no | no |
+p2 | angle1 | degrees | no | no |
+p3 | time2 | seconds | no | no | point in time at which sound should be at this location
+p4 | distance2 | feet | no | no |
+p5 | angle2 | degrees | no | no |
+pN-2 | timeN/3 | seconds | no | yes | point in time at which sound should be at this location
+pN-1 | distanceN/3 | feet | no | yes |
+pN | angleN/3 | degrees | no | yes |
+
+Up to 100 triples may be specified.
 
   
 <span id="cpath"></span> **cpath**  
 
-```cpp
-   The pfields for cpath are triples, the first being the relative time
-   during processing to reach this point, and the other two of each triple being
-   the x- and y- cartesian coordinates of the sound source location (feet,
-   with [0,0] being the center position of the listener).  Up to 100 triples
-   may be specified.
+The pfields for **cpath** are triples:
+
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | time1 | seconds | no | no | point in time at which sound should be at this location
+p1 | xcoord1 | feet | no | no |
+p2 | ycoord1 | degrees | no | no |
+p3 | time2 | seconds | no | no | point in time at which sound should be at this location
+p4 | xcoord2 | feet | no | no |
+p5 | ycoord2 | degrees | no | no |
+pN-2 | timeN/3 | seconds | no | yes | point in time at which sound should be at this location
+pN-1 | xcoordN/3 | feet | no | yes |
+pN | ycoordN/3 | degrees | no | yes |
+
+Up to 100 triples may be specified.
 
    NOTE: one of the subcommands (path, cpath, param, cparam) is required for MMOVE to function
-```
 
   
 <span id="param"></span> **param**  
 
-```cpp
-   p0 = function table reference for polar coordinate distance to sound source (feet) values
-   p1 = function table reference for polar coordinate angle to sound source (degrees) values
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | function table reference for polar coordinate distance to sound source | (feet) | no | no | value | 
+p1 | function table reference for polar coordinate angle to sound source | (degrees) | no | no | value | 
 
    The two function tables are loaded with values representing the polar
    coordinates of the sound source location (p0 table == distance to sound [feet]
@@ -143,14 +158,14 @@ instrument allows the sound trajectory to be controlled using
    makegen function table system should be used to create the tables.
 
    NOTE: one of the subcommands (path, cpath, param, cparam) is required for MMOVE to function
-```
 
   
 <span id="cparam"></span> **cparam**  
 
-```cpp
-   p0 = function table reference for x-coordinate location of sound source (feet)
-   p1 = function table reference for y-coordinate location of sound source (feet)
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | function table reference for x-coordinate location of sound source | (feet) | no | no | 
+p1 | function table reference for y-coordinate location of sound source | (feet) | no | no | 
 
    The two function tables are loaded with values representing the x-coordinate
    location of the sound source (feet) and the y-coordinate location of the
@@ -161,57 +176,53 @@ instrument allows the sound trajectory to be controlled using
    makegen function table system should be used to create the tables.
 
    NOTE: one of the subcommands (path, cpath, param, cparam) is required for MMOVE to function
-```
 
   
 <span id="threshold"></span> **threshold**  
 
-```cpp
-   p0 = time interval (seconds) for trajectory updates (typically < 0.01)
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | time interval | (seconds) | no | no | for trajectory updates (typically < 0.01) | 
 
-   NOTE: this subcommand is optional for MMOVE to function (the default is
-      the size of the buffers set in rtsetparams)
-```
+   NOTE: this subcommand is optional for MMOVE to function. Default is RTBUFSAMPS/SR (both set in rtsetparams).
 
   
 <span id="mikes"></span> **mikes**  
 
-```cpp
-   p0 = microphone angle (degrees, 0 degrees is straight in front)
-   p1 = microphone pattern (0-1; 0 == omnidirectional, 1 == highly directional)
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | microphone angle | (degrees, 0 degrees is straight in front) | no | no | 
+p1 | microphone pattern | 0-1 | no | no | 0 == omnidirectional, 1 == highly directional
 
    NOTE: this subcommand is optional for MMOVE to function (the default is "mikes_off")
-```
 
   
 <span id="mikes_off"></span> **mikes\_off**  
 
-```cpp
-   no pfields, this defeats the microphone angle and pattern settings for binaural simulation
+No pfields. This turns off the microphone angle and pattern settings to allow binaural simulation.
 
    NOTE: this subcommand is optional for MMOVE to function
-```
 
   
 <span id="set_attenuation_params"></span> **set\_attenuation\_params**  
 
-```cpp
-   p0 = minimum distance (feet)
-   p1 = maximum distance (feet)
-   p2 = distance attentuation exponent
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | minimum distance | (feet) | no | no | default is 0
+p1 | maximum distance | (feet) | no | no | default is infinite
+p2 | distance attentuation exponent |  -  | no | no | default is 2
 
    NOTE: this subcommand is optional for MMOVE to function
-```
 
   
 <span id="matrix"></span> **matrix**  
 
-```cpp
-   p0 = total matrix gain (relative multiplier of input signal)
-   p1-p145 = 12 x 12 matrix amp/feedback coefficients [optional; defaults to internal matrix]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | total matrix gain | (relative multiplier of input signal) | no | no | 
+p1-p145 | 12 x 12 matrix amp/feedback coefficients |  -  | no | yes | defaults to internal matrix | 
 
    NOTE: this subcommand is optional for MMOVE to function
-```
 
   
 
@@ -304,7 +315,6 @@ basic use:
    rvblevel = maketable("line", 1024, 0, 0.01, 1, 1.0);
    RVB(0, 0, dur+rvbtime+0.5, rvblevel)
 ```
-
   
 
 -----

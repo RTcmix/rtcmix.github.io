@@ -26,40 +26,31 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
-
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of output signal)
-   p4 = number of filters
-   p5 = if p4 > 0, lowest filter center frequency (Hz/oct.pc)
-        if p4 == 0, transposition of function table (oct.pc)
-   p6 = if p4 > 0, center frequency spacing multiplier (> 1)
-        if p4 == 0, function table format (0: octave.pc, 1: linear octave; Hz if > 15.0)
-   p7 = amount to transpose carrier oscillators (Hz/oct.pc)
-   p8 = filter bandwidth proportion of center frequency (> 0)
-   p9 = power gauge window length (seconds, try 0.01)
-   p10 = smoothness -- how much to smooth the power gauge output (0-1, try 0.5)
-   p11 = threshold -- below which no synthesis for a band occurs (0-1, try 0.0)
-   p12 = attack time -- how long it takes the oscillator for a band to turn
-         on fully once the modulator power for that band rises above the
-         threshold (seconds, try 0.001)
-   p13 = release time -- how long it takes the oscillator for a band to turn
-         off fully once the modulator power for that band falls below the
-         threshold (seconds, try 0.01])
-   p14 = amount of high-passed modulator signal to mix with output
-         (amplitude multiplier, try 0.0)
-   p15 = cutoff frequency for high pass filter applied to modulator.
-         This pfield ignored if p10 is zero.  (Hz, try 5000)
-   p16 = input channel
-   p17 = pan (0-1 stereo; 0.5 is middle)
-   p18 = pfield reference for wavetable to use
-   p19 = pfield reference for table giving the carrier scaling curve, as [freq, amp] pairs
-   p20 = pfield reference for table giving list of center frequencies (if p4 is zero)
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of output signal) | yes | no | 
+p4 | number of filters |  -  | no | no | 
+p5 | if p4 > 0, lowest filter center frequency | (Hz/oct.pc) | no | no |
+ | if p4 == 0, transposition of function table | (oct.pc) | 
+p6 | if p4 > 0, center frequency spacing multiplier | (>1) | yes | no |
+ | if p4 == 0, function table format | (0: octave.pc, 1: linear octave; Hz if > 15.0) |
+p7 | amount to transpose carrier oscillators | (Hz/oct.pc) | no | no | 
+p8 | filter bandwidth proportion of center frequency | (> 0) | no | no | 
+p9 | power gauge window length | (seconds, try 0.01) | no | no | 
+p10 | smoothness -- how much to smooth the power gauge output | (0-1, try 0.5) | no | no | 
+p11 | threshold -- below which no synthesis for a band occurs | (0-1, try 0.0) | no | no | 
+p12 | attack time -- how long it takes the oscillator for a band to turn on fully once the modulator power for that band rises above the threshold |  (seconds, try 0.001)  | no | no | 
+p13 | release time -- how long it takes the oscillator for a band to turn off fully once the modulator power for that band falls below the threshold |  (seconds, try 0.01])  | no | no | 
+p14 | amount of high-passed modulator signal to mix with output |  (amplitude multiplier, try 0.0)  | no | no | 
+p15 | cutoff frequency for high pass filter applied to modulator | (Hz, try 5000)  | no | no | This pfield ignored if p10 is zero.  
+p16 | input channel |  -  | no | no | 
+p17 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p18 | pfield reference for wavetable to use |  -  | yes | no | 
+p19 | pfield reference for table giving the carrier scaling curve |  as [freq, amp] pairs  | yes | no | 
+p20 | pfield reference for table giving list of center frequencies | - | yes | no | if p4 is zero
 
    p3 (amplitude) and p17 (pan) can receive dynamic updates from a table or
    real-time control source.
@@ -69,7 +60,6 @@ commands). Parameters after the \[bracket\] are optional and default to
    be references to pfield table-handles.
 
    Author:  John Gibson, 8/7/03.
-```
 
   
 

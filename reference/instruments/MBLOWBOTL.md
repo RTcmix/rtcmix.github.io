@@ -24,27 +24,19 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3 = frequency (Hz)
-   p4 = noise gain (0.0-1.0)
-   p5 = max pressure (0.0 - 1.0)
-   p6 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0.5]
-   p7 = breath pressure table [optional; default is 1.0]
-
-   p2 (amplitude), p3 (frequency), p4 (noise amp) and p6 (pan) can receive
-   dynamic updates from a table or real-time control source.
-
-   p7 (breath pressure table), if used, should be a reference to a pfield table-handle.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | frequency | (Hz) | yes | no | 
+p4 | noise gain | (0.0-1.0) | yes | no | 
+p5 | max pressure | (0.0 - 1.0) | no | no | 
+p6 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p7 | breath pressure table | reference to a pfield table-handle | yes | yes | default is 1.0 | 
 
    Author:  Brad Garton, based on code from the Synthesis ToolKit
-```
 
   
 

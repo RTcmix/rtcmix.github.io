@@ -24,26 +24,20 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3 = energy (0.0-1.0)
-   p4 = decay (0.0-1.0)
-   p5 = # of objects (0.0-1.0)
-   p6 = resonance freq (0.0-1.0)
-   p7 = instrument selection (0-22 -- see the Usage Notes below)
-   p8 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0.5]
-
-   p2 (amplitude), p3 (energy), p4 (decay), p5 (# of objects), p6 (resonance frequency)
-   and p8 (pan)  can receive dynamic updates from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | energy | (0.0-1.0) | yes | no | 
+p4 | decay | (0.0-1.0) | yes | no | 
+p5 | # of objects | (0.0-1.0) | yes | no | 
+p6 | resonance freq | (0.0-1.0) | yes | no | 
+p7 | instrument selection | 0-22 | no | no | see the Usage Notes below
+p8 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
 
    Author:  Brad Garton, based on code from the Synthesis ToolKit
-```
 
   
 
@@ -93,7 +87,6 @@ very basic:
       inst = inst + 1
    }
 ```
-
   
   
 slightly more advanced:

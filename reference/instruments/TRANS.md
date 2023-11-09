@@ -5,7 +5,7 @@ layout: ref
 
 ## TRANS
 
-Pitch-transposiion using cubic spline interpolation.
+Pitch-transposiion using cubic spline (2nd order) interpolation.
 
 *in RTcmix/insts/std*  
   
@@ -23,33 +23,27 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | output duration (or endtime if negative) | (seconds) |  no | no |
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | interval of transposition | (oct.pc) | yes | no | 
+p5 | input channel |  -  | no | yes | default is 0 | 
+p6 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = output duration (or endtime if negative) (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = interval of transposition (oct.pc)
-   p5 = input channel [optional; default is 0]
-   p6 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
+Author: Doug Scott; rev. by John Gibson, 2/29/00;  rev. for v4 by JG, 3/27/05
 
-   p3 (amplitude), p4 (transposition) and p6 (pan) can receive dynamic updates
-   from a table or real-time control source.
-
-   Author: Doug Scott; rev. by John Gibson, 2/29/00;  rev. for v4 by JG, 3/27/05
-```
-
-  
 
 -----
 
   
 **TRANS** transposes the input for the specified output duration (p2),
-starting at the input start time (p1). **TRANS** uses second-order
-polynomial interpolation to accomplish this.
+starting at the input start time (p1) using cubic spline interpolation to accomplish this.
+To use 3rd order polynomial interpolation, see [TRANS3](TRANS3.html).
+
 <span id="usage_notes"></span>
 
 ### Usage Notes
@@ -100,7 +94,6 @@ very basic:
    TRANS(outskip=1, inskip=2, dur=4, amp=1, trans, inchan=0, pan=0)
    TRANS(outskip=1, inskip=2, dur=4, amp=1, trans, inchan=1, pan=1)
 ```
-
   
   
 slightly more advanced:

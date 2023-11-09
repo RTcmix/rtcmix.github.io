@@ -31,34 +31,34 @@ characteristics.
   
 <span id="roomset"></span> **roomset**  
 
-```cpp
-   p0 = x-dimension size (feet)
-   p1 = y-dimension size (feet)
-   p2 = x-coordinate of virtual source (0.0-1.0) [0.0: left, 1.0: right, 0.5: center]
-   p3 = y-coordinate of virtual source (0.0-1.0) [0.0: left, 1.0: right, 0.5: center]
-   p4 = x-coordinate where left wall branches to become the back wall (0.0-1.0)
-   p5 = y-coordinate where left wall branches to become the back wall (0.0-1.0)
-   p6 = x-coordinate where right wall branches to become the back wall (0.0-1.0)
-   p7 = y-coordinate where right wall branches to become the back wall (0.0-1.0)
-   p8 = absorption factor (0.0: highly reverberant, 2.0: "normal" room, 3.0: "quiet" room)
-   p9 = random seed value [optional; default is 0.3]
-```
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | x-dimension size | (feet) | no | no | 
+p1 | y-dimension size | (feet) | no | no | 
+p2 | x-coordinate of virtual source | (0.0-1.0) | no | no | 0.0: left, 1.0: right, 0.5: center] | 
+p3 | y-coordinate of virtual source | (0.0-1.0) | no | no | 0.0: left, 1.0: right, 0.5: center] | 
+p4 | x-coordinate where left wall branches to become the back wall | (0.0-1.0) | no | no | 
+p5 | y-coordinate where left wall branches to become the back wall | (0.0-1.0) | no | no | 
+p6 | x-coordinate where right wall branches to become the back wall | (0.0-1.0) | no | no | 
+p7 | y-coordinate where right wall branches to become the back wall | (0.0-1.0) | no | no | 
+p8 | absorption factor | (0.0: highly reverberant, 2.0: "normal" room, 3.0: "quiet" room) | no | no | 
+p9 | random seed value |  -  | no | yes | default is 0.3 | 
 
   
 <span id="ROOM"></span> **ROOM**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = input channel [optional; default is 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
+p4 | input channel |  -  | no | yes | default is 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
 
    assumes function table 1 is the amplitude envelope
-```
 
   
 

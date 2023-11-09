@@ -23,24 +23,18 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time |  -  | no | no | 
+p1 | duration |  seconds  | no | no | 
+p2 | amplitude multiplier |  -  | yes | no | 
+p3 | density | (average impulses per second) | yes | no | default: 5] | 
+p4 | impulse range minimum | (-1 or 0) | no | no | default: -1] | 
+p5 | seed [default: system clock] |  -  | no | no | 
+p6 | pan | (in percent-to-left format) | yes | no | default: 0.5] | 
 
-```cpp
-   p0 = output start time
-   p1 = duration
-   p2 = amplitude multiplier
-   p3 = density (average impulses per second) [default: 5]
-   p4 = impulse range minimum (-1 or 0) [default: -1]
-   p5 = seed [default: system clock]
-   p6 = pan (in percent-to-left format) [default: 0.5]
-
-   p2 (amplitude), p3 (pan), and p4 (density) can receive updates from a table
-   or real-time control source.
-   
    Author: Neil Thornock (neilthornock at gmail), 11/12/16
-```
 
   
 

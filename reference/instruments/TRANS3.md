@@ -23,24 +23,18 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = output duration (or endtime if negative) (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = interval of transposition (oct.pc)
-   p5 = input channel [optional; default is 0]
-   p6 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-
-   p3 (amplitude), p4 (transposition) and p6 (pan) can receive dynamic updates
-   from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | output duration (or endtime if negative) | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | interval of transposition | (oct.pc) | yes | no | 
+p5 | input channel |  -  | no | yes | default is 0 | 
+p6 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
 
    Author: Doug Scott; rev. for v4 by JG, 2/11/06
-```
 
   
 

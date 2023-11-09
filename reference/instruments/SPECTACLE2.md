@@ -26,47 +26,33 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
+
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | output amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | input amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p5 | ring-down duration | (seconds) | no | no | 
+p6 | FFT length | samples, power of 2 | no | no | usually 1024 | 
+p7 | window length | samples, power of 2 | no | no | usually FFT length * 2 |
+p8 | window table | reference to pfield-table handle | yes | no | zero for internally generated Hamming window |
+p9 | overlap (FFT window overlap) | (positive power of 2) | no | no | 1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc. 2 or 4 is usually fine; 1 is fluttery; higher overlaps use more CPU | 
+p10 | EQ table (i.e., amplitude scaling of each band) | dB | yes | no | in dB (0 dB means no change, + dB boost, - dB cut) | 
+p11 | delay time table | (seconds) | yes | no | 
+p12 | delay feedback table | (multiplier, 0-1) | yes | no | 
+p13 | minimum EQ frequency | (Hz) | yes | yes | default is 0 | 
+p14 | maximum EQ frequency | (Hz) | yes | yes | default is Nyquist | 
+p15 | minimum delay frequency | (Hz) | yes | yes | default is 0 | 
+p16 | maximum delay frequency | (Hz) | yes | yes | default is Nyquist | 
+p17 | bin-mapping table |  -  | yes | yes | default is 0 (no mapping done) | 
+p18 | wet/dry mix | (0: dry -> 1: wet) | yes | yes | default is 1 |
+p19 | input channel |  -  | no | yes | default is 0 | 
+p20 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 |
 
   
-
-```cpp
-   p0  = output start time (seconds)
-   p1  = input start time (seconds)
-   p2  = input duration (seconds)
-   p3  = output amplitude multiplier (relative multiplier of input signal)
-   p4  = input amplitude multiplier (relative multiplier of input signal)
-   p5  = ring-down duration (seconds)
-   p6  = FFT length (samples, power of 2, usually 1024)
-   p7  = window length (samples, power of 2, usually FFT length * 2)
-   p8  = window table (or zero for internally generated Hamming window)
-   p9  = overlap - how much FFT windows overlap (positive power of 2)
-      1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc.
-      2 or 4 is usually fine; 1 is fluttery; higher overlaps use more CPU.
-   p10 = EQ table (i.e., amplitude scaling of each band),
-      in dB (0 dB means no change, + dB boost, - dB cut).
-   p11 = delay time table (seconds)
-   p12 = delay feedback table (multiplier, 0-1)
-   p13 = minimum EQ frequency (Hz) [optional; default is 0]
-   p14 = maximum EQ frequency (Hz) [optional; default is Nyquist] 
-   p15 = minimum delay frequency (Hz) [optional; default is 0]
-   p16 = maximum delay frequency (Hz) [optional; default is Nyquist] 
-   p17 = bin-mapping table [optional; default is 0 (no mapping done)]
-   p18 = wet/dry mix (0: dry -> 1: wet) [optional; default is 1]
-   p19 = input channel [optional; default is 0]
-   p20 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-
-
-   p3 (output amp), p13 (min. EQ freq.), p14 (max. EQ freq.), p15 (min. delay freq.),
-   p16 (max. delay freq.), p18 (wet/dry mix) and p20 (pan) can receive dynamic
-   updates from a table or real-time control source.
-  
-   p4 (input amp), p8 (window table, if used), p10 (EQ table), p11 (delay time table),
-   p12 (delay feedback table) and p17 (bin-mapping table, if used) should be
-   references to pfield table-handles.
-
    Author:  John Gibson, 6/12/05
-```
 
   
 
@@ -181,7 +167,6 @@ very basic:
       window, overlap, eq, deltime, fb, mineqfreq, maxeqfreq,
       mindelfreq, maxdelfreq, 0, wet, inchan, pan=0)
 ```
-
   
   
 slightly more advanced:

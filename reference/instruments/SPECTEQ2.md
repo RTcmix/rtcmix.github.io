@@ -24,37 +24,25 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0  = output start time (seconds)
-   p1  = input start time (seconds)
-   p2  = duration (seconds)
-   p3  = amplitude multiplier (relative multiplier of input signal)
-   p4  = FFT length (samples, power of 2, usually 1024)
-   p5  = window length (samples, power of 2, usually FFT length * 2)
-   p6  = window table (or zero for internally generated Hamming window)
-   p7  = overlap - how much FFT windows overlap (positive power of 2)
-      1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc.
-      2 or 4 is usually fine; 1 is fluttery; higher overlaps use more CPU.
-   p8  = EQ table (i.e., amplitude scaling of each band),
-      in dB (0 dB means no change, + dB boost, - dB cut).
-   p9  = minimum frequency (Hz) [optional; default is 0 Hz]
-   p10 = maximum frequency (Hz) [optional; default is Nyquist] 
-   p11 = bypass (0: bypass off, 1: bypass on) [optional; default is 0]
-   p12 = input channel [optional; default is 0]
-   p13 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-
-   p3 (amp), p9 (min. freq.), p10 (max. freq.), p11 (bypass) and p13 (pan)
-   can receive dynamic updates from a table or real-time control source.
-
-   p6 (window table, if used) and p8 (EQ table) should be
-   references to pfield table-handles.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | FFT length | samples, power of 2, | no | no | usually 1024 |
+p5 | window length | (samples, power of 2 | no | no | usually FFT length * 2 |
+p6 | window table | reference to pfield table-handle | yes | no | use zero for internally generated Hamming window |
+p7 | overlap (FFT window overlap) | positive power of 2: 1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc. | no | no |  2 or 4 is usually fine; 1 is fluttery; higher overlaps use more CPU | 
+p8 | EQ table (i.e., amplitude scaling of each band) | dB (use reference to pfield table-handle) | yes | no | 0 dB means no change, +dB boost, -dB cut |
+p9 | minimum frequency | (Hz) | yes | yes | default is 0 Hz | 
+p10 | maximum frequency | (Hz) | yes | yes | default is Nyquist | 
+p11 | bypass | (0: bypass off, 1: bypass on) | yes | yes | default is 0 | 
+p12 | input channel |  -  | no | yes | default is 0 | 
+p13 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
 
    Author:  John Gibson, 6/12/05
-```
 
   
 

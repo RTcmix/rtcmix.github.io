@@ -24,30 +24,23 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
+p4 | minimum distortion index | (0.0-1.0) | no | no | 
+p5 | maximum distortion index | (0.0-1.0) | no | no | 
+p6 | amplitude normalization | reference to pfield table-handle | no | no | 0 for no normalization |
+p7 | input channel |  -  | no | no | 
+p8 | pan | (0-1 stereo; 0.5 is middle) | no | no | 
+p9 | waveshaping tranfer function | reference to pfield table-handle | yes | no | 
+p10 | index control envelope | reference to pfield table-handle | no | yes | default is constant 1.0 | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = minimum distortion index (0.0-1.0)
-   p5 = maximum distortion index (0.0-1.0)
-   p6 = reference to an amplitude normalization table, or 0 for no normalization
-   p7 = input channel
-   p8 = pan (0-1 stereo; 0.5 is middle)
-   p9 = reference to waveshaping tranfer function table
-   p10 = index control envelope [optional; default is constant 1.0]
-
-   p3 (amplitude), p4 (min index), p5 (max index), p8 (pan) and p10 (index)
-   can receive dynamic updates from a table or real-time control source.
-
-   p6 (amp normalization table) and p9 (transfer function) should be references to pfield table-handles.
 
    Author:  John Gibson, 3 Jan 2002; rev for v4, 7/21/04
-```
 
   
 

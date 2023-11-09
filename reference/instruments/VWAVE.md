@@ -23,18 +23,16 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch (Hz or oct.pc)
-   p3 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p4 = wavetable vector guide [0.0-1.0]
-   p5 = pan (0-1 stereo; 0.5 is middle)
-   p6... pn = wavetable references
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch | (Hz or oct.pc) | yes | no | 
+p3 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p4 | wavetable vector guide | 0.0 - 1.0 | yes | no | 
+p5 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p6... pn | wavetable references | - | no | no |
 
    p2 (pitch), p3 (amplitude), p4 (wavetable vector guide) and p5 (pan)
    can receive dynamic updates from a table or real-time control source.
@@ -43,7 +41,6 @@ commands). Parameters after the \[bracket\] are optional and default to
 
    Author Brad Garton, 7/2007 (based on the very first digital instrument I (Brad)
       wrote for FORTRAN MIX in 1983 :-)).
-```
 
   
 

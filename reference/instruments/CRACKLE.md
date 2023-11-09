@@ -23,22 +23,16 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time
-   p1 = duration
-   p2 = amplitude multiplier
-   p3 = chaos parameter (0-1) [optional, default is 1]
-   p4 = pan (in percent-to-left format) [optional, default is .5]
-
-   p2 (amplitude), p3 (chaos), and p4 (pan) can receive updates from a table or
-   real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | seconds  | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude multiplier |  -  | yes | no | 
+p3 | chaos parameter | (0-1) | yes | yes | default is 1 | 
+p4 | pan | (in percent-to-left format) | yes | yes | default is .5 | 
 
    Author: Neil Thornock (neilthornock at gmail), 11/12/16
-```
 
   
 

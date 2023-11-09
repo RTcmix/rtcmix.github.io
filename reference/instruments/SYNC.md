@@ -23,27 +23,19 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch | (Hz or oct.pc) | yes | no | 
+p3 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p4 | oscillator writing frequency |  -  | yes | no | 
+p5 | oscillator wavetable reference |  reference to a pfield table-handle| yes | no | 
+p6 | pan |  -  | yes | yes | default is 0 | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch (Hz or oct.pc)
-   p3 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p4 = oscillator writing frequency
-   p5 = oscillator wavetable reference
-   p6 = pan [optional; default is 0]
-
-
-   p2 (pitch), p3 (amplitude), p4 (oscillator writing frequency) and p6 (pan)
-   can receive dynamic updates from a table or real-time control source.
-
-   p5 (oscillator wavetable reference) should be a reference to a pfield table-handle.
 
    Author Brad Garton, 7/2007
-```
 
   
 

@@ -25,33 +25,25 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0  = output start time (seconds)
-   p1  = duration (seconds)
-   p2  = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3  = pitch (Hz or oct.pc *) (see note below)
-   p4  = feedback pitch (Hz or oct.pc *) (see note below)
-   p5  = squish (0-10)
-   p6  = fundamental decay time (seconds)
-   p7  = Nyquist decay time (seconds)
-   p8  = distortion gain (0-100 (or more!))
-   p9  = feedback gain (0-10 -- values > 1.0 are very 'fed-back')
-   p10 = clean signal level (0.0-1.0)
-   p11 = distortion signal level (0.0-1.0)
-   p12 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-
-   p2 (amp), p3 (pitch), p4 (feedback pitch), p6 (fundamental decay),
-   p7 (Nyquist decay), p8 (distortion gain), p9 (feedback gain), p10 (clean signal level,
-   p11 (distortion signal level) and p12 (pan) can receive updates from a table or
-   real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | pitch | Hz or oct.pc* | yes | no | * see note below | 
+p4 | feedback pitch | Hz or oct.pc* | yes | no | * see note below | 
+p5 | squish | (0-10) | yes | no | 
+p6 | fundamental decay time | (seconds) | yes | no | 
+p7 | Nyquist decay time | (seconds) | yes | no | 
+p8 | distortion gain | (0-100 (or more!)) | yes | no | 
+p9 | feedback gain | (0-10) | yes | no | values > 1.0 are very 'fed-back' |
+p10 | clean signal level | (0.0-1.0) | yes | no | 
+p11 | distortion signal level | (0.0-1.0) | yes | no | 
+p12 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
 
    * If the value of p3 or p4 field is < 15.0, it assumes oct.pc.  Use the pchcps
    scorefile convertor for direct frequency specification below 15.0 Hz
-```
 
   
 

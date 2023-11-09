@@ -29,33 +29,33 @@ trajectory.
 <span id="timeset"></span> **timeset**  
   
 
-```cpp
-   p0 = timepoint (seconds)
-   p1 = x location (feet, Cartesian coordinates)
-   p2 = y location (feet, Cartesian coordinates)
-```
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | timepoint | (seconds) | no | no | 
+p1 | x location | (feet, Cartesian coordinates) | no | no | 
+p2 | y location | (feet, Cartesian coordinates) | no | no | 
 
   
 <span id="MROOM"></span> **MROOM**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = distance from middle of room to right wall (feet; i.e., 1/2 of width)
-   p5 = distance from middle of room to front wall (feet; i.e., 1/2 of depth)
-   p6 = reverb time (seconds)
-   p7 = reflectivity (0 - 100; the higher, the more reflective)
-   p8 = "inner room" width (feet; try 8)
-   p9 = input channel number [optional; default is 0]
-   p10 = control rate for trajectory [optional; default is 100]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
+p4 | distance from middle of room to right wall | (feet; i.e., 1/2 of width) | no | no | 
+p5 | distance from middle of room to front wall | (feet; i.e., 1/2 of depth) | no | no | 
+p6 | reverb time | (seconds) | no | no | 
+p7 | reflectivity | (0 - 100; the higher, the more reflective) | no | no | 
+p8 | "inner room" width | (feet; try 8) | no | no | 
+p9 | input channel number |  -  | no | yes | default is 0 | 
+p10 | control rate for trajectory |  -  | no | yes | default is 100 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
 
    assumes function table 1 is the amplitude envelope
-```
 
   
 

@@ -24,33 +24,24 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | impulse response table | references to pfield table-handle* | yes | no | usually loaded from a soundfile - use **maketable**("soundfile", ...). Must be mono; **maketable** lets you select channel
+p5 | impulse start time (time to skip in table) | seconds | no | no | 
+p6 | impulse duration | (seconds) | no | no | 
+p7 | impulse gain | (relative multiplier of signal) | no | no | 
+p8 | window function table | references to pfield table-handle | yes | no | 
+p9 | wet amount | (0-1) | yes | no | 
+p10 | input channel |  -  | no | no | 
+p11 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = impulse response table (usually a soundfile, use maketable("soundfile", ...)
-      must be mono; maketable lets you select channel.
-   p5 = impulse start time (time to skip in table) (seconds)
-   p6 = impulse duration (seconds)
-   p7 = impulse gain (relative multiplier of signal)
-   p8 = window function table
-   p9 = wet amount (0-1)
-   p10 = input channel
-   p11 = pan (0-1 stereo; 0.5 is middle)
-
-   p3 (amplitude), p9 (wet percent) and p11 (pan) can receive dynamic updates
-   from a table or real-time control source.
-
-   p4 (impulse response table) and p8 (window function table) should be
-   references to pfield table-handles.
 
    Author: John Gibson, 5/31/05 (based on cmix convolve)
-```
 
   
 

@@ -24,33 +24,24 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3 = frequency of carrier (Hz or oct.pc *)
-   p4 = frequency of modulator (Hz or oct.pct)
-   p5 = FM index low point
-   p6 = FM index high point
-   p7 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-   p8 = reference to carrier and modulator wavetable
-   p9 = index envelope
-
-   p2 (amplitude), p3 (carrier freq), p4 (modulator freq), p5 (index low),
-   p6 (index high), p7 (pan) and p9 (index guide) can receive dynamic updates
-   from a table or real-time control source.
-
-   p8 (carrier/modulator wavetable), if used, should be a reference to a pfield table-handle.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | frequency of carrier | (Hz or oct.pc*) | yes | no | 
+p4 | frequency of modulator | (Hz or oct.pc*) | yes | no | 
+p5 | FM index low point |  -  | yes | no | 
+p6 | FM index high point |  -  | yes | no | 
+p7 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p8 | carrier and modulator wavetable | reference to a pfield table-handle | yes | no | 
+p9 | index envelope | reference to a pfield table-handle | yes | no | 
 
    * oct.pc format generally will not work as you expect for p3 and p4
    (osc freq) if the pfield changes dynamically.  Use Hz instead in that case.
 
    Author Brad Garton, rev for v4, JGG, 7/12/04
-```
 
   
 

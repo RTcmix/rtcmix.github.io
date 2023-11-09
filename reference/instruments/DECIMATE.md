@@ -24,26 +24,23 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = pre-amp multiplier (before decimation) (relative multiplier)
-   p4 = post-amp multiplier (after decimation) (relative multiplier)
-   p5 = number of bits to use (1 to 16)
-   p6 = low-pass filter cutoff frequency (or 0 to bypass) [optional, default is 0]
-   p7 = input channel [optional, default is 0]
-   p8 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | pre-amp multiplier (before decimation) | relative multiplier | yes | no |
+p4 | post-amp multiplier (after decimation) | relative multiplier | yes | no |
+p5 | number of bits to use | (1 to 16) | yes | no | 
+p6 | low-pass filter cutoff frequency | Hz | yes | yes | default is 0 (will bypass) | 
+p7 | input channel |  -  | no | yes | default is 0 | 
+p8 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
 
    p3 (pre-amp), p4 (post-amp), p5 (bits), p6 (cutoff) and p8 (pan) can
    receive dynamic updates from a table or real-time control source.
 
    JGG , 3 Jan 2002, rev for v4, 7/11/04
-```
 
   
 

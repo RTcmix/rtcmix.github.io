@@ -24,30 +24,23 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
-
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3 = oscil A frequency (Hz or oct.pc)
-   p4 = oscil B frequency (Hz or oct.pc; if zero, same as A)
-   p5 = phase offset for second oscillator (0-1)
-   p6 = oscil A wavetable reference
-   p7 = oscil B wavetable reference (if zero, same as A)
-   p8 = combination expression ("a + b", "a - b", "a * b", etc.; see the Usage Notes below)
-   p9 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0.5]
-
-   p2 (amplitude), p3, (oscil A freq), p4 (oscil B freq) and p5 (phase oscil B), and
-   p9 (pan) can receive dynamic updates from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | oscil A frequency | (Hz or oct.pc) | yes | no | 
+p4 | oscil B frequency | (Hz or oct.pc; if zero, same as A) | yes | no | 
+p5 | phase offset for second oscillator | (0-1) | yes | no | 
+p6 | oscil A wavetable | reference to pfield table-handle  | yes | no | 
+p7 | oscil B wavetable | reference to pfield table-handle (if zero, same as A) | yes | no | 
+p8 | combination expression | ("a + b", "a - b", "a * b", etc.; see the Usage Notes below) | no | no | 
+p9 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
 
    p6 (oscil A wavetable) and p7 (oscil B wavetable) should be references to
    pfield table-handles.
 
    Author:  John Gibson, 6/15/05
-```
 
   
 

@@ -24,32 +24,23 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3 = frequency (Hz)
-   p4 = vibrato freq low (Hz)
-   p5 = vibrato freq high (Hz)
-   p6 = vibrato depth (% of base frequency [decimal notation 0.1 == 10%])
-   p7 = pan (0-1 stereo; 0.5 is middle)
-   p8 = bow velocity (amplitude) table
-   p9 = bow pressure table
-   p10 = bow position table
-   p11 = vibrato wavetable
-
-   p2 (amplitude), p3 (frequency), p6 (vibrato depth) and p7 (pan) can receive
-   dynamic updates from a table or real-time control source.
-
-   p8 (bow velocity table), p9 (bow pressure table), p10 (bow position table) and
-   p11 (vibrato wavetable) should be a references to pfield table-handles.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | frequency | (Hz) | yes | no | 
+p4 | vibrato freq low | (Hz) | no | no | 
+p5 | vibrato freq high | (Hz) | no | no | 
+p6 | vibrato depth | (% of base frequency [decimal notation 0.1 == 10%]) | yes | no | 
+p7 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p8 | bow velocity (amplitude) | reference to pfield table-handle | yes | no | tabl | 
+p9 | bow pressure table | reference to pfield table-handle | yes | no | 
+p10 | bow position table | reference to pfield table-handle | yes | no | 
+p11 | vibrato wavetable | reference to pfield table-handle | yes | no | 
 
    Author:  Brad Garton, based on code from the Synthesis ToolKit
-```
 
   
 

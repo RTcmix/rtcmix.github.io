@@ -25,35 +25,33 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | master | 0: bypass off, 1: bypass on | yes | no | usually use 0 | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = master (bypass 0: bypass off, 1: bypass on) (usually use 0)
-   p5, p6, p7, p8, p9 ... pN-4, pN-3, pN-2, pN-1, pN
-      starting with p5, the next N pfields are quintuples describing each EQ band:
-         - EQ type ("lowpass", "highpass", "lowshelf", "highshelf", "peaknotch")
-            or numeric codes for the filter type
-            (1: lowpass, 2: highpass, 3: lowshelf, 4: highshelf, 5: peaknotch)
-         - filter frequency (Hz)
-         - filter Q (c. 0.5-10)
-         - filter gain (cut or boost, in dB -- for shelf and peak/notch only)
-         - bypass (bypass 0: bypass off, 1: bypass on) (usually use 0)
-      Not all have to specified; a maximum of 8 quintuples is allowed.
+##### starting with p5, the next N pfields are quintuples describing each EQ band:
+      
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p5 | EQ type | "lowpass", "highpass", "lowshelf", "highshelf", "peaknotch" | no | no
+   | numeric code for the filter type | 1: lowpass, 2: highpass, 3: lowshelf, 4: highshelf, 5: peaknotch | yes | no | dynamic when using numeric codes
+p6 | filter frequency | Hz, 0 - Nyquist | yes | no
+p7 | filter Q | c. 0.5-10 | yes | no
+p8 | filter gain (cut or boost | dB | yes | no | for shelf and peak/notch only
+p9 | bypass | 0: bypass off, 1: bypass on | yes | no | usually use 0
 
-   p3 (amplitude), p4 (bypass) as well as the EQ type, freq, Q, gain and bypass pfields
-   for individual bands can receive dynamic updates from a table or real-time
-   control source.  The EQ type pfields can be updated only when using numeric codes
+##### ... pN-4, pN-3, pN-2, pN-1, pN
+
+Not all have to specified; a maximum of 8 quintuples is allowed.
 
    Author:  John Gibson, 26 Sep 2004
    Based on formulas by Robert Bristow-Johnson ("Audio-EQ-Cookbook") and code
    by Tom St Denis (see musicdsp.org)
-```
 
   
 

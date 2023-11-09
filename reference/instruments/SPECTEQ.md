@@ -25,20 +25,19 @@ NOTE: This is an older RTcmix instrument, the newer
   
   
 
-```cpp
-   p0  = output start time (seconds)
-   p1  = input start time (seconds)
-   p2  = input duration (seconds)
-   p3  = amplitude multiplier (relative multiplier of input signal)
-   p4  = ring-down duration (seconds, can be 0)
-   p5  = FFT length (samples, power of 2, usually 1024)
-   p6  = window length (samplse, power of 2, usually FFT length * 2)
-   p7  = window type (0: Hamming, 1: Hanning, 2: Rectangle, 3: Triangle, 4: Blackman, 5: Kaiser)
-   p8  = overlap - how much FFT windows overlap (samples, any power of 2)
-         1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc.
-         2 or 4 is usually fine; 1 is fluttery; the higher the more CPU time
-   p9  = input channel [optional, default is 0]
-   p10 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
+p4 | ring-down duration | (seconds, can be 0) | no | no | 
+p5 | FFT length | samples, power of 2 | no | no | usually 1024 |
+p6 | window length | (samples, power of 2) | no | no | usually FFT length * 2 |
+p7 | window type | (0: Hamming, 1: Hanning, 2: Rectangle, 3: Triangle, 4: Blackman, 5: Kaiser) | no | no | 
+p8 | overlap - how much FFT windows overlap | (samples, any power of 2) | no | no | 1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc. 2 or 4 is usually fine; 1 is fluttery; the higher the more CPU tim | 
+p9 | input channel |  -  | no | yes | default is 0 | 
+p10 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
 
 
    Because this instrument has not been updated for pfield control,
@@ -50,7 +49,6 @@ NOTE: This is an older RTcmix instrument, the newer
       in dB (0 dB means no change, + dB boost, - dB cut).
 
    Author:  John Gibson
-```
 
   
 

@@ -24,45 +24,44 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time |  -  | no | no | 
+p1 | duration |  -  | no | no | 
+p2 | overall amplitude multiplier |  -  | yes | no | 
+p3 | number of oscillators |  -  | no | no | 
+p4 | pan | (in percent-to-left format) | yes | no | 
+p5 | oscillator 1 freq | Hz | yes | no | forms pair with next pfield |
+p6 | oscillator 1 waveform | reference to pfield table-handle | no | no | forms pair with previous pfield 
 
-```cpp
-   p0 = output start time
-   p1 = duration
-   p2 = overall amplitude multiplier
-   p3 = number of oscillators
-   p4 = pan (in percent-to-left format)
-   p5, p6 ... pN-1, pN 
-      List of frequency / waveform pairs for each oscillator.
-      pO, pO+1, pO+2 ... pP-2, pP-1, pP
-      Oscillator connections in triples in the following form:
+##### p5,p6, p7,p8, ..., pN-1, pN form pairs of frequency / waveform values for each oscillator.
 
-      1) Oscillator (Carrier) - Audio Out - Relative Amplitude
-         or
-      2) Modulator - Carrier - Index
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+pN-1 | oscillator N/2 freq | Hz | yes | yes | forms pair with next pfield |
+pN | oscillator 1 waveform | reference to pfield table-handle | no | yes | forms pair with previous pfield |
+      
+##### pO, pO+1, pO+2, ... pP-2, pP-1, pP form triplets for oscillator connections in one of the two following forms:
 
-      The first number refers to an oscillator, 1-N.
-         1 refers to the first frequency / waveform pair, p5-p6.
-         2 refers to the next pair, and so on.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+pO | oscillator pair number | 1-N | no | no | 1 refers to the 1st freq / waveform pair, p5-p6. 2 refers to the next pair, and so on
+pO+1 | where to direct the output of this oscillator | 0  | no | no | directs signal to audio output
+pO+2 | relative amplitude | linear multiple of p2 | yes | no 
 
-      The second number directs the output of the indicated oscillator.
-         0 directs it to audio output (form 1 above).
-         1-N directs it to modulate the frequency of the given oscillator
-        (form 2 above).
+##### or
 
-      The third number is the relative amplitude (for form 1) or the
-      index (for form 2).
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+pO | oscillator pair number | 1-N | no | no | 1 refers to the 1st freq / waveform pair, p5-p6. 2 refers to the next pair, and so on
+pO+1 | where to direct the output of the indicated oscillator | 1-N | no | no | direct it to modulate the frequency of the given oscillator
+pO+2 | modulation index | non-negative | yes | no
 
-      Any number of connections in any direction, including feedback, is
-      acceptable.
-
-   p2 amplitude, p4 pan, oscillator frequencies, and oscillator amplitude/index
-   can receive dynamic updates from a table or real-time control source.
+  Any number of connections in any direction, including feedback, is
+  acceptable.
 
    Author: Neil Thornock (neilthornock at gmail), 11/12/16
-```
 
   
 

@@ -23,21 +23,16 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time |  -  | no | no | 
+p1 | duration |  -  | no | no | 
+p2 | amp |  -  | yes | no | 
+p3 | fixed table |  -  | yes | yes | 
 
-```cpp
-   p0 = output start time
-   p1 = duration
-   p2 = amp
-   p3 = fixed table [optional]
-
-   p2 (amplitude) can receive dynamic updates from a table or real-time
-   control source.  This is the parameter whose values will print (unless
-   the optional p3 parameter is present).
-```
+   The dynamically-controlled values of the p2 'amp' field will print unless
+   the optional p3 parameter is present.  See the *Usage Notes* below.
 
   
 

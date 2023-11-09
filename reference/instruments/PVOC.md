@@ -14,36 +14,40 @@ Phase vocoder.
 
 ##### quick syntax:
 
-**PVOC**(outsk, insk, dur, amp, inputchan, fftsize, windowsize,
-decimation, interpolation\[, pitchmult, npoles, oscthreshold\])
+**PVOC**(outsk, insk, dur, AMP, inputchan, fftsize, windowsize,
+DECIMATION, interpolation\[, PITCHMULT, npoles, OSCTHRESHOLD\])
+
+**set_filter**("filter\_name" OR "filter\_DSO\_path")
+
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of analyzed input signal) | yes | no | 
+p4 | input channel |  -  | no | no | 
+p5 | fft size | (samples, power of 2) | no | no | 
+p6 | window size | (samples, normally 2 * fft size) | no | no | 
+p7 | decimation amount | (samples, amount to read in) | yes | no | should be < p5
+p8 | interpolation amount | (samples, amount to write out) | no | no | 
+p9 | pitch multiplier |  -  | yes | yes | default is 0.0 (no pitch change) | 
+p10 | npoles (used for LPC data only) |  -  | no | yes | leave at 0.0 | 
+p11 | gain threshold for resynthesis |  -  | yes | yes | default is 0.0 | 
+
+   Author:  Doug Scott (based on earlier work by Christopher Penrose and others)
+
+<span id="set_filter"></span> **set_filter**  
+
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | filter | string | no | no | either the name of a PVOC filter or the full path |
+
+   NOTE: this subcommand is only available in standalone RTcmix configurations.
 
 -----
 
   
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of analyzed input signal)
-   p4 = input channel
-   p5 = fft size (samples, power of 2)
-   p6 = window size (samples, normally 2 * fft size)
-   p7 = decimation amount (samples, amount to read in [should be < p5])
-   p8 = interpolation amount (samples, amount to write out)
-   p9 = pitch multiplier [optional; default is 0.0]
-   p10 = npoles [optional; default is 0.0]
-   p11 = gain threshold for resynthesis [optional; default is 0.0]
-
-   Author:  Doug Scott
-```
-
-  
-
------
-
-  
-**PVOC** (*Phase vocoding*) is an analysis/resynthesis technique whereby
+*Phase vocoding* is an analysis/resynthesis technique whereby
 a sound is analyzed through a filter bank with additional computation of
 phase deviation from each of the channels of the vocoder (sort of an
 expanded Fourier transform). The data discerned from the analysis allows
@@ -85,7 +89,7 @@ faster) than the original sound.
 
 If the optional "pitchmult" (p9) is 0, then **PVOC** will do an
 inverse-FFT resynthesis (fairly efficient). If it is \> 0, however, it
-will cause an oscillator-bank resynthesis, with inidvidual oscillators
+will cause an oscillator-bank resynthesis, with individual oscillators
 tracking the frequency and amplitude from the FFT analysis. p9 is a
 direct multiplier of all frequency values, so that a value of 2.0 will
 shift the entire spectrum up one octave, a value of 0.25 will shift it
@@ -112,15 +116,14 @@ with amplitudes greater than this value will be resynthesized. Values \>
 feature can be useful for eliminating noise from a signal, although it
 will cause audible artifacts in the resulting sound.
 
-Although there is no amplitude envelope control (not even using the
-older **makegen** system), it is possible to provide an amplitude
-envelope by routing the output of **PVOC** into an instrument that does
-have this capability such as [MIX](MIX.html) or [STEREO](STEREO.html).
-You can do this using the [bus\_config](../scorefile/bus_config.html)
-system.
-
 **PVOC** can read mono or stereo input files; it only writes mono
 output.
+
+**PVOC** has the ability to set filter plugins which operate on the frequency
+and amplitude bins before they are used to resynthesize the audio.  The plugins are
+loaded by name or by DSO path using the **set_filter** command.  This feature 
+is only available in the standalone version, and the details are, for now, left
+to those who are willing to examine the source code.
 
 ### Sample Scores
 

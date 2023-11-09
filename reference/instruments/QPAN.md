@@ -23,24 +23,18 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = X coordinate of virtual source (-1.0 - 1.0) [-1: left, 1: right, 0.0: center]
-   p5 = Y coordinate of virtual source (-1.0 - 1.0) [-1: back, 1: front, 0.0: center]
-   p6 = input channel [optional, default is 0]
-
-   p3 (amplitude), p4 (xloc) and p5 (yloc) can receive dynamic
-   updates from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | X coordinate of virtual source | (-1.0 - 1.0) | yes | no | -1: left, 1: right, 0.0: center] | 
+p5 | Y coordinate of virtual source | (-1.0 - 1.0) | yes | no | -1: back, 1: front, 0.0: center] | 
+p6 | input channel |  -  | no | yes | default is 0 | 
 
    Author:  John Gibson, 11/18/04
-```
 
   
 

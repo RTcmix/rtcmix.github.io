@@ -24,28 +24,22 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = input channel
-   p5 = pan (0-1 stereo; 0.5 is middle)
-   p6 = bypass filter (0: bypass off, 1: bypass on) (usually use 0)
-   p7 = filter cutoff frequency (Hz)
-   p8 = filter resonance (0-1, 1 is more resonant.  > 1.0 will self-oscillate)
-
-   p3 (amplitude), p5 (pan), p6 (bypass), p7 (cutoff) and p8 (resonance) can
-   receive dynamic updates from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | input channel |  -  | no | no | 
+p5 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p6 | bypass filter | (0: bypass off, 1: bypass on) | yes | no | usually use 0 | 
+p7 | filter cutoff frequency | (Hz) | yes | no | 
+p8 | filter resonance | 0-1 | yes | no | 1 is more resonant. > 1.0 will self-oscillate
 
    Author:  John Gibson, 22 May 2002; rev for v4, 7/24/04
    This is based on the design by Stilson and Smith (CCRMA), as modified
    by Paul Kellett  (described in the source code archives at musicdsp.org).
-```
 
   
 

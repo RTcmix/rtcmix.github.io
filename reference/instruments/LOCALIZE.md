@@ -25,39 +25,30 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output skip time
-   p1 = input skip time
-   p2 = duration
-   *p3 = overall amp
-   *p4 = source x
-   *p5 = source y
-   *p6 = source z
-   *p7 = dest (listener) x
-   *p8 = dest (listener) y
-   *p9 = dest (listener) z
-   *p10 = headwidth (units)
-   p11 = feet/unit scaler
-   p12 = input channel [default: 0]
-   p13 = behind head filter on/off [default: 0 (off)]
-   p14 = amp/distance calculation flag [default: 0]
-      0: no amp/distance
-      1: linear amp/distance
-      2: inverse square amp/distance
-   p15 = minimum amp/distance multiplier [default: 0]
-   p16 = maximum distance (for linear amp/distance scaling) [default: 0]
-
-   * p-fields marked with an asterisk can receive dynamic updates
-   from a table or real-time control source
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output skip time |  -  | no | no | 
+p1 | input skip time |  -  | no | no | 
+p2 | duration |  seconds  | no | no | 
+p3 | overall amp |  -  | yes | no | 
+p4 | source x | see Usage Notes | yes | no | 
+p5 | source y | see Usage Notes | yes | no | 
+p6 | source z | see Usage Notes | yes | no | 
+p7 | dest (listener) x |  see Usage Notes | yes | no |  | 
+p8 | dest (listener) y |  see Usage Notes | yes | no |  | 
+p9 | dest (listener) z |  see Usage Notes | yes | no |  | 
+p10 | headwidth | see Usage Notes | yes | no | 
+p11 | feet/unit scaler |  -  | no | no | 
+p12 | input channel |  -  | no | no | default: 0
+p13 | behind head filter on/off [default: 0 | (off)] | no | no | 
+p14 | amp/distance calculation flag | 0: no amp/distance, 1: linear amp/distance, 2: inverse square amp/distance | no | no | default: 0 |
+p15 | minimum amp/distance multiplier |  -  | no | no | default: 0 
+p16 | maximum distance (for linear amp/distance scaling) | see Usage Notes | no | no | default: 0 | 
 
    speed of sound set at 1000 ft/second
 
    Author: Brad Garton (garton - at - columbia.edu), 11/2017
-```
 
   
 

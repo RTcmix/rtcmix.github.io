@@ -297,7 +297,7 @@ These perform special actions and neither generate nor process audio.
 - [SHAPE](SHAPE.html)
 - [SPECTACLE](SPECTACLE.html)
 - [SPECTACLE2](SPECTACLE2.html)
-- [SPECTEQ](SPECTEQ.htm)
+- [SPECTEQ](SPECTEQ.html)
 - [SPECTEQ2](SPECTEQ2.html)
 - [SPLITTER](SPLITTER.html)
 - [SROOM](SROOM.html)

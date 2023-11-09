@@ -24,32 +24,25 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | roomsize | (1.0 - 300.0) | yes | no | 
+p5 | reverb time | (0.1 - 360.0) | yes | no | 
+p6 | damping | (0.0 - 1.0) | yes | no | 
+p7 | input filter bandwidth | (0.0 - 1.0) | yes| no | 
+p8 | dry level | (inverse dB, -90.0 - 0.0) | yes | no | 
+p9 | early reflection level | (inverse dB, -90.0 - 0.0) | yes | no | 
+p10 | tail level | (inverse dB, -90.0 - 0.0) | yes | no | 
+p11 | ring-down time | (seconds, added to duration) | no | no | 
+p12 | input channel |  -  | no | yes | default 0 | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = roomsize (1.0 - 300.0)
-   p5 = reverb time (0.1 - 360.0)
-   p6 = damping (0.0 - 1.0)
-   p7 = input filter bandwidth (0.0 - 1.0)
-   p8 = dry level (inverse dB, -90.0 - 0.0)
-   p9 = early reflection level (inverse dB, -90.0 - 0.0)
-   p10 = tail level (inverse dB, -90.0 - 0.0)
-   p11 = ring-down time (seconds, added to duration)
-   p12 = input channel [optional; default = 0]
-
-
-   p3 (amplitude), p4 (roomsize), p5 (reverb time), p6 (damping), p7 (input filter bandwidth
-   p8 (dry level), p9 (early reflection level) and p10 (tail level) can receive dynamic updates
-   from a table or real-time control source.
 
    Author:  Brad Garton, 5/2010
-```
 
   
 

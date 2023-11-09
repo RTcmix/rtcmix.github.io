@@ -24,22 +24,20 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = start time (seconds)
-   p1 = duration (seconds)
-   p2 = pitch (Hz or oct.pc *) (see note below)
-   p3 = minimum distortion index (0.0-1.0)
-   p4 = maximum distortion index (0.0-1.0)
-   p5 = amp (absolute, for 16-bit soundfiles: 0-32768)
-   p6 = pan (0-1 stereo; 0.5 is middle)
-   p7 = reference to oscillator waveform table
-   p8 = reference to waveshaping transfer function table
-   p9 = index control envelope
-   p10 = amp normalization [optional; default is on (1)]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | pitch | (Hz or oct.pc *) | yes | no | see note below | 
+p3 | minimum distortion index | (0.0-1.0) | yes | no | 
+p4 | maximum distortion index | (0.0-1.0) | yes | no | 
+p5 | amp | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p6 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p7 | reference to oscillator waveform table |  -  | yes | no | 
+p8 | reference to waveshaping transfer function table |  -  | yes | no | 
+p9 | index control envelope |  -  | yes | no | 
+p10 | amp normalization |  -  | no | yes | default is on (1) | 
 
    p2 (freq), p3 (min index), p4 (max index), p5 (amp), p6 (pan) and
    p9 (index) can receive dynamic updates from a table or real-time
@@ -48,7 +46,6 @@ commands). Parameters after the \[bracket\] are optional and default to
    p7 (waveform) and p8 (transfer function) should be references to pfield table-handles.
 
    Author: Brad Garton; rev for v4, JGG, 7/22/04
-```
 
   
 
@@ -155,7 +152,6 @@ very basic:
    WAVESHAPE(0, 7, 7.02, 0, 1, 20000*ampenv, 0.3, waveform, transferfunc, indexfunc)
    WAVESHAPE(0, 7, 7.021, 0, 1, 20000*ampenv, 0.7, waveform, transferfunc, indexfunc)
 ```
-
   
   
 slightly more advanced:

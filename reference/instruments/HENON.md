@@ -23,28 +23,22 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time
-   p1 = duration
-   p2 = amplitude multiplier
-   p3 = a [optional, default is 1.4]
-   p4 = b [optional, default is 0.3]
-   p5 = x [optional, default is 1]
-   p6 = y [optional, default is 1]
-   p7 = update rate for p3-p6 [optional, default is 1000]
-   p8 = pan (in percent-to-left format) [optional, default is .5]
-
-   p2 (amp), p3-p6 (function parameters), p7 (update rate), and p8 (pan)
-   can receive updates from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time |  -  | no | no | 
+p1 | duration |  -  | no | no | 
+p2 | amplitude multiplier |  -  | yes | no | 
+p3 | a |  -  | yes | yes | default is 1.4 | 
+p4 | b |  -  | yes | yes | default is 0.3 | 
+p5 | x |  -  | yes | yes | default is 1 | 
+p6 | y |  -  | yes | yes | default is 1 | 
+p7 | update rate for p3-p6 | | times per second  | yes | yes | default is 1000 | 
+p8 | pan | percent-to-left | yes | yes | default is .5 | 
 
    p3-p6: Try values within a few tenths of the defaults given here.
 
    Author: Neil Thornock (neilthornock at gmail), 11/12/16.
-```
 
   
 

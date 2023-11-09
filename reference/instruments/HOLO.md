@@ -23,37 +23,33 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | crosstalk amplitude multipler |  -  | yes | no | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = crosstalk amplitude multipler
-
-   p3 (amplitude) and p4 (crosstalk amplitude multipler) can receive dynamic
-   updates from a table or real-time control source.
-
-   Author Doug Scott
-```
+   Author: Doug Scott
 
   
 
 -----
 
   
-**HOLO** is a simulation of the fun Carver Sonic Hologram generator
-(yeah, we grew up in the late 70's...). It does some monkey-business
-with phase-cancellation between the two outputs of a stereo signal.
+**HOLO** is a simulation of the fun Carver Sonic Hologram Generator
+(yeah, we grew up in the late 70's...). It performs crosstalk cancellation 
+across the two outputs of a stereo signal (as produced by a pair of stereo
+speakers).
 
 ### Usage Notes
 
 Try it out to see how it affects the stereo 'image'. It can be used to
-create a very (deceptively) wide stereo field. Psychoacoustics in
-action\!
+create the sense of a wide stereo field. A good use of this is as a follow-up
+instrument (in the signal path) after any reverb, room simulator, or sound
+placement instrument.  Note that it does *not* work well with headphones.
 
 **HOLO** only operates on stereo input files and only writes stereo
 output files.
@@ -77,5 +73,5 @@ very basic:
 
 ### See Also
 
-[maketable](../scorefile/maketable.html), [MIX](MIX.html),
-[STEREO](STEREO.html)
+[MIX](MIX.html), [STEREO](STEREO.html), [DMOVE](DMOVE.html)
+

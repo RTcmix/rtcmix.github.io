@@ -53,100 +53,90 @@ intended for this information to be specified in the "DIST-XPOS" and
   
 <span id="DMOVE"></span> **DMOVE**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (or endtime if negative) (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = distance (feet) to sound source, or x-coordinate (feet) of sound source
-   p5 = angle to sound source (degrees; 0 degrees is straight in front),
-      or y-coordinate (feet) of sound source
-   p6 = distance between 'mics' (stereo receivers) in the room (feet)
-      NOTE: if p6 is negative, p4/p5 will be interpreted as x- and y- coordinates,
-      otherwise p4/p5 will set polar coordinates for the sound source location
-   p7 = input channel [optional, default is 0]
-
-   p3 (amplitude) can receive dynamic updates from a table or real-time control source.
-```
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration (or endtime if negative) | seconds | no | no |
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | distance to, or x-coordinate of, sound source | feet* | yes | no | * p6 < 0: cartesian, else polar | 
+p5 | angle to, or y-coordinate of, sound source | feet* or degrees (0 is straight in front) | yes | no | * p6 < 0: cartesian, else polar
+p6 | distance between 'mics' (stereo receivers) in the room | feet | no | no | if negative, p4/p5 will be interpreted as x- and y- coordinates, otherwise p4/p5 will set polar coordinates
+p7 | input channel |  -  | no | yes | default is 0 | 
 
   
 <span id="RVB"></span> **RVB**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (or endtime if negative) (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-
-   p3 (amplitude) can receive dynamic updates from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration (or endtime if negative) | seconds | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
 
    NOTE: this associated instrument is required for MPLACE to function
-```
 
   
 <span id="space"></span> **space**  
 
-```cpp
-   p0 = distance to front wall of room (feet)
-   p1 = distance to right-hand wall of room (feet)
-   p2 = distance to back wall of room (feet) [< 0.0]
-   p3 = distance to left-hand wall of room (feet) [< 0.0]
-   p4 = distance to ceiling of room (feet)
-   p5 = wall absorption factor (0-10; 0 == more 'dead', 10 == more 'live')
-   p6 = reverberation time (seconds)
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | distance to front wall of room | (feet) | no | no | 
+p1 | distance to right-hand wall of room | (feet) | no | no | 
+p2 | distance to back wall of room | (feet) | no | no | must be specified as negative distance | 
+p3 | distance to left-hand wall of room | (feet) | no | no | must be specified as negative distance | 
+p4 | distance to ceiling of room | (feet) | no | no | 
+p5 | wall absorption factor | 0-10 | no | no | 0 == more 'dead', 10 == more 'live'
+p6 | reverberation time | (seconds) | no | no | 0 - ~5 work best
 
    NOTE: this subcommand is required for MPLACE to function
-```
 
   
 <span id="threshold"></span>**threshold**  
 
-```cpp
-   p0 = time interval (seconds) for trajectory updates
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | time interval | (seconds) | no | no | for trajectory update | 
 
-   NOTE: this subcommand is optional for MMOVE to function (the default is
-      the size of the buffers set in rtsetparams)
-```
+   NOTE: this subcommand is optional for MMOVE to function. Default is RTBUFSAMPS/SR (both set in rtsetparams).
 
   
 <span id="mikes"></span> **mikes**  
 
-```cpp
-   p0 = microphone angle (degrees, 0 degrees is straight in front)
-   p1 = microphone pattern (0-1; 0 == omnidirectional, 1 == highly directional)
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | microphone angle | (degrees, 0 degrees is straight in front) | no | no | 
+p1 | microphone pattern | 0-1 | no | no | 0 == omnidirectional, 1 == highly directional
 
    NOTE: this subcommand is optional for MPLACE to function (the default is "mikes_off")
-```
 
   
 <span id="mikes_off"></span> **mikes\_off**  
 
-```cpp
-   no pfields, this defeats the microphone angle and pattern settings for binaural simulation
+No pfields, this defeats the microphone angle and pattern settings for binaural simulation
 
    NOTE: this subcommand is optional for MPLACE to function
-```
 
   
 <span id="set_attenuation_params"></span> **set\_attenuation\_params**  
 
-```cpp
-   p0 = minimum distance (feet)
-   p1 = maximum distance (feet)
-   p2 = distance attentuation exponent
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | minimum distance | (feet) | no | no | default is 0
+p1 | maximum distance | (feet) | no | no | default is infinite
+p2 | distance attentuation exponent |  -  | no | no | default is 2
 
    NOTE: this subcommand is optional for MPLACE to function
-```
 
   
 <span id="matrix"></span> **matrix**  
 
-```cpp
-   p0 = total matrix gain (relative multiplier of input signal)
-   p1-p145 = 12 x 12 matrix amp/feedback coefficients [optional; defaults to internal matrix]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | total matrix gain | (relative multiplier of input signal) | no | no | 
+p1-p145 | 12 x 12 matrix amp/feedback coefficients |  -  | no | yes | defaults to internal matrix | 
 
    NOTE: this subcommand is optional for MPLACE to function
-```
 
   
 

@@ -23,21 +23,15 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-
-   p2 (amplitude) and p3 (pan) can receive dynamic updates from a table or
-   real-time control source.
-   
    Author: JGG , 24 Dec 2002, rev. 7/9/04
-```
 
   
 

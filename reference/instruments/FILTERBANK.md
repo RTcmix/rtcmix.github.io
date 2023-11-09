@@ -24,36 +24,28 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | ring-down duration | (seconds) | no | no | 
+p5 | input channel |  -  | no | no | 
+p6 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p7 | center freq for filter | Hz or oct.pc * (see note below) | yes | no |
+p8 | bandwidth for filter | multiplier of the center frequency, 0-1 | yes | no |
+p9 | relative amplitude for filter in final construction | - | yes | no |
+... |
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = ring-down duration (seconds)
-   p5 = input channel
-   p6 = pan (0-1 stereo; 0.5 is middle)
-   p7, p8, p9, ... pN-2, pN-1, pN
-      starting with p7, the next N pfields are triples, the first being the
-      center frequency of a filter "hump" (Hz or oct.pc * (see note below)), the
-      second being the bandwidth of the "hump" (expressed as a multiplier of the
-      center frequency, 0-1), and the third being the relative amplitude of that
-      "hump" in the final constructed filter (0-1).  Up to 60 cf-bw-amp triples 
-      can be specified.
-
-   p3 (amplitude), p6 (pan) as well as the center frequency, bandwidth, and
-   relative amplitude pfields for individual bands can receive dynamic updates
-   from a table or real-time control source.
+   The remaining pfields are triples following the format of p7-p9.  Up to 60 cf-bw-amp triples can be specified.
 
    * If the value of the center frequency pfield(s) ("CFREQ1 ... CFREQN") is < 15.0,
    it assumes oct.pc.  Use the pchcps
    scorefile convertor for direct frequency specification below 15.0 Hz.
 
    Author: John Gibson, 25 Feb 2007
-```
 
   
 

@@ -25,34 +25,27 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of output signal)
-   p4 = number of filters
-   p5 = if p4 > 0, lowest filter center frequency (Hz/oct.pc)
-        if p4 == 0, transposition table (oct.pc)
-   p6 = if p4 > 0, center frequency spacing multiplier (> 1)
-        if p4 == 0, multipler of p5 to add additional filters
-   p7 = amount to transpose carrier filters (Hz/oct.pc)
-   p8 = filter bandwidth proportion of center frequency (> 0)
-   p9 = filter response time (seconds)  [optional; default is 0.01]
-   p10 = amount of high-passed modulator signal to mix with output (amplitude multiplier)
-         [optional; default is 0]
-   p11 = cutoff frequency for high pass filter applied to modulator. (Hz, ignored if p10 == 0)
-         [optional, default is 5000 Hz]
-   p12 = amount of noise signal to mix into carrier before processing
-         (amplitude multiplier applied to full-scale noise signal) [optional; default is 0]
-   p13 = specifies how often (in samples) to get new random values from
-         the noise generator.  This pfield is ignored if p12 is zero.
-         [optional; default is 1 -- a new value every sample]  
-   p14 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0.5]
-   p15 = table giving list of center frequencies (if p4 == 0)
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of output signal) | yes | no | 
+p4 | number of filters |  -  | no | no | 
+p5 | if p4 > 0, lowest filter center frequency | (Hz/oct.pc) | yes | no |
+   | if p4 == 0, transposition table | (oct.pc)
+p6 | if p4 > 0, center frequency spacing multiplier | (> 1) | yes | no | 
+   | if p4 == 0, multipler of p5 to add additional filters | - |
+p7 | amount to transpose carrier filters | (Hz/oct.pc) | no | no | 
+p8 | filter bandwidth proportion of center frequency | (> 0) | no | no | 
+p9 | filter response time | (seconds) | no | yes | default is 0.01 | 
+p10 | amount of high-passed modulator signal to mix with output | (amplitude multiplier) | no | yes | default is 0 |
+p11 | cutoff frequency for high pass filter applied to modulator. | (Hz, ignored if p10 == 0) | yes | no | default is 5000 Hz |
+p12 | amount of noise signal to mix into carrier before processing |  (amplitude multiplier applied to full-scale noise signal) | yes | yes | default is 0 |
+p13 | specifies how often to get new random values from the noise generator | (samples) | no | yes | This pfield is ignored if p12 is zero. default is 1 -- a new value every sample |
+p14 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p15 | table giving list of center frequencies | - | yes | yes | if p4 == 0 |
 
    p3 (amplitude), p12 (noise amp) and p14 (pan) can receive dynamic updates
    from a table or real-time control source.
@@ -61,7 +54,6 @@ commands). Parameters after the \[bracket\] are optional and default to
    references to pfield table-handles if p4 == 0.
 
    Author:  John Gibson, 6/3/02
-```
 
   
 

@@ -18,21 +18,19 @@ Stochastic granular synthesis.
 p12-15: location, p16-19: transposition\[, grainlayers (not used),
 seed\])
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude multiplier (relative multiplier of input signal)
-   p3 = grain rate (seconds)
-   p4-7 = rate variance (between 0.0 and 1.0; it is the % variation in rate - 100% being the rate)
-   p8-11 = duration values (seconds)
-   p12-15 = location values (0-1 stereo; 0.5 is middle)
-   p16-19 = pitch values (Hz)
-   p20 = grainlayers [optional; default is 0]
-   p21 = random number seed [optional; default is 0]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
+p3 | grain rate | (seconds) | no | no | 
+p4-7 | rate variance | (between 0.0 and 1.0) | no | no |  the % variation in rate - 100% being the rate |
+p8-11 | duration values | (seconds) | no | no | 
+p12-15 | location values | (0-1 stereo; 0.5 is middle) | no | no | 
+p16-19 | pitch values | (Hz) | no | no | 
+p20 | grainlayers |  -  | no | yes | default is 0 | 
+p21 | random number seed |  -  | no | yes | default is 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
@@ -45,7 +43,6 @@ seed\])
    otherwise noted.
 
    Author: Mara Helmuth (mara dot helmuth at uc dot edu)
-```
 
   
 

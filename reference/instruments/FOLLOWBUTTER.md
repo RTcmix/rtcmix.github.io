@@ -25,36 +25,25 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | carrier amplitude multiplier | (relative multiplier) | yes | no | 
+p4 | modulator amplitude multiplier | (relative multiplier) | yes | no | 
+p5 | power gauge window length | (samples; try 100) | no | no | 
+p6 | smoothness -- how much to smooth the power gauge output | (0-1; try .8) | yes | no | 
+p7 | type of filter | ("lowpass", "highpass", "bandpass", "bandreject"; or numeric codes for the filter type (1: lowpass, 2: highpass, 3: bandpass, 4: bandreject) | yes* | no | *only dynamic when using numeric codes
+p8 | minimum cutoff or center frequency | Hz | yes | no |
+p9 | maximum cutoff or center frequency | Hz | yes | no |
+p10 | steepness | (> 0) | no | no | 1 is a good starting value | 
+p11 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p12 | filter bandwidth for bandpass/reject types | Hz if positive; if negative, the '-' sign acts as a flag to interpret the BW values as a multiplier (0.0-1.0) of the current CF | yes | yes | only used for "bandpass" or "bandreject" filters | 
 
-```cpp
-   p0  = output start time (seconds)
-   p1  = input start time (seconds)
-   p2  = duration (seconds)
-   p3  = carrier amplitude multiplier (relative multiplier)
-   p4  = modulator amplitude multiplier (relative multiplier)
-   p5  = power gauge window length (samples; try 100)
-   p6  = smoothness -- how much to smooth the power gauge output (0-1; try .8)
-   p7  = type of filter ("lowpass", "highpass", "bandpass", "bandreject";
-      or numeric codes for the filter type (1: lowpass, 2: highpass, 3: bandpass, 4: bandreject)
-   p8  = minimum cutoff (or center) frequency (Hz)
-   p9  = maximum cutoff (or center) frequency (Hz)
-   p10 = steepness (> 0) (1 is a good starting value)
-   p11 = pan (0-1 stereo; 0.5 is middle)
-   p12 = filter bandwidth for bandpass/reject types (Hz if positive;
-      if negative, the '-' sign acts as a flag to interpret the bw values
-      as a multiplier (0.0-1.0) of the current center frequency.
-      [optional; only used for "bandpass" or "bandreject" filters])
-
-   p3 (carrier amp), p4 (modulator amp), p6 (smoothness), p7 (filter type),
-   p8 (min. cutoff), p9 (max. cutoff), p11 (pan) and p12 (bandwidth) can
-   receive dynamic updates from a table or real-time control source.
-   p7 (filter type) can be updated only when using numeric codes.
 
    Author: John Gibson, 8/7/03; rev for v4, JGG, 7/24/04
-```
 
   
 

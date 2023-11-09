@@ -24,38 +24,32 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | frequency | (Hz) | yes | no | 
+p4 | stick hardness | (0.0-1.0) | no | no | 
+p5 | stick position | (0.0-1.0) | no | no | 
+p6 | modal preset |  -  | no | no | see below for preset values
+p7 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p8 | amplitude envelope | reference to a pfield table-handle | no | yes | default is 1.0 | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3 = frequency (Hz)
-   p4 = stick hardness (0.0-1.0)
-   p5 = stick position (0.0-1.0)
-   p6 = modal preset
-      - Marimba = 0
-      - Vibraphone = 1
-      - Agogo = 2
-      - Wood1 = 3
-      - Reso = 4
-      - Wood2 = 5
-      - Beats = 6
-      - Two Fixed = 7
-      - Clump = 8
-   p7 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0.5]
-   p8 = amplitude envelope table [optional; default is 1.0]
+##### p6 preset values:
 
-
-   p2 (amplitude), p3 (frequency) and p7 (pan) can receive dynamic updates from
-   a table or real-time control source.
-
-   p8 (amplitude envelope table), if used, should be a reference to a pfield table-handle.
+- Marimba = 0
+- Vibraphone = 1
+- Agogo = 2
+- Wood1 = 3
+- Reso = 4
+- Wood2 = 5
+- Beats = 6
+- Two Fixed = 7
+- Clump = 8
 
    Author:  Brad Garton, based on code from the Synthesis ToolKit
-```
 
   
 

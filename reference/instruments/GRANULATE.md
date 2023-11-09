@@ -26,51 +26,38 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | seconds | yes | no | will be constrained to window, p5-p6
+p2 | total duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input sound) | yes | no | 
+p4 | input sound table | reference to pfield table-handle | yes | no | 
+p5 | number of channels in sample table |  -  | no | no | 
+p6 | input channel of sample table | (seconds) | yes | no | 
+p7 | input window start time | (seconds) | yes | no | 
+p8 | input window end time | (seconds) | yes | no | 
+p9 | wraparound | 1: yes 0: no  | yes | no | usually use 1
+p10 | traversal rate | (speed multiplier, 1.0 == normal, -1.0 == backwards) | yes | no | 
+p11 | grain envelope table | reference to pfield table-handle | yes | no | 
+p12 | grain hop time | (seconds, time between successive grains) | yes | no | 
+p13 | grain input time jitter | (seconds) | yes | no | 
+p14 | grain output time jitter | (seconds) | yes | no | 
+p15 | grain duration minimum | (seconds) | yes | no | 
+p16 | grain duration maximum | (seconds) | yes | no | 
+p17 | grain amplitude multiplier minimum | (relative multiplier of p3) | yes | no | 
+p18 | grain amplitude multiplier maximum | (relative multiplier of p3) | yes | no | 
+p19 | grain transposition | (in linear octaves, relative to 0) | yes | no | default: no transposition
+p20 | grain transposition collection | reference to pfield table-handle, oct.pc | yes | yes | default: no transpositions applied | 
+p21 | grain transposition jitter | (linear octaves or oct.pc (if p20 used)) | yes | yes | default: no transposition jitter
+p22 | random seed | (integer) | no | yes | default: system clock | 
+p23 | grain pan minimum | (0-1 stereo; 0.5 is middle) | yes | yes | default 0.0 | 
+p24 | grain pan maximum | (0-1 stereo; 0.5 is middle) | yes | yes | default 0.0 | 
+p25 | interpolation type | (0: 2nd-order interpolation, 1: 3rd-order interpolation) | yes | yes | default is 0 | 
 
-```cpp
-   p0  = output start time (seconds)
-   p1  = input start time (seconds, will be constrained to window, p5-6)
-   p2  = total duration (seconds)
-   p3  = amplitude multiplier (relative multiplier of input sound)
-   p4  = input sound table (pfield-handle)
-   p5  = number of channels in sample table
-   p6  = input channel of sample table (seconds)
-   p7  = input window start time (seconds)
-   p8  = input window end time (seconds)
-   p9  = wraparound (1: yes,  0: no (usually use 1))
-   p10 = traversal rate (speed multiplier, 1.0 == normal, -1.0 == backwards)
-   p11 = grain envelope table (pfield-handle)
-   p12 = grain hop time (seconds, time between successive grains)
-   p13 = grain input time jitter (seconds)
-   p14 = grain output time jitter (seconds)
-   p15 = grain duration minimum (seconds)
-   p16 = grain duration maximum (seconds)
-   p17 = grain amplitude multiplier minimum (relative multiplier of p3)
-   p18 = grain amplitude multiplier maximum (relative multiplier of p3)
-   p19 = grain transposition (in linear octaves, relative to 0)
-      [optional; default: no transposition]
-   p20 = grain transposition collection (oct.pc) [optional; default no transpositions applied]
-   p21 = grain transposition jitter (linear octaves or oct.pc (if p20 used))
-      [optional; if missing, no transposition jitter]
-   p22 = random seed (integer) [optional; default: system clock]
-   p23 = grain pan minimum (0-1 stereo; 0.5 is middle) [optional; default 0.0]
-   p24 = grain pan maximum (0-1 stereo; 0.5 is middle) [optional; default 0.0]
-   p25 = interpolation type (0: 2nd-order interpolation, 1: 3rd-order interpolation) [optional; default is 0]
-
-   p2 (insk), p4 (amplitude), p6 (input channel #), p7 (input window start), p8 (input window end),
-   p9 (wraparound flag), p10 (speed), p12 (grain hop), p13 (input time jitter),
-   p14 (output time jitter), p15 (minimum grain duration), p16 (maximum grain duration),
-   p17 (minimum grain amplitude), p18 (maximum grain amplitude), p19 (grain transposition),
-   p21 (pitch jitter), p23 (grain pan minimum), p24 (grain pan maximum), and
-   p25 (interpolation type) can receive dynamic updates from a table or real-time control source.
-
-   p4 (input sound table), p11 (grain envelope) and p20 (if used), should be references to pfield table-handles.
 
    Author:  John Gibson, 1/29/05
-```
 
   
 

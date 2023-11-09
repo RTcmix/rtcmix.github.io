@@ -16,19 +16,18 @@ Cubic spline dynamic pitch-shifter.
 
 **MOCKBEND**(outsk, insk, dur, amp, pitchenvgenno\[, inputchan, pan\])
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | output duration (or endtime if negative) | seconds | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
+p4 | function table number for pitch envelope |  -  | no | no | 
+p5 | input channel |  -  | no | yes | default is 0 | 
+p6 | percent to left |  -  | no | yes | default is .5 | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = output duration (or endtime if negative) (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = function table number for pitch envelope
-   p5 = input channel [optional, default is 0]
-   p6 = percent to left [optional, default is .5]
-    Assumes gen table 1 is amplitude curve for the note.
+	Assumes gen table 1 is amplitude curve for the note.
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
@@ -36,7 +35,6 @@ Cubic spline dynamic pitch-shifter.
    assumes function table 1 is the amplitude envelope
 
    Author:  Ivica Ico Bukvic (based on Doug Scott's TRANSBEND instrument)
-```
 
   
 

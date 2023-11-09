@@ -25,36 +25,26 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | resonance | (can be negative) | yes | no | 
+p5 | maximum delay time | (seconds) | no | no | determines lowest pitch; try: 1.0 / cpspch(8.00) | 
+p6 | modulation depth | (0 - 100%) | yes | no | 
+p7 | modulation rate | (Hz) | yes | no | 
+p8 | wet/dry mix | (0: dry --> 1: wet) | yes | yes | default is 0.5 | 
+p9 | flanger type | ("IIR" is IIR comb, "FIR" is FIR notch; or numeric codes for the flanger type (0: "IIR", 1: "FIR") | yes* | yes | default is "IIR" * only dynamic when using numeric codes| 
+p10 | input channel |  -  | no | yes | default is 0 | 
+p11 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0.5 | 
+p12 | ring-down duration |  -  | no | yes | default is resonance value | 
+p13 | modulator wavetable | reference to a pfield table-handle | no | yes | defaults to sine wave | 
 
-```cpp
-   p0  = output start time (seconds)
-   p1  = input start time (seconds)
-   p2  = duration (seconds)
-   p3  = amplitude multiplier (relative multiplier of input signal)
-   p4  = resonance (can be negative)
-   p5  = maximum delay time (seconds) (determines lowest pitch; try: 1.0 / cpspch(8.00))
-   p6  = modulation depth (0 - 100%)
-   p7  = modulation rate (Hz)
-   p8  = wet/dry mix (0: dry --> 1: wet)  [optional; default is 0.5]
-   p9  = flanger type ("IIR" is IIR comb, "FIR" is FIR notch; or
-      numeric codes for the flanger type (0: "IIR", 1: "FIR") [optional; default is "IIR"]
-   p10 = input channel  [optional; default is 0]
-   p11 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0.5]
-   p12 = ring-down duration [optional; default is resonance value]
-   p13 = reference to modulator wavetable [optional; defaults to sine wave]
-
-   p3 (amplitude), p4 (resonance), p6 (modulation depth), p7 (modulation rate),
-   p8 (wet/dry mix), p9 (flanger type) and p11 (pan) can receive dynamic updates
-   from a table or real-time control source.  p9 (flanger type) can be updated
-   only when using numeric codes.
-
-   p13 (modulator wavetable), if used, should be a reference to a pfield table-handle.
 
    Author: John Gibson, 7/21/99; rev for v4, JGG, 7/24/04
-```
 
   
 

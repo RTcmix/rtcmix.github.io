@@ -16,15 +16,12 @@ Utility instrument used to generate a Max "bang" message.
 
 **MAXBANG**(time)
 
------
 
-  
-
-```cpp
-   p0 = time to generate the bang (seconds)
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | time to generate the bang | (seconds) | no | no | 
 
    Author Brad Garton, 1/2004
-```
 
   
 

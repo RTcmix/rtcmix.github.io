@@ -24,29 +24,20 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3 = carrier frequency (Hz)
-   p4 = modulation frequency (Hz)
-   p5 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-   p6 = modulator amplitude [optional; default is 1.0 (full amplitude)]
-   p7 = reference to carrier wavetable [optional; defaults to sine wave]
-   p8 = reference to modulator wavetable [optional; defaults to sine wave]
-
-   p2 (amplitude), p3 (carrier freq), p4 (modulator freq) p5 (pan) and p6 (modulator amp)
-   can receive dynamic updates from a table or real-time control source.
-
-   p7 (carrier wavetable) and p8 (modulator wavetable), if used, should be
-   references to pfield table-handles.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | carrier frequency | (Hz) | no | no | 
+p4 | modulation frequency | (Hz) | yes | no | 
+p5 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p6 | modulator amplitude | reference to pfield table-handle | yes | yes | default is 1.0 (full amplitude) | 
+p7 | carrier wavetable | reference to pfield table-handle | yes | yes | defaults to sine wave | 
+p8 | modulator wavetable | reference to pfield table-handle | yes | yes | defaults to sine wave | 
 
    Author Brad Garton; rev for v4, JGG, 7/22/04
-```
 
   
 

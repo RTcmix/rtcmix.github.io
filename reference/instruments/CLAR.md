@@ -19,24 +19,20 @@ Physical model clarinet.
 **CLAR**(outsk, dur, noiseamp, length1 (samples), length2 (samples),
 outputamp, d2gain\[, pan\])
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | noise amplitude | (0-1) | no | no | 
+p3 | length 1 | (1-500, length in samples) | no | no | 
+p4 | length 2 | (1-500, length in samples) | no | no | 
+p5 | output amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
+p6 | d2 gain | (0-1) | no | no | 
+p7 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = noise amplitude (0-1)
-   p3 = length 1 (1-500, length in samples)
-   p4 = length 2 (1-500, length in samples)
-   p5 = output amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p6 = d2 gain (0-1)
-   p7 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-
-   no pfield-enabled control of parameters
-   is implemented for this instrument.  Older makegen()-style control
+   No pfield-enabled control of parameters is implemented for this instrument.  Older makegen()-style control
    may be used if desired.
-```
 
   
 

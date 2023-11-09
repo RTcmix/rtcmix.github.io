@@ -24,20 +24,18 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = filter order (higher order allows steeper slope)
-   p5 = input channel
-   p6 = pan (0-1 stereo; 0.5 is middle)
-   p7 = bypass filter (0: bypass off, 1: bypass on) (usually use 0)
-   p8 = reference to frequency response table
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | filter order | (higher order allows steeper slope) | no | no | 
+p5 | input channel |  -  | no | no | default: 0
+p6 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p7 | bypass filter | (0: bypass off, 1: bypass on) | yes | no | usually use 0 | 
+p8 | frequency response table | reference to a pfield table-handle | yes | no | 
 
    p3 (amplitude), p6 (pan) and p7 (bypass) can receive dynamic updates from
    a table or real-time control source.
@@ -46,7 +44,6 @@ commands). Parameters after the \[bracket\] are optional and default to
 
    Author:  John Gibson, 7/3/99; rev for v4, JGG, 7/24/04
    Filter design code adapted from Bill Schottstaedt's Snd.
-```
 
   
 

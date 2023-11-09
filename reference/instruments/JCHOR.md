@@ -24,35 +24,28 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | output duration | (seconds) | no | no | 
+p3 | input duration | (seconds, not input end time) | no | no | 
+p4 | maintain input duration, regardless of transposition | (1: yes, 0: no) | no | no | 
+p5 | transposition | (oct.pc) | no | no | 
+p6 | number of voices | - | no | no | minimum of 1
+p7 | minimum grain amplitude | (relative multiplier of p13) | yes | no | 
+p8 | maximum grain amplitude | (relative multiplier of p13) | yes | no | 
+p9 | minimum grain wait | (seconds) | yes | no | 
+p10 | maximum grain wait | (seconds) | yes | no | 
+p11 | seed | (0-1) | no | no | 
+p12 | input channel |  -  | no | no | 
+p13 | overall amplitude | (relative multiplier of input sound) | yes | no | 
+p14 | grain envelope | reference to a pfield table-handle | no | no | 
 
-```cpp
-   p0  = output start time (seconds)
-   p1  = input start time (seconds)
-   p2  = output duration (seconds)
-   p3  = input duration (seconds, not input end time)
-   p4  = maintain input duration, regardless of transposition (1: yes, 0: no)
-   p5  = transposition (oct.pc)
-   p6  = number of voices (minimum of 1)
-   p7  = minimum grain amplitude (relative multiplier of p13)
-   p8  = maximum grain amplitude (relative multiplier of p13)
-   p9  = minimum grain wait (seconds)
-   p10 = maximum grain wait (seconds)
-   p11 = seed (0-1)
-   p12 = input channel
-   p13 = overall amplitude (relative multiplier of input sound)
-   p14 = grain envelope table (pfield-handle)
-
-   p7 (min amp), p8 (max amp), p9 (min wait), p10 (max wait) and p13 (amp mult)
-   can receive dynamic updates from a table or real-time control source.
-
-   p14 (grain envelope) should be a reference to a pfield table-handle.
 
    Author:  John Gibson, 9/20/98, RT'd 6/24/99; rev for v4, 7/24/04
        based on Paul Lansky's CMIX chor instrument  and Doug Scott's TRANS code
-```
 
   
 

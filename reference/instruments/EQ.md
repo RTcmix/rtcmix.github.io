@@ -24,33 +24,25 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
-
   
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = EQ type ("lowpass", "highpass", "lowshelf", "highshelf", "peaknotch";
-      or numeric codes for the EQ type (0: lowpass, 1: highpass, 2: lowshelf, 3: highshelf, 4: peaknotch)
-   p5 = input channel
-   p6 = pan (0-1 stereo; 0.5 is middle)
-   p7 = bypass filter (0: bypass off, 1: bypass on) (usually use 0)
-   p8 = filter frequency (Hz)
-   p9 = filter Q (values from 0.5 to 10.0, roughly)
-   p10 = filter gain (dB) [optional; shelf and peak/notch only]
-         use gen 4] *****
-
-   p3 (amplitude), p4 (type), p6 (pan), p7 (bypass), p8 (freq), p9 (Q)
-   and p10 (gain) can receive dynamic updates from a table or real-time
-   control source.  p4 (type) can be updated only when using numeric codes.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | EQ type | ("lowpass", "highpass", "lowshelf", "highshelf", "peaknotch"; or numeric codes for the EQ type (0: lowpass, 1: highpass, 2: lowshelf, 3: highshelf, 4: peaknotch) | yes* | no | * only dynamic when using numeric codes
+p5 | input channel |  -  | no | no | 
+p6 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p7 | bypass filter | (0: bypass off, 1: bypass on) | yes | no | (usually use 0 | 
+p8 | filter frequency | (Hz) | yes | no | 
+p9 | filter Q | (values from 0.5 to 10.0, roughly) | yes | no | 
+p10 | filter gain | (dB) | yes | yes | shelf and peak/notch only | 
 
    Author: John Gibson, 7 Dec 2003; rev for v4, 7/23/04
    Based on formulas by Robert Bristow-Johnson ("Audio-EQ-Cookbook") and code
-   by Tom St Denis (see musicdsp.org)
-```
+   by Tom St Denis (see [musicdsp.org](http://musicdsp.org))
 
   
 

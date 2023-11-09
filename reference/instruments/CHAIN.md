@@ -13,27 +13,25 @@ Connect a set of instruments together so they execute as one.
 
 **CHAIN**(outsk, dur, inst\_count, handle1, ..., handleN)
 
------
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (-endtime) | no | no | 
+p2 | number of instruments handles to follow |  -  | no | no | 
+p3-n | handles for instruments to be chained | reference to an instrument handle | no | no | 
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (-endtime)
-   p2 = number of instruments handles to follow
-   p3-n = handles for instruments to be chained
-```
+	Author:  Doug Scott, 12/2012
 
 -----
 
   
 **CHAIN** runs a series of instruments as a group, chaining the output
 of each to the input of the next. All the instruments are scheduled
-together.
+together.  Up to 1000 instruments can be chained.
 
 ### Usage Notes
 
-To add an instruments to **CHAIN**, you have to create the instruments
+To add an instruments to **CHAIN**, you create the instruments you want
 using the [makeinstrument()](../scorefile/makeinstrument.html) utility.
 Use the handle that is returned as the argument for that instrument.
 **CHAIN**'d instruments do not use mix buses between them, but you still
@@ -69,6 +67,10 @@ determines the output skip. The duration of the instruments can be
 arbitrary, but will be truncated to the duration set in **CHAIN**. If
 **CHAIN**'s duration is longer than its instruments, the extra time will
 be filled with zeros.
+
+Note that any instrument which uses dynamic pfields, that will be set up
+during the **makeinstrument** calls, just like it would if the instruments
+were being invoked via their normal function calls.
 
 ### Sample Scores
 

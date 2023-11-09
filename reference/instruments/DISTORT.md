@@ -24,27 +24,21 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = input duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = type of distortion (1: soft clip, 2: tube)
-   p5 = gain (before distortion) (relative multiplier)
-   p6 = cutoff freq for low-pass filter (Hz)  (0 to disable filter)
-   p7 = input channel [optional; default is 0]
-   p8 = percent to left channel [optional; default is .5]
-   p9 = bypass (0: bypass off, 1: bypass on) [optional; default is 0]
-
-   p3 (amplitude), p5 (gain), p6 (cutoff), p8 (pan) and p9 (bypass) can
-   receive dynamic updates from a table or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | input duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | type of distortion | (1: soft clip, 2: tube) | no | no | 
+p5 | gain | (before distortion) | yes | no | (relative multiplier | 
+p6 | cutoff freq for low-pass filter | (Hz) | yes | no | (0 to disable filter | 
+p7 | input channel |  -  | no | yes | default is 0 | 
+p8 | percent to left channel |  -  | yes | yes | default is .5 | 
+p9 | bypass | (0: bypass off, 1: bypass on) | yes | yes | default is 0 | 
 
    Author: John Gibson (johgibso at indiana dot edu), 8/12/03, rev for v4, 7/10/04.
-```
 
   
 

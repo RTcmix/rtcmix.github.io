@@ -25,39 +25,29 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | total duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | oscillator waveform table | reference to pfield table-handle | yes | no | 
+p4 | grain envelope table |  -  | yes | no | 
+p5 | grain hop time | (seconds, time between successive grains) | yes | no | 
+p6 | grain output time jitter | (seconds) | yes | no | 
+p7 | grain duration minimum | (seconds) | yes | no | 
+p8 | grain duration maximum | (seconds) | yes | no | 
+p9 | grain amplitude multiplier minimum | (relative multiplier of p2) | yes | no | 
+p10 | grain amplitude multiplier maximum | (relative multiplier of p2) | yes | no | 
+p11 | grain pitch | (linear octaves) | yes | no | 
+p12 | grain transposition collection | reference to pfield table-handle, oct.pc | yes | yes | default: no transpositions applied | 
+p13 | grain pitch jitter | (linear octaves or oct.pc (if p12 used)) | yes | yes | default: no pitch jitter applied | 
+p14 | random seed | (integer) | no | yes | default: use system clock | 
+p15 | grain pan minimum | (0-1 stereo; 0.5 is middle) | yes | yes | default: 0.0 | 
+p16 | grain pan maximum | (0-1 stereo; 0.5 is middle) | yes | yes | default: 1.0 | 
 
-```cpp
-   p0  = output start time (seconds)
-   p1  = total duration (seconds)
-   p2  = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3  = oscillator waveform table
-   p4  = grain envelope table
-   p5  = grain hop time (seconds, time between successive grains)
-   p6  = grain output time jitter (seconds)
-   p7  = grain duration minimum (seconds)
-   p8  = grain duration maximum (seconds)
-   p9  = grain amplitude multiplier minimum (relative multiplier of p2)
-   p10 = grain amplitude multiplier maximum (relative multiplier of p2)
-   p11 = grain pitch (linear octaves)
-   p12 = grain transposition collection (oct.pc) [optional; default no transpositions applied]
-   p13 = grain pitch jitter (linear octaves or oct.pc (if p12 used)) [optional; default no pitch jitter applied]
-   p14 = random seed (integer) [optional; if missing, uses system clock]
-   p15 = grain pan minimum (0-1 stereo; 0.5 is middle) [optional; default 0.0]
-   p16 = grain pan maximum (0-1 stereo; 0.5 is middle) [optional; default 1.0]
-
-
-   p2 (amplitude), p5 (grain hop), p6 (output time jitter), p7 (minium grain duration),
-   p8 (maximum grain duration), p9 (minimum grain amplitude), p10 (maximum grain amplitude),
-   p11 (pitch), p13 (pitch jitter), p15 (grain pan minimum) and p16 (grain pan maximum)
-   can receive dynamic updates from a table or real-time control source.
-
-   p3 (wavetable), p4 (grain envelope) and p12 (if used), should be references to pfield table-handles.
 
    Author:  John Gibson, 2/8/05
-```
 
   
 

@@ -24,39 +24,32 @@ table or dynamic control (see the
 commands). Parameters after the \[bracket\] are optional and default to
 0 unless otherwise noted.
 
------
 
-  
-
-```cpp
-   p0 = output start time (seconds)
-   p1 = duration (seconds)
-   p2 = amplitude (absolute, for 16-bit soundfiles: 0-32768)
-   p3 = frequency (Hz)
-   p4 = strike position (0.0-1.0)
-   p5 = pluck flag (0: no pluck, 1: pluck)
-   p6 = max velocity (0.0-1.0)
-   p7 = preset #
-         - Uniform Bar = 0
-         - Tuned Bar = 1
-         - Glass Harmonica = 2
-         - Tibetan Bowl = 3
-   p8 = bow pressure (0.0-1.0) 0.0 == strike only
-   p9 = mode resonance (0.0-1.0) 0.99 == normal strike
-   p10 = integration constant (0.0-1.0) 0.0 == normal?
-   p11 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0.5]
-   p12 = velocity envelope table reference [optional; default is 1.0]]
-
-   p2 (amplitude), p3 (frequency), p8 (bow pressure), p9 (mode resonance),
-   p10 (integration constant) and p11 (pan) can receive dynamic updates from
-   a table or real-time control source.
-
-   p11 (velocity table), if used, should be a reference to a pfield table-handle.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | duration | (seconds) | no | no | 
+p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p3 | frequency | (Hz) | yes | no | 
+p4 | strike position | (0.0-1.0) | no | no | 
+p5 | pluck flag | (0: no pluck, 1: pluck) | no | no | 
+p6 | max velocity | (0.0-1.0) | no | no | 
+p7 | preset # |  -  | no | no | preset values listed below
+p8 | bow pressure | (0.0-1.0) | yes | no | 0.0 == strike onl | 
+p9 | mode resonance | (0.0-1.0) | yes | no | 0.99 == normal strik | 
+p10 | integration constant | (0.0-1.0) | yes | no | 0.0 == normal | 
+p11 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p12 | velocity envelope | reference to a pfield table-handle | yes | yes | if 0, default value is 1.0 | 
 
    Author:  Brad Garton, based on code from the Synthesis ToolKit
-```
 
   
+##### p7 Preset values
+
+- Uniform Bar = 0
+- Tuned Bar = 1
+- Glass Harmonica = 2
+- Tibetan Bowl = 3
 
 -----
 

@@ -40,47 +40,51 @@ commands). Parameters after the \[bracket\] are optional and default to
   
 <span id="ellset"></span> **ellset**
 
-```cpp
-   for lowpass filter:
-   p0 = passband cutoff (Hz) (< stopband)
-   p1 = stopband cutoff (Hz)
-   p2 = 0
-   p3 = ripple (db)  [try 0.2]
-   p4 = attenuation at stopband (db)  [try 90 for a steep filter]
+**For lowpass filter:**
 
-   for hipass filter:
-   p0 = passband cutoff (Hz) (> stopband)
-   p1 = stopband cutoff (Hz)
-   p2 = 0
-   p3 = ripple (db)  [try 0.2]
-   p4 = attenuation at stopband (db)  [try 90 for a steep filter]
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | passband cutoff | (Hz) | no | no | < stopband | 
+p1 | stopband cutoff | (Hz) | no | no | 
+p2 | 0 |  -  | no | no | 
+p3 | ripple | (db) | no | no | try 0.2 | 
+p4 | attenuation at stopband | (db) | no | no | try 90 for a steep filter] | 
 
-   for bandpass filter:
-   p0  lower passband cutoff (Hz)
-   p1  higher passband cutoff (Hz)
-   p2  stopband cutoff, either higher or lower (Hz) (higher seems more reliable)
-   p3 = ripple (db)  [try 0.2]
-   p4 = attenuation at stopband (db)  [try 90 for a steep filter]
-```
+**For hipass filter:**
+
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | passband cutoff | (Hz) | no | no | > stopband | 
+p1 | stopband cutoff | (Hz) | no | no | 
+p2 | 0 |  -  | no | no | 
+p3 | ripple | (db) | no | no | try 0.2 | 
+p4 | attenuation at stopband | (db) | no | no | try 90 for a steep filter | 
+
+**For bandpass filter:**
+
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | lower passband cutoff | (Hz) | no | no |
+p1 | higher passband cutoff | (Hz) | no | no |
+p2 | stopband cutoff, either higher or lower | (Hz) | no | no | higher seems more reliable
+p3 | ripple | (db) | no | no | try 0.2 | 
+p4 | attenuation at stopband | (db) | no | no | try 90 for a steep filter | 
 
   
 <span id="ELL"></span> **ELL**  
 
-```cpp
-   p0 = output start time (seconds)
-   p1 = input start time (seconds)
-   p2 = duration (seconds)
-   p3 = amplitude multiplier (relative multiplier of input signal)
-   p4 = ring-down duration (seconds)
-   p5 = input channel [optional; default is 0]
-   p6 = pan (0-1 stereo; 0.5 is middle) [optional; default is 0]
-
-   p3 (amplitude) and p6 (pan) can receive dynamic updates from a table
-   or real-time control source.
+Param Field	| Parameter | Units | Dynamic | Optional | Notes
+----------- | --------- | ----- | -------- | --------- | ---------
+p0 | output start time | (seconds) | no | no | 
+p1 | input start time | (seconds) | no | no | 
+p2 | duration | (seconds) | no | no | 
+p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p4 | ring-down duration | (seconds) | no | no | 
+p5 | input channel |  -  | no | yes | default is 0 | 
+p6 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
 
    Author: Adapted by John Gibson from the original Cmix instrument.
    Thanks to Alistair Riddell and Ross Bencina for eliminating the f2c dependency
-```
 
   
 
@@ -134,9 +138,9 @@ very basic:
    amp = 0.9
    ringdur = 0.1
    
-   p0 = 1600
-   p1 = 9000
-   p2 = 0
+p0 | 1600 |  -  | no | no | 
+p1 | 9000 |  -  | no | no | 
+p2 | 0 |  -  | no | no | 
    ripple = 0.1
    attenuation = 90.0
    
