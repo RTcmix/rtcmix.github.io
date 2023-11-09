@@ -19,13 +19,13 @@ Time-varying pitch transposition.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | output duration | (or endtime if negative) | no | no | seconds | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | output duration | or endtime if negative | no | no | seconds | 
+p3 | amplitude multiplier | relative multiplier of input signal | no | no | 
 p4 | function table number for pitch transposition control envelope |  -  | no | no | 
-p5 | input channel |  -  | no | yes | default is 0 | 
-p6 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p5 | input channel |  -  | no | yes | default: 0 | 
+p6 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    This instrument assumes function table 1 is the amplitude envelope.
 

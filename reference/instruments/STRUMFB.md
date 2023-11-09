@@ -28,19 +28,19 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
 p3 | pitch | Hz or oct.pc* | yes | no | * see note below | 
 p4 | feedback pitch | Hz or oct.pc* | yes | no | * see note below | 
-p5 | squish | (0-10) | yes | no | 
-p6 | fundamental decay time | (seconds) | yes | no | 
-p7 | Nyquist decay time | (seconds) | yes | no | 
-p8 | distortion gain | (0-100 (or more!)) | yes | no | 
-p9 | feedback gain | (0-10) | yes | no | values > 1.0 are very 'fed-back' |
-p10 | clean signal level | (0.0-1.0) | yes | no | 
-p11 | distortion signal level | (0.0-1.0) | yes | no | 
-p12 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p5 | squish | 0-10 | yes | no | 
+p6 | fundamental decay time | seconds | yes | no | 
+p7 | Nyquist decay time | seconds | yes | no | 
+p8 | distortion gain | 0-100 (or more!) | yes | no | 
+p9 | feedback gain | 0-10 | yes | no | values > 1.0 are very 'fed-back' |
+p10 | clean signal level | 0.0-1.0 | yes | no | 
+p11 | distortion signal level | 0.0-1.0 | yes | no | 
+p12 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
    * If the value of p3 or p4 field is < 15.0, it assumes oct.pc.  Use the pchcps
    scorefile convertor for direct frequency specification below 15.0 Hz

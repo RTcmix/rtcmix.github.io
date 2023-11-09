@@ -27,13 +27,13 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | ring-down duration | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | ring-down duration | seconds | no | no | 
 p5 | input channel |  -  | no | no | 
-p6 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p6 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
 p7 | center freq for filter | Hz or oct.pc * (see note below) | yes | no |
 p8 | bandwidth for filter | multiplier of the center frequency, 0-1 | yes | no |
 p9 | relative amplitude for filter in final construction | - | yes | no |

@@ -28,18 +28,18 @@ control) is probably better to use.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
-p4 | ring-down duration | (seconds) | no | no | 
-p5 | FFT length | (samples, power of 2, usually 1024) | no | no | 
-p6 | window length | (samples, power of 2, usually FFT length * 2) | no | no | 
-p7 | window type | (0: Hamming, 1: Hanning, 2: Rectangle, 3: Triangle, 4: Blackman, 5: Kaiser) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | no | no | 
+p4 | ring-down duration | seconds | no | no | 
+p5 | FFT length | samples, power of 2, usually 1024 | no | no | 
+p6 | window length | samples, power of 2, usually FFT length * 2 | no | no | 
+p7 | window type | 0: Hamming, 1: Hanning, 2: Rectangle, 3: Triangle, 4: Blackman, 5: Kaiser | no | no | 
 p8 | overlap - how much FFT windows overlap | (any power of 2) 1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc. | no | no | 2 or 4 is usually fine; 1 is fluttery; the higher the more CPU time |
-p9 | wet/dry mix | (0: dry -> 1: wet) | no | yes | default is 1 | 
-p10 | input channel | - | no | yes | default is 0 |
-p11 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p9 | wet/dry mix | 0: dry -> 1: wet | no | yes | default: 1 | 
+p10 | input channel | - | no | yes | default: 0 |
+p11 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:

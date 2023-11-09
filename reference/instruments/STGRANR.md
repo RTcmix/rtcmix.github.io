@@ -21,17 +21,17 @@ seed\])
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
-p4 | grain rate | (seconds) | no | no | 
-p5-8 | rate variance | (between 0.0 and 1.0; it is the % variation in rate - 100% being the rate) | no | no | 
-p9-12 | duration values | (seconds) | no | no | 
-p13-16 | location values | (0-1 stereo; 0.5 is middle) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | no | no | 
+p4 | grain rate | seconds | no | no | 
+p5-8 | rate variance | between 0.0 and 1.0; it is the % variation in rate - 100% being the rate | no | no | 
+p9-12 | duration values | seconds | no | no | 
+p13-16 | location values | 0-1 stereo; 0.5 is middle | no | no | 
 p17-20 | transposition values |  -  | no | no | 
-p21 | grainlayers |  -  | no | yes | default is 0 | 
-p22 | random number seed |  -  | no | yes | default is 0 | 
+p21 | grainlayers |  -  | no | yes | default: 0 | 
+p22 | random number seed |  -  | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:

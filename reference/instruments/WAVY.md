@@ -26,16 +26,16 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | oscil A frequency | (Hz or oct.pc) | yes | no | 
-p4 | oscil B frequency | (Hz or oct.pc; if zero, same as A) | yes | no | 
-p5 | phase offset for second oscillator | (0-1) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | oscil A frequency | Hz or oct.pc | yes | no | 
+p4 | oscil B frequency | Hz or oct.pc; if zero, same as A | yes | no | 
+p5 | phase offset for second oscillator | 0-1 | yes | no | 
 p6 | oscil A wavetable | reference to pfield table-handle  | yes | no | 
 p7 | oscil B wavetable | reference to pfield table-handle (if zero, same as A) | yes | no | 
-p8 | combination expression | ("a + b", "a - b", "a * b", etc.; see the Usage Notes below) | no | no | 
-p9 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p8 | combination expression | "a + b", "a - b", "a * b", etc.; see the Usage Notes below | no | no | 
+p9 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 
    p6 (oscil A wavetable) and p7 (oscil B wavetable) should be references to
    pfield table-handles.

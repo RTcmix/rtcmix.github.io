@@ -43,13 +43,13 @@ vibrato (**VSFLUTE**), and an 'unarticulated' (legato) attack
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | noise amplitude | (relative to overall amplitude; usually 0-1) | no | no | 
-p3 | length1 | (samples, usually 5-200) | no | no | 
-p4 | length2 | (samples, usually 5-200) | no | no | 
-p5 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
-p6 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | noise amplitude | relative to overall amplitude; usually 0-1 | no | no | 
+p3 | length1 | samples, usually 5-200 | no | no | 
+p4 | length2 | samples, usually 5-200 | no | no | 
+p5 | amplitude multiplier | relative multiplier of input signal | no | no | 
+p6 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
@@ -67,19 +67,19 @@ p6 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 |
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | noise amplitude | (relative to overall amplitude; usually 0-1) | no | no | 
-p3 | length1 low value | (samples, usually 5-200) | no | no | 
-p4 | length1 high value | (samples, usually 5-200) | no | no | 
-p5 | length2 low value | (samples, usually 5-200) | no | no | 
-p6 | length2 high value | (samples, usually 5-200) | no | no | 
-p7 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
-p8 | vibrato frequency 1 low value | (Hz, usually < 20) | no | no | 
-p9 | vibrato frequency 1 high value | (Hz, usually < 20) | no | no | 
-p10 | vibrato frequency 2 low value | (Hz, usually < 20) | no | no | 
-p11 | vibrato frequency 2 high value | (Hz, usually < 20) | no | no | 
-p12 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | noise amplitude | relative to overall amplitude; usually 0-1 | no | no | 
+p3 | length1 low value | samples, usually 5-200 | no | no | 
+p4 | length1 high value | samples, usually 5-200 | no | no | 
+p5 | length2 low value | samples, usually 5-200 | no | no | 
+p6 | length2 high value | samples, usually 5-200 | no | no | 
+p7 | amplitude multiplier | relative multiplier of input signal | no | no | 
+p8 | vibrato frequency 1 low value | Hz, usually < 20 | no | no | 
+p9 | vibrato frequency 1 high value | Hz, usually < 20 | no | no | 
+p10 | vibrato frequency 2 low value | Hz, usually < 20 | no | no | 
+p11 | vibrato frequency 2 high value | Hz, usually < 20 | no | no | 
+p12 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
@@ -99,15 +99,15 @@ p12 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 |
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | noise amplitude | (relative to overall amplitude; usually 0-1) | no | no | 
-p3 | length1 low value | (samples, usually 5-200) | no | no | 
-p4 | length1 high value | (samples, usually 5-200) | no | no | 
-p5 | length2 low value | (samples, usually 5-200) | no | no | 
-p6 | length2 high value | (samples, usually 5-200) | no | no | 
-p7 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
-p8 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | noise amplitude | relative to overall amplitude; usually 0-1 | no | no | 
+p3 | length1 low value | samples, usually 5-200 | no | no | 
+p4 | length1 high value | samples, usually 5-200 | no | no | 
+p5 | length2 low value | samples, usually 5-200 | no | no | 
+p6 | length2 high value | samples, usually 5-200 | no | no | 
+p7 | amplitude multiplier | relative multiplier of input signal | no | no | 
+p8 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
@@ -127,13 +127,13 @@ p8 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 |
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | noise amplitude | (relative to overall amplitude; usually 0-1) | no | no | 
-p3 | length1 | (samples, usually 5-200) | no | no | 
-p4 | length2 | (samples, usually 5-200) | no | no | 
-p5 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
-p6 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | noise amplitude | relative to overall amplitude; usually 0-1 | no | no | 
+p3 | length1 | samples, usually 5-200 | no | no | 
+p4 | length2 | samples, usually 5-200 | no | no | 
+p5 | amplitude multiplier | relative multiplier of input signal | no | no | 
+p6 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:

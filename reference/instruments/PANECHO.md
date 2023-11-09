@@ -35,7 +35,7 @@ p4 | left channel delay time | (seconds) | yes | no |
 p5 | right channel delay time | (seconds) | yes | no | 
 p6 | delay feedback | (i.e., regeneration multiplier) | yes | no | 0-1] | 
 p7 | ring-down duration | (seconds) | no | no | 
-p8 | input channel |  -  | no | yes | default is 0 | 
+p8 | input channel |  -  | no | yes | default: 0 | 
 
    Author:  Brad Garton;  rev. for v4.0 by JGG, 7/10/04
 

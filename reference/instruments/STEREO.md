@@ -27,11 +27,11 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds)| no | no | endtime if negative |
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4-n | input/output channel pan assigns | (0-1 stereo; 0.5 is middle) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | endtime if negative |
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4-n | input/output channel pan assigns | 0-1 stereo; 0.5 is middle | yes | no | 
 
    Author:  Brad Garton; rev. for v4.0 by JGG, 7/9/04
 

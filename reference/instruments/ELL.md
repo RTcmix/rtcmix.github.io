@@ -44,44 +44,44 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | passband cutoff | (Hz) | no | no | < stopband | 
-p1 | stopband cutoff | (Hz) | no | no | 
+p0 | passband cutoff | Hz | no | no | < stopband | 
+p1 | stopband cutoff | Hz | no | no | 
 p2 | 0 |  -  | no | no | 
-p3 | ripple | (db) | no | no | try 0.2 | 
-p4 | attenuation at stopband | (db) | no | no | try 90 for a steep filter] | 
+p3 | ripple | db | no | no | try 0.2 | 
+p4 | attenuation at stopband | db | no | no | try 90 for a steep filter] | 
 
 **For hipass filter:**
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | passband cutoff | (Hz) | no | no | > stopband | 
-p1 | stopband cutoff | (Hz) | no | no | 
+p0 | passband cutoff | Hz | no | no | > stopband | 
+p1 | stopband cutoff | Hz | no | no | 
 p2 | 0 |  -  | no | no | 
-p3 | ripple | (db) | no | no | try 0.2 | 
-p4 | attenuation at stopband | (db) | no | no | try 90 for a steep filter | 
+p3 | ripple | db | no | no | try 0.2 | 
+p4 | attenuation at stopband | db | no | no | try 90 for a steep filter | 
 
 **For bandpass filter:**
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | lower passband cutoff | (Hz) | no | no |
-p1 | higher passband cutoff | (Hz) | no | no |
-p2 | stopband cutoff, either higher or lower | (Hz) | no | no | higher seems more reliable
-p3 | ripple | (db) | no | no | try 0.2 | 
-p4 | attenuation at stopband | (db) | no | no | try 90 for a steep filter | 
+p0 | lower passband cutoff | Hz | no | no |
+p1 | higher passband cutoff | Hz | no | no |
+p2 | stopband cutoff, either higher or lower | Hz | no | no | higher seems more reliable
+p3 | ripple | db | no | no | try 0.2 | 
+p4 | attenuation at stopband | db | no | no | try 90 for a steep filter | 
 
   
 <span id="ELL"></span> **ELL**  
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | ring-down duration | (seconds) | no | no | 
-p5 | input channel |  -  | no | yes | default is 0 | 
-p6 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | ring-down duration | seconds | no | no | 
+p5 | input channel |  -  | no | yes | default: 0 | 
+p6 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
    Author: Adapted by John Gibson from the original Cmix instrument.
    Thanks to Alistair Riddell and Ross Bencina for eliminating the f2c dependency

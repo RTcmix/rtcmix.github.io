@@ -21,18 +21,18 @@ DECIMATION, interpolation\[, PITCHMULT, npoles, OSCTHRESHOLD\])
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of analyzed input signal) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of analyzed input signal | yes | no | 
 p4 | input channel |  -  | no | no | 
-p5 | fft size | (samples, power of 2) | no | no | 
-p6 | window size | (samples, normally 2 * fft size) | no | no | 
-p7 | decimation amount | (samples, amount to read in) | yes | no | should be < p5
-p8 | interpolation amount | (samples, amount to write out) | no | no | 
-p9 | pitch multiplier |  -  | yes | yes | default is 0.0 (no pitch change) | 
+p5 | fft size | samples, power of 2 | no | no | 
+p6 | window size | samples, normally 2 * fft size | no | no | 
+p7 | decimation amount | samples, amount to read in | yes | no | should be < p5
+p8 | interpolation amount | samples, amount to write out | no | no | 
+p9 | pitch multiplier |  -  | yes | yes | default: 0.0 (no pitch change) | 
 p10 | npoles (used for LPC data only) |  -  | no | yes | leave at 0.0 | 
-p11 | gain threshold for resynthesis |  -  | yes | yes | default is 0.0 | 
+p11 | gain threshold for resynthesis |  -  | yes | yes | default: 0.0 | 
 
    Author:  Doug Scott (based on earlier work by Christopher Penrose and others)
 

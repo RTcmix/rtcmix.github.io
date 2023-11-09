@@ -27,14 +27,14 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | output duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | right channel [channel 1] delay time | (seconds) | yes | no | 
-p5 | right channel amplitude multiplier | (relative to left channel) | yes | no | 
-p6 | input channel |  -  | no | yes | default is 0 | 
-p7 | ring-down duration |  -  | no | yes | default is first delay time value | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | output duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | right channel [channel 1] delay time | seconds | yes | no | 
+p5 | right channel amplitude multiplier | relative to left channel | yes | no | 
+p6 | input channel |  -  | no | yes | default: 0 | 
+p7 | ring-down duration |  -  | no | yes | default: first delay time value | 
 
   
 

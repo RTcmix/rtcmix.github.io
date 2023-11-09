@@ -27,14 +27,14 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | frequency | (Hz) | yes | no | 
-p4 | vibrato freq low | (Hz) | no | no | 
-p5 | vibrato freq high | (Hz) | no | no | 
-p6 | vibrato depth | (% of base frequency [decimal notation 0.1 == 10%]) | yes | no | 
-p7 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | frequency | Hz | yes | no | 
+p4 | vibrato freq low | Hz | no | no | 
+p5 | vibrato freq high | Hz | no | no | 
+p6 | vibrato depth | % of base frequency [decimal notation 0.1 == 10%] | yes | no | 
+p7 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
 p8 | bow velocity (amplitude) | reference to pfield table-handle | yes | no | tabl | 
 p9 | bow pressure table | reference to pfield table-handle | yes | no | 
 p10 | bow position table | reference to pfield table-handle | yes | no | 

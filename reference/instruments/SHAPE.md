@@ -27,17 +27,17 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
-p4 | minimum distortion index | (0.0-1.0) | no | no | 
-p5 | maximum distortion index | (0.0-1.0) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | no | no | 
+p4 | minimum distortion index | 0.0-1.0 | no | no | 
+p5 | maximum distortion index | 0.0-1.0 | no | no | 
 p6 | amplitude normalization | reference to pfield table-handle | no | no | 0 for no normalization |
 p7 | input channel |  -  | no | no | 
-p8 | pan | (0-1 stereo; 0.5 is middle) | no | no | 
+p8 | pan | 0-1 stereo; 0.5 is middle | no | no | 
 p9 | waveshaping tranfer function | reference to pfield table-handle | yes | no | 
-p10 | index control envelope | reference to pfield table-handle | no | yes | default is constant 1.0 | 
+p10 | index control envelope | reference to pfield table-handle | no | yes | default: constant 1.0 | 
 
 
    Author:  John Gibson, 3 Jan 2002; rev for v4, 7/21/04

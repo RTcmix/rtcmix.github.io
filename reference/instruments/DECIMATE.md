@@ -27,15 +27,15 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
 p3 | pre-amp multiplier (before decimation) | relative multiplier | yes | no |
 p4 | post-amp multiplier (after decimation) | relative multiplier | yes | no |
-p5 | number of bits to use | (1 to 16) | yes | no | 
-p6 | low-pass filter cutoff frequency | Hz | yes | yes | default is 0 (will bypass) | 
-p7 | input channel |  -  | no | yes | default is 0 | 
-p8 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p5 | number of bits to use | 1 to 16 | yes | no | 
+p6 | low-pass filter cutoff frequency | Hz | yes | yes | default: 0 (will bypass) | 
+p7 | input channel |  -  | no | yes | default: 0 | 
+p8 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
    p3 (pre-amp), p4 (post-amp), p5 (bits), p6 (cutoff) and p8 (pan) can
    receive dynamic updates from a table or real-time control source.

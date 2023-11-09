@@ -26,13 +26,13 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | X coordinate of virtual source | (-1.0 - 1.0) | yes | no | -1: left, 1: right, 0.0: center] | 
-p5 | Y coordinate of virtual source | (-1.0 - 1.0) | yes | no | -1: back, 1: front, 0.0: center] | 
-p6 | input channel |  -  | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | X coordinate of virtual source | -1.0 - 1.0 | yes | no | -1: left, 1: right, 0.0: center] | 
+p5 | Y coordinate of virtual source | -1.0 - 1.0 | yes | no | -1: back, 1: front, 0.0: center] | 
+p6 | input channel |  -  | no | yes | default: 0 | 
 
    Author:  John Gibson, 11/18/04
 

@@ -27,16 +27,16 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | carrier amplitude multiplier | (relative multiplier) | yes | no | 
-p4 | modulator amplitude multiplier | (relative multiplier) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | carrier amplitude multiplier | relative multiplier | yes | no | 
+p4 | modulator amplitude multiplier | relative multiplier | yes | no | 
 p5 | power gauge window length | samples | no | no | try 100
-p6 | smoothness | (0-1; try .8) | yes | no | how much to smooth the power gauge output
-p7 | attack time | (seconds) | yes | no | how long it takes the gate to fully open once the modulator power rises above the threshold 
-p8 | release time | (seconds) | yes | no | how long it takes the gate to fully close once the modulator power falls below the threshold
-p9 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p6 | smoothness | 0-1; try .8 | yes | no | how much to smooth the power gauge output
+p7 | attack time | seconds | yes | no | how long it takes the gate to fully open once the modulator power rises above the threshold 
+p8 | release time | seconds | yes | no | how long it takes the gate to fully close once the modulator power falls below the threshold
+p9 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
 p10 | power threshold | multiplier of total power, 0.0-1.0 | yes | no | try 0.5
 p11 | range | multiplier of threshold, 0.0-1.0 | yes | no | usually small, try 0.005
 

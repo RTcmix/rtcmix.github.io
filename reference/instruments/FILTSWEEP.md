@@ -27,18 +27,18 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | ring-down duration | (seconds) | no | no | 
-p5 | steepness | (1-5, inclusive) | no | no | 1 is a good starting value | 
-p6 | balance output and input signals | (0:no, 1:yes) | no | no | usually use 1 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | ring-down duration | seconds | no | no | 
+p5 | steepness | 1-5, inclusive | no | no | 1 is a good starting value | 
+p6 | balance output and input signals | 0:no, 1:yes | no | no | usually use 1 | 
 p7 | input channel |  -  | no | no | 
-p8 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
-p9 | bypass filter | (0: bypass off, 1: bypass on) | yes | no | usually use 0 | 
-p10 | filter center frequency | (Hz) | yes | no | 
-p11 | filter bandwidth | (Hz if positive; if negative, the '-' sign acts as a flag to interpret the bw values as a multipler of the current center frequency (0-1) | yes | no |
+p8 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
+p9 | bypass filter | 0: bypass off, 1: bypass on | yes | no | usually use 0 | 
+p10 | filter center frequency | Hz | yes | no | 
+p11 | filter bandwidth | Hz if positive; if negative, the '-' sign acts as a flag to interpret the bw values as a multipler of the current center frequency (0-1 | yes | no |
 
    Author: John Gibson, 2/5/00; rev for v4, JGG, 7/24/04
 

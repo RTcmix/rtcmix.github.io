@@ -27,13 +27,13 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | carrier frequency | (Hz) | no | no | 
-p4 | modulation frequency | (Hz) | yes | no | 
-p5 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
-p6 | modulator amplitude | reference to pfield table-handle | yes | yes | default is 1.0 (full amplitude) | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | carrier frequency | Hz | no | no | 
+p4 | modulation frequency | Hz | yes | no | 
+p5 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
+p6 | modulator amplitude | reference to pfield table-handle | yes | yes | default: 1.0 (full amplitude) | 
 p7 | carrier wavetable | reference to pfield table-handle | yes | yes | defaults to sine wave | 
 p8 | modulator wavetable | reference to pfield table-handle | yes | yes | defaults to sine wave | 
 

@@ -29,32 +29,32 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
 p1 | input start time | seconds | yes | no | will be constrained to window, p5-p6
-p2 | total duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input sound) | yes | no | 
+p2 | total duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input sound | yes | no | 
 p4 | input sound table | reference to pfield table-handle | yes | no | 
 p5 | number of channels in sample table |  -  | no | no | 
-p6 | input channel of sample table | (seconds) | yes | no | 
-p7 | input window start time | (seconds) | yes | no | 
-p8 | input window end time | (seconds) | yes | no | 
+p6 | input channel of sample table | seconds | yes | no | 
+p7 | input window start time | seconds | yes | no | 
+p8 | input window end time | seconds | yes | no | 
 p9 | wraparound | 1: yes 0: no  | yes | no | usually use 1
-p10 | traversal rate | (speed multiplier, 1.0 == normal, -1.0 == backwards) | yes | no | 
+p10 | traversal rate | speed multiplier, 1.0 == normal, -1.0 == backwards | yes | no | 
 p11 | grain envelope table | reference to pfield table-handle | yes | no | 
-p12 | grain hop time | (seconds, time between successive grains) | yes | no | 
-p13 | grain input time jitter | (seconds) | yes | no | 
-p14 | grain output time jitter | (seconds) | yes | no | 
-p15 | grain duration minimum | (seconds) | yes | no | 
-p16 | grain duration maximum | (seconds) | yes | no | 
-p17 | grain amplitude multiplier minimum | (relative multiplier of p3) | yes | no | 
-p18 | grain amplitude multiplier maximum | (relative multiplier of p3) | yes | no | 
-p19 | grain transposition | (in linear octaves, relative to 0) | yes | no | default: no transposition
+p12 | grain hop time | seconds, time between successive grains | yes | no | 
+p13 | grain input time jitter | seconds | yes | no | 
+p14 | grain output time jitter | seconds | yes | no | 
+p15 | grain duration minimum | seconds | yes | no | 
+p16 | grain duration maximum | seconds | yes | no | 
+p17 | grain amplitude multiplier minimum | relative multiplier of p3 | yes | no | 
+p18 | grain amplitude multiplier maximum | relative multiplier of p3 | yes | no | 
+p19 | grain transposition | in linear octaves, relative to 0 | yes | no | default: no transposition
 p20 | grain transposition collection | reference to pfield table-handle, oct.pc | yes | yes | default: no transpositions applied | 
-p21 | grain transposition jitter | (linear octaves or oct.pc (if p20 used)) | yes | yes | default: no transposition jitter
-p22 | random seed | (integer) | no | yes | default: system clock | 
-p23 | grain pan minimum | (0-1 stereo; 0.5 is middle) | yes | yes | default 0.0 | 
-p24 | grain pan maximum | (0-1 stereo; 0.5 is middle) | yes | yes | default 0.0 | 
-p25 | interpolation type | (0: 2nd-order interpolation, 1: 3rd-order interpolation) | yes | yes | default is 0 | 
+p21 | grain transposition jitter | linear octaves or oct.pc (if p20 used) | yes | yes | default: no transposition jitter
+p22 | random seed | integer | no | yes | default: system clock | 
+p23 | grain pan minimum | 0-1 stereo; 0.5 is middle | yes | yes | default 0.0 | 
+p24 | grain pan maximum | 0-1 stereo; 0.5 is middle | yes | yes | default 0.0 | 
+p25 | interpolation type | 0: 2nd-order interpolation, 1: 3rd-order interpolation | yes | yes | default: 0 | 
 
 
    Author:  John Gibson, 1/29/05

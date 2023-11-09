@@ -19,7 +19,7 @@ Utility instrument used to output values in Max.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | time to send out the values | (seconds) | no | no | 
+p0 | time to send out the values | seconds | no | no | 
 p1-pn | the values to be sent |  -  | no | no | 
 
    Author Brad Garton, 1/2004

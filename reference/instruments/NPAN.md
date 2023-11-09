@@ -55,16 +55,16 @@ pN   | virtual speaker N/2 location | distance or y-location | no | no | determi
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | global amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | mode: "polar" or "xy" | (or "cartesian") | no | no | 
-p5 | angle | (degrees relative to listener) | yes | no | If mode is "polar"
-   |  x coordinate | (feet) | yes | no | If mode is "cartesian"
-p6 | distance from listener | (feet) | no | no | If mode is "polar"
-   | y coordinate | (feet) | yes | no | If mode is "cartesian"
-p7 | input channel |  -  | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | global amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | mode: "polar" or "xy" | or "cartesian" | no | no | 
+p5 | angle | degrees relative to listener | yes | no | If mode is "polar"
+   |  x coordinate | feet | yes | no | If mode is "cartesian"
+p6 | distance from listener | feet | no | no | If mode is "polar"
+   | y coordinate | feet | yes | no | If mode is "cartesian"
+p7 | input channel |  -  | no | yes | default: 0 | 
 
    Author:  John Gibson, 11/13/04
    based on the description in F. R. Moore, "Elements of Computer Music," pp. 353-9

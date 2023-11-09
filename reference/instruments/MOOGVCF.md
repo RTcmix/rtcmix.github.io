@@ -27,14 +27,14 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 p4 | input channel |  -  | no | no | 
-p5 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
-p6 | bypass filter | (0: bypass off, 1: bypass on) | yes | no | usually use 0 | 
-p7 | filter cutoff frequency | (Hz) | yes | no | 
+p5 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
+p6 | bypass filter | 0: bypass off, 1: bypass on | yes | no | usually use 0 | 
+p7 | filter cutoff frequency | Hz | yes | no | 
 p8 | filter resonance | 0-1 | yes | no | 1 is more resonant. > 1.0 will self-oscillate
 
    Author:  John Gibson, 22 May 2002; rev for v4, 7/24/04

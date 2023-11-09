@@ -27,16 +27,16 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | type of distortion | (1: soft clip, 2: tube) | no | no | 
-p5 | gain | (before distortion) | yes | no | (relative multiplier | 
-p6 | cutoff freq for low-pass filter | (Hz) | yes | no | (0 to disable filter | 
-p7 | input channel |  -  | no | yes | default is 0 | 
-p8 | percent to left channel |  -  | yes | yes | default is .5 | 
-p9 | bypass | (0: bypass off, 1: bypass on) | yes | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | type of distortion | 1: soft clip, 2: tube | no | no | 
+p5 | gain | before distortion | yes | no | (relative multiplier | 
+p6 | cutoff freq for low-pass filter | Hz | yes | no | (0 to disable filter | 
+p7 | input channel |  -  | no | yes | default: 0 | 
+p8 | percent to left channel |  -  | yes | yes | default: .5 | 
+p9 | bypass | 0: bypass off, 1: bypass on | yes | yes | default: 0 | 
 
    Author: John Gibson (johgibso at indiana dot edu), 8/12/03, rev for v4, 7/10/04.
 

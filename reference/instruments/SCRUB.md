@@ -27,15 +27,15 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
 p2 | output duration (or endtime if negative) | seconds| no | no |
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 p4 | speed multiplier | linear multiple, -inf - inf | yes | no | 
-p5 | sync width | (samples) | no | no | 
-p6 | sync oversampling | (samples) | no | no | 
-p7 | input channel |  -  | no | yes | default is 0 | 
-p8 | pan |  percent to left | no | yes | default is .5 | 
+p5 | sync width | samples | no | no | 
+p6 | sync oversampling | samples | no | no | 
+p7 | input channel |  -  | no | yes | default: 0 | 
+p8 | pan |  percent to left | no | yes | default: .5 | 
 
    Author:  Doug Scott, based on interpolation and i/o code by Tobias Kunze-Briseno.
 

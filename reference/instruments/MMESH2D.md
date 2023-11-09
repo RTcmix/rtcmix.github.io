@@ -27,16 +27,16 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | # of X points | (2-12) | no | no | 
-p4 | # of Y points | (2-12) | no | no | 
-p5 | xpos | (0.0-1.0) | no | no | 
-p6 | ypos | (0.0-1.0) | no | no | 
-p7 | decay value | (0.0-1.0) | no | no | 
-p8 | strike energy | (0.0-1.0) | no | no | 
-p9 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | # of X points | 2-12 | no | no | 
+p4 | # of Y points | 2-12 | no | no | 
+p5 | xpos | 0.0-1.0 | no | no | 
+p6 | ypos | 0.0-1.0 | no | no | 
+p7 | decay value | 0.0-1.0 | no | no | 
+p8 | strike energy | 0.0-1.0 | no | no | 
+p9 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 
    Author:  Brad Garton, based on code from the Synthesis ToolKit
 

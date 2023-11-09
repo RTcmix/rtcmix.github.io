@@ -26,12 +26,12 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | input channel |  -  | no | yes | default is 0 | 
-p5 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | input channel |  -  | no | yes | default: 0 | 
+p5 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
    Author: Ivica "Ico" Bukvic, 27 May 2000
    (with John Gibson )

@@ -28,10 +28,10 @@ PField	| Parameter | Units | Dynamic | Optional | Notes
 p0 | output start time | seconds | no | no |
 p1 | input start time | seconds | no | no |
 p2 | duration | seconds | no | no |
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no |
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no |
 p4 | modulation oscillator frequency | Hz | yes | no
-p5 | input channel | - | no | yes | default is 0 |
-p6 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0
+p5 | input channel | - | no | yes | default: 0 |
+p6 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0
 p7 | AM modulator | reference to a pfield table-handle | yes | yes | defaults to sine wave. |
 
    Author:  Brad Garton; rev. for v 4.0: John Gibson

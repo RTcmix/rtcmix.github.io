@@ -26,14 +26,14 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | reverb type | (integer - 1: PRCRev, 2: JCRev, 3: NRev) | no | no | see Usage Notes below |
-p5 | reverb time | (seconds) | no | no | 
-p6 | reverb amount | (0: dry --> 1: wet) | yes | no | 
-p7 | input channel |  -  | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | reverb type | integer - 1: PRCRev, 2: JCRev, 3: NRev | no | no | see Usage Notes below |
+p5 | reverb time | seconds | no | no | 
+p6 | reverb amount | 0: dry --> 1: wet | yes | no | 
+p7 | input channel |  -  | no | yes | default: 0 | 
 
    p3 (amplitude) and p6 (reverb amount) can receive dynamic updates from
    a table or real-time control source.

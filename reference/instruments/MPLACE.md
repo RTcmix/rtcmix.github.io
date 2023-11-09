@@ -47,26 +47,26 @@ characteristics and one sub-instrument (**RVB**) to operate.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
 p2 | duration (or endtime if negative) | seconds | no | no |
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | distance to sound source | (feet) | no | no | polar
-   | OR x-coordinate of sound source | (feet) | no | no | cartesian
-p5 | angle to sound source | (degrees; 0 degrees is straight in front) | no | no | polar
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | distance to sound source | feet | no | no | polar
+   | OR x-coordinate of sound source | feet | no | no | cartesian
+p5 | angle to sound source | degrees; 0 degrees is straight in front | no | no | polar
    | OR y-coordinate of sound source | feet | no | no | cartesian
 p6 | distance between 'mics' (stereo receivers) in the room | feet | no | no | if negative, cartesian coords, else polar
-p7 | input channel |  -  | no | yes | default is 0 | 
+p7 | input channel |  -  | no | yes | default: 0 | 
 
 
 <span id="RVB"></span> **RVB**  
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
 p2 | duration (or endtime if negative) | seconds | no | no |
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 
    NOTE: this associated instrument is required for MPLACE to function
 
@@ -75,13 +75,13 @@ p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no |
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | distance to front wall of room | (feet) | no | no | 
-p1 | distance to right-hand wall of room | (feet) | no | no | 
-p2 | distance to back wall of room | (feet) | no | no | specified as negative | 
-p3 | distance to left-hand wall of room | (feet) | no | no | specified as negative | 
-p4 | distance to ceiling of room | (feet) | no | no | 
+p0 | distance to front wall of room | feet | no | no | 
+p1 | distance to right-hand wall of room | feet | no | no | 
+p2 | distance to back wall of room | feet | no | no | specified as negative | 
+p3 | distance to left-hand wall of room | feet | no | no | specified as negative | 
+p4 | distance to ceiling of room | feet | no | no | 
 p5 | wall absorption factor | 0-10 | no | no | 0 == more 'dead', 10 == more 'live'
-p6 | reverberation time | (seconds) | no | no | 0 - ~5 work best
+p6 | reverberation time | seconds | no | no | 0 - ~5 work best
 
    NOTE: this subcommand is required for MPLACE to function
 
@@ -90,8 +90,8 @@ p6 | reverberation time | (seconds) | no | no | 0 - ~5 work best
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | microphone angle | (degrees, 0 degrees is straight in front) | no | no | 
-p1 | microphone pattern | (0-1; 0 == omnidirectional, 1 == highly directional) | no | no | 
+p0 | microphone angle | degrees, 0 degrees is straight in front | no | no | 
+p1 | microphone pattern | 0-1; 0 == omnidirectional, 1 == highly directional | no | no | 
 
    NOTE: this subcommand is optional for MPLACE to function (the default is "mikes_off")
 
@@ -107,9 +107,9 @@ No pfields. This turns off the microphone angle and pattern settings to allow bi
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | minimum distance | (feet) | no | no | default is 0
-p1 | maximum distance | (feet) | no | no | default is infinite
-p2 | distance attentuation exponent |  -  | no | no | default is 2
+p0 | minimum distance | feet | no | no | default: 0
+p1 | maximum distance | feet | no | no | default: infinite
+p2 | distance attentuation exponent |  -  | no | no | default: 2
 
 
    NOTE: this subcommand is optional for MPLACE to function
@@ -119,7 +119,7 @@ p2 | distance attentuation exponent |  -  | no | no | default is 2
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | total matrix gain | (relative multiplier of input signal) | no | no | 
+p0 | total matrix gain | relative multiplier of input signal | no | no | 
 p1-p145 | 12 x 12 matrix amp/feedback coefficients |  -  | no | yes | defaults to internal matrix | 
 
    NOTE: this subcommand is optional for MPLACE to function

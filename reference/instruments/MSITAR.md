@@ -26,13 +26,13 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | frequency | (Hz) | yes | no | 
-p4 | pluck amp | (0.0-1.0) | no | no | 
-p5 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
-p6 | amplitude envelope | reference to a pfield table-handle | yes | yes | default is 1.0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | frequency | Hz | yes | no | 
+p4 | pluck amp | 0.0-1.0 | no | no | 
+p5 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
+p6 | amplitude envelope | reference to a pfield table-handle | yes | yes | default: 1.0 | 
 
    Author:  Brad Garton, based on code from the Synthesis ToolKit
 

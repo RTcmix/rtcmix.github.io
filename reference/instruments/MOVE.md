@@ -57,25 +57,25 @@ are better to use.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (or endtime if negative) | no | no | (seconds | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | distance between 'mics' | (stereo receivers) | no | no | in the room (feet | 
-p5 | input channel |  -  | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | or endtime if negative | no | no | (seconds | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | distance between 'mics' | stereo receivers | no | no | in the room (feet | 
+p5 | input channel |  -  | no | yes | default: 0 | 
 
   
 <span id="space"></span> **space**  
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | distance to front wall of room | (feet) | no | no | 
-p1 | distance to right-hand wall of room | (feet) | no | no | 
-p2 | distance to back wall of room | (feet) | no | no | < 0.0] | 
-p3 | distance to left-hand wall of room | (feet) | no | no | < 0.0] | 
-p4 | distance to ceiling of room | (feet) | no | no | 
+p0 | distance to front wall of room | feet | no | no | 
+p1 | distance to right-hand wall of room | feet | no | no | 
+p2 | distance to back wall of room | feet | no | no | < 0.0] | 
+p3 | distance to left-hand wall of room | feet | no | no | < 0.0] | 
+p4 | distance to ceiling of room | feet | no | no | 
 p5 | wall absorption factor | 0-10 | no | no |  0 == more 'dead', 10 == more 'live'
-p6 | reverberation time | (seconds) | no | no | 0 - ~5 work best
+p6 | reverberation time | seconds | no | no | 0 - ~5 work best
 
    NOTE: this subcommand is required for MOVE to function
 
@@ -126,8 +126,8 @@ Up to 100 triples may be specified.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | function table reference for polar coordinate distance to sound source | (feet) | no | no | 
-p1 | function table reference for polar coordinate angle to sound source | (degrees) | no | no | 
+p0 | function table reference for polar coordinate distance to sound source | feet | no | no | 
+p1 | function table reference for polar coordinate angle to sound source | degrees | no | no | 
 
    The two function tables are loaded with values representing the polar
    coordinates of the sound source location (p0 table == distance to sound [feet]
@@ -144,8 +144,8 @@ p1 | function table reference for polar coordinate angle to sound source | (degr
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | function table reference for x-coordinate location of sound source | (feet) | no | no | 
-p1 | function table reference for y-coordinate location of sound source | (feet) | no | no | 
+p0 | function table reference for x-coordinate location of sound source | feet | no | no | 
+p1 | function table reference for y-coordinate location of sound source | feet | no | no | 
 
    The two function tables are loaded with values representing the x-coordinate
    location of the sound source (feet) and the y-coordinate location of the
@@ -162,7 +162,7 @@ p1 | function table reference for y-coordinate location of sound source | (feet)
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | time interval | (seconds) | no | no | for trajectory updates (typically < 0.01 | 
+p0 | time interval | seconds | no | no | for trajectory updates (typically < 0.01 | 
 
    NOTE: this subcommand is optional for MOVE to function (the default is
       the size of the buffers set in rtsetparams)
@@ -172,8 +172,8 @@ p0 | time interval | (seconds) | no | no | for trajectory updates (typically < 0
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | microphone angle | (degrees, 0 degrees is straight in front) | no | no | 
-p1 | microphone pattern | (0-1; 0 == omnidirectional, 1 == highly directional) | no | no | 
+p0 | microphone angle | degrees, 0 degrees is straight in front | no | no | 
+p1 | microphone pattern | 0-1; 0 == omnidirectional, 1 == highly directional | no | no | 
 
    NOTE: this subcommand is optional for MOVE to function (the default is "mikes_off")
 
@@ -191,7 +191,7 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | total matrix gain | (relative multiplier of input signal) | no | no | 
+p0 | total matrix gain | relative multiplier of input signal | no | no | 
 p1-p145 | 12 x 12 matrix amp/feedback coefficients |  -  | no | yes | defaults to internal matrix | 
 
    NOTE: this subcommand is optional for MOVE to function

@@ -27,15 +27,15 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | frequency | (Hz) | yes | no | 
-p4 | stick hardness | (0.0-1.0) | no | no | 
-p5 | stick position | (0.0-1.0) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | frequency | Hz | yes | no | 
+p4 | stick hardness | 0.0-1.0 | no | no | 
+p5 | stick position | 0.0-1.0 | no | no | 
 p6 | modal preset |  -  | no | no | see below for preset values
-p7 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
-p8 | amplitude envelope | reference to a pfield table-handle | no | yes | default is 1.0 | 
+p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
+p8 | amplitude envelope | reference to a pfield table-handle | no | yes | default: 1.0 | 
 
 ##### p6 preset values:
 

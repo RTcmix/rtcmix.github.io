@@ -26,13 +26,13 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 p4 | input channel |  -  | no | no | 
 p5 | panning mode | 0: use constant-power panning, 1: use linear panning |  -  | yes | no | 
-p6 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p6 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
 
    Author:  John Gibson, 1/26/00; rev for v4, JGG, 7/24/04
 

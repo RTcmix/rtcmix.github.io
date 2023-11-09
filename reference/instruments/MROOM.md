@@ -31,26 +31,26 @@ trajectory.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | timepoint | (seconds) | no | no | 
-p1 | x location | (feet, Cartesian coordinates) | no | no | 
-p2 | y location | (feet, Cartesian coordinates) | no | no | 
+p0 | timepoint | seconds | no | no | 
+p1 | x location | feet, Cartesian coordinates | no | no | 
+p2 | y location | feet, Cartesian coordinates | no | no | 
 
   
 <span id="MROOM"></span> **MROOM**  
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
-p4 | distance from middle of room to right wall | (feet; i.e., 1/2 of width) | no | no | 
-p5 | distance from middle of room to front wall | (feet; i.e., 1/2 of depth) | no | no | 
-p6 | reverb time | (seconds) | no | no | 
-p7 | reflectivity | (0 - 100; the higher, the more reflective) | no | no | 
-p8 | "inner room" width | (feet; try 8) | no | no | 
-p9 | input channel number |  -  | no | yes | default is 0 | 
-p10 | control rate for trajectory |  -  | no | yes | default is 100 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | no | no | 
+p4 | distance from middle of room to right wall | feet; i.e., 1/2 of width | no | no | 
+p5 | distance from middle of room to front wall | feet; i.e., 1/2 of depth | no | no | 
+p6 | reverb time | seconds | no | no | 
+p7 | reflectivity | 0 - 100; the higher, the more reflective | no | no | 
+p8 | "inner room" width | feet; try 8 | no | no | 
+p9 | input channel number |  -  | no | yes | default: 0 | 
+p10 | control rate for trajectory |  -  | no | yes | default: 100 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:

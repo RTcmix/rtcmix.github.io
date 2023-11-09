@@ -26,13 +26,13 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | pitch | (Hz or oct.pc) | yes | no | 
-p3 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | pitch | Hz or oct.pc | yes | no | 
+p3 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
 p4 | oscillator writing frequency |  -  | yes | no | 
 p5 | oscillator wavetable reference |  reference to a pfield table-handle| yes | no | 
-p6 | pan |  -  | yes | yes | default is 0 | 
+p6 | pan |  -  | yes | yes | default: 0 | 
 
 
    Author Brad Garton, 7/2007

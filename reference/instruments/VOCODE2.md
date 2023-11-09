@@ -28,23 +28,23 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of output signal) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of output signal | yes | no | 
 p4 | number of filters |  -  | no | no | 
-p5 | if p4 > 0, lowest filter center frequency | (Hz/oct.pc) | yes | no |
+p5 | if p4 > 0, lowest filter center frequency | Hz/oct.pc | yes | no |
    | if p4 == 0, transposition table | (oct.pc)
-p6 | if p4 > 0, center frequency spacing multiplier | (> 1) | yes | no | 
+p6 | if p4 > 0, center frequency spacing multiplier | > 1 | yes | no | 
    | if p4 == 0, multipler of p5 to add additional filters | - |
-p7 | amount to transpose carrier filters | (Hz/oct.pc) | no | no | 
-p8 | filter bandwidth proportion of center frequency | (> 0) | no | no | 
-p9 | filter response time | (seconds) | no | yes | default is 0.01 | 
-p10 | amount of high-passed modulator signal to mix with output | (amplitude multiplier) | no | yes | default is 0 |
-p11 | cutoff frequency for high pass filter applied to modulator. | (Hz, ignored if p10 == 0) | yes | no | default is 5000 Hz |
-p12 | amount of noise signal to mix into carrier before processing |  (amplitude multiplier applied to full-scale noise signal) | yes | yes | default is 0 |
-p13 | specifies how often to get new random values from the noise generator | (samples) | no | yes | This pfield is ignored if p12 is zero. default is 1 -- a new value every sample |
-p14 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p7 | amount to transpose carrier filters | Hz/oct.pc | no | no | 
+p8 | filter bandwidth proportion of center frequency | > 0 | no | no | 
+p9 | filter response time | seconds | no | yes | default: 0.01 | 
+p10 | amount of high-passed modulator signal to mix with output | amplitude multiplier | no | yes | default: 0 |
+p11 | cutoff frequency for high pass filter applied to modulator. | Hz, ignored if p10 == 0 | yes | no | default: 5000 Hz |
+p12 | amount of noise signal to mix into carrier before processing | amplitude multiplier applied to full-scale noise signal | yes | yes | default: 0 |
+p13 | specifies how often to get new random values from the noise generator | samples | no | yes | This pfield is ignored if p12 is zero. default is 1 -- a new value every sample |
+p14 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 p15 | table giving list of center frequencies | - | yes | yes | if p4 == 0 |
 
    p3 (amplitude), p12 (noise amp) and p14 (pan) can receive dynamic updates

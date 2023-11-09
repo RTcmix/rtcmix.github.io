@@ -28,19 +28,19 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | resonance | (can be negative) | yes | no | 
-p5 | maximum delay time | (seconds) | no | no | determines lowest pitch; try: 1.0 / cpspch(8.00) | 
-p6 | modulation depth | (0 - 100%) | yes | no | 
-p7 | modulation rate | (Hz) | yes | no | 
-p8 | wet/dry mix | (0: dry --> 1: wet) | yes | yes | default is 0.5 | 
-p9 | flanger type | ("IIR" is IIR comb, "FIR" is FIR notch; or numeric codes for the flanger type (0: "IIR", 1: "FIR") | yes* | yes | default is "IIR" * only dynamic when using numeric codes| 
-p10 | input channel |  -  | no | yes | default is 0 | 
-p11 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0.5 | 
-p12 | ring-down duration |  -  | no | yes | default is resonance value | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | resonance | can be negative | yes | no | 
+p5 | maximum delay time | seconds) | no | no | determines lowest pitch; try: 1.0 / cpspch(8.00 | 
+p6 | modulation depth | 0 - 100% | yes | no | 
+p7 | modulation rate | Hz | yes | no | 
+p8 | wet/dry mix | 0: dry --> 1: wet | yes | yes | default: 0.5 | 
+p9 | flanger type | "IIR" is IIR comb, "FIR" is FIR notch; or numeric codes for the flanger type (0: "IIR", 1: "FIR" | yes* | yes | default: "IIR" * only dynamic when using numeric codes| 
+p10 | input channel |  -  | no | yes | default: 0 | 
+p11 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0.5 | 
+p12 | ring-down duration |  -  | no | yes | default: resonance value | 
 p13 | modulator wavetable | reference to a pfield table-handle | no | yes | defaults to sine wave | 
 
 

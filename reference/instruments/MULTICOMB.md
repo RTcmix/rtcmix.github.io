@@ -26,14 +26,14 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | comb frequency range bottom | (Hz) | no | no | 
-p5 | comb frequency range top | (Hz) | no | no | 
-p6 | reverb time | (seconds) | yes | no | 
-p7 | input channel |  -  | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | comb frequency range bottom | Hz | no | no | 
+p5 | comb frequency range top | Hz | no | no | 
+p6 | reverb time | seconds | yes | no | 
+p7 | input channel |  -  | no | yes | default: 0 | 
 p8 | ring-down duration | (p6)] |  -  | no | yes | 
 
    Author:  Brad Garton; rev. for v4.0 by JGG, 7/10/0

@@ -27,14 +27,14 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | frequency of carrier | (Hz or oct.pc*) | yes | no | 
-p4 | frequency of modulator | (Hz or oct.pc*) | yes | no | 
+p0 | start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | frequency of carrier | Hz or oct.pc* | yes | no | 
+p4 | frequency of modulator | Hz or oct.pc* | yes | no | 
 p5 | FM index low point |  -  | yes | no | 
 p6 | FM index high point |  -  | yes | no | 
-p7 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 p8 | carrier and modulator wavetable | reference to a pfield table-handle | yes | no | 
 p9 | index envelope | reference to a pfield table-handle | yes | no | 
 

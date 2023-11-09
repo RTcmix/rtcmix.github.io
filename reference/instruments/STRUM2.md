@@ -26,13 +26,13 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
 p3 | pitch | (Hz or oct.pc)* | yes | no | *(see note below | 
-p4 | squish | (0-10) | no | no | 
-p5 | decay time | (seconds) | no | no | 
-p6 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p4 | squish | 0-10 | no | no | 
+p5 | decay time | seconds | no | no | 
+p6 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
    * If the value of p3 field is < 15.0, it assumes oct.pc.  Use the pchcps
    scorefile convertor for direct frequency specification below 15.0 Hz.

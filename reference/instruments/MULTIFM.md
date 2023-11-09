@@ -31,7 +31,7 @@ p0 | output start time |  -  | no | no |
 p1 | duration |  -  | no | no | 
 p2 | overall amplitude multiplier |  -  | yes | no | 
 p3 | number of oscillators |  -  | no | no | 
-p4 | pan | (in percent-to-left format) | yes | no | 
+p4 | pan | in percent-to-left format | yes | no | 
 p5 | oscillator 1 freq | Hz | yes | no | forms pair with next pfield |
 p6 | oscillator 1 waveform | reference to pfield table-handle | no | no | forms pair with previous pfield 
 

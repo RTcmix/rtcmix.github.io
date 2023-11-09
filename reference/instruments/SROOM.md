@@ -20,18 +20,18 @@ rvbtime, reflect, inroomwidth\[, inputchan\])
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
-p4 | distance from middle of room to right wall | (feet) | no | no | 
-p5 | distance from middle of room to front wall | (feet) | no | no | 
-p6 | x position of sound source | (feet) | no | no | 
-p7 | y position of source | (feet) | no | no | 
-p8 | reverb time | (seconds) | no | no | 
-p9 | reflectivity | (0 - 100; the higher, the more reflective) | no | no | 
-p10 | "inner room" width | (feet; try 8) | no | no | 
-p11 | input channel number |  -  | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | no | no | 
+p4 | distance from middle of room to right wall | feet | no | no | 
+p5 | distance from middle of room to front wall | feet | no | no | 
+p6 | x position of sound source | feet | no | no | 
+p7 | y position of source | feet | no | no | 
+p8 | reverb time | seconds | no | no | 
+p9 | reflectivity | 0 - 100; the higher, the more reflective | no | no | 
+p10 | "inner room" width | feet; try 8 | no | no | 
+p11 | input channel number |  -  | no | yes | default: 0 | 
 
 
 NOTE: This is an older RTcmix instrument, the newer

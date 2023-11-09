@@ -22,20 +22,20 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | type of filter | ("lowpass", "highpass", "bandpass", "bandreject" or numeric codes for the filter type (1: lowpass, 2: highpass, 3: bandpass, 4: bandreject) | yes * | no | * dynamic only when using numeric codes
-p5 | steepness | (> 0) | no | no | (1 is a good starting value | 
-p6 | balance output and input signals | (0:no, 1:yes) | no | no | (usually use 1 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | type of filter | "lowpass", "highpass", "bandpass", "bandreject" or numeric codes for the filter type (1: lowpass, 2: highpass, 3: bandpass, 4: bandreject | yes * | no | * dynamic only when using numeric codes
+p5 | steepness | > 0 | no | no | (1 is a good starting value | 
+p6 | balance output and input signals | 0:no, 1:yes | no | no | (usually use 1 | 
 p7 | input channel |  -  | no | no | 
-p8 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
-p9 | bypass filter | (0: bypass off, 1: bypass on) | yes | no | (usually use 0 | 
-p10 | filter frequency | (Hz) | yes | no | 
-p11 | filter bandwidth for bandpass/reject types | (Hz if positive; if negative, the '-' sign acts as a flag to interpret the bw values as a multiplier (0.0-1.0) of the current center frequency | yes | yes | only used for "bandpass" or "bandreject" filters | 
-p12 | ringdown duration | seconds | no | yes | default is 0.1 | 
-p13 | output amplitude multiplier |  -  | yes | yes | default is 1.0 | 
+p8 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
+p9 | bypass filter | 0: bypass off, 1: bypass on | yes | no | (usually use 0 | 
+p10 | filter frequency | Hz | yes | no | 
+p11 | filter bandwidth for bandpass/reject types | Hz if positive; if negative, the '-' sign acts as a flag to interpret the bw values as a multiplier (0.0-1.0) of the current center frequency | yes | yes | only used for "bandpass" or "bandreject" filters | 
+p12 | ringdown duration | seconds | no | yes | default: 0.1 | 
+p13 | output amplitude multiplier |  -  | yes | yes | default: 1.0 | 
 
    Author: John Gibson (johgibso at indiana dot edu), 12/1/01; 
    rev for v4, JGG, 7/24/04

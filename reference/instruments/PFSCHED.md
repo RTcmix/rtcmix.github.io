@@ -19,11 +19,11 @@ Dynamically schedule pfield controls.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
 p2 | pfield bus number to use |  -  | no | no | 
 p3 | pfield variable |  -  | no | no | 
-p4 | delete note flag | (keep note active: 0, delete note: 1) | no | yes | default is 0 | 
+p4 | delete note flag | keep note active: 0, delete note: 1 | no | yes | default: 0 | 
 
    Author Brad Garton, 11/2009
 

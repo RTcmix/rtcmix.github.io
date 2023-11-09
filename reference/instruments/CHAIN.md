@@ -15,8 +15,8 @@ Connect a set of instruments together so they execute as one.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (-endtime) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | -endtime | no | no | 
 p2 | number of instruments handles to follow |  -  | no | no | 
 p3-n | handles for instruments to be chained | reference to an instrument handle | no | no | 
 

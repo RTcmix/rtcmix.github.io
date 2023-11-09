@@ -27,14 +27,14 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | carrier amplitude multiplier | (relative multiplier) | yes | no | 
-p4 | modulator amplitude multiplier | (relative multiplier) | yes | no | 
-p5 | power gauge window length | (samples; try 100) | no | no | 
-p6 | smoothness -- how much to smooth the power gauge output | (0-1; try .8) | yes | no | 
-p7 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | carrier amplitude multiplier | relative multiplier | yes | no | 
+p4 | modulator amplitude multiplier | relative multiplier | yes | no | 
+p5 | power gauge window length | samples; try 100 | no | no | 
+p6 | smoothness -- how much to smooth the power gauge output | 0-1; try .8 | yes | no | 
+p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 
    p3 (carrier amp), p4 (modulator amp), p6 (smoothness) and p7 (pan) can
    receive dynamic updates from a table or real-time control source.

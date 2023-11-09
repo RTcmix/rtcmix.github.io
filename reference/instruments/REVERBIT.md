@@ -27,16 +27,16 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | reverb time | (seconds, > 0) | yes | no | 
-p5 | reverb amount | (0: dry --> 1: wet) | yes | no | 
-p6 | right channel delay time | (seconds, > 0) | no | no | 
-p7 | cutoff freq for low-pass filter | (Hz, 0 will disable filter) | yes | no | 
-p8 | apply DC blocking filter | (0: No, 1: Yes) | no | yes | default is 1 | 
-p9 | ring-down duration | seconds | no | yes | default is p4 value |
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | reverb time | seconds, > 0 | yes | no | 
+p5 | reverb amount | 0: dry --> 1: wet | yes | no | 
+p6 | right channel delay time | seconds, > 0 | no | no | 
+p7 | cutoff freq for low-pass filter | Hz, 0 will disable filter | yes | no | 
+p8 | apply DC blocking filter | 0: No, 1: Yes | no | yes | default: 1 | 
+p9 | ring-down duration | seconds | no | yes | default: p4 value |
 
    Author:  John Gibson, 6/24/99 rev for v4, 7/11/04
    based on original code by Paul Lansky

@@ -27,20 +27,20 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | carrier amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | carrier oscillator frequency | (Hz/oct.pc) | yes | no | 
-p4 | modulator depth control type | (0: no modulation at all, 1: percent of carrier frequency, 2: modulation index [useful for FM]) | no | no | 
-p5 | type of filter | (0: no filter, 1: low-pass, 2: high-pass) | no | no | 
-p6 | steepness | (> 0) | no | no | 
-p7 | balance output and input signals | (0:no, 1:yes) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | carrier amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | carrier oscillator frequency | Hz/oct.pc | yes | no | 
+p4 | modulator depth control type | 0: no modulation at all, 1: percent of carrier frequency, 2: modulation index [useful for FM] | no | no | 
+p5 | type of filter | 0: no filter, 1: low-pass, 2: high-pass | no | no | 
+p6 | steepness | > 0 | no | no | 
+p7 | balance output and input signals | 0:no, 1:yes | no | no | 
 p8 | carrier wavetable | reference to pfield table-handle | yes | no | 
 p9 | modulator wavetable |  reference to pfield table-handle  | yes | no | 
-p10 | modulator frequency | (Hz, or carrier-ratio if negative) | yes | no | 
+p10 | modulator frequency | Hz, or carrier-ratio if negative | yes | no | 
 p11 | modulator depth |  -  | yes | no | 
-p12 | lowpass filter cutoff frequency | (Hz) | yes | no | 
-p13 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p12 | lowpass filter cutoff frequency | Hz | yes | no | 
+p13 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
    Author:  John Gibson, 12/4/01; rev. for v4, 6/17/05.
 

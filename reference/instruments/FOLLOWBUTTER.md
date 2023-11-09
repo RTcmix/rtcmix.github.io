@@ -28,18 +28,18 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | carrier amplitude multiplier | (relative multiplier) | yes | no | 
-p4 | modulator amplitude multiplier | (relative multiplier) | yes | no | 
-p5 | power gauge window length | (samples; try 100) | no | no | 
-p6 | smoothness -- how much to smooth the power gauge output | (0-1; try .8) | yes | no | 
-p7 | type of filter | ("lowpass", "highpass", "bandpass", "bandreject"; or numeric codes for the filter type (1: lowpass, 2: highpass, 3: bandpass, 4: bandreject) | yes* | no | *only dynamic when using numeric codes
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | carrier amplitude multiplier | relative multiplier | yes | no | 
+p4 | modulator amplitude multiplier | relative multiplier | yes | no | 
+p5 | power gauge window length | samples; try 100 | no | no | 
+p6 | smoothness -- how much to smooth the power gauge output | 0-1; try .8 | yes | no | 
+p7 | type of filter | "lowpass", "highpass", "bandpass", "bandreject"; or numeric codes for the filter type (1: lowpass, 2: highpass, 3: bandpass, 4: bandreject | yes* | no | *only dynamic when using numeric codes
 p8 | minimum cutoff or center frequency | Hz | yes | no |
 p9 | maximum cutoff or center frequency | Hz | yes | no |
-p10 | steepness | (> 0) | no | no | 1 is a good starting value | 
-p11 | pan | (0-1 stereo; 0.5 is middle) | yes | no | 
+p10 | steepness | > 0 | no | no | 1 is a good starting value | 
+p11 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
 p12 | filter bandwidth for bandpass/reject types | Hz if positive; if negative, the '-' sign acts as a flag to interpret the BW values as a multiplier (0.0-1.0) of the current CF | yes | yes | only used for "bandpass" or "bandreject" filters | 
 
 

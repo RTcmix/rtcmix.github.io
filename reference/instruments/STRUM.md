@@ -54,15 +54,15 @@ different set of performance parameters.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | pitch | (oct.pc) | no | no | 
-p3 | fundamental decay time | (seconds) | no | no | 
-p4 | nyquist decay time | (seconds) | no | no | 
-p5 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
-p6 | squish value | (0-10) | no | no | 
-p7 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
-p8 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | default is 0 (no delete) | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | pitch | oct.pc | no | no | 
+p3 | fundamental decay time | seconds | no | no | 
+p4 | nyquist decay time | seconds | no | no | 
+p5 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | no | no | 
+p6 | squish value | 0-10 | no | no | 
+p7 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
+p8 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | default: 0 (no delete) | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
@@ -73,15 +73,15 @@ p8 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | 
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | pitch0 | (oct.pc) | no | no | 
-p3 | pitch1 | (oct.pc) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | pitch0 | oct.pc | no | no | 
+p3 | pitch1 | oct.pc | no | no | 
 p4 | function table number for pitch glissando |  -  | no | no | 
-p5 | fundamental decay time | (seconds) | no | no | 
-p6 | nyquist decay time | (seconds) | no | no | 
-p7 | update rate | (samples) | no | yes | default is 100 | 
-p8 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p5 | fundamental decay time | seconds | no | no | 
+p6 | nyquist decay time | seconds | no | no | 
+p7 | update rate | samples | no | yes | default: 100 | 
+p8 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
@@ -92,12 +92,12 @@ p8 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 |
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | pitch | (oct.pc) | no | no | 
-p3 | fundamental decay time | (seconds) | no | no | 
-p4 | nyquist decay time | (seconds) | no | no | 
-p5 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | pitch | oct.pc | no | no | 
+p3 | fundamental decay time | seconds | no | no | 
+p4 | nyquist decay time | seconds | no | no | 
+p5 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sy
@@ -109,20 +109,20 @@ stem should be used:
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | pitch | (oct.pc) | no | no | 
-p3 | fundamental decay time | (seconds) | no | no | 
-p4 | nyquist decay time | (seconds) | no | no | 
-p5 | distortion gain | (0-100 (or more!)) | no | no | 
-p6 | feedback gain | (0-10) | no | no | values > 1.0 are very 'fed-back' |
-p7 | feedback pitch | (oct.pc) | no | no | 
-p8 | clean signal level | (0-1) | no | no | 
-p9 | distortion signal level | (0-1) | no | no | 
-p10 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
-p11 | squish value | (0-10) | no | no | 
-p12 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
-p13 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | default is 0 (no delete) | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | pitch | oct.pc | no | no | 
+p3 | fundamental decay time | seconds | no | no | 
+p4 | nyquist decay time | seconds | no | no | 
+p5 | distortion gain | 0-100 (or more!) | no | no | 
+p6 | feedback gain | 0-10 | no | no | values > 1.0 are very 'fed-back' |
+p7 | feedback pitch | oct.pc | no | no | 
+p8 | clean signal level | 0-1 | no | no | 
+p9 | distortion signal level | 0-1 | no | no | 
+p10 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | no | no | 
+p11 | squish value | 0-10 | no | no | 
+p12 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
+p13 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | default: 0 (no delete) | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
@@ -133,21 +133,21 @@ p13 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes |
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | pitch0 | (oct.pc) | no | no | 
-p3 | pitch1 | (oct.pc) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | pitch0 | oct.pc | no | no | 
+p3 | pitch1 | oct.pc | no | no | 
 p4 | function table number for pitch glissando |  -  | no | no | 
-p5 | fundamental decay time | (seconds) | no | no | 
-p6 | nyquist decay time | (seconds) | no | no | 
-p7 | distortion gain | (0-100 (or more!)) | no | no | 
-p8 | feedback gain | (0-10) | no | no | values > 1.0 are very 'fed-back' |
-p9 | feedback pitch | (oct.pc) | no | no | 
-p10 | clean signal level | (0-1) | no | no | 
-p11 | distortion signal level | (0-1) | no | no | 
-p12 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
-p13 | update rate | (samples) | no | yes | default is 100 | 
-p14 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p5 | fundamental decay time | seconds | no | no | 
+p6 | nyquist decay time | seconds | no | no | 
+p7 | distortion gain | 0-100 (or more!) | no | no | 
+p8 | feedback gain | 0-10 | no | no | values > 1.0 are very 'fed-back' |
+p9 | feedback pitch | oct.pc | no | no | 
+p10 | clean signal level | 0-1 | no | no | 
+p11 | distortion signal level | 0-1 | no | no | 
+p12 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | no | no | 
+p13 | update rate | samples | no | yes | default: 100 | 
+p14 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
@@ -158,18 +158,18 @@ p14 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 |
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | pitch | (oct.pc) | no | no | 
-p3 | fundamental decay time | (seconds) | no | no | 
-p4 | nyquist decay time | (seconds) | no | no | 
-p5 | distortion gain | (0-100 (or more!)) | no | no | 
-p6 | feedback gain | (0-10) | no | no | values > 1.0 are very 'fed-back' |
-p7 | feedback pitch | (oct.pc) | no | no | 
-p8 | clean signal level | (0-1) | no | no | 
-p9 | distortion signal level | (0-1) | no | no | 
-p10 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
-p11 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | pitch | oct.pc | no | no | 
+p3 | fundamental decay time | seconds | no | no | 
+p4 | nyquist decay time | seconds | no | no | 
+p5 | distortion gain | 0-100 (or more!) | no | no | 
+p6 | feedback gain | 0-10 | no | no | values > 1.0 are very 'fed-back' |
+p7 | feedback pitch | oct.pc | no | no | 
+p8 | clean signal level | 0-1 | no | no | 
+p9 | distortion signal level | 0-1 | no | no | 
+p10 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | no | no | 
+p11 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
@@ -180,25 +180,25 @@ p11 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 |
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | pitch | (oct.pc) | no | no | 
-p3 | fundamental decay time | (seconds) | no | no | 
-p4 | nyquist decay time | (seconds) | no | no | 
-p5 | distortion gain | (0-100 (or more!)) | no | no | 
-p6 | feedback gain | (0-10) | no | no | values > 1.0 are very 'fed-back' |
-p7 | feedback pitch | (oct.pc) | no | no | 
-p8 | clean signal level | (0-1) | no | no | 
-p9 | distortion signal level | (0-1) | no | no | 
-p10 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
-p11 | squish value | (0-10) | no | no | 
-p12 | low vibrato rate | (Hz) | no | no | 
-p13 | high vibrato rate | (Hz) | no | no | 
-p14 | vibrato depth | (Hz) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | pitch | oct.pc | no | no | 
+p3 | fundamental decay time | seconds | no | no | 
+p4 | nyquist decay time | seconds | no | no | 
+p5 | distortion gain | 0-100 (or more!) | no | no | 
+p6 | feedback gain | 0-10 | no | no | values > 1.0 are very 'fed-back' |
+p7 | feedback pitch | oct.pc | no | no | 
+p8 | clean signal level | 0-1 | no | no | 
+p9 | distortion signal level | 0-1 | no | no | 
+p10 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | no | no | 
+p11 | squish value | 0-10 | no | no | 
+p12 | low vibrato rate | Hz | no | no | 
+p13 | high vibrato rate | Hz | no | no | 
+p14 | vibrato depth | Hz | no | no | 
 p15 | random seed value |  -  | no | no | 
-p16 | update rate | (samples) | no | yes | default is 100) | 
-p17 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
-p18 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | default is 0 (no delete) | 
+p16 | update rate | samples) | no | yes | default: 100 | 
+p17 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
+p18 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | default: 0 (no delete) | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
@@ -209,22 +209,22 @@ p18 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes |
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | pitch | (oct.pc) | no | no | 
-p3 | fundamental decay time | (seconds) | no | no | 
-p4 | nyquist decay time | (seconds) | no | no | 
-p5 | distortion gain | (0-100 (or more!)) | no | no | 
-p6 | feedback gain | (0-10) | no | no | values > 1.0 are very 'fed-back' |
-p7 | feedback pitch | (oct.pc) | no | no | 
-p8 | clean signal level | (0-1) | no | no | 
-p9 | distortion signal level | (0-1) | no | no | 
-p10 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
-p11 | low vibrato rate | (Hz) | no | no | 
-p12 | high vibrato rate | (Hz) | no | no | 
-p13 | vibrato depth | (Hz) | no | no | 
-p14 | update rate | (samples) | no | yes | default is 100) | 
-p15 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | pitch | oct.pc | no | no | 
+p3 | fundamental decay time | seconds | no | no | 
+p4 | nyquist decay time | seconds | no | no | 
+p5 | distortion gain | 0-100 (or more!) | no | no | 
+p6 | feedback gain | 0-10 | no | no | values > 1.0 are very 'fed-back' |
+p7 | feedback pitch | oct.pc | no | no | 
+p8 | clean signal level | 0-1 | no | no | 
+p9 | distortion signal level | 0-1 | no | no | 
+p10 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | no | no | 
+p11 | low vibrato rate | Hz | no | no | 
+p12 | high vibrato rate | Hz | no | no | 
+p13 | vibrato depth | Hz | no | no | 
+p14 | update rate | samples) | no | yes | default: 100 | 
+p15 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:

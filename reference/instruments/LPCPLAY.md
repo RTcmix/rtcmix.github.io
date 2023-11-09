@@ -61,13 +61,13 @@ the LPC synthesis. Several of them necessarily need to precede the
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude multiplier | (relative multiplier of original signal) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude multiplier | relative multiplier of original signal | yes | no | 
 p3 | transposition | see Usage Notes | yes | no | 
 p4 | starting LPC frame |  -  | no | no | 
 p5 | ending LPC frame |  -  | no | no | 
-p6 | warp factor | (-1.0 - 1.0) | yes | yes | default is 0 | 
+p6 | warp factor | -1.0 - 1.0 | yes | yes | default: 0 | 
 p7 | reson center frequency | Hz  | yes | yes | value of 0 bypasses filter | 
 p8 | reson bandwidth | multiple of center freq | yes | yes | used only if p7 is specified | 
 
@@ -76,13 +76,13 @@ p8 | reson bandwidth | multiple of center freq | yes | yes | used only if p7 is 
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of original signal) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of original signal | yes | no | 
 p4 | starting LPC frame |  -  | no | no | 
 p5 | ending LPC frame |  -  | no | no | 
-p6 | warp factor | (-1.0 - 1.0) | yes | yes | default is 0 | 
+p6 | warp factor | -1.0 - 1.0 | yes | yes | default: 0 | 
 p7 | reson center frequency | Hz  | yes | yes | value of 0 bypasses filter | 
 p8 | reson bandwidth | multiple of center freq | yes | yes | used only if p7 is specified | 
   
@@ -100,11 +100,11 @@ p1 | number of filter poles in the original analysis | 0-64 | no | yes | the def
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | voice/unvoiced threshold | (usually <= 0.1 for normal resynthesis) | no | no | 
-p1 | noise amplitude | (usually <= 0.1 for normal resynthesis) | no | no | 
+p0 | voice/unvoiced threshold | usually <= 0.1 for normal resynthesis | no | no | 
+p1 | noise amplitude | usually <= 0.1 for normal resynthesis | no | no | 
 p2 | unvoiced frame rate |  -  | no | yes | the default value 0 will cause voiced and unvoiced frames to be synthesized at the same rate
-p3 | rise | seconds  | no | yes | default is 0; applies internal gain ramp-up
-p4 | decay | seconds | no | yes | default is 0; applies internal gain ramp-down
+p3 | rise | seconds  | no | yes | default: 0; applies internal gain ramp-up
+p4 | decay | seconds | no | yes | default: 0; applies internal gain ramp-down
 p5 | threshold cutoff |  -  | no | yes | default 0 | frame amplitudes below this value will be muted
 
 Though p0 will work to set the voices/unvoiced threshold, it is advisable the **set_thresh** subcommand instead.
@@ -116,8 +116,8 @@ NOTE: this subcommand is required for **LPCPLAY** to function
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | voiced | (buzz) | no | no | threshold (usually close to 0.1 | 
-p1 | unvoiced | (noise) | no | no | threshold (usually close to 0.1 also | 
+p0 | voiced | buzz | no | no | threshold (usually close to 0.1 | 
+p1 | unvoiced | noise | no | no | threshold (usually close to 0.1 also | 
 
    NOTE: this subcommand is optional for **LPCPLAY** to function
 

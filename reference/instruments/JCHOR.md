@@ -27,20 +27,20 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | output duration | (seconds) | no | no | 
-p3 | input duration | (seconds, not input end time) | no | no | 
-p4 | maintain input duration, regardless of transposition | (1: yes, 0: no) | no | no | 
-p5 | transposition | (oct.pc) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | output duration | seconds | no | no | 
+p3 | input duration | seconds, not input end time | no | no | 
+p4 | maintain input duration, regardless of transposition | 1: yes, 0: no | no | no | 
+p5 | transposition | oct.pc | no | no | 
 p6 | number of voices | - | no | no | minimum of 1
-p7 | minimum grain amplitude | (relative multiplier of p13) | yes | no | 
-p8 | maximum grain amplitude | (relative multiplier of p13) | yes | no | 
-p9 | minimum grain wait | (seconds) | yes | no | 
-p10 | maximum grain wait | (seconds) | yes | no | 
-p11 | seed | (0-1) | no | no | 
+p7 | minimum grain amplitude | relative multiplier of p13 | yes | no | 
+p8 | maximum grain amplitude | relative multiplier of p13 | yes | no | 
+p9 | minimum grain wait | seconds | yes | no | 
+p10 | maximum grain wait | seconds | yes | no | 
+p11 | seed | 0-1 | no | no | 
 p12 | input channel |  -  | no | no | 
-p13 | overall amplitude | (relative multiplier of input sound) | yes | no | 
+p13 | overall amplitude | relative multiplier of input sound | yes | no | 
 p14 | grain envelope | reference to a pfield table-handle | no | no | 
 
 

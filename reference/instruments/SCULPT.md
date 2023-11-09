@@ -19,11 +19,11 @@ Breakpoint oscillator resynthesis.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration of each segment | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration of each segment | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | no | no | 
 p3 | number of points |  -  | no | no | 
-p4 | pan | (0-1 stereo; 0.5 is middle) | no | yes | default is 0 | 
+p4 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:

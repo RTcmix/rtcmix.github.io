@@ -26,10 +26,10 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is .5 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: .5 | 
 
    Author: Neil Thornock (neilthornock at gmail), 11/12/16
 

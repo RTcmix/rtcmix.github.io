@@ -27,9 +27,9 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | overall amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | overall amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
 p3 | wavetable | reference to a pfield table-handle | no | no | 
 p4 | oscillator 1 freq | Hz | yes | no | 
 p5 | oscillator 1 amp | relative multiplier of overall amplitude (p2) | yes | no | 

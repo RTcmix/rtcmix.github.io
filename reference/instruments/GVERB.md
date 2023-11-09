@@ -27,18 +27,18 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | roomsize | (1.0 - 300.0) | yes | no | 
-p5 | reverb time | (0.1 - 360.0) | yes | no | 
-p6 | damping | (0.0 - 1.0) | yes | no | 
-p7 | input filter bandwidth | (0.0 - 1.0) | yes| no | 
-p8 | dry level | (inverse dB, -90.0 - 0.0) | yes | no | 
-p9 | early reflection level | (inverse dB, -90.0 - 0.0) | yes | no | 
-p10 | tail level | (inverse dB, -90.0 - 0.0) | yes | no | 
-p11 | ring-down time | (seconds, added to duration) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | roomsize | 1.0 - 300.0 | yes | no | 
+p5 | reverb time | 0.1 - 360.0 | yes | no | 
+p6 | damping | 0.0 - 1.0 | yes | no | 
+p7 | input filter bandwidth | 0.0 - 1.0 | yes| no | 
+p8 | dry level | inverse dB, -90.0 - 0.0 | yes | no | 
+p9 | early reflection level | inverse dB, -90.0 - 0.0 | yes | no | 
+p10 | tail level | inverse dB, -90.0 - 0.0 | yes | no | 
+p11 | ring-down time | seconds, added to duration | no | no | 
 p12 | input channel |  -  | no | yes | default 0 | 
 
 

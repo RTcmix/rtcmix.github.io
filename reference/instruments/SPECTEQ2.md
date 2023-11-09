@@ -27,20 +27,20 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 p4 | FFT length | samples, power of 2, | no | no | usually 1024 |
 p5 | window length | (samples, power of 2 | no | no | usually FFT length * 2 |
 p6 | window table | reference to pfield table-handle | yes | no | use zero for internally generated Hamming window |
 p7 | overlap (FFT window overlap) | positive power of 2: 1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc. | no | no |  2 or 4 is usually fine; 1 is fluttery; higher overlaps use more CPU | 
 p8 | EQ table (i.e., amplitude scaling of each band) | dB (use reference to pfield table-handle) | yes | no | 0 dB means no change, +dB boost, -dB cut |
-p9 | minimum frequency | (Hz) | yes | yes | default is 0 Hz | 
-p10 | maximum frequency | (Hz) | yes | yes | default is Nyquist | 
-p11 | bypass | (0: bypass off, 1: bypass on) | yes | yes | default is 0 | 
-p12 | input channel |  -  | no | yes | default is 0 | 
-p13 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p9 | minimum frequency | Hz | yes | yes | default: 0 Hz | 
+p10 | maximum frequency | Hz | yes | yes | default: Nyquist | 
+p11 | bypass | 0: bypass off, 1: bypass on | yes | yes | default: 0 | 
+p12 | input channel |  -  | no | yes | default: 0 | 
+p13 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
    Author:  John Gibson, 6/12/05
 

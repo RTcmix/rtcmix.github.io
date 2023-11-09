@@ -27,14 +27,14 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | pitch | (Hz or oct.pc) | yes | no | 
-p3 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | pitch | Hz or oct.pc | yes | no | 
+p3 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
 p4 | first half-wavetable | reference to pfield table-handle | yes | no | 
 p5 | second half-wavetable | reference to pfield table-handle | yes | no | 
 p6 | wavetable mid-crossover point [0.0-1.0] |  -  | yes | no | 
-p7 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
 
    Author Brad Garton, 7/2007

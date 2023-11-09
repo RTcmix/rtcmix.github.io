@@ -27,12 +27,12 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | global amp multiplier | (relative multiplier of input signal) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | global amp multiplier | relative multiplier of input signal | yes | no | 
 p4 | input channel |  -  | no | no | 
-p5-pN | amplitude multiplier for each output channel | (relative multiplier) | yes | no | 
+p5-pN | amplitude multiplier for each output channel | relative multiplier | yes | no | 
 
    John Gibson, 1/22/06
 

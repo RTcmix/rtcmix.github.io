@@ -28,21 +28,21 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
 p3 | gain applied to input before compression | dBFS | yes | no | 0 means no change
 p4 | gain applied to output after compression - "makeup gain" | dBFS | yes | no | 
-p5 | attack time | (seconds) | yes | no | 
-p6 | release time | (seconds) | yes | no | 
+p5 | attack time | seconds | yes | no | 
+p6 | release time | seconds | yes | no | 
 p7 | threshold | dBFS | yes | no | 
 p8 | compression ratio | >0 | yes | no | 20 means 20:1 | (100 is infinity)
-p9 | look-ahead time | (seconds) | no | no | 
+p9 | look-ahead time | seconds | no | no | 
 p10 | peak detection window size | power of 2* | no | no | * must be <= RTCmix output buffer size
-p11 | detection type | (0: peak, 1: average peak, 2: rms) | yes | yes | default is 0 | 
-p12 | bypass | (0: bypass off, 1: bypass on) | yes | yes | default is 0 | 
-p13 | input channel |  -  | yes | yes | default is 0 | 
-p14 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p11 | detection type | 0: peak, 1: average peak, 2: rms | yes | yes | default: 0 | 
+p12 | bypass | 0: bypass off, 1: bypass on | yes | yes | default: 0 | 
+p13 | input channel |  -  | yes | yes | default: 0 | 
+p14 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 
 
    Author: John Gibson , 4/21/00; rev. for v4, 6/18/05

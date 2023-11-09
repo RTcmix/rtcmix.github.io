@@ -28,24 +28,24 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude multiplier | (relative multiplier of grain intensity (p14, p15) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude multiplier | relative multiplier of grain intensity (p14, p15 | yes | no | 
 p3 | random seed | any integer | no | no | default: 0 (seed from system clock_ | 
-p4 | oscillator configuration | (0: wavetable, 1: FM) | no | no | default: 0 | 
-p5 | randomize oscillator starting phase | (0: no, 1: yes) | no | no | default: yes | 
+p4 | oscillator configuration | 0: wavetable, 1: FM | no | no | default: 0 | 
+p5 | randomize oscillator starting phase | 0: no, 1: yes | no | no | default: yes | 
 p6 | grain envelope | reference to pfield table-handle | no | no | 
 p7 | grain waveform | reference to pfield table-handle | no | no | 
 p8 | modulation frequency multiplier | - | yes | no | sets frequency of modulator for FM synthesis
 p9 | index of modulation (FM synthesis) | - | yes | no | 
-p10 | minimum grain frequency | (Hz) | yes | no | 
-p11 | maximum grain frequency | (Hz) | yes | no | 
-p12 | minimum grain speed | (I think this is the number of grains/second) | yes | no | 
-p13 | maximum grain speed | (ditto) | yes | no | 
+p10 | minimum grain frequency | Hz | yes | no | 
+p11 | maximum grain frequency | Hz | yes | no | 
+p12 | minimum grain speed | I think this is the number of grains/second | yes | no | 
+p13 | maximum grain speed | ditto | yes | no | 
 p14 | minimum grain intensity | dB  | yes | no | 
-p15 | maximum grain intensity | (I'm not sure how this translates to actual amplitude) | yes | no | 
-p16 | grain density | (I have no idea what units are used. Try "1") | yes | no | 
-p17 | grain pan | (0-1 stereo; 0.5 is middle) | yes | yes* | * required if stereo output | 
+p15 | maximum grain intensity | I'm not sure how this translates to actual amplitude | yes | no | 
+p16 | grain density | I have no idea what units are used. Try "1" | yes | no | 
+p17 | grain pan | 0-1 stereo; 0.5 is middle | yes | yes* | * required if stereo output | 
 p18 | grain pan randomization | 1: full stereo randomization; 0: no randomization from p17 value | no | yes* | * required if stereo output |
 
 

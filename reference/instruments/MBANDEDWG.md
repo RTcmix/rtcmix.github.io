@@ -27,18 +27,18 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | frequency | (Hz) | yes | no | 
-p4 | strike position | (0.0-1.0) | no | no | 
-p5 | pluck flag | (0: no pluck, 1: pluck) | no | no | 
-p6 | max velocity | (0.0-1.0) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | frequency | Hz | yes | no | 
+p4 | strike position | 0.0-1.0 | no | no | 
+p5 | pluck flag | 0: no pluck, 1: pluck | no | no | 
+p6 | max velocity | 0.0-1.0 | no | no | 
 p7 | preset # |  -  | no | no | preset values listed below
-p8 | bow pressure | (0.0-1.0) | yes | no | 0.0 == strike onl | 
-p9 | mode resonance | (0.0-1.0) | yes | no | 0.99 == normal strik | 
-p10 | integration constant | (0.0-1.0) | yes | no | 0.0 == normal | 
-p11 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p8 | bow pressure | 0.0-1.0 | yes | no | 0.0 == strike onl | 
+p9 | mode resonance | 0.0-1.0 | yes | no | 0.99 == normal strik | 
+p10 | integration constant | 0.0-1.0 | yes | no | 0.0 == normal | 
+p11 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 p12 | velocity envelope | reference to a pfield table-handle | yes | yes | if 0, default value is 1.0 | 
 
    Author:  Brad Garton, based on code from the Synthesis ToolKit

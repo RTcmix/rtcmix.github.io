@@ -55,33 +55,33 @@ The pfields for **setup** are triples; up to 64 cf-bw-amp triples can be specifi
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | input channel |  -  | no | yes | default is 0 | 
-p5 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | input channel |  -  | no | yes | default: 0 | 
+p5 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
   
 <span id="IINOISE"></span> **IINOISE**  
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amp | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amp | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
   
 <span id="BUZZ"></span> **BUZZ**  
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amp | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | pitch | (Hz or oct.pc *) | yes | no | see note below | 
-p4 | pan | (in percent-to-left form: 0-1) | yes | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amp | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | pitch | Hz or oct.pc * | yes | no | see note below | 
+p4 | pan | in percent-to-left form: 0-1 | yes | yes | default: 0 | 
 
    * If the value of p3 field is < 15.0, it assumes oct.pc.  Use the pchcps
    scorefile convertor for direct frequency specification below 15.0 Hz.
@@ -91,11 +91,11 @@ p4 | pan | (in percent-to-left form: 0-1) | yes | yes | default is 0 |
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amp | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | pitch | (Hz or oct.pc *) | yes | no | see note below | 
-p4 | pan | (in percent-to-left form: 0-1) | yes | yes | default is 0 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amp | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | pitch | Hz or oct.pc * | yes | no | see note below | 
+p4 | pan | in percent-to-left form: 0-1 | yes | yes | default: 0 | 
 
    * If the value of p3 field is < 15.0, it assumes oct.pc.  Use the pchcps
    scorefile convertor for direct frequency specification below 15.0 Hz.

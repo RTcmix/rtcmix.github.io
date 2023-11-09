@@ -27,14 +27,14 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
-p3 | frequency | (Hz) | yes | no | 
-p4 | slide length | (samps) | yes | no | 
-p5 | lip filter | (Hz) | yes | no | 
-p6 | max pressure | (0.0-1.0) | no | no | 
-p7 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0.5 | 
+p0 | output start time | seconds | no | no | 
+p1 | duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
+p3 | frequency | Hz | yes | no | 
+p4 | slide length | samps | yes | no | 
+p5 | lip filter | Hz | yes | no | 
+p6 | max pressure | 0.0-1.0 | no | no | 
+p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 p8 | breath pressure envelope | reference to a pfield table-handle | yes | yes | if 0, value defaults to 1.0 | 
 
    p2 (amplitude), p3 (frequency), p4 (slide length), p5 (lip filter) and p7 (pan)

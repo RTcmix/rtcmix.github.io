@@ -19,13 +19,13 @@ Cubic spline dynamic pitch-shifter.
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
 p2 | output duration (or endtime if negative) | seconds | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | no | no | 
 p4 | function table number for pitch envelope |  -  | no | no | 
-p5 | input channel |  -  | no | yes | default is 0 | 
-p6 | percent to left |  -  | no | yes | default is .5 | 
+p5 | input channel |  -  | no | yes | default: 0 | 
+p6 | percent to left |  -  | no | yes | default: .5 | 
 
 	Assumes gen table 1 is amplitude curve for the note.
 

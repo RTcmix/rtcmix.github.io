@@ -29,27 +29,27 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | output amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | input amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p5 | ring-down duration | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | output amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | input amplitude multiplier | relative multiplier of input signal | yes | no | 
+p5 | ring-down duration | seconds | no | no | 
 p6 | FFT length | samples, power of 2 | no | no | usually 1024 | 
 p7 | window length | samples, power of 2 | no | no | usually FFT length * 2 |
 p8 | window table | reference to pfield-table handle | yes | no | zero for internally generated Hamming window |
-p9 | overlap (FFT window overlap) | (positive power of 2) | no | no | 1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc. 2 or 4 is usually fine; 1 is fluttery; higher overlaps use more CPU | 
+p9 | overlap (FFT window overlap) | positive power of 2 | no | no | 1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc. 2 or 4 is usually fine; 1 is fluttery; higher overlaps use more CPU | 
 p10 | EQ table (i.e., amplitude scaling of each band) | dB | yes | no | in dB (0 dB means no change, + dB boost, - dB cut) | 
-p11 | delay time table | (seconds) | yes | no | 
-p12 | delay feedback table | (multiplier, 0-1) | yes | no | 
-p13 | minimum EQ frequency | (Hz) | yes | yes | default is 0 | 
-p14 | maximum EQ frequency | (Hz) | yes | yes | default is Nyquist | 
-p15 | minimum delay frequency | (Hz) | yes | yes | default is 0 | 
-p16 | maximum delay frequency | (Hz) | yes | yes | default is Nyquist | 
-p17 | bin-mapping table |  -  | yes | yes | default is 0 (no mapping done) | 
-p18 | wet/dry mix | (0: dry -> 1: wet) | yes | yes | default is 1 |
-p19 | input channel |  -  | no | yes | default is 0 | 
-p20 | pan | (0-1 stereo; 0.5 is middle) | yes | yes | default is 0 |
+p11 | delay time table | seconds | yes | no | 
+p12 | delay feedback table | multiplier, 0-1 | yes | no | 
+p13 | minimum EQ frequency | Hz | yes | yes | default: 0 | 
+p14 | maximum EQ frequency | Hz | yes | yes | default: Nyquist | 
+p15 | minimum delay frequency | Hz | yes | yes | default: 0 | 
+p16 | maximum delay frequency | Hz | yes | yes | default: Nyquist | 
+p17 | bin-mapping table |  -  | yes | yes | default: 0 (no mapping done) | 
+p18 | wet/dry mix | 0: dry -> 1: wet | yes | yes | default: 1 |
+p19 | input channel |  -  | no | yes | default: 0 | 
+p20 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 |
 
   
    Author:  John Gibson, 6/12/05

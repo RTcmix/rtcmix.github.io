@@ -28,23 +28,23 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | total duration | (seconds) | no | no | 
-p2 | amplitude | (absolute, for 16-bit soundfiles: 0-32768) | yes | no | 
+p0 | output start time | seconds | no | no | 
+p1 | total duration | seconds | no | no | 
+p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
 p3 | oscillator waveform table | reference to pfield table-handle | yes | no | 
 p4 | grain envelope table |  -  | yes | no | 
-p5 | grain hop time | (seconds, time between successive grains) | yes | no | 
-p6 | grain output time jitter | (seconds) | yes | no | 
-p7 | grain duration minimum | (seconds) | yes | no | 
-p8 | grain duration maximum | (seconds) | yes | no | 
-p9 | grain amplitude multiplier minimum | (relative multiplier of p2) | yes | no | 
-p10 | grain amplitude multiplier maximum | (relative multiplier of p2) | yes | no | 
-p11 | grain pitch | (linear octaves) | yes | no | 
+p5 | grain hop time | seconds, time between successive grains | yes | no | 
+p6 | grain output time jitter | seconds | yes | no | 
+p7 | grain duration minimum | seconds | yes | no | 
+p8 | grain duration maximum | seconds | yes | no | 
+p9 | grain amplitude multiplier minimum | relative multiplier of p2 | yes | no | 
+p10 | grain amplitude multiplier maximum | relative multiplier of p2 | yes | no | 
+p11 | grain pitch | linear octaves | yes | no | 
 p12 | grain transposition collection | reference to pfield table-handle, oct.pc | yes | yes | default: no transpositions applied | 
-p13 | grain pitch jitter | (linear octaves or oct.pc (if p12 used)) | yes | yes | default: no pitch jitter applied | 
-p14 | random seed | (integer) | no | yes | default: use system clock | 
-p15 | grain pan minimum | (0-1 stereo; 0.5 is middle) | yes | yes | default: 0.0 | 
-p16 | grain pan maximum | (0-1 stereo; 0.5 is middle) | yes | yes | default: 1.0 | 
+p13 | grain pitch jitter | linear octaves or oct.pc (if p12 used) | yes | yes | default: no pitch jitter applied | 
+p14 | random seed | integer | no | yes | default: use system clock | 
+p15 | grain pan minimum | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.0 | 
+p16 | grain pan maximum | 0-1 stereo; 0.5 is middle | yes | yes | default: 1.0 | 
 
 
    Author:  John Gibson, 2/8/05
