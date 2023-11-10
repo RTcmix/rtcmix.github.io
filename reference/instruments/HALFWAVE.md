@@ -36,8 +36,9 @@ p5 | second half-wavetable | reference to pfield table-handle | yes | no |
 p6 | wavetable mid-crossover point [0.0-1.0] |  -  | yes | no | 
 p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author Brad Garton, 7/2007
+Author Brad Garton, 7/2007
 
   
 

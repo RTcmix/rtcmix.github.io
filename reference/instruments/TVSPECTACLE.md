@@ -43,20 +43,18 @@ p11 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 |
 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
-```
-   Function table 1 is the input amplitude, spanning just the input duration.
-   Function table 2 is the output amplitude, spanning the entire note, including ring-down duration.
-   Function table 3 is the EQ table A (i.e., amplitude scaling of each band),
-      in dB (0 dB means no change, + dB boost, - dB cut).
-   Function table 4 is the delay time table A.
-   Function table 5 is the delay feedback table A.  Values > 1 are dangerous!
-   Function table 6 is the EQ table B
-   Function table 7 is the delay time table B.
-   Function table 8 is the delay feedback table B.
-   Function table 9 describes the curve between EQ tables A and B.
-   Function table 10 describes the curve between delay time tables A and B.
-   Function table 11 describes the curve between delay feedback tables A and B.
-```
+
+   * Function table 1 is the input amplitude, spanning just the input duration.
+   * Function table 2 is the output amplitude, spanning the entire note, including ring-down duration.
+   * Function table 3 is the EQ table A (i.e., amplitude scaling of each band), in dB (0 dB means no change, + dB boost, - dB cut).
+   * Function table 4 is the delay time table A.
+   * Function table 5 is the delay feedback table A.  Values > 1 are dangerous!
+   * Function table 6 is the EQ table B
+   * Function table 7 is the delay time table B.
+   * Function table 8 is the delay feedback table B.
+   * Function table 9 describes the curve between EQ tables A and B.
+   * Function table 10 describes the curve between delay time tables A and B.
+   * Function table 11 describes the curve between delay feedback tables A and B.
 
    Author:  John Gibson
 

@@ -38,9 +38,11 @@ p7 | input channel |  -  | no | no |
 p8 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
 p9 | bypass filter | 0: bypass off, 1: bypass on | yes | no | usually use 0 | 
 p10 | filter center frequency | Hz | yes | no | 
-p11 | filter bandwidth | Hz if positive; if negative, the '-' sign acts as a flag to interpret the bw values as a multipler of the current center frequency (0-1 | yes | no |
+p11 | filter bandwidth | Hz if positive; if negative, the '-' sign acts as a flag to interpret the bw values as a multipler of the current center frequency (0-1) | yes | no |
 
-   Author: John Gibson, 2/5/00; rev for v4, JGG, 7/24/04
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author: John Gibson, 2/5/00; rev for v4, JGG, 7/24/04
 
   
 

@@ -34,7 +34,9 @@ p4 | X coordinate of virtual source | -1.0 - 1.0 | yes | no | -1: left, 1: right
 p5 | Y coordinate of virtual source | -1.0 - 1.0 | yes | no | -1: back, 1: front, 0.0: center] | 
 p6 | input channel |  -  | no | yes | default: 0 | 
 
-   Author:  John Gibson, 11/18/04
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  John Gibson, 11/18/04
 
   
 

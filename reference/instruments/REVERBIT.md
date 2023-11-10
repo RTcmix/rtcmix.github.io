@@ -38,8 +38,10 @@ p7 | cutoff freq for low-pass filter | Hz, 0 will disable filter | yes | no |
 p8 | apply DC blocking filter | 0: No, 1: Yes | no | yes | default: 1 | 
 p9 | ring-down duration | seconds | no | yes | default: p4 value |
 
-   Author:  John Gibson, 6/24/99 rev for v4, 7/11/04
-   based on original code by Paul Lansky
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  John Gibson, 6/24/99 rev for v4, 7/11/04
+based on original code by Paul Lansky
 
   
 

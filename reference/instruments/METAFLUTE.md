@@ -54,7 +54,7 @@ p6 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 |
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
 
-   assumes function table 1 is the noise amplitude envelope
+   Assumes function table 1 is the noise amplitude envelope
    function table 2 is the overall amplitude envelope
  
    Parameters after the [bracket] are optional and default to 0 unless

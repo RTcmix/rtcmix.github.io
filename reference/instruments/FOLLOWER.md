@@ -36,10 +36,10 @@ p5 | power gauge window length | samples; try 100 | no | no |
 p6 | smoothness -- how much to smooth the power gauge output | 0-1; try .8 | yes | no | 
 p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 
-   p3 (carrier amp), p4 (modulator amp), p6 (smoothness) and p7 (pan) can
-   receive dynamic updates from a table or real-time control source.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author: John Gibson, 1/5/03; rev for v4, JGG, 7/24/04
+
+Author: John Gibson, 1/5/03; rev for v4, JGG, 7/24/04
 
   
 

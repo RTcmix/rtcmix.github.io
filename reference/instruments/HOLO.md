@@ -32,7 +32,9 @@ p2 | duration | seconds | no | no |
 p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 p4 | crosstalk amplitude multipler |  -  | yes | no | 
 
-   Author: Doug Scott
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author: Doug Scott
 
   
 

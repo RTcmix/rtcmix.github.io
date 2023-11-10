@@ -36,7 +36,10 @@ commands). Parameters after the \[bracket\] are optional and default to
 
   
 **IIR** consists of a set of sub-instruments that draw upon a subcommand
-(**setup**) for filter design parameters.  
+(**setup**) for filter design parameters.
+
+For all, parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
   
   
 <span id="setup"></span> **setup**  

@@ -20,7 +20,9 @@ p1 | duration | -endtime | no | no |
 p2 | number of instruments handles to follow |  -  | no | no | 
 p3-n | handles for instruments to be chained | reference to an instrument handle | no | no | 
 
-	Author:  Doug Scott, 12/2012
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Doug Scott, 12/2012
 
 -----
 

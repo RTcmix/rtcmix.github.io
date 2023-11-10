@@ -32,10 +32,10 @@ p0 | output start time | seconds | no | no |
 p1 | input start time | seconds | no | no | 
 p2 | duration | seconds | no | no | 
 p3 | amplitude multiplier | relative multiplier of output signal | yes | no | 
-p4 | table of modulator center frequencies | Hz or linear octaves | yes | no | 
-p5 | table of carrier center frequencies | Hz or linear octaves | yes | no | 
-p6 | table mapping modulator to carrier filter bands | 0 == no mapping | yes | no | 
-p7 | carrier amplitude scaling table | 0 == no mapping | yes | no | 
+p4 | table of modulator center frequencies | reference to pfield table-handle (Hz or linear octaves) | yes | no | 
+p5 | table of carrier center frequencies | reference to pfield table-handle (Hz or linear octaves) | yes | no | 
+p6 | table mapping modulator to carrier filter bands | reference to pfield table-handle (0 == no mapping) | yes | no | 
+p7 | carrier amplitude scaling table | reference to pfield table-handle (0 == no mapping) | yes | no | 
 p8 | transposition of modulator center frequencies | linear octaves | yes | no | 
 p9 | transposition of carrier center frequencies | linear octaves | yes | no | 
 p10 | modulator filter Q | i.e., cf / bandwidth in Hz | yes | no | 
@@ -44,15 +44,9 @@ p12 | filter response time | seconds | yes | yes | default: 0.01 |
 p13 | hold | 0: normal, 1: modulator is disengaged and has no further effect on the carrier | yes | yes | default: 0
 p14 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 
-   p3 (amplitude), p8 (modulator center freq transposition), p9 (carrier center freq transposition),
-   p10 (modulator filter Q), p11 (carrier filter Q), p12 (filter response time), p13 (hold) and
-   p14 (pan) can receive dynamic updates from a table or real-time control source.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   p4 (modulator center frequencies), p5 (carrier center frequencies),
-   p6 (if used, modulator to carrier filter band mapping) and
-   p7 (if used, carrier amplitude scaling) should be references to pfield table-handles.
-
-   Author:  John Gibson, 6/3/02
+Author:  John Gibson, 6/3/02
 
   
 

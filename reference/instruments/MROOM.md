@@ -55,7 +55,7 @@ p10 | control rate for trajectory |  -  | no | yes | default: 100 |
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
 
-   assumes function table 1 is the amplitude envelope
+   Assumes function table 1 is the amplitude envelope.
 
   
 

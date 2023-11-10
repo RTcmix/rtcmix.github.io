@@ -32,7 +32,9 @@ p2 | duration (or endtime if negative) | seconds | no | no |
 p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 p4-n | channel mix maxtrix |  -  | no | no | 
 
-   rev for v4, JGG, 7/9/04
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+rev for v4, JGG, 7/9/04
 
   
 

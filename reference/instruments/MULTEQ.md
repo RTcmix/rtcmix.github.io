@@ -49,9 +49,11 @@ p9 | bypass | 0: bypass off, 1: bypass on | yes | no | usually use 0
 
 Not all have to specified; a maximum of 8 quintuples is allowed.
 
-   Author:  John Gibson, 26 Sep 2004
-   Based on formulas by Robert Bristow-Johnson ("Audio-EQ-Cookbook") and code
-   by Tom St Denis (see musicdsp.org)
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  John Gibson, 26 Sep 2004
+Based on formulas by Robert Bristow-Johnson ("Audio-EQ-Cookbook") and code
+by Tom St Denis (see musicdsp.org)
 
   
 

@@ -33,7 +33,9 @@ p3 | amplitude multiplier | relative multiplier of input signal | yes | no |
 p4 | total number of filter-equation coefficients |  -  | no | no | 
 p5 ... | the coefficients (up to 99 fir coefficients) | - | no | no
 
-  NOTE: mono input / mono output only
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+NOTE: mono input / mono output only
 
   
 

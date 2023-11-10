@@ -35,8 +35,8 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
 p0 | x-dimension size | feet | no | no | 
 p1 | y-dimension size | feet | no | no | 
-p2 | x-coordinate of virtual source | 0.0-1.0 | no | no | 0.0: left, 1.0: right, 0.5: center] | 
-p3 | y-coordinate of virtual source | 0.0-1.0 | no | no | 0.0: left, 1.0: right, 0.5: center] | 
+p2 | x-coordinate of virtual source | 0.0-1.0 | no | no | 0.0: left, 1.0: right, 0.5: center | 
+p3 | y-coordinate of virtual source | 0.0-1.0 | no | no | 0.0: left, 1.0: right, 0.5: center | 
 p4 | x-coordinate where left wall branches to become the back wall | 0.0-1.0 | no | no | 
 p5 | y-coordinate where left wall branches to become the back wall | 0.0-1.0 | no | no | 
 p6 | x-coordinate where right wall branches to become the back wall | 0.0-1.0 | no | no | 
@@ -58,7 +58,7 @@ p4 | input channel |  -  | no | yes | default: 0 |
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
 
-   assumes function table 1 is the amplitude envelope
+   Assumes function table 1 is the amplitude envelope
 
   
 

@@ -37,6 +37,8 @@ p6 | modulator amplitude | reference to pfield table-handle | yes | yes | defaul
 p7 | carrier wavetable | reference to pfield table-handle | yes | yes | defaults to sine wave | 
 p8 | modulator wavetable | reference to pfield table-handle | yes | yes | defaults to sine wave | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
    Author Brad Garton; rev for v4, JGG, 7/22/04
 
   

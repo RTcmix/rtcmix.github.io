@@ -41,8 +41,9 @@ p10 | tail level | inverse dB, -90.0 - 0.0 | yes | no |
 p11 | ring-down time | seconds, added to duration | no | no | 
 p12 | input channel |  -  | no | yes | default 0 | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author:  Brad Garton, 5/2010
+Author:  Brad Garton, 5/2010
 
   
 

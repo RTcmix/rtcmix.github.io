@@ -32,7 +32,9 @@ p3 | amplitude multiplier | relative multiplier of input signal | yes | no |
 p4 | modulation oscillator frequency | Hz | yes | no
 p5 | input channel | - | no | yes | default: 0 |
 p6 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0
-p7 | AM modulator | reference to a pfield table-handle | yes | yes | defaults to sine wave. |
+p7 | AM modulator | reference to a pfield table-handle | yes | yes | defaults to sine wave |
+
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
    Author:  Brad Garton; rev. for v 4.0: John Gibson
 

@@ -36,7 +36,7 @@ p5 | right channel amplitude multiplier | relative to left channel | yes | no |
 p6 | input channel |  -  | no | yes | default: 0 | 
 p7 | ring-down duration |  -  | no | yes | default: first delay time value | 
 
-  
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source. 
 
 -----
 

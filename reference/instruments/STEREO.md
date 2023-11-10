@@ -33,7 +33,9 @@ p2 | duration | seconds | no | no | endtime if negative |
 p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 p4-n | input/output channel pan assigns | 0-1 stereo; 0.5 is middle | yes | no | 
 
-   Author:  Brad Garton; rev. for v4.0 by JGG, 7/9/04
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Brad Garton; rev. for v4.0 by JGG, 7/9/04
 
   
 

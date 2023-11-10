@@ -51,8 +51,9 @@ p18 | wet/dry mix | 0: dry -> 1: wet | yes | yes | default: 1 |
 p19 | input channel |  -  | no | yes | default: 0 | 
 p20 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 |
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
   
-   Author:  John Gibson, 6/12/05
+Author:  John Gibson, 6/12/05
 
   
 

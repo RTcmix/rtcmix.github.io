@@ -31,6 +31,8 @@ p1 | duration | seconds | no | no |
 p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
 p3 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: .5 | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
    Author: Neil Thornock (neilthornock at gmail), 11/12/16
 
   

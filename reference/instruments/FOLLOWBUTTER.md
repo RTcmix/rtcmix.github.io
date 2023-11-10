@@ -42,8 +42,10 @@ p10 | steepness | > 0 | no | no | 1 is a good starting value |
 p11 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
 p12 | filter bandwidth for bandpass/reject types | Hz if positive; if negative, the '-' sign acts as a flag to interpret the BW values as a multiplier (0.0-1.0) of the current CF | yes | yes | only used for "bandpass" or "bandreject" filters | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author: John Gibson, 8/7/03; rev for v4, JGG, 7/24/04
+
+Author: John Gibson, 8/7/03; rev for v4, JGG, 7/24/04
 
   
 

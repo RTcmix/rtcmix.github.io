@@ -34,9 +34,11 @@ p4 | comb frequency range bottom | Hz | no | no |
 p5 | comb frequency range top | Hz | no | no | 
 p6 | reverb time | seconds | yes | no | 
 p7 | input channel |  -  | no | yes | default: 0 | 
-p8 | ring-down duration | (p6)] |  -  | no | yes | 
+p8 | ring-down duration | seconds |  -  | no | yes | default: p6 value |
 
-   Author:  Brad Garton; rev. for v4.0 by JGG, 7/10/0
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Brad Garton; rev. for v4.0 by JGG, 7/10/0
 
   
 

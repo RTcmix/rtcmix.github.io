@@ -35,11 +35,10 @@ p5 | reverb time | seconds | no | no |
 p6 | reverb amount | 0: dry --> 1: wet | yes | no | 
 p7 | input channel |  -  | no | yes | default: 0 | 
 
-   p3 (amplitude) and p6 (reverb amount) can receive dynamic updates from
-   a table or real-time control source.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author:  John Gibson, 7/19/99; rev for v4, 7/21/04
-   based on several reverberators from the STK package (by Perry Cook, Gary Scavone, and Tim Stilson)
+Author:  John Gibson, 7/19/99; rev for v4, 7/21/04
+based on several reverberators from the STK package (by Perry Cook, Gary Scavone, and Tim Stilson)
 
   
 

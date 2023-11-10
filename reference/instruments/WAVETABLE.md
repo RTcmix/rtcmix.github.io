@@ -28,14 +28,11 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | start time | seconds | no | no | 
 p1 | duration | seconds | no | no | 
 p2 | amp | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
-p3 | pitch | Hz or oct.pc * | yes | no | see note below | 
+p3 | pitch | Hz or oct.pc* | yes | no | see note below | 
 p4 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
-p5 | reference to wavetable |  -  | yes | yes | defaults to sine wave | 
+p5 | reference to wavetable* |  -  | yes | yes | * defaults to sine wave | 
 
-   p2 (amplitude), p3 (pitch) and p4 (pan) can receive dynamic updates
-   from a table or real-time control source.
-
-   p5 (wavetable), if used, should be a reference to a pfield table-handle.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
    * If the value of p3 field is < 15.0, it assumes oct.pc.  Use the pchcps
    scorefile convertor for direct frequency specification below 15.0 Hz.

@@ -28,10 +28,10 @@ p4 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 |
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
 
-   function table 1 is overall amp envelope
-   function table 2 is the synthesis waveform
-   function table 3 is a listing of the frequency points
-   function table 4 is a listing of the amplitude points
+   Function table 1 is overall amp envelope
+   Function table 2 is the synthesis waveform
+   Function table 3 is a listing of the frequency points
+   Function table 4 is a listing of the amplitude points
 
    Author:  Stanko Juzbasic
 

@@ -38,7 +38,9 @@ p8 | Register vent state | 1 == "open"; 0 == "closed" | yes | no |
 p9 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 p10 | breath pressure table | reference to a pfield table-handle | yes | yes | default: 1.0 | 
 
-   Author:  Brad Garton, based on code from the Synthesis ToolKit
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 

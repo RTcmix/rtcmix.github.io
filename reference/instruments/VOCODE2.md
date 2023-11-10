@@ -34,9 +34,9 @@ p2 | duration | seconds | no | no |
 p3 | amplitude multiplier | relative multiplier of output signal | yes | no | 
 p4 | number of filters |  -  | no | no | 
 p5 | if p4 > 0, lowest filter center frequency | Hz/oct.pc | yes | no |
-   | if p4 == 0, transposition table | (oct.pc)
+   | if p4 == 0, transposition (reference to pfield table-handle) | (oct.pc)
 p6 | if p4 > 0, center frequency spacing multiplier | > 1 | yes | no | 
-   | if p4 == 0, multipler of p5 to add additional filters | - |
+   | if p4 == 0, multipler of p5 to add additional filters (reference to pfield table-handle) |  | | |  |
 p7 | amount to transpose carrier filters | Hz/oct.pc | no | no | 
 p8 | filter bandwidth proportion of center frequency | > 0 | no | no | 
 p9 | filter response time | seconds | no | yes | default: 0.01 | 
@@ -47,13 +47,9 @@ p13 | specifies how often to get new random values from the noise generator | sa
 p14 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 p15 | table giving list of center frequencies | - | yes | yes | if p4 == 0 |
 
-   p3 (amplitude), p12 (noise amp) and p14 (pan) can receive dynamic updates
-   from a table or real-time control source.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   p5 (cfreqlo/ftabletransp), p6 (cfreqmult/filtmult) and p15 cfreqtable should be
-   references to pfield table-handles if p4 == 0.
-
-   Author:  John Gibson, 6/3/02
+Author:  John Gibson, 6/3/02
 
   
 

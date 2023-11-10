@@ -42,8 +42,10 @@ p10 | clean signal level | 0.0-1.0 | yes | no |
 p11 | distortion signal level | 0.0-1.0 | yes | no | 
 p12 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
-   * If the value of p3 or p4 field is < 15.0, it assumes oct.pc.  Use the pchcps
-   scorefile convertor for direct frequency specification below 15.0 Hz
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+\* If the value of p3 or p4 field is < 15.0, it assumes oct.pc.  Use the pchcps
+scorefile convertor for direct frequency specification below 15.0 Hz
 
   
 

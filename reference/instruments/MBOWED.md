@@ -40,7 +40,9 @@ p9 | bow pressure table | reference to pfield table-handle | yes | no |
 p10 | bow position table | reference to pfield table-handle | yes | no | 
 p11 | vibrato wavetable | reference to pfield table-handle | yes | no | 
 
-   Author:  Brad Garton, based on code from the Synthesis ToolKit
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 

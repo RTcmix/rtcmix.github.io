@@ -37,7 +37,9 @@ p6 | resonance freq | 0.0-1.0 | yes | no |
 p7 | instrument selection | 0-22 | no | no | see the Usage Notes below
 p8 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 
-   Author:  Brad Garton, based on code from the Synthesis ToolKit
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 

@@ -37,11 +37,13 @@ p7 | seed x |  -  | yes | yes | default: 0.5 |
 p8 | seed y |  -  | yes | yes | default: 0.5 | 
 p9 | pan | in percent-to-left format | yes | yes | default: .5 | 
 
-   Any values for p3-p8 are legal. Pickover recommends values for a and b
-   between -3 and 3,  and p4 and p5 between 0.5 and 1.5. Depending on the
-   values provided, results may be chaotic noise, pitch, or silence.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author: Neil Thornock (neilthornock at gmail), 11/12/16
+Any values for p3-p8 are legal. Pickover recommends values for a and b
+between -3 and 3,  and p4 and p5 between 0.5 and 1.5. Depending on the
+values provided, results may be chaotic noise, pitch, or silence.
+
+Author: Neil Thornock (neilthornock at gmail), 11/12/16
 
   
 

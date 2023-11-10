@@ -37,6 +37,7 @@ p6 | input channel |  -  | no | yes | default: 0 |
 p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 p8 | ring-down duration |  -  | no | yes | default: initial p5 value | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
 -----
 

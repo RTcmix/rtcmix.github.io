@@ -45,6 +45,8 @@ p13 | input channel |  -  | yes | yes | default: 0 |
 p14 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
    Author: John Gibson , 4/21/00; rev. for v4, 6/18/05
 
   

@@ -29,10 +29,12 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | output start time |  -  | no | no | 
 p1 | duration |  seconds  | no | no | 
 p2 | amplitude multiplier |  -  | yes | no | 
-p3 | density | average impulses per second | yes | no | default: 5] | 
-p4 | impulse range minimum | -1 or 0 | no | no | default: -1] | 
-p5 | seed [default: system clock] |  -  | no | no | 
-p6 | pan | in percent-to-left format | yes | no | default: 0.5] | 
+p3 | density | average impulses per second | yes | no | default: 5 | 
+p4 | impulse range minimum | -1 or 0 | no | no | default: -1 | 
+p5 | seed |  -  | no | no | default: system clock 
+p6 | pan | in percent-to-left format | yes | no | default: 0.5 | 
+
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
    Author: Neil Thornock (neilthornock at gmail), 11/12/16
 

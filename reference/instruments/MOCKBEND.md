@@ -27,12 +27,10 @@ p4 | function table number for pitch envelope |  -  | no | no |
 p5 | input channel |  -  | no | yes | default: 0 | 
 p6 | percent to left |  -  | no | yes | default: .5 | 
 
-	Assumes gen table 1 is amplitude curve for the note.
-
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
 
-   assumes function table 1 is the amplitude envelope
+   Assumes function table 1 is the amplitude envelope
 
    Author:  Ivica Ico Bukvic (based on Doug Scott's TRANSBEND instrument)
 

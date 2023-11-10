@@ -41,7 +41,9 @@ commands). Parameters after the \[bracket\] are optional and default to
   
 **MPLACE** employs several subcommands to set the room-simulation
 characteristics and one sub-instrument (**RVB**) to operate.  
-  
+
+For these commands, parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
   
 <span id="MPLACE"></span> **MPLACE**  
 
@@ -68,7 +70,7 @@ p1 | input start time | seconds | no | no |
 p2 | duration (or endtime if negative) | seconds | no | no |
 p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 
-   NOTE: this associated instrument is required for MPLACE to function
+   NOTE: this associated instrument is required for **MPLACE** to function
 
   
 <span id="space"></span> **space**  
@@ -83,7 +85,7 @@ p4 | distance to ceiling of room | feet | no | no |
 p5 | wall absorption factor | 0-10 | no | no | 0 == more 'dead', 10 == more 'live'
 p6 | reverberation time | seconds | no | no | 0 - ~5 work best
 
-   NOTE: this subcommand is required for MPLACE to function
+   NOTE: this subcommand is required for **MPLACE** to function
 
   
 <span id="mikes"></span> **mikes**  
@@ -93,14 +95,14 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | microphone angle | degrees, 0 degrees is straight in front | no | no | 
 p1 | microphone pattern | 0-1; 0 == omnidirectional, 1 == highly directional | no | no | 
 
-   NOTE: this subcommand is optional for MPLACE to function (the default is "mikes_off")
+   NOTE: this subcommand is optional for **MPLACE** to function (the default is "mikes_off")
 
   
 <span id="mikes_off"></span> **mikes\_off**  
 
 No pfields. This turns off the microphone angle and pattern settings to allow binaural simulation.
 
-   NOTE: this subcommand is optional for MPLACE to function
+   NOTE: this subcommand is optional for **MPLACE** to function
 
   
 <span id="set_attenuation_params"></span> **set\_attenuation\_params**  
@@ -112,7 +114,7 @@ p1 | maximum distance | feet | no | no | default: infinite
 p2 | distance attentuation exponent |  -  | no | no | default: 2
 
 
-   NOTE: this subcommand is optional for MPLACE to function
+   NOTE: this subcommand is optional for **MPLACE** to function
 
   
 <span id="matrix"></span> **matrix**  
@@ -122,7 +124,7 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | total matrix gain | relative multiplier of input signal | no | no | 
 p1-p145 | 12 x 12 matrix amp/feedback coefficients |  -  | no | yes | defaults to internal matrix | 
 
-   NOTE: this subcommand is optional for MPLACE to function
+   NOTE: this subcommand is optional for **MPLACE** to function
 
   
 

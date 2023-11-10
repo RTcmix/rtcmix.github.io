@@ -50,7 +50,7 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | output start time | seconds | no | no | 
 p1 | input start time | seconds | no | no | 
 p2 | duration | or endtime if negative | no | no | (seconds | 
-p3 | amplitude multiplier | relative multiplier of input signal | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 p4 | distance | feet | no | no | to sound source, or x-coordinate (feet) of sound sourc | 
 p5 | angle to sound source | (degrees; 0 degrees is straight in front), | no | no | 
       or y-coordinate (feet) of sound source
@@ -60,7 +60,7 @@ p6 | distance between 'mics' | stereo receivers | no | no | in the room (feet |
 p7 | amplitude of reverberation | relative multiplier of input signal | no | no | 
 p8 | input channel |  -  | no | yes | default: 0 | 
 
-   p3 (amplitude) can receive dynamic updates from a table or real-time control source.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
   
 <span id="space"></span> **space**  
@@ -69,8 +69,8 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
 p0 | distance to front wall of room | feet | no | no | 
 p1 | distance to right-hand wall of room | feet | no | no | 
-p2 | distance to back wall of room | feet | no | no | < 0.0] | 
-p3 | distance to left-hand wall of room | feet | no | no | < 0.0] | 
+p2 | distance to back wall of room | feet | no | no | < 0.0 | 
+p3 | distance to left-hand wall of room | feet | no | no | < 0.0 | 
 p4 | distance to ceiling of room | feet | no | no | 
 p5 | wall absorption factor | 0-10; 0 == more 'dead', 10 == more 'live' | no | no | 
 p6 | reverberation time | seconds | no | no | 

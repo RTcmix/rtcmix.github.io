@@ -84,7 +84,7 @@ p1 | input start time | seconds | no | no |
 p2 | duration (or endtime if negative) | seconds | no | no |
 p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 
-   NOTE: this associated instrument is required for MMOVE to function
+   NOTE: this associated instrument is required for **MMOVE** to function
 
   
 <span id="space"></span> **space**  
@@ -99,7 +99,7 @@ p4 | distance to ceiling of room | feet | no | no |
 p5 | wall absorption factor | 0-10 | no | no | 0 == more 'dead', 10 == more 'live'
 p6 | reverberation time | seconds | no | no | 0 - ~5 work best
 
-   NOTE: this subcommand is required for MMOVE to function
+   NOTE: this subcommand is required for **MMOVE** to function
 
   
 <span id="path"></span> **path**  
@@ -139,7 +139,7 @@ pN | ycoordN/3 | degrees | no | yes |
 
 Up to 100 triples may be specified.
 
-   NOTE: one of the subcommands (path, cpath, param, cparam) is required for MMOVE to function
+   NOTE: one of the subcommands (path, cpath, param, cparam) is required for **MMOVE** to function
 
   
 <span id="param"></span> **param**  
@@ -157,7 +157,7 @@ p1 | function table reference for polar coordinate angle to sound source | degre
    Because this instrument has not been updated for pfield control, the older
    makegen function table system should be used to create the tables.
 
-   NOTE: one of the subcommands (path, cpath, param, cparam) is required for MMOVE to function
+   NOTE: one of the subcommands (path, cpath, param, cparam) is required for **MMOVE** to function
 
   
 <span id="cparam"></span> **cparam**  
@@ -175,7 +175,7 @@ p1 | function table reference for y-coordinate location of sound source | feet |
    Because this instrument has not been updated for pfield control, the older
    makegen function table system should be used to create the tables.
 
-   NOTE: one of the subcommands (path, cpath, param, cparam) is required for MMOVE to function
+   NOTE: one of the subcommands (path, cpath, param, cparam) is required for **MMOVE** to function
 
   
 <span id="threshold"></span> **threshold**  
@@ -184,7 +184,7 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
 p0 | time interval | seconds) | no | no | for trajectory updates (typically < 0.01 | 
 
-   NOTE: this subcommand is optional for MMOVE to function. Default is RTBUFSAMPS/SR (both set in rtsetparams).
+   NOTE: this subcommand is optional for **MMOVE** to function. Default is RTBUFSAMPS/SR (both set in rtsetparams).
 
   
 <span id="mikes"></span> **mikes**  
@@ -194,14 +194,14 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | microphone angle | degrees, 0 degrees is straight in front | no | no | 
 p1 | microphone pattern | 0-1 | no | no | 0 == omnidirectional, 1 == highly directional
 
-   NOTE: this subcommand is optional for MMOVE to function (the default is "mikes_off")
+   NOTE: this subcommand is optional for **MMOVE** to function (the default is "mikes_off")
 
   
 <span id="mikes_off"></span> **mikes\_off**  
 
 No pfields. This turns off the microphone angle and pattern settings to allow binaural simulation.
 
-   NOTE: this subcommand is optional for MMOVE to function
+   NOTE: this subcommand is optional for **MMOVE** to function
 
   
 <span id="set_attenuation_params"></span> **set\_attenuation\_params**  
@@ -212,7 +212,7 @@ p0 | minimum distance | feet | no | no | default: 0
 p1 | maximum distance | feet | no | no | default: infinite
 p2 | distance attentuation exponent |  -  | no | no | default: 2
 
-   NOTE: this subcommand is optional for MMOVE to function
+   NOTE: this subcommand is optional for **MMOVE** to function
 
   
 <span id="matrix"></span> **matrix**  
@@ -222,7 +222,7 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | total matrix gain | relative multiplier of input signal | no | no | 
 p1-p145 | 12 x 12 matrix amp/feedback coefficients |  -  | no | yes | defaults to internal matrix | 
 
-   NOTE: this subcommand is optional for MMOVE to function
+   NOTE: this subcommand is optional for **MMOVE** to function
 
   
 
@@ -239,6 +239,7 @@ processing.
 NOTE: This is an older RTcmix instrument, the newer [DMOVE](DMOVE.html)
 instrument allows the sound trajectory to be controlled using
 [pfield-enabled](pfield-enabled.html) parameters.
+
 <span id="usage_notes"></span>
 
 ### Usage Notes

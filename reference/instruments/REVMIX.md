@@ -33,9 +33,11 @@ p3 | amplitude multiplier | relative multiplier of input signal | yes | no |
 p4 | input channel |  -  | no | yes | default: 0 | 
 p5 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
-   Author: Ivica "Ico" Bukvic, 27 May 2000
-   (with John Gibson )
-   rev. for v4.0, JGG, 7/9/04
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author: Ivica "Ico" Bukvic, 27 May 2000
+(with John Gibson )
+rev. for v4.0, JGG, 7/9/04
 
   
 

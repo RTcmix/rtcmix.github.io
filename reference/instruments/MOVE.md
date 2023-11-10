@@ -71,13 +71,13 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
 p0 | distance to front wall of room | feet | no | no | 
 p1 | distance to right-hand wall of room | feet | no | no | 
-p2 | distance to back wall of room | feet | no | no | < 0.0] | 
-p3 | distance to left-hand wall of room | feet | no | no | < 0.0] | 
+p2 | distance to back wall of room | feet | no | no | < 0.0 | 
+p3 | distance to left-hand wall of room | feet | no | no | < 0.0 | 
 p4 | distance to ceiling of room | feet | no | no | 
 p5 | wall absorption factor | 0-10 | no | no |  0 == more 'dead', 10 == more 'live'
 p6 | reverberation time | seconds | no | no | 0 - ~5 work best
 
-   NOTE: this subcommand is required for MOVE to function
+   NOTE: this subcommand is required for **MOVE** to function
 
   
 <span id="path"></span> **path**  
@@ -98,7 +98,7 @@ pN | angleN/3 | degrees | no | yes |
 
 Up to 100 triples may be specified.
 
-NOTE: one of the subcommands (path, cpath, param, cparam) is required for MOVE to function
+NOTE: one of the subcommands (path, cpath, param, cparam) is required for **MOVE** to function
 
   
 <span id="cpath"></span> **cpath**  
@@ -119,7 +119,7 @@ pN | ycoordN/3 | degrees | no | yes |
 
 Up to 100 triples may be specified.
 
-   NOTE: one of the subcommands (path, cpath, param, cparam) is required for MOVE to function
+   NOTE: one of the subcommands (path, cpath, param, cparam) is required for **MOVE** to function
 
   
 <span id="param"></span> **param**  
@@ -137,7 +137,7 @@ p1 | function table reference for polar coordinate angle to sound source | degre
    Because this instrument has not been updated for pfield control, the older
    makegen function table system should be used to create the tables.
 
-   NOTE: one of the subcommands (path, cpath, param, cparam) is required for MOVE to function
+   NOTE: one of the subcommands (path, cpath, param, cparam) is required for **MOVE** to function
 
   
 <span id="cparam"></span> **cparam**  
@@ -155,7 +155,7 @@ p1 | function table reference for y-coordinate location of sound source | feet |
    Because this instrument has not been updated for pfield control, the older
    makegen function table system should be used to create the tables.
 
-   NOTE: one of the subcommands (path, cpath, param, cparam) is required for MOVE to function
+   NOTE: one of the subcommands (path, cpath, param, cparam) is required for **MOVE** to function
 
   
 <span id="threshold"></span> **threshold**  
@@ -164,7 +164,7 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
 p0 | time interval | seconds | no | no | for trajectory updates (typically < 0.01 | 
 
-   NOTE: this subcommand is optional for MOVE to function (the default is
+   NOTE: this subcommand is optional for **MOVE** to function (the default is
       the size of the buffers set in rtsetparams)
 
   
@@ -175,7 +175,7 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | microphone angle | degrees, 0 degrees is straight in front | no | no | 
 p1 | microphone pattern | 0-1; 0 == omnidirectional, 1 == highly directional | no | no | 
 
-   NOTE: this subcommand is optional for MOVE to function (the default is "mikes_off")
+   NOTE: this subcommand is optional for **MOVE** to function (the default is "mikes_off")
 
   
 <span id="mikes_off"></span> **mikes\_off**  
@@ -184,7 +184,7 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
    no pfields, this defeats the microphone angle and pattern settings for binaural simulation
 
-   NOTE: this subcommand is optional for MOVE to function
+   NOTE: this subcommand is optional for **MOVE** to function
 
   
 <span id="matrix"></span> **matrix**  
@@ -194,7 +194,7 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | total matrix gain | relative multiplier of input signal | no | no | 
 p1-p145 | 12 x 12 matrix amp/feedback coefficients |  -  | no | yes | defaults to internal matrix | 
 
-   NOTE: this subcommand is optional for MOVE to function
+   NOTE: this subcommand is optional for **MOVE** to function
 
   
 

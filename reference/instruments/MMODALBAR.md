@@ -37,6 +37,8 @@ p6 | modal preset |  -  | no | no | see below for preset values
 p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 p8 | amplitude envelope | reference to a pfield table-handle | no | yes | default: 1.0 | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
 ##### p6 preset values:
 
 - Marimba = 0
@@ -49,7 +51,7 @@ p8 | amplitude envelope | reference to a pfield table-handle | no | yes | defaul
 - Two Fixed = 7
 - Clump = 8
 
-   Author:  Brad Garton, based on code from the Synthesis ToolKit
+Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 

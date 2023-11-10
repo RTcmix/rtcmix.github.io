@@ -27,17 +27,19 @@ commands). Parameters after the \[bracket\] are optional and default to
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
-p0 | output start time | (seconds) | no | no | 
-p1 | input start time | (seconds) | no | no | 
-p2 | input duration | (seconds) | no | no | 
-p3 | amplitude multiplier | (relative multiplier of input signal) | yes | no | 
-p4 | left channel delay time | (seconds) | yes | no | 
-p5 | right channel delay time | (seconds) | yes | no | 
-p6 | delay feedback | (i.e., regeneration multiplier) | yes | no | 0-1] | 
-p7 | ring-down duration | (seconds) | no | no | 
+p0 | output start time | seconds | no | no | 
+p1 | input start time | seconds | no | no | 
+p2 | input duration | seconds | no | no | 
+p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
+p4 | left channel delay time | seconds | yes | no | 
+p5 | right channel delay time | seconds | yes | no | 
+p6 | delay feedback (i.e., regeneration multiplier) | - | yes | no | 0-1 | 
+p7 | ring-down duration | seconds | no | no | 
 p8 | input channel |  -  | no | yes | default: 0 | 
 
-   Author:  Brad Garton;  rev. for v4.0 by JGG, 7/10/04
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Brad Garton;  rev. for v4.0 by JGG, 7/10/04
 
   
 

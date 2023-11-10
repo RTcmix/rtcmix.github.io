@@ -41,14 +41,16 @@ p9 | dest (listener) z |  see Usage Notes | yes | no |  |
 p10 | headwidth | see Usage Notes | yes | no | 
 p11 | feet/unit scaler |  -  | no | no | 
 p12 | input channel |  -  | no | no | default: 0
-p13 | behind head filter on/off [default: 0 | (off)] | no | no | 
+p13 | behind head filter on/off | no | no | default: 0 (off) |
 p14 | amp/distance calculation flag | 0: no amp/distance, 1: linear amp/distance, 2: inverse square amp/distance | no | no | default: 0 |
 p15 | minimum amp/distance multiplier |  -  | no | no | default: 0 
 p16 | maximum distance (for linear amp/distance scaling) | see Usage Notes | no | no | default: 0 | 
 
-   speed of sound set at 1000 ft/second
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author: Brad Garton (garton - at - columbia.edu), 11/2017
+The speed of sound set at 1000 ft/second
+
+Author: Brad Garton (garton - at - columbia.edu), 11/2017
 
   
 

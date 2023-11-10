@@ -66,8 +66,10 @@ p6 | distance from listener | feet | no | no | If mode is "polar"
    | y coordinate | feet | yes | no | If mode is "cartesian"
 p7 | input channel |  -  | no | yes | default: 0 | 
 
-   Author:  John Gibson, 11/13/04
-   based on the description in F. R. Moore, "Elements of Computer Music," pp. 353-9
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  John Gibson, 11/13/04,
+based on the description in F. R. Moore, "Elements of Computer Music," pp. 353-9
 
   
 

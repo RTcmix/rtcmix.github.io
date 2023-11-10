@@ -49,7 +49,9 @@ instrument (**path**, **cpath**, **param**, **cparam**, see the
 [MMOVE](MMOVE.html) documentation for a description of these), it is
 intended for this information to be specified in the "DIST-XPOS" and
 "ANGLE-YPOS" pfield parameters.  
-  
+
+For all commands below: Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
   
 <span id="DMOVE"></span> **DMOVE**  
 

@@ -30,8 +30,8 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
 p0 | output start time | seconds | no | no | 
 p1 | duration | seconds | no | no | 
-p2 | amplitude multiplier | relative multiplier of grain intensity (p14, p15 | yes | no | 
-p3 | random seed | any integer | no | no | default: 0 (seed from system clock_ | 
+p2 | amplitude multiplier | relative multiplier of grain intensity p14, p15 | yes | no | 
+p3 | random seed | any integer | no | no | default: 0 seed from system clock | 
 p4 | oscillator configuration | 0: wavetable, 1: FM | no | no | default: 0 | 
 p5 | randomize oscillator starting phase | 0: no, 1: yes | no | no | default: yes | 
 p6 | grain envelope | reference to pfield table-handle | no | no | 
@@ -48,10 +48,11 @@ p16 | grain density | I have no idea what units are used. Try "1" | yes | no |
 p17 | grain pan | 0-1 stereo; 0.5 is middle | yes | yes* | * required if stereo output | 
 p18 | grain pan randomization | 1: full stereo randomization; 0: no randomization from p17 value | no | yes* | * required if stereo output |
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author:  John Gibson, 4/15/00; rev for v4, JGG, 7/25/04
-   JGRAN was derived from a Cecilia module (StochasticGrains) by Mathieu
-   Bezkorowajny and Jean Piche.
+Author:  John Gibson, 4/15/00; rev for v4, JGG, 7/25/04
+JGRAN was derived from a Cecilia module (StochasticGrains) by Mathieu
+Bezkorowajny and Jean Piche.
 
   
 

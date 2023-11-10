@@ -34,7 +34,9 @@ p4 | input channel |  -  | no | no |
 p5 | panning mode | 0: use constant-power panning, 1: use linear panning |  -  | yes | no | 
 p6 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
 
-   Author:  John Gibson, 1/26/00; rev for v4, JGG, 7/24/04
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  John Gibson, 1/26/00; rev for v4, JGG, 7/24/04
 
   
 

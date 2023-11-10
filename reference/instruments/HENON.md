@@ -36,17 +36,18 @@ p6 | y |  -  | yes | yes | default: 1 |
 p7 | update rate for p3-p6 | | times per second  | yes | yes | default: 1000 | 
 p8 | pan | percent-to-left | yes | yes | default: .5 | 
 
-   p3-p6: Try values within a few tenths of the defaults given here.
+p3-p6: Try values within a few tenths of the defaults given here.
 
-   Author: Neil Thornock (neilthornock at gmail), 11/12/16.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-  
+Author: Neil Thornock (neilthornock at gmail), 11/12/16.
+
+Function from the Henon map by Michel Henon.
+
 
 -----
 
   
-Function from the Henon map by Michel Henon.
-
 ### Usage Notes
 
 HENON is a chaotic noise generator. Pfields p3-p6 default to classical

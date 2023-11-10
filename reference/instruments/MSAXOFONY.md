@@ -39,7 +39,9 @@ p8 | blow position | 0.0-1.0 | yes | no |
 p9 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 p10 | breath pressure | reference to a pfield table-handle | yes | yes | if 0, value defaults to 1.0 | 
 
-   Author:  Brad Garton, based on code from the Synthesis ToolKit
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 

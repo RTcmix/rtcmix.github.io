@@ -34,32 +34,27 @@ p2 | duration | seconds | no | no |
 p3 | amplitude multiplier | relative multiplier of output signal | yes | no | 
 p4 | number of filters |  -  | no | no | 
 p5 | if p4 > 0, lowest filter center frequency | Hz/oct.pc | no | no |
- | if p4 == 0, transposition of function table | oct.pc | 
+ | if p4 == 0, transposition of function table* | oct.pc | yes | no | * reference to pfield table-handle
 p6 | if p4 > 0, center frequency spacing multiplier | >1 | yes | no |
- | if p4 == 0, function table format | 0: octave.pc, 1: linear octave; Hz if > 15.0 |
+ | if p4 == 0, function table format* | 0: octave.pc, 1: linear octave; Hz if > 15.0 | yes | no | * reference to pfield table-handle
 p7 | amount to transpose carrier oscillators | Hz/oct.pc | no | no | 
 p8 | filter bandwidth proportion of center frequency | > 0 | no | no | 
 p9 | power gauge window length | seconds, try 0.01 | no | no | 
 p10 | smoothness -- how much to smooth the power gauge output | 0-1, try 0.5 | no | no | 
 p11 | threshold -- below which no synthesis for a band occurs | 0-1, try 0.0 | no | no | 
 p12 | attack time -- how long it takes the oscillator for a band to turn on fully once the modulator power for that band rises above the threshold | seconds, try 0.001 | no | no | 
-p13 | release time -- how long it takes the oscillator for a band to turn off fully once the modulator power for that band falls below the threshold | seconds, try 0.01] | no | no | 
+p13 | release time -- how long it takes the oscillator for a band to turn off fully once the modulator power for that band falls below the threshold | seconds, try 0.01 | no | no | 
 p14 | amount of high-passed modulator signal to mix with output | amplitude multiplier, try 0.0 | no | no | 
 p15 | cutoff frequency for high pass filter applied to modulator | Hz, try 5000 | no | no | This pfield ignored if p10 is zero.  
 p16 | input channel |  -  | no | no | 
 p17 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
-p18 | pfield reference for wavetable to use |  -  | yes | no | 
-p19 | pfield reference for table giving the carrier scaling curve |  as [freq, amp] pairs  | yes | no | 
-p20 | pfield reference for table giving list of center frequencies | - | yes | no | if p4 is zero
+p18 | wavetable to use | reference to pfield table-handle | yes | no | 
+p19 | table giving the carrier scaling curve | reference to pfield table-handle (as [freq, amp] pairs)  | yes | no | 
+p20 | table giving list of center frequencies | reference to pfield table-handle | yes | no | if p4 is zero
 
-   p3 (amplitude) and p17 (pan) can receive dynamic updates from a table or
-   real-time control source.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   p5 (cfreqlo/ftabletransp), p6 (cfreqmult/ftableformat), p18 (wavetable),
-   p19 (scalingtable, if used) and p20 (center freq table, if used) should
-   be references to pfield table-handles.
-
-   Author:  John Gibson, 8/7/03.
+Author:  John Gibson, 8/7/03.
 
   
 

@@ -34,7 +34,9 @@ p9 | pitch multiplier |  -  | yes | yes | default: 0.0 (no pitch change) |
 p10 | npoles (used for LPC data only) |  -  | no | yes | leave at 0.0 | 
 p11 | gain threshold for resynthesis |  -  | yes | yes | default: 0.0 | 
 
-   Author:  Doug Scott (based on earlier work by Christopher Penrose and others)
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Doug Scott (based on earlier work by Christopher Penrose and others).
 
 <span id="set_filter"></span> **set_filter**  
 

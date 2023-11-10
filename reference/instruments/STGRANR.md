@@ -36,7 +36,7 @@ p22 | random number seed |  -  | no | yes | default: 0 |
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope sysystem should be used:
 
-   assumes function table 1 is the amplitude envelope
+   Assumes function table 1 is the amplitude envelope,
    function table 2 is the synthesis waveform,
    function table 3 is grain amplitude envelope
 

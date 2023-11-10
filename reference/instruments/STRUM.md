@@ -67,7 +67,7 @@ p8 | flag for deleting pluck arrays (used by FRET, BEND, etc.) | - | no | yes | 
    Because this instrument has not been updated for pfield control,
    the older makegen control envelope system should be used:
 
-   assumes makegen 1 is the amplitude envelope
+   Assumes makegen 1 is the amplitude envelope.
 
 <span id="BEND"></span> **BEND**  
 

@@ -40,7 +40,9 @@ p9 | pan | 0-1 stereo; 0.5 is middle | yes | no |
 p10 | power threshold | multiplier of total power, 0.0-1.0 | yes | no | try 0.5
 p11 | range | multiplier of threshold, 0.0-1.0 | yes | no | usually small, try 0.005
 
-   Author: John Gibson, 1/5/03; rev for v4, JGG, 7/24/04
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author: John Gibson, 1/5/03; rev for v4, JGG, 7/24/04
 
   
 

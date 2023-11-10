@@ -58,10 +58,12 @@ pO | oscillator pair number | 1-N | no | no | 1 refers to the 1st freq / wavefor
 pO+1 | where to direct the output of the indicated oscillator | 1-N | no | no | direct it to modulate the frequency of the given oscillator
 pO+2 | modulation index | non-negative | yes | no
 
-  Any number of connections in any direction, including feedback, is
-  acceptable.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author: Neil Thornock (neilthornock at gmail), 11/12/16
+Any number of connections in any direction, including feedback, is
+acceptable.
+
+Author: Neil Thornock (neilthornock at gmail), 11/12/16
 
   
 

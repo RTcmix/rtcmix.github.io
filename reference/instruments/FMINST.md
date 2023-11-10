@@ -30,18 +30,21 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | start time | seconds | no | no | 
 p1 | duration | seconds | no | no | 
 p2 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
-p3 | frequency of carrier | Hz or oct.pc* | yes | no | 
-p4 | frequency of modulator | Hz or oct.pc* | yes | no | 
+p3 | frequency of carrier | Hz or oct.pc* | yes | no | * see note
+p4 | frequency of modulator | Hz or oct.pc* | yes | no | * see note
 p5 | FM index low point |  -  | yes | no | 
 p6 | FM index high point |  -  | yes | no | 
 p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 p8 | carrier and modulator wavetable | reference to a pfield table-handle | yes | no | 
 p9 | index envelope | reference to a pfield table-handle | yes | no | 
 
-   * oct.pc format generally will not work as you expect for p3 and p4
+NOTE: oct.pc format generally will not work as you expect for p3 and p4
    (osc freq) if the pfield changes dynamically.  Use Hz instead in that case.
 
-   Author Brad Garton, rev for v4, JGG, 7/12/04
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+
+Author Brad Garton, rev for v4, JGG, 7/12/04
 
   
 

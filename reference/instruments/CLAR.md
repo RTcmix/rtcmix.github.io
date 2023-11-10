@@ -31,8 +31,7 @@ p5 | output amplitude | absolute, for 16-bit soundfiles: 0-32768 | no | no |
 p6 | d2 gain | 0-1 | no | no | 
 p7 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 
-   No pfield-enabled control of parameters is implemented for this instrument.  Older makegen()-style control
-   may be used if desired.
+No dynamic control of parameters is implemented for this instrument.  Older makegen()-style control may be used if desired.
 
   
 

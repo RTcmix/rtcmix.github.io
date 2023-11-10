@@ -32,15 +32,12 @@ p2 | pitch | Hz or oct.pc | yes | no |
 p3 | amplitude | absolute, for 16-bit soundfiles: 0-32768 | yes | no | 
 p4 | wavetable vector guide | 0.0 - 1.0 | yes | no | 
 p5 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
-p6... pn | wavetable references | - | no | no |
+p6... pn | references to pfield table-handles | - | no | no |
 
-   p2 (pitch), p3 (amplitude), p4 (wavetable vector guide) and p5 (pan)
-   can receive dynamic updates from a table or real-time control source.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   p6... pn should be references to pfield table-handles.
-
-   Author Brad Garton, 7/2007 (based on the very first digital instrument I (Brad)
-      wrote for FORTRAN MIX in 1983 :-)).
+Author Brad Garton, 7/2007 (based on the very first digital instrument I (Brad)
+wrote for FORTRAN MIX in 1983 :-)).
 
   
 

@@ -42,7 +42,9 @@ p11 | modulator depth |  -  | yes | no |
 p12 | lowpass filter cutoff frequency | Hz | yes | no | 
 p13 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
-   Author:  John Gibson, 12/4/01; rev. for v4, 6/17/05.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  John Gibson, 12/4/01; rev. for v4, 6/17/05.
 
   
 

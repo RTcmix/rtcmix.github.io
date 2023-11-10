@@ -34,6 +34,8 @@ p4 | interval of transposition | oct.pc | yes | no |
 p5 | input channel |  -  | no | yes | default: 0 | 
 p6 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
 Author: Doug Scott; rev. by John Gibson, 2/29/00;  rev. for v4 by JG, 3/27/05
 
 

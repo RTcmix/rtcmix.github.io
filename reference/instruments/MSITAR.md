@@ -34,7 +34,9 @@ p4 | pluck amp | 0.0-1.0 | no | no |
 p5 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 p6 | amplitude envelope | reference to a pfield table-handle | yes | yes | default: 1.0 | 
 
-   Author:  Brad Garton, based on code from the Synthesis ToolKit
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 

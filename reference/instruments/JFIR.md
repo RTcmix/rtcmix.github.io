@@ -37,13 +37,10 @@ p6 | pan | 0-1 stereo; 0.5 is middle | yes | no |
 p7 | bypass filter | 0: bypass off, 1: bypass on | yes | no | usually use 0 | 
 p8 | frequency response table | reference to a pfield table-handle | yes | no | 
 
-   p3 (amplitude), p6 (pan) and p7 (bypass) can receive dynamic updates from
-   a table or real-time control source.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   p8 should be a reference to a pfield table-handle.
-
-   Author:  John Gibson, 7/3/99; rev for v4, JGG, 7/24/04
-   Filter design code adapted from Bill Schottstaedt's Snd.
+Author:  John Gibson, 7/3/99; rev for v4, JGG, 7/24/04
+Filter design code adapted from Bill Schottstaedt's Snd.
 
   
 

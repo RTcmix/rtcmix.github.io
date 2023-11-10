@@ -56,7 +56,8 @@ The subcommands of **LPCPLAY** are used to set various parameters for
 the LPC synthesis. Several of them necessarily need to precede the
 **LPCPLAY** command itself. See the *Usage Notes* below.  
   
-  
+For all commands, parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
 <span id="LPCPLAY"></span> **LPCPLAY**  
 
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
@@ -211,11 +212,11 @@ with each other. Here are a few of the effects possible:
   - The pitch/transposition parameter (p3) in **LPCPLAY** can be used in many
     different ways.  In the discussion below, *base frequency* is the calculated
     average of all the frame frequencies in the specified LPC data frames.
-    - p3 > -1.0 && p3 < 1.0: Pitch transposed by p3 semitones (may be fractional)
-    - p3 > 20.0: Pitch transposed by ratio of p3 (Hz) to base frequency (Hz)
-    - p3 > 0.0 && p3 <= 20.0: Pitch transposed by ratio of p3 (pch) to base frequency (Hz)
-    - p3 < -20.0: Pitch set to flat value of -p3 (Hz)
-    - p3 >= -20 && p3 < -1.0: Pitch set to flat value of -p3 (pch)
+    - **p3 > -1.0 && p3 < 1.0:** Pitch transposed by p3 semitones (may be fractional)
+    - **p3 > 20.0:** Pitch transposed by ratio of p3 (Hz) to base frequency (Hz)
+    - **p3 > 0.0 && p3 <= 20.0:** Pitch transposed by ratio of p3 (pch) to base frequency (Hz)
+    - **p3 < -20.0:** Pitch set to flat value of -p3 (Hz)
+    - **p3 >= -20 && p3 < -1.0:** Pitch set to flat value of -p3 (pch)
 
   - **setdev** controls how much in Hertz an adjusted pitch analysis will
     deviate from its *base frequency* -- a value of 1 will produce

@@ -32,6 +32,8 @@ p2 | amplitude multiplier |  -  | yes | no |
 p3 | chaos parameter | 0-1 | yes | yes | default: 1 | 
 p4 | pan | in percent-to-left format | yes | yes | default: .5 | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
    Author: Neil Thornock (neilthornock at gmail), 11/12/16
 
   

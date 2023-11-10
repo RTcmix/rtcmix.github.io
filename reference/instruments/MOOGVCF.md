@@ -37,9 +37,11 @@ p6 | bypass filter | 0: bypass off, 1: bypass on | yes | no | usually use 0 |
 p7 | filter cutoff frequency | Hz | yes | no | 
 p8 | filter resonance | 0-1 | yes | no | 1 is more resonant. > 1.0 will self-oscillate
 
-   Author:  John Gibson, 22 May 2002; rev for v4, 7/24/04
-   This is based on the design by Stilson and Smith (CCRMA), as modified
-   by Paul Kellett  (described in the source code archives at musicdsp.org).
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  John Gibson, 22 May 2002; rev for v4, 7/24/04
+This is based on the design by Stilson and Smith (CCRMA), as modified
+by Paul Kellett  (described in the source code archives at musicdsp.org).
 
   
 

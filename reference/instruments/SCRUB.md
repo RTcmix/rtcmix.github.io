@@ -37,7 +37,9 @@ p6 | sync oversampling | samples | no | no |
 p7 | input channel |  -  | no | yes | default: 0 | 
 p8 | pan |  percent to left | no | yes | default: .5 | 
 
-   Author:  Doug Scott, based on interpolation and i/o code by Tobias Kunze-Briseno.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  Doug Scott, based on interpolation and i/o code by Tobias Kunze-Briseno.
 
   
 

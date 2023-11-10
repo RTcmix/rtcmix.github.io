@@ -40,6 +40,7 @@ p9 | wet amount | 0-1 | yes | no |
 p10 | input channel |  -  | no | no | 
 p11 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
    Author: John Gibson, 5/31/05 (based on cmix convolve)
 

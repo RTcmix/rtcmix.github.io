@@ -37,6 +37,8 @@ p11 | filter bandwidth for bandpass/reject types | Hz if positive; if negative, 
 p12 | ringdown duration | seconds | no | yes | default: 0.1 | 
 p13 | output amplitude multiplier |  -  | yes | yes | default: 1.0 | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+    
    Author: John Gibson (johgibso at indiana dot edu), 12/1/01; 
    rev for v4, JGG, 7/24/04
 

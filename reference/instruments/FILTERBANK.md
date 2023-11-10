@@ -34,18 +34,20 @@ p3 | amplitude multiplier | relative multiplier of input signal | yes | no |
 p4 | ring-down duration | seconds | no | no | 
 p5 | input channel |  -  | no | no | 
 p6 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
-p7 | center freq for filter | Hz or oct.pc * (see note below) | yes | no |
+p7 | center freq for filter | Hz or oct.pc* | yes | no | see note below
 p8 | bandwidth for filter | multiplier of the center frequency, 0-1 | yes | no |
 p9 | relative amplitude for filter in final construction | - | yes | no |
 ... |
 
-   The remaining pfields are triples following the format of p7-p9.  Up to 60 cf-bw-amp triples can be specified.
+The remaining pfields are triples following the format of p7-p9.  Up to 60 cf-bw-amp triples can be specified.
 
-   * If the value of the center frequency pfield(s) ("CFREQ1 ... CFREQN") is < 15.0,
-   it assumes oct.pc.  Use the pchcps
-   scorefile convertor for direct frequency specification below 15.0 Hz.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author: John Gibson, 25 Feb 2007
+\* If the value of the center frequency pfield(s) ("CFREQ1 ... CFREQN") is < 15.0,
+it assumes oct.pc.  Use the pchcps
+scorefile convertor for direct frequency specification below 15.0 Hz.
+
+Author: John Gibson, 25 Feb 2007
 
   
 

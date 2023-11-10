@@ -35,14 +35,16 @@ p3 | amplitude multiplier | relative multiplier of input signal | yes | no |
 p4 | EQ type | "lowpass", "highpass", "lowshelf", "highshelf", "peaknotch"; or numeric codes for the EQ type (0: lowpass, 1: highpass, 2: lowshelf, 3: highshelf, 4: peaknotch | yes* | no | * only dynamic when using numeric codes
 p5 | input channel |  -  | no | no | 
 p6 | pan | 0-1 stereo; 0.5 is middle | yes | no | 
-p7 | bypass filter | 0: bypass off, 1: bypass on | yes | no | (usually use 0 | 
+p7 | bypass filter | 0: bypass off, 1: bypass on | yes | no | usually use 0 | 
 p8 | filter frequency | Hz | yes | no | 
 p9 | filter Q | values from 0.5 to 10.0, roughly | yes | no | 
 p10 | filter gain | dB | yes | yes | shelf and peak/notch only | 
 
-   Author: John Gibson, 7 Dec 2003; rev for v4, 7/23/04
-   Based on formulas by Robert Bristow-Johnson ("Audio-EQ-Cookbook") and code
-   by Tom St Denis (see [musicdsp.org](http://musicdsp.org))
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author: John Gibson, 7 Dec 2003; rev for v4, 7/23/04
+Based on formulas by Robert Bristow-Johnson ("Audio-EQ-Cookbook") and code
+by Tom St Denis (see [musicdsp.org](http://musicdsp.org))
 
   
 

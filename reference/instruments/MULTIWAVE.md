@@ -46,8 +46,9 @@ pN-2 | oscillator N/4 amp | relative multiplier of overall amplitude (p2) | yes 
 pN-1 | oscillator N/4 initial phase | 0-360 degrees, not updateable | no | yes | must be part of quadruplet |
 pN  | oscillator N/4 pan | 0-1 stereo; 0.5 is middle | yes | yes | must be part of quadruplet |
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author: John Gibson, 3/9/05
+Author: John Gibson, 3/9/05
 
   
 

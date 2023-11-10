@@ -35,7 +35,7 @@ p4 | ring-down duration | seconds, can be 0 | no | no |
 p5 | FFT length | samples, power of 2 | no | no | usually 1024 |
 p6 | window length | samples, power of 2 | no | no | usually FFT length * 2 |
 p7 | window type | 0: Hamming, 1: Hanning, 2: Rectangle, 3: Triangle, 4: Blackman, 5: Kaiser | no | no | 
-p8 | overlap - how much FFT windows overlap | samples, any power of 2 | no | no | 1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc. 2 or 4 is usually fine; 1 is fluttery; the higher the more CPU tim | 
+p8 | overlap - how much FFT windows overlap | samples, any power of 2 | no | no | 1: no overlap, 2: hopsize=FFTlen/2, 4: hopsize=FFTlen/4, etc. 2 or 4 is usually fine; 1 is fluttery; the higher the more CPU timr | 
 p9 | input channel |  -  | no | yes | default: 0 | 
 p10 | pan | 0-1 stereo; 0.5 is middle | no | yes | default: 0 | 
 

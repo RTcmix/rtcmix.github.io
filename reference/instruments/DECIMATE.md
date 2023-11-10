@@ -37,10 +37,9 @@ p6 | low-pass filter cutoff frequency | Hz | yes | yes | default: 0 (will bypass
 p7 | input channel |  -  | no | yes | default: 0 | 
 p8 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0 | 
 
-   p3 (pre-amp), p4 (post-amp), p5 (bits), p6 (cutoff) and p8 (pan) can
-   receive dynamic updates from a table or real-time control source.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   JGG , 3 Jan 2002, rev for v4, 7/11/04
+Author:  JGG, 3 Jan 2002, rev for v4, 7/11/04
 
   
 

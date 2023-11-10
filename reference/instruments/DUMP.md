@@ -31,8 +31,10 @@ p1 | duration |  -  | no | no |
 p2 | amp |  -  | yes | no | 
 p3 | fixed table |  -  | yes | yes | 
 
-   The dynamically-controlled values of the p2 'amp' field will print unless
-   the optional p3 parameter is present.  See the *Usage Notes* below.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+The dynamically-controlled values of the p2 'amp' field will print unless
+the optional p3 parameter is present.  See the *Usage Notes* below.
 
   
 

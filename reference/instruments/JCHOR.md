@@ -43,9 +43,10 @@ p12 | input channel |  -  | no | no |
 p13 | overall amplitude | relative multiplier of input sound | yes | no | 
 p14 | grain envelope | reference to a pfield table-handle | no | no | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author:  John Gibson, 9/20/98, RT'd 6/24/99; rev for v4, 7/24/04
-       based on Paul Lansky's CMIX chor instrument  and Doug Scott's TRANS code
+Author:  John Gibson, 9/20/98, RT'd 6/24/99; rev for v4, 7/24/04
+   based on Paul Lansky's CMIX chor instrument  and Doug Scott's TRANS code
 
   
 

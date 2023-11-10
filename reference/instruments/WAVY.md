@@ -37,10 +37,9 @@ p7 | oscil B wavetable | reference to pfield table-handle (if zero, same as A) |
 p8 | combination expression | "a + b", "a - b", "a * b", etc.; see the Usage Notes below | no | no | 
 p9 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 
-   p6 (oscil A wavetable) and p7 (oscil B wavetable) should be references to
-   pfield table-handles.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author:  John Gibson, 6/15/05
+Author:  John Gibson, 6/15/05
 
   
 

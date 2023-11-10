@@ -31,7 +31,9 @@ p1 | input start time | seconds | no | no |
 p2 | duration | seconds | no | no | 
 p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 
-   Author:  John Gibson , 5/21/06
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+Author:  John Gibson , 5/21/06
 
   
 

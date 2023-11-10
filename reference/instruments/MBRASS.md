@@ -37,12 +37,9 @@ p6 | max pressure | 0.0-1.0 | no | no |
 p7 | pan | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.5 | 
 p8 | breath pressure envelope | reference to a pfield table-handle | yes | yes | if 0, value defaults to 1.0 | 
 
-   p2 (amplitude), p3 (frequency), p4 (slide length), p5 (lip filter) and p7 (pan)
-   can receive dynamic updates from a table or real-time control source.
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   p8 (breath pressure table), if used, should be a reference to a pfield table-handle.
-
-   Author:  Brad Garton, based on code from the Synthesis ToolKit
+Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 

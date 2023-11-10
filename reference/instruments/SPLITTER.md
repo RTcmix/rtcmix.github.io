@@ -34,7 +34,9 @@ p3 | global amp multiplier | relative multiplier of input signal | yes | no |
 p4 | input channel |  -  | no | no | 
 p5-pN | amplitude multiplier for each output channel | relative multiplier | yes | no | 
 
-   John Gibson, 1/22/06
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
+
+John Gibson, 1/22/06
 
   
 

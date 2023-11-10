@@ -46,8 +46,9 @@ p14 | random seed | integer | no | yes | default: use system clock |
 p15 | grain pan minimum | 0-1 stereo; 0.5 is middle | yes | yes | default: 0.0 | 
 p16 | grain pan maximum | 0-1 stereo; 0.5 is middle | yes | yes | default: 1.0 | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author:  John Gibson, 2/8/05
+Author:  John Gibson, 2/8/05
 
   
 

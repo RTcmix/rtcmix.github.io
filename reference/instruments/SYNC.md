@@ -34,8 +34,10 @@ p4 | oscillator writing frequency |  -  | yes | no |
 p5 | oscillator wavetable reference |  reference to a pfield table-handle| yes | no | 
 p6 | pan |  -  | yes | yes | default: 0 | 
 
+Parameters labled as Dynamic can receive dynamic updates from a table or real-time control source.
 
-   Author Brad Garton, 7/2007
+
+Author Brad Garton, 7/2007
 
   
 
