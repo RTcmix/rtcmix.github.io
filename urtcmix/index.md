@@ -10,10 +10,10 @@ including a robust scheduler and large set of pre-compiled
 "instruments". uRTcmix encapsulates RTcmix for use in a
 [Unity](https://unity.com) project.
 
-- [uRTcmix intallation instructions and tutorial](texttutorial.php)
-- [uRTcmix video tutorials](videotutorials.php)
-- [uRTcmix function reference](functionreference.php)
-- [uRTcmix Unity project demos](demos.php)
+- [uRTcmix intallation instructions and tutorial](texttutorial.html)
+- [uRTcmix video tutorials](videotutorials.html)
+- [uRTcmix function reference](functionreference.html)
+- [uRTcmix Unity project demos](demos.html)
 - [the 'scoralyzer' program used to create score
-  strings](scoralyzer.php)
-- [sound localization with the LOCALIZE() instrument](localize.php)
+  strings](scoralyzer.html)
+- [sound localization with the LOCALIZE() instrument](localize.html)

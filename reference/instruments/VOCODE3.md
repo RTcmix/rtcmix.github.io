@@ -112,7 +112,7 @@ band output.
 Parameters p8 ("MODCFTRANSP") and p9 ("CARCFTRANSP") transpose the
 modulator center frequencies and the carrier center frequencies
 respectively. This is specified using linear octaves (see the [format
-conversion routines](../scorefile/ampdb.php/index.html) for scorefile
+conversion routines](../scorefile/ampdb.html) for scorefile
 conversion to different pitch specifiers).
 
 p10 ("MODFILTQ") and p11 ("CARFILTQ") control the 'sharpness' of the

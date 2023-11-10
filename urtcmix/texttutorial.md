@@ -15,7 +15,7 @@ macOS machines running Catalina (10.15.x) or later, you will probably
 get the Apple 'gatekeeper' message about the library/application not
 able to run because it isn't from a 'signed developer'. One of these
 days We'll wade through the impenetrable documentation about how to do
-this, but for now you can follow the instructions [here](annoying.php)
+this, but for now you can follow the instructions [here](annoying.html)
 to get it going.*</span>
 
 To import uRTcmix for use, start a new Unity project. Drag the

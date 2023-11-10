@@ -6,8 +6,8 @@ layout: ref
 # uRTcmix LOCALIZE() Instument
 
 *[rtcmix.org documentation for
-LOCALIZE()](http://rtcmix.org/reference/instruments/LOCALIZE.php)*  
-*[LOCALIZE() video tutorial](videotutorials.php#localize)*  
+LOCALIZE()](http://rtcmix.org/reference/instruments/LOCALIZE.html)*  
+*[LOCALIZE() video tutorial](http://rtcmix.org/urtcmix/videotutorials.php#localize)*  
   
 
 ## initial setup
