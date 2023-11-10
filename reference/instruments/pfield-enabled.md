@@ -7,7 +7,7 @@ layout: ref
 
 Beginning in RTcmix 4.0, a new system for controlling Instrument
 parameters was installed. This replaces the original
-[makegen](/reference/scorefile/makegen.php) system for various
+[makegen](../scorefile/makegen.html) system for various
 Instrument envelopes, although it is still supported for nearly all of
 the older instruments. This new system also allows the user to control
 Instrument parameters in real-time as a note is being executed. For
@@ -25,12 +25,12 @@ operator commands for these *handle* variables. PField-enabled
 parameters can also be single values or 'regular' RTcmix variables, of
 course.
 
-The [Basic RTcmix Tutorial](/tutorials/standalone.php) has examples of
+The [Basic RTcmix Tutorial](../../tutorials/standalone.html) has examples of
 how this control system works, and the [RTcmix Instrument Design
-Tutorial](/tutorials/instrument_design.php) discusses how to incorporate
+Tutorial](../../tutorials/instrumentdesign.html) discusses how to incorporate
 PFIeld control into user-written Instruments.
 
-See the [Short Tour of PField Capabilities](/tutorials/PFields.php)
+See the [Short Tour of PField Capabilities](../../tutorials/PFields.html)
 tutorial for more information about various PField scorefile commands.  
   
 
@@ -38,9 +38,9 @@ tutorial for more information about various PField scorefile commands.
 
 ### SEE ALSO
 
-[maketable](/reference/scorefile/maketable.php),
-[makeconnection](/reference/scorefile/makeconnection.php),
-[makemonitor](/reference/scorefile/makemonitor.php),
-[makeLFO](/reference/scorefile/makeLFO.php),
-[makefilter](/reference/scorefile/makefilter.php),
-[makerandom](/reference/scorefile/makerandom.php)
+[maketable](../scorefile/maketable.html),
+[makeconnection](../scorefile/makeconnection.html),
+[makemonitor](../scorefile/makemonitor.html),
+[makeLFO](../scorefile/makeLFO.html),
+[makefilter](../scorefile/makefilter.html),
+[makerandom](../scorefile/makerandom.html)
