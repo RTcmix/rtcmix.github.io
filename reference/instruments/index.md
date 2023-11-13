@@ -182,8 +182,8 @@ These perform special actions and neither generate nor process audio.
 
 ### Miscellaneous
 - [DUMP](DUMP.html) &mdash; print control ('handle') data
-- [MAXBANG](MAXBANG.html) &mdash; utility to generate a bang message in [rtcmix~](http://rtcmix.org/rtcmix~/) or [iRTcmix](http://rtcmix.org/iRTcmix/)
-- [MAXMESSAGE](MAXMESSAGE.html) &mdash; utility to send a list of values, used in [rtcmix~\>](http://rtcmix.org/rtcmix~/) or [iRTcmix](http://rtcmix.org/iRTcmix/)
+- [MAXBANG](MAXBANG.html) &mdash; utility to generate a bang message in [rtcmix~](../../rtcmix_/index.html) or [iRTcmix](../../irtcmix/index.html)
+- [MAXMESSAGE](MAXMESSAGE.html) &mdash; utility to send a list of values, used in [rtcmix~\>](../../rtcmix_/) or [iRTcmix](../../irtcmix/)
 - [PFSCHED](PFSCHED.html) &mdash; schedule (real-time) pfield events
 
 ## <span id="sort_alphabetical">All Instruments, Listed in Alphabetical Order</span>

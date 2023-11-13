@@ -161,7 +161,7 @@ object](../interface/RTcmix-embed.html).
     - [mouse](makeconnection.html#mouse) &mdash; connect to the mouse position
     - [midi](makeconnection.html#midi) &mdash; connect to MIDI controller
     - [datafile](makeconnection.html#datafile) &mdash; open and read data from an existing file
-    - [inlet](makeconnection.html#inlet) &mdash; connect to a Max or Pd [rtcmix~](../../rtcmix~/index.html) object inlet
+    - [inlet](makeconnection.html#inlet) &mdash; connect to a Max or Pd [rtcmix~](../../rtcmix_/index.html) object inlet
   - [maketable](maketable.html) &mdash; create a table using the table-handle
     scheme:
     - [textfile](maketable.html#textfile) &mdash; fill a table with values from a text file

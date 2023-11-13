@@ -30,7 +30,7 @@ p0 | time to generate the bang | seconds | no | no |
   
 **MAXBANG** sends a 'bang' out the right outlet of the
 [rtcmix\~](../../rtcmix_/index.html) object. It can also be used in
-[iRTcmix](../../iRTcmix/index.html) for iOS.
+[iRTcmix](../../irtcmix/index.html) for iOS.
 
 ### Usage Notes
 
@@ -39,7 +39,7 @@ scheduled. An internal function, check\_bang(), determines if the flag
 has been set. If it has, it produces a 'bang' at the right outlet of the
 Max/MSP [rtcmix\~](../../rtcmix_/index.html) object.
 
-**MAXBANG** can also be used in [iRTcmix](../../iRTcmix/index.html)
+**MAXBANG** can also be used in [iRTcmix](../../irtcmix/index.html)
 for timing and scheduling purposes (the check\_bang() function is called
 directly in the application developer code).
 
@@ -66,4 +66,4 @@ very basic:
 ### See Also
 
 [MAXMESSAGE](MAXMESSAGE.html), [rtcmix\~](../../rtcmix_/index.html),
-[iRTcmix](../../iRTcmix/index.html)
+[iRTcmix](../../irtcmix/index.html)

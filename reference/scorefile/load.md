@@ -103,7 +103,7 @@ this\!).
     the CMIX command was invoked. 
     
     *NOTE: for many embedded applications
-    such as [rtcmix\~](../../rtcmix~/index.html) and
+    such as [rtcmix\~](../../rtcmix_/index.html) and
     [iRTcmix](../../irtcmix/index.html), the instruments are
     'compiled-in' and do not have to be loaded.*
 

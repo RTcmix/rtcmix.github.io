@@ -43,7 +43,7 @@ instruments to arbitrarily schedule pfield controls during execution of
 a note. It uses an internal set of "pfield busses" (up to 1024) for the
 routing of pfield information to instruments/notes. This is useful in
 interactive RTcmix applications such as the
-[rtcmix\~](../../rtcmix_/rtcmix_.php/index.html) Max/MSP object or the
+[rtcmix\~](../../rtcmix_/rtcmix_.html) Max/MSP object or the
 [iRTcmix](../../irtcmix/index.html) library for iOS.
 
 The "pfield bus" (or "pfbus") is set up using the

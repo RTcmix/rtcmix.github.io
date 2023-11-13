@@ -51,7 +51,7 @@ carriage-return/line-feed scheme that will cause the RTcmix parser to
 crash.*</span>
 
 Older versions are available [in the
-archives](http://rtcmix.org/rtcmix~/archives.php).
+archives](archives.html).
 
 ## Installation Instructions for Pure Data
 
