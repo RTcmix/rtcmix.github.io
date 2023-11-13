@@ -33,7 +33,7 @@ sort-of had to know how to use it already.
 I was still using RTcmix a fair amount in my own musical work, but I
 also began to look at other languages (like
 [JSyn](http://www.softsynth.com/jsyn/),
-[Max/MSP](http://www.cycling74.com/products/maxmsp.html) and
+[Max/MSP](http://www.cycling74.com/products/max) and
 [SuperCollider](http://www.audiosynth.com/)). One of the things I didn't
 like about these languages was the difficulty in incorporating them into
 C/C++ applications with a high degree of data-sharing. I also
@@ -44,7 +44,7 @@ to get our documentation house in order so that others who might want a
 language like RTcmix could gain entry.
 
 I had noticed that many of our students at Columbia were adopting
-[Max/MSP](http://www.cycling74.com/products/maxmsp.html) as a base for
+[Max/MSP](http://www.cycling74.com/products/max) as a base for
 their computer music operations. The Max/MSP
 [rtcmix\~](../rtcmix_/index.html) object was created to bring the Joy of
 RTcmix to this environment. The recent Windows XP port of this object

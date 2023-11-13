@@ -9,7 +9,7 @@ layout: ref
 **RTcmix** is a real-time software system for synthesizing and processing digital audio. It has two main parts: a front-end parsing system which reads ASCII scripts or “scores“ written using the [Minc language](reference/scorefile/Minc.html), and a powerful back-end audio rendering engine which performs the event scheduling, audio I/O, sound synthesis and processing. It is written in C/C++ and is distributed open-source, free of charge. In certain respects, it is similar in function to other extant unit-generator-based software packages such as [CSOUND](http://www.csounds.com/),
 [SuperCollider](http://supercollider.sourceforge.net/) and (to a lesser
 extent) [JSyn](http://www.softsynth.com/jsyn/) and
-[Max/MSP](http://www.cycling74.com/products/maxmsp.html) -- they do
+[Max/MSP](http://www.cycling74.com/products/max) -- they do
 share a common heritage, after all. There are differences, however,
 between all these packages... and *variety is* of course *the spice of
 life\!*
