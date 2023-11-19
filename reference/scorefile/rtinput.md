@@ -11,7 +11,9 @@ Open a sound file or audio device for reading.
 
 ### Synopsis
 
-**rtinput**(*"input\_source"*)
+**rtinput**(*"input\_source"* \[, *"memory"* \])
+
+Parameters inside the \[brackets\] are optional.
 
 -----
 
@@ -45,20 +47,33 @@ file, such as the header type and sampling rate (unless the
     If *input\_source* is "AUDIO", then input comes from the audio
     device. This lets you send input to RTcmix from a microphone or
     line-level source. The mic/line audio device is selected using the
-    [set\_option](set_option.html#device) scorefile command. For linux
+    [set\_option](set_option.html#device) scorefile command. For Linux
     users, there is a utility program called "alsaprobe" in
     RTcmix/test/alsa that can list the available devices. A similar
     program exists for macOS users ("coreaudioprobe") in
-    RTcmix/test/coreaudioprobe. For 'full duplex' (i.e. input and output
-    simultaneously) use of RTcmix, macOS users need to create an
-    "aggregate device" using the AudioMIDISetup.app (in
-    /Applications/Utilities) with both in and out capabilities. As an
-    example, this "aggregate device" is selected using
-    [set\_option](set_option.html#device) as followe:
+    RTcmix/test/coreaudioprobe. For full duplex (i.e., input and output
+    simultaneously) use of RTcmix, macOS users may need to create an
+    "aggregate device" using the AudioMIDISetup application (in
+    /Applications/Utilities) with both input and output capabilities.
+    As an example, this aggregate device is selected using
+    [set\_option](set_option.html#device) as follows:
+
+    ```cpp
+      set_option("record = on", "device = Aggregate Device:0,0")  
+      rtsetparams(48000, 2)  
+      rtinput("AUDIO")  
+    ```
     
     Note that the [set\_option](set_option.html#device) command has to
     precede the [rtsetparams](rtsetparams.html) command in the
     scorefile.
+
+  - <span id="memory">*"memory"*</span> 
+
+    This optional argument causes the sound file to be read entirely
+    into RAM at the time of the **rtinput** call. Without this argument,
+    RTcmix reads the file while an instrument plays.
+  
 
 -----
 
@@ -78,7 +93,7 @@ by any instruments that follow this line in the script.
 Opens "trouble.wav'' using a full path name.
 
 ```cpp
-   rtinput("AUDIO)"
+   rtinput("AUDIO")
 ```
 
 Opens the audio device for reading.
