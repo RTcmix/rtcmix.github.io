@@ -646,20 +646,20 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     [window](http://en.wikipedia.org/wiki/Window_function/) function
     curve. The syntax is:
 
-```
+    ```
     table = maketable("window", size, type)
-```
-    
+    ```
+
     Window functions are used for many signal-processing operations.
     Using this **maketable**, two common window types can be
     constructed. The *type* specifier determines the kind of window
     function to use:
     
-      - *1 / "hanning"* &mdash; this will build a
+    *1 / "hanning"* &mdash; this will build a
         [hanning](http://www.mathworks.com/access/helpdesk/help/toolbox/signal/hann.html)
         window function in the table.  
           
-      - *2 / "hamming"* &mdash; this will build a
+    *2 / "hamming"* &mdash; this will build a
         [hamming](http://www.mathworks.com/access/helpdesk/help/toolbox/signal/hamming.html)
         window function in the table.
     
