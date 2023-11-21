@@ -36,7 +36,7 @@ table\_average = **tablemean**(*table\_handle*)
 
 ```cpp
 table = maketable("literal", "nonorm", 0, 10, 20, 30, 40)
-table_average = tablemean(table) \\ returns 25
+table_average = tablemean(table) // returns 25
 ```
 -----
 

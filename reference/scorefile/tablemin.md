@@ -36,7 +36,7 @@ minval = **tablemin**(*table\_handle*)
 
 ```cpp
 table = maketable("literal", "nonorm", 0, 8.00, 8.02, 8.03, 8.05, 8.07)
-maxvalue = tablemin(table) \\ returns 8.00
+maxvalue = tablemin(table) // returns 8.00
 ```
 -----
 

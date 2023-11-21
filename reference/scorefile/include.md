@@ -30,7 +30,7 @@ The syntax is easy, although it differs slightly from the standard
 [Minc](Minc.html) or other parser-interface syntax:
 
 ```cpp
-   include otherfile.sco
+include otherfile.sco
 ```
 
 where *otherfile.sco* can be an absolute or relative path to a scorefile
@@ -63,13 +63,13 @@ This is similar to the *\#include* directive in C/C++.
 ### Examples
 
 ```cpp
-   dice = random()
+dice = random()
 
-   if (dice > 0.5) {
-   include firstbigchunk.sco
-   } else {
-   include secondbigchunk.sco
-   }
+if (dice > 0.5) {
+include firstbigchunk.sco
+} else {
+include secondbigchunk.sco
+}
 ```
 
 The above scorefile will be altered by the inclusion of
