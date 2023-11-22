@@ -12,4 +12,4 @@ List](https://listserv.cuit.columbia.edu/scripts/wa.exe?SUBED1=rtcmix-discuss&A=
 For other inquiries, you may also contact [Brad
 Garton](mailto:garton@columbia.edu).
 
-Follow [@rtcmix](https://twitter.com/rtcmix) for news updates.
+Follow the Twitter/X feed [@rtcmix](https://twitter.com/rtcmix) for news updates.
