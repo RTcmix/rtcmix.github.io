@@ -430,7 +430,8 @@ The purpose of the explicit declarations will be discussed later.
         types (i.e., no type conversion supported).
       - If the score provides fewer arguments that the function expects,
         the remainder will be set to 0 (or NULL). This is legal but you
-        will get a friendly warning.
+        may get a friendly warning (depending on settings).
+      - Every function call defines a private variable *"\_n\_args"* which indicates the number of arguments passed to the function.  This variable is only visible within the body of the function.
       - There can only be one function defined with any given function
         name.
       - The body of a function may contain any legal Minc score
