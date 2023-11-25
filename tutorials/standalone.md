@@ -31,7 +31,7 @@ Of course, this makes several basic assumptions -- we are assuming that
 you are "in" the same directory where the file "greatmusic.score" is
 stored, and we are also assuming that the RTcmix *CMIX* command has been
 installed and that your command path has been set properly (please see
-the [Command Line RTcmix](../rtcmix/index.html) page for directions on
+the [Command Line RTcmix](../index.html) page for directions on
 how to do this, or consult a good Unix tutorial for information about
 directories, command search paths, etc.). Be sure that the
 "greatmusic.sco" file is a text-only file, any extraneous formatting
