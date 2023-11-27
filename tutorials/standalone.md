@@ -31,7 +31,7 @@ Of course, this makes several basic assumptions -- we are assuming that
 you are "in" the same directory where the file "greatmusic.score" is
 stored, and we are also assuming that the RTcmix *CMIX* command has been
 installed and that your command path has been set properly (please see
-the [Command Line RTcmix](../rtcmix/index.html) page for directions on
+the [Command Line RTcmix](../index.html) page for directions on
 how to do this, or consult a good Unix tutorial for information about
 directories, command search paths, etc.). Be sure that the
 "greatmusic.sco" file is a text-only file, any extraneous formatting
@@ -181,9 +181,8 @@ second is that we need to specify parameter 5 in order to use the
 *waveform* table-handle variable in parameter 6 to reference the
 waveform we want WAVETABLE to use. The reason this final parameter is
 also optional is to allow WAVETABLE to employ an older method for
-specifying waveforms using the
-[makegen](../reference/scorefile/makegen.html) command instead of
-*maketable*. Again, see the [earlier documentation](standalone3.x.html)
+specifying waveforms using the makegen command instead of
+*maketable*. Again, see the [earlier documentation](standalone.html)
 for a discussion of how this approach works. Many RTcmix instruments
 have optional parameters like this, sometimes required when other
 p-fields have certain values, often optional for use at your discretion.
