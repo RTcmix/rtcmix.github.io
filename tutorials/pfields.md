@@ -196,7 +196,7 @@ be used to create and manipulate *pfield-handles* and *table-handles*:
   - [tablelen](../reference/scorefile/tablelen.html) -- returns the length (number of elements) of a table from a *table-handle*.
   - [add](../reference/scorefile/add.html), [div](../reference/scorefile/div.html), [mul](../reference/scorefile/mul.html), [sub](../reference/scorefile/sub.html) -- arithmetic operations that work on all the data in a table given a *table-handle* variable.
 
-####pfield-handle commands
+#### pfield-handle commands
       
   - [makeLFO](../reference/scorefile/makeLFO.html) -- generate Low Frequency Oscillation (usually \< 20 Hz) data and feed it through a *pfield-handle* variable.
   - [makerandom](../reference/scorefile/makerandom.html) -- periodically generate some type of random number and feed it through a *pfield-handle* variable.
@@ -205,7 +205,7 @@ be used to create and manipulate *pfield-handles* and *table-handles*:
   - [makeconverter](../reference/scorefile/makeconverter.html) -- apply a data conversion operation like [octcps](../reference/scorefile/octcps.html), [pchmidi](../reference/scorefile/pchmidi.html), [ampdb](../reference/scorefile/ampdb.html), etc., to the data coming through a *pfield-handle* variable feed the result through another *pfield-handle* variable.
 
       
-####data output and display commands
+#### data output and display commands
       
   - [samptable](../reference/scorefile/samptable.html) -- return a value from a table given a *table-handle*.
   - [makemonitor](../reference/scorefile/makemonitor.html) -- display or record data coming through a *pfield-handle* variable.
