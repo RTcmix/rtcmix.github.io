@@ -40,7 +40,7 @@ In the RTcmix source code directory ("RTcmix/"), type the shell command:
 
 There are options you may wish to use with the configure command for your installation -- See the INSTALL file in the top-level RTcmix source directory for a discussion of these.
 
-## Compiling the RTcmix Embedded Library
+## Compiling the RTcmix Embedded Library for MacOS X
 
 After running the configure command (with any appropriate options), then
 type (in that same "RTcmix/" directory):
@@ -49,5 +49,15 @@ type (in that same "RTcmix/" directory):
 make BUILDTYPE=OSXEMBEDDED
 ```
 
-This will compile the dynamic **RTcmix** library including the complete set of objects for the available instruments.
+## Compiling the RTcmix Embedded Library for Linux
+
+After running the configure command (with any appropriate options), then
+type (in that same "RTcmix/" directory):
+
+``` 
+make BUILDTYPE=LINUXEMBEDDED
+```
+
+
+These will compile the dynamic **RTcmix** library including the complete set of objects for the available instruments.  Running 'make install' will copy this library to the location that has been configured for it.
 
