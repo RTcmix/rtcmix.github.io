@@ -540,7 +540,7 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
   - <span id="cheby" class="internallink">*cheby*</span>  
       
     Fill a table with a curve computed using [Chebyshev
-    polynomials](http://math.fullerton.edu/mathews/n2003/ChebyshevPolyMod.html).
+    polynomials](https://en.wikipedia.org/wiki/Chebyshev_polynomials).
     These curves have the property that when used as a transfer
     function, the polynomial coefficients determine the harmonic content
     of the resulting signal for a given index value. This is very useful
@@ -714,10 +714,6 @@ for (st = 0; st < 10; st = st+1) {
    WAVETABLE(st, 3.5, 10000 * amp, irand(100.0, 1000.0), random(), wave)
 }
 ```
-
-Be aware, though that memory for these tables is allocated for each use.
-This is a potential small memory leak for algorthmic processes that
-define a large number of new tables over a long period of time.
 
 -----
 
