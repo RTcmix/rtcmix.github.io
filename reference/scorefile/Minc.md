@@ -42,7 +42,7 @@ loops, *if* decision-constructs, etc. In addition to the many examples below,
 see the [RTcmix tutorial](../../tutorials/standalone.html) (especially the later
 sections about algorithmic composition) for examples of **Minc** use.
 One of the main differences between **Minc** and **C** is the ability to
-leave out semicolons at the end of lines (note: semicolons are still required
+leave out semicolons at the end of lines (NOTE: semicolons are still required
 in "for(...)" statements and a couple of other places). Semicolons may be used
 at the end of **Minc** lines, but they are not required. The advantage of using them
 is that the parser can more easily pinpoint the offending line number in your score - very
@@ -314,7 +314,7 @@ The purpose of the explicit declarations will be discussed later.
 - Arrays can be passed as an argument to any built-in function or instrument call. When this is done, the elements in the list become the next N arguments to the function:
 
 	```cpp
-	// Note: To be passed as function arguments, all the array's items must be floats
+	// NOTE: To be passed as function arguments, all the array's items must be floats
 	remaining_args = { 0,0, 1,1, 3,1, 5.5,0 }
 	
 	// This next line is the same as calling maketable(“line", 1000, 0,0, 1,1, etc.
@@ -661,7 +661,7 @@ If you wish to do your own additional error checking in your score, you can use 
 ```cpp
 if ($entered_sample_rate < 8000)
 {
-	error("entered sample rate (%f) is an illegal value!")
+	error("entered sample rate (%f) is an illegal value!", $entered_sample_rate)
 }
 ```
 
@@ -676,7 +676,7 @@ For programmers, the term "object" usually refers to a chunk of information (the
 
   - they are declared as part of the struct's declaration
   - they are called using the "dot" operator on a variable that has the struct type
-  - they can access, modify, and return the value of any of the member variables that are part of the struct
+  - they can access, modify, and return the value of any of the member variables that are part of the struct via the automatic 'this' variable
 
 ```cpp
 // Simple struct object which contains a count
@@ -708,6 +708,37 @@ print(myCounter.increment())
 	103
 
 ```
+### Minc Variable Visibility and Lifetime:  Scopes
+When a variable of any type is first declared or auto-declared in a Minc score file, its *visibility* (i.e. what other parts of the score can use it) is determined by its *scope*.  Two important scopes are *Global* and *Function*.  Variables declared at Global scope can be used by any part of the score, including inside [user-defined functions](minc-functions).  Variables declared inside a function block (i.e., between the opening and closing curly brace) can only be "seen" by code inside the function which follows that declaration.  In addition, any set of enclosing curly braces can define a scope.  The following score snippet shows examples of all of these.
+
+```cpp
+aGlobalNumber = 7		// This variable is Global scope and visible/usable by any code in a score.
+
+float myCustomFunction()
+{
+	string myPrivateString;		// This one is Function scope and ONLY visible inside this function.
+	print(aGlobalNumber);		// Global variables are accessible inside functions
+	return 0;
+}
+
+if (aGlobalNumber > 0) {		// This opening curly brace defines a new scope.
+	float privateVariable;		// Declaring a variable this way puts it in this scope.
+	privateVariable = 10;
+}									// The new scope ends here.
+
+// trying to use 'privateVariable' here would generate an error
+
+```
+Due to legacy concerns, variables which are *auto-declared* inside curly braces are treated as if they were declared at the Global scope:
+
+```cpp
+x = 10;
+if (x > 0) {
+	newvariable = 7;
+}
+print(newvariable);		// 'newvariable' visible due to legacy behavior for auto-declared vars
+```
+NOTE: This is not true if the declaration falls anywhere inside a [custom function](minc-functions); in this case any variable declared inside '{}' is only visible inside that scope.
 
 ## History of the Minc Parser
 
