@@ -721,7 +721,7 @@ print(myCounter.increment())
 
 ```
 ### Minc Variable Visibility and Lifetime:  Scopes
-When a variable of any type is first declared or auto-declared in a Minc score file, its *visibility* (i.e. what other parts of the score can use it) is determined by its *scope*.  Two important scopes are *Global* and *Function*.  Variables declared at Global scope can be used by any part of the score, including inside [user-defined functions](minc-functions).  Variables declared inside a function block (i.e., between the opening and closing curly brace) can only be "seen" by code inside the function which follows that declaration.  In addition, any set of enclosing curly braces can define a scope.  The following score snippet shows examples of all of these.
+When a variable of any type is first declared or auto-declared in a Minc score file, its *visibility* (i.e. what other parts of the score can use it) is determined by its *scope*.  Two important scopes are *Global* and *Function*.  Variables declared at Global scope can be used by any part of the score, including inside [user-defined functions](#minc-functions).  Variables declared inside a function block (i.e., between the opening and closing curly brace) can only be "seen" by code inside the function which follows that declaration.  In addition, any set of enclosing curly braces can define a scope.  The following score snippet shows examples of all of these.
 
 ```cpp
 aGlobalNumber = 7		// This variable is Global scope and visible/usable by any code in a score.
@@ -750,7 +750,7 @@ if (x > 0) {
 }
 print(newvariable);		// 'newvariable' visible due to legacy behavior for auto-declared vars
 ```
-NOTE: This is not true if the declaration falls anywhere inside a [custom function](minc-functions); in this case any variable declared inside '{}' is only visible inside that scope.
+NOTE: This is not true if the declaration falls anywhere inside a [custom function](#minc-functions); in this case any variable declared inside '{}' is only visible inside that scope.
 
 ## History of the Minc Parser
 
