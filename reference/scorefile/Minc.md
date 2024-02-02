@@ -87,7 +87,7 @@ useful for large, complex scores!
     precedence of evaluation is also supported:
     
 	```cpp 
-	if ((val > 2.0) && < (val2 != 0)) { ... }
+	if ((val > 2.0) && (val2 != 0)) { ... }
 	```
     
     Note that the "do...while" and "switch" statements are not supported
@@ -206,18 +206,30 @@ struct MyData { string name,
                 list array
               }
 ```
-These members can be any **Minc** data type, and there is no limit on the number of member variables. Their names must all be unique within the struct definition. For now, structs cannot be nested within each other. To declare a variable in your score to be a struct, just use the struct type as follows:
+These members can be any **Minc** data type, and there is no limit on the number of member variables. Their names must all be unique within the struct definition. For now, structs cannot be nested within each other. There are several ways to declare a variable in your score to be a struct:
 
 ```cpp
-struct MyData instrumentData
+// You can simply declare it.  This will initialize all its members to 0 or NULL.
+struct MyData instrumentData;
+
+// You can auto-initialize a variable by assigning to it from the struct's built-in *constructor* function:
+initializedInstrumentData = MyData("Loud Instrument", 1, {});
+
 ```
-To assign and read from the members, use the "dot" syntax:
+NOTE: The struct constructor is a new feature as of version 5.4.0.
+
+If you chose the first option, you can assign to the struct variable's members using the "dot" syntax:
 
 ```cpp
 instrumentData.name = "Loud Instrument"
 instrumentData.number = 1
 instrumentData.array = {}
 	
+```
+
+To read from the members, always use the "dot" syntax:
+
+```cpp	
 printf("Instrument %f: %s\n", instrumentData.number, instrumentData.name)
 ```
 For more details, see [More About Structs](#more-about-structs) below.
@@ -363,7 +375,7 @@ The purpose of the explicit declarations will be discussed later.
 ### <a name="more-about-structs"></a>More About Structs
 
 
-- All struct member variables are set to 0 or NULL by default. You cannot auto-declare struct variables unless you are assigning from one to another:
+- All struct member variables are set to 0 or NULL by default. You cannot auto-declare struct variables unless you are assigning from one to another or from a call to the struct's constructor:
 
 	OK:
 
@@ -392,7 +404,7 @@ The purpose of the explicit declarations will be discussed later.
 		return MIX(theArgs.outskip, theArgs.inskip, theArgs.dur, theArgs.amp, 0, 1)
 	}
 
-	struct EasyArgs args = { 15.4, 0, DUR(), 10000 }  // Note this quick-hand for initializing members!!
+	args = EasyArgs(15.4, 0, DUR(), 10000)  // 'args' auto-declared via assignment from constructor
 	
 	myMixWrapper(args)
 	
@@ -729,7 +741,7 @@ if (aGlobalNumber > 0) {		// This opening curly brace defines a new scope.
 // trying to use 'privateVariable' here would generate an error
 
 ```
-Due to legacy concerns, variables which are *auto-declared* inside curly braces are treated as if they were declared at the Global scope:
+Due to legacy concerns, variables which are *auto-declared* inside if and if/else blocks are treated as if they were declared at the enclosing scope:
 
 ```cpp
 x = 10;

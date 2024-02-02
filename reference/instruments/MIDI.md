@@ -61,7 +61,7 @@ NOTE: this subcommand is optional for the **MIDI** commands to function
 Param Field	| Parameter | Units | Dynamic | Optional | Notes
 ----------- | --------- | ----- | -------- | --------- | ---------
 p0	| event time | seconds | no | no |
-p1	| event duration | seconds | no | no | no effect for **CONTROLLER** command
+p1	| event duration | seconds | no | no | for controller curves
 p2	| midi channel | 0-15 | no | no |
 p3 | controller number | integer, 0-127 | no | no | 
 p4 | controller value | 0-1.0 (normalized) | yes | no | 
@@ -142,7 +142,8 @@ setup_midi();
 
 expr = controller_number("expression");
 
-// We will use a table curve to generate a smooth controller change
+// We will use a table curve to generate a smooth controller change over the
+// duration of the note
 
 exprvolume = maketable("line", "nonorm", 1000, 0, 1, 1, 0.1, 2, 1);
 
