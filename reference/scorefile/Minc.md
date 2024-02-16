@@ -41,12 +41,16 @@ language, including flow-of-control features such as *for* and *while*
 loops, *if* decision-constructs, etc. In addition to the many examples below,
 see the [RTcmix tutorial](../../tutorials/standalone.html) (especially the later
 sections about algorithmic composition) for examples of **Minc** use.
+
 One of the main differences between **Minc** and **C** is the ability to
 leave out semicolons at the end of lines (NOTE: semicolons are still required
 in "for(...)" statements and a couple of other places). Semicolons may be used
 at the end of **Minc** lines, but they are not required. The advantage of using them
 is that the parser can more easily pinpoint the offending line number in your score - very
-useful for large, complex scores!
+useful for large, complex scores!  The examples in this document sometimes use semicolons
+and sometimes do not.  A special note: If you are running **Minc** interactively on the command
+line, many command lines will not execute upon hitting <return> unless they have been terminated
+with a semicolon (this is how the interpreter knows there is not more text to come).
 
 ### Some useful features of **Minc**
 
@@ -57,10 +61,11 @@ useful for large, complex scores!
 	- '/' divide
 	- '^' and '**' power
 	- '++' increment (add 1)
-	- '--' decrement (subtract1)
+	- '--' decrement (subtract 1)
 	- '%' modulo
 		
-	Many of these are also available in the form '+=', '-=', etc.
+	Many of these are also available in the form '+=', '-=', etc.  Operators can be used with **Minc** data types
+	other than [float](#float), as well.  See the descriptions of the data types below.
 		
 - **Minc** Functions may be calls to Instruments, built-in, or score-defined
     functions used to perform score file calculations. Return values are assigned to **Minc** 
@@ -93,8 +98,7 @@ useful for large, complex scores!
     Note that the "do...while" and "switch" statements are not supported
     in **Minc**.  Postfix (x--) operators are also not supported.
       
-- Comments may be included in **Minc** scripts using **C** comment
-syntax:
+- Comments may be included in **Minc** scripts using **C** comment syntax:
     
     ```cpp 
     /* a comment may be between two slash-asterisk markers */
@@ -147,13 +151,34 @@ soundPath = “/tmp/recording.wav"
 soundPath = some_function_which_returns_a_string();
 ```
 
-Strings can be concatenated using the ‘+’ operator:
+Strings can be concatenated using the ‘+’ and '+=' operators:
 	
 ```cpp
 sentence = “hello" + “ “ + “world!"
 print(sentence)
     “hello world!"
+word = "foo";
+word += "bar";
+print(word)
+    "foobar"
 ```
+Numeric values can also be appended to a string:
+
+```cpp
+version = "version";
+version += 2;		// appends the character for '2'
+print(version)
+    "version2"
+```
+
+Individual characters in a string may be accessed using the [] operator:
+
+```cpp
+s = "abcde";
+print(s[2])
+    "c"
+```
+
 #### <a name="list"></a>list
 
 **lists** or, as they are often called, **Minc arrays**, store a set of variables of any type which can be accessed by indexing into the list using the [] operator. These are extremely useful in a score. The following are acceptable Minc constructions:
@@ -214,9 +239,8 @@ struct MyData instrumentData;
 
 // You can auto-initialize a variable by assigning to it from the struct's built-in *constructor* function:
 initializedInstrumentData = MyData("Loud Instrument", 1, {});
-
 ```
-NOTE: The struct constructor is a new feature as of version 5.4.0.
+NOTE: The struct constructor is a new feature as of version 5.4.0.  Currently, you must provide arguments for all members in the struct - there are no default values.
 
 If you chose the first option, you can assign to the struct variable's members using the "dot" syntax:
 
@@ -224,7 +248,6 @@ If you chose the first option, you can assign to the struct variable's members u
 instrumentData.name = "Loud Instrument"
 instrumentData.number = 1
 instrumentData.array = {}
-	
 ```
 
 To read from the members, always use the "dot" syntax:
@@ -288,7 +311,6 @@ The purpose of the explicit declarations will be discussed later.
 
 ### <a name="more-about-arrays"></a>More About Arrays
 
-
 - **Minc** arrays can contain 'mixed' data types:
 	
 	```cpp
@@ -315,11 +337,10 @@ The purpose of the explicit declarations will be discussed later.
 	mylist = { 1, 2, 3 }
 	
 	print(len(f))
-	print(len(str))
-	print(len(mylist))
-	
 		1
+	print(len(str))
 		5
+	print(len(mylist))
 		3
 	```
 
@@ -353,7 +374,17 @@ The purpose of the explicit declarations will be discussed later.
 	print(third)
 		[1, 2, 3, 4, 5, 6]
 	```
-- All the elements of an array can be modified via operators +, -, *, and / followed a float variable:
+- There is now an 'append' method which will allow a single new element of any type to be added to the end of an array, increasing its length:
+
+	```cpp
+	l = {}
+	l.append(999)
+	l.append("hello")
+	print(l)
+		[999, "hello"]
+```
+
+- All the elements of an array can be modified via operators +, -, *, /, %, and ^ followed a float variable:
 
 	```cpp
 	arr = { 1, 2, 3 }
@@ -364,16 +395,16 @@ The purpose of the explicit declarations will be discussed later.
 	print(arr)
 		[1100, 1200, 1300]
 	```
-	Currently the ++ and -- operators do not work on an array or an element indexed on an array:
+- The unary negation operator '-' flips the sign on all an array's float elements:
 	
 	```cpp
-	arr = { 1, 2, 3 }
-	++arr		// NOT OK
-	++arr[1]	// NOT OK
+	arr = { -2, -1, 0, 1 }
+	print(-arr);
+		[2, 1, 0, -1 ]
 	```
-
+	any element which is not a float will be left as-is.
+	
 ### <a name="more-about-structs"></a>More About Structs
-
 
 - All struct member variables are set to 0 or NULL by default. You cannot auto-declare struct variables unless you are assigning from one to another or from a call to the struct's constructor:
 
@@ -412,6 +443,20 @@ The purpose of the explicit declarations will be discussed later.
 	
 	myMixWrapper(args)		// call it again with new outskip
 
+	```
+- The named elements within a struct can be accessed and used the same way a simple variables are used:
+
+	```cpp
+	struct FloatAndString { float fElement, string sElement };
+	fas = FloatAndString(99, "hello");	// variable auto-declared via call to constructor
+	
+	fas.fElement += 1;		// increments the value of 'fElement'
+	mystring = fas.sElement + " world";
+	
+	print(fas)
+	    { 100, "hello" }
+	print(mystring)
+	    "hello world"
 	```
 
 ### <a name="minc-functions"></a>Score-defined (custom) **Minc** Functions
@@ -720,6 +765,17 @@ print(myCounter.increment())
 	103
 
 ```
+
+### Built-in Methods
+Several utility functions have been described in this document: len(), type(), print(), and others.  The built-in data types in **Minc** have the ability to act as "objects" (see above) and these utility functions may be called as methods on those objects.  Here is an example of the traditional and the new use of len():
+
+```cpp
+myString = "hello world"		// declare a string
+string_len = len(myString)		// traditional way
+string_len = myString.len()	    // new way using a method call
+```
+
+
 ### Minc Variable Visibility and Lifetime:  Scopes
 When a variable of any type is first declared or auto-declared in a Minc score file, its *visibility* (i.e. what other parts of the score can use it) is determined by its *scope*.  Two important scopes are *Global* and *Function*.  Variables declared at Global scope can be used by any part of the score, including inside [user-defined functions](#minc-functions).  Variables declared inside a function block (i.e., between the opening and closing curly brace) can only be "seen" by code inside the function which follows that declaration.  In addition, any set of enclosing curly braces can define a scope.  The following score snippet shows examples of all of these.
 
@@ -741,7 +797,7 @@ if (aGlobalNumber > 0) {		// This opening curly brace defines a new scope.
 // trying to use 'privateVariable' here would generate an error
 
 ```
-Due to legacy concerns, variables which are *auto-declared* inside if and if/else blocks are treated as if they were declared at the enclosing scope:
+Due to legacy concerns, variables which are *auto-declared* inside if and if/else blocks are treated as if they were declared at the enclosing scope (the scope immediately outside of the new {}):
 
 ```cpp
 x = 10;
