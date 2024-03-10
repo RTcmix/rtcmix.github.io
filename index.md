@@ -98,7 +98,7 @@ Lansky](https://paul.mycpanel.princeton.edu/).
 
 [Dave Topper](https://www.davetopper.com/)
 
-[John Gibson](https://john-gibson.com/)
+[John Gibson](http://john-gibson.com/)
 
 [Doug Scott](https://music.columbia.edu/~doug)
 

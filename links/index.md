@@ -56,8 +56,8 @@ layout: ref
     Gibson](https://john-gibson.com/)
   - [Slumber](https://soundcloud.com/johgibso/slumber) by [John
     Gibson](https://john-gibson.com/)
-  - [Thrum](https://john-gibson.com/pieces/thrum.htm) by [John
-    Gibson](https://john-gibson.com/)
+  - [Thrum](http://john-gibson.com/pieces/thrum.htm) by [John
+    Gibson](http://john-gibson.com/)
   - [Character
     Weekend 02](https://damonholzborn.bandcamp.com/album/character-weekend-02)
     by [Damon Holzborn](https://damonholzborn.com/)
