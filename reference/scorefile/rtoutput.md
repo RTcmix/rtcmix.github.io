@@ -87,7 +87,7 @@ floating-point files that you want to open in other programs, use the
 -1.0&ndash;1.0.
 
 If you want to use them in
-[MiXViews](https://www.music.columbia.edu/~doug/MixViews/MiXViews.html)
+[MiXViews](https://music.columbia.edu/~doug/MixViews/MiXViews.html)
 editor, choose the "next" header type. Many programs don't read AIFC
 files, maybe because they assume these are always compressed.
 
