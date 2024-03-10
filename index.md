@@ -94,7 +94,7 @@ Lansky](https://paul.mycpanel.princeton.edu/).
 
 ## Contributors
 
-[Brad Garton](https://bradgarton.com/)
+[Brad Garton](http://bradgarton.com/)
 
 [Dave Topper](https://www.davetopper.com/)
 
@@ -102,7 +102,7 @@ Lansky](https://paul.mycpanel.princeton.edu/).
 
 [Doug Scott](https://music.columbia.edu/~doug)
 
-[Mara Helmuth](https://www.marahelmuth.com/)
+[Mara Helmuth](http://www.marahelmuth.com/)
 
 [Luke DuBois](https://www.lukedubois.com/)
 
@@ -110,9 +110,9 @@ Lansky](https://paul.mycpanel.princeton.edu/).
 
 [Stanko Juzbasic](https://music.columbia.edu/~stanko)
 
-[Ico Bukvic](https://ico.bukvic.net/)
+[Ico Bukvic](http://ico.bukvic.net/)
 
-[Joel Matthys](https://joel.matthysmusic.com/)
+[Joel Matthys](http://joel.matthysmusic.com/)
 
 [Damon Holzborn](https://damonholzborn.com/)
 
