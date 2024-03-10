@@ -49,11 +49,11 @@ layout: ref
 ## Music
 
   - [Lots and lots of music](https://music.columbia.edu/~brad/music/) by
-    [Brad Garton](https://bradgarton.com/)
+    [Brad Garton](http://bradgarton.com/)
   - [Several RTcmix Compositions](https://soundcloud.com/dascott/sets/my-electronic-compositions)
     by [Doug Scott](https://music.columbia.edu/~doug)
-  - [Day Trip](https://john-gibson.com/pieces/daytrip.htm) by [John
-    Gibson](https://john-gibson.com/)
+  - [Day Trip](http://john-gibson.com/pieces/daytrip.htm) by [John
+    Gibson](http://john-gibson.com/)
   - [Slumber](https://soundcloud.com/johgibso/slumber) by [John
     Gibson](https://john-gibson.com/)
   - [Thrum](http://john-gibson.com/pieces/thrum.htm) by [John
@@ -68,12 +68,12 @@ layout: ref
     by [David McDonnell](https://davidmcdonnellmusic.com/)
   - [Script Calendar](https://pareidoliaudio.tumblr.com/) by [Jerod
     Sommerfeldt](https://www.jerodsommerfeldt.com/)
+	<!--
   - [Headless Monkey Attack](https://www.headlessmonkeyattack.com/) a
     project of [Ryan Carter](https://www.ryancarter.org/) (including some
     [shared code](https://www.headlessmonkeyattack.com/code.html))
-  - [Grow Old (an ever-evolving
-    EP)](https://turbulence.org/Works/GrowOld) by [Jason
-    Freeman](https://jasonfreeman.net/)
+  - [Grow Old (an ever-evolving EP)](https://turbulence.org/Works/GrowOld) by [Jason Freeman](https://jasonfreeman.net/)
+    -->
 
 ## Artists
 
@@ -82,7 +82,7 @@ layout: ref
   - [Ryan Carter](https://www.ryancarter.org/)
   - [Luke DuBois](https://www.lukedubois.com/)
   - [Jason Freeman](https://jasonfreeman.net/)
-  - [Brad Garton](https://bradgarton.com/)
+  - [Brad Garton](http://bradgarton.com/)
   - [John Gibson](https://john-gibson.com/)
   - [Mara Helmuth](https://www.marahelmuth.com/)
   - [Damon Holzborn](https://damonholzborn.com/)
