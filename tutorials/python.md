@@ -12,8 +12,8 @@ for information about this). Once you do this and (re-)compile RTcmix,
 you're set to go with a Python front-end. As with Perl, this can be used
 in place of the default scorefile language
 [Minc](../reference/scorefile/Minc.html). You will need to use the
-[PYCMIX](../reference/interface/PYCMIX.html) command instead of
-[CMIX](../reference/interface/CMIX.html) to start RTcmix.
+[PYCMIX](../reference/standalone/CMIX.html) command instead of
+[CMIX](../reference/standalone/CMIX.html) to start RTcmix.
 
 ## Using Python/RTcmix
 
