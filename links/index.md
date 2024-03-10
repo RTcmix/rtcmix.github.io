@@ -48,28 +48,16 @@ layout: ref
 
 ## Music
 
-  - [Lots and lots of music](https://music.columbia.edu/~brad/music/) by
-    [Brad Garton](http://bradgarton.com/)
-  - [Several RTcmix Compositions](https://soundcloud.com/dascott/sets/my-electronic-compositions)
-    by [Doug Scott](https://music.columbia.edu/~doug)
-  - [Day Trip](http://john-gibson.com/pieces/daytrip.htm) by [John
-    Gibson](http://john-gibson.com/)
-  - [Slumber](https://soundcloud.com/johgibso/slumber) by [John
-    Gibson](https://john-gibson.com/)
-  - [Thrum](http://john-gibson.com/pieces/thrum.htm) by [John
-    Gibson](http://john-gibson.com/)
-  - [Character
-    Weekend 02](https://damonholzborn.bandcamp.com/album/character-weekend-02)
-    by [Damon Holzborn](https://damonholzborn.com/)
-  - [A set of RTcmix
-    works](https://soundcloud.com/jwmatthys/sets/rtcmix) by [Joel
-    Matthys](https://joel.matthysmusic.com/)
-  - [MyDinnerWithASpectrogram](https://www.youtube.com/watch?feature=player_embedded&v=y_Y6w0Y4cy0)
-    by [David McDonnell](https://davidmcdonnellmusic.com/)
-  - [Script Calendar](https://pareidoliaudio.tumblr.com/) by [Jerod
-    Sommerfeldt](https://www.jerodsommerfeldt.com/)
-  - [Headless Monkey Attack](https://www.headlessmonkeyattack.com/) a
-    project of [Ryan Carter](https://www.ryancarter.org/) (including some
+  - [Lots and lots of music](https://music.columbia.edu/~brad/music/) by [Brad Garton](http://bradgarton.com/)
+  - [Several RTcmix Compositions](https://soundcloud.com/dascott/sets/my-electronic-compositions) by [Doug Scott](https://music.columbia.edu/~doug)
+  - [Day Trip](http://john-gibson.com/pieces/daytrip.htm) by [John Gibson](http://john-gibson.com/)
+  - [Slumber](https://soundcloud.com/johgibso/slumber) by [John Gibson](http://john-gibson.com/)
+  - [Thrum](http://john-gibson.com/pieces/thrum.htm) by [John Gibson](http://john-gibson.com/)
+  - [Character Weekend 02](https://damonholzborn.bandcamp.com/album/character-weekend-02) by [Damon Holzborn](https://damonholzborn.com/)
+  - [A set of RTcmix works](https://soundcloud.com/jwmatthys/sets/rtcmix) by [Joel Matthys](https://joel.matthysmusic.com/)
+  - [MyDinnerWithASpectrogram](https://www.youtube.com/watch?feature=player_embedded&v=y_Y6w0Y4cy0) by [David McDonnell](https://davidmcdonnellmusic.com/)
+  - [Script Calendar](https://pareidoliaudio.tumblr.com/) by [Jerod Sommerfeldt](https://www.jerodsommerfeldt.com/)
+  - [Headless Monkey Attack](https://www.headlessmonkeyattack.com/) a project of [Ryan Carter](https://www.ryancarter.org/) (including some
     [shared code](https://www.headlessmonkeyattack.com/code.html))
   - [Grow Old (an ever-evolving EP)](https://turbulence.org/Works/GrowOld) by [Jason Freeman](https://jasonfreeman.net/)
 
