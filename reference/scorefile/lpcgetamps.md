@@ -19,7 +19,7 @@ ampvals = **lpcgetamps**(*"lpc\_analysis\_filename", npoles\_guess, firstFrame, 
 
 **lpcgetamps** will retrieve a list (array) of amplitude values from an **LPC** analysis file,
 most likely created by the
-[MiXViews](http://music.columbia.edu/~doug/MixViews/MiXViews.html)
+[MiXViews](https://music.columbia.edu/~doug/MixViews/MiXViews.html)
 program.  Any subset of the total frames may be retrieved as well as all of them.
 
 -----

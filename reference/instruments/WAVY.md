@@ -64,7 +64,7 @@ oscillator, "b", the second one. Some general examples:
 
 The complete list of possibilities is given below. The parser library is
 written by Juha Nieminen and Joel Yliluoma. (More at: [fparser
-library](http://iki.fi/warp/FunctionParser)). If you create a very
+library](https://iki.fi/warp/FunctionParser)). If you create a very
 complicated expression, using trig functions, etc., then **WAVY** will
 not run very quickly.
 
@@ -88,7 +88,7 @@ and *freqB*), and the phase of oscillator B can be offset relative to
 oscillator A (the *phaseB* p-field).
 
 This is the listing (taken from the
-[fparser](http://iki.fi/warp/FunctionParser) library) of the kinds of
+[fparser](https://iki.fi/warp/FunctionParser) library) of the kinds of
 expressions that can be used by **WAVY** in combining the two
 oscillators:  
   

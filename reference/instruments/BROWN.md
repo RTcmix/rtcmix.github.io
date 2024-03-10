@@ -41,10 +41,10 @@ Parameters labled as Dynamic can receive dynamic updates from a table or real-ti
 
   
 **BROWN** is based on an [algorithm by Andrew
-Simper](http://vellocet.com/dsp/noise/VRand.html), who credits these
+Simper](https://vellocet.com/dsp/noise/VRand.html), who credits these
 people, mainly from the music-dsp mailing list: Allan Herriman, James
 McCartney, Phil Burk and Paul Kellet, and the [web page by Robin
-Whittle](http://www.firstpr.com.au/dsp/pink-noise).
+Whittle](https://www.firstpr.com.au/dsp/pink-noise).
 
 ### Usage Notes
 

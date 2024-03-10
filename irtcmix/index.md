@@ -32,9 +32,9 @@ techniques. They'll go on forever and ever\! (well, at least for a few
 hours...) Because the music is being constructed on-the-fly, each time
 it plays it will be slightly different. Such is life.
 
-[more info](http://music.columbia.edu/~brad/ilooch/)  ·  [download
+[more info](https://music.columbia.edu/~brad/ilooch/)  ·  [download
 iLooch from the App
-Store](http://itunes.apple.com/us/app/ilooch/id379528794?mt=8)
+Store](https://itunes.apple.com/us/app/ilooch/id379528794?mt=8)
 
 **iMonkeypants**  
 by Ryan Carter
@@ -44,6 +44,6 @@ listener-interactive electronica in the form of an iPhone app. The music
 responds in real time to the position of the device, giving the listener
 control over certain aspects of the sound while it plays.
 
-[more info](http://www.ryancarter.org/imonkeypants.html)  ·  [download
+[more info](https://www.ryancarter.org/imonkeypants.html)  ·  [download
 iMonkeypants from the App
-Store](http://itunes.apple.com/us/app/imonkeypants/id547532522?mt=8)
+Store](https://itunes.apple.com/us/app/imonkeypants/id547532522?mt=8)

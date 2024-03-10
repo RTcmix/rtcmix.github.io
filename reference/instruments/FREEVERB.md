@@ -43,7 +43,7 @@ Parameters labled as Dynamic can receive dynamic updates from a table or real-ti
 
    Author: John Gibson, 2 Feb 2001; rev for v4, 7/11/04
    This reverb instrument is based on Freeverb, by Jezar
-   (http://www.dreampoint.co.uk/~jzracc/freeverb.htm).
+   (https://www.dreampoint.co.uk/~jzracc/freeverb.htm).
 
   
 
@@ -52,7 +52,7 @@ Parameters labled as Dynamic can receive dynamic updates from a table or real-ti
   
 **FREEVERB** uses a simple but well-done implementation of the standard
 Schroeder/Moorer reverb model. It is based on the
-[Freeverb](http://www.dreampoint.co.uk/~jzracc/freeverb.htm) code, put
+[Freeverb](https://www.dreampoint.co.uk/~jzracc/freeverb.htm) code, put
 nicely in the public domain by "Jezar". The reverb sounds pretty good,
 probably because Jezar "spent a long while doing listening tests in
 order to create the values \[used\]." We're glad he did\!

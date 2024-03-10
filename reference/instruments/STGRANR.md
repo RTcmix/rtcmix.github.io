@@ -55,7 +55,7 @@ input soundfile or real-time sound source. It's a fairly powerful
 instrument, with lots of snazzy gen-envelope controls to produce
 evolving granular textures. To best understand the concepts behind the
 design of this instrument, see Mara Helmth's
-[papers](http://ccm.uc.edu/music/cmt/events/computermusic/software) on
+[papers](https://ccm.uc.edu/music/cmt/events/computermusic/software) on
 the use of these techniques.
 
 It was originally adapted from the older *stgran* Cmix instrument, also

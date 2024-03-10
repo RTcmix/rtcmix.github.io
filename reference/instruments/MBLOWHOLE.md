@@ -48,7 +48,7 @@ Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 **MBLOWHOLE** is the "BlowHole" physical model in Perry Cook and Gary
-Scavone's [STK](http://www.cs.princeton.edu/~prc/NewWork.php#STK) , the
+Scavone's [STK](https://www.cs.princeton.edu/~prc/NewWork.php#STK) , the
 Synthesis ToolKit.
 
 ### Usage Notes

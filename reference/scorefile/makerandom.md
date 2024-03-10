@@ -67,14 +67,14 @@ pfield-handles.
       
     *"gaussian"* &mdash; randomly select numbers between *min* and *max*, but
     with the probability of choosing a value determined using a
-    [Gaussian](http://mathworld.wolfram.com/NormalDistribution.html)
+    [Gaussian](https://mathworld.wolfram.com/NormalDistribution.html)
     ("normal"; "bell curve") probability distribution with the apex at
     the midpoint between the *min* and *max* values. Similar to how the
     *"triangle"* specifier operates.  
       
     *"cauchy"* &mdash; randomly select numbers between *min* and *max*, but
     with the probability of choosing a value determined using a
-    [Cauchy](http://www.itl.nist.gov/div898/handbook/eda/section3/eda3663.htm)
+    [Cauchy](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3663.htm)
     function with the apex at the midpoint between the *min* and *max*
     values. Similar to how the *"triangle"* and *"gaussian"* specifiers
     operate.  

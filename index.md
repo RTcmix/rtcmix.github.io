@@ -6,10 +6,10 @@ layout: ref
 # Introduction to RTcmix
 
 ## What is RTcmix?
-**RTcmix** is a real-time software system for synthesizing and processing digital audio. It has two main parts: a front-end parsing system which reads ASCII scripts or “scores“ written using the [Minc language](reference/scorefile/Minc.html), and a powerful back-end audio rendering engine which performs the event scheduling, audio I/O, sound synthesis and processing. It is written in C/C++ and is distributed open-source, free of charge. In certain respects, it is similar in function to other extant unit-generator-based software packages such as [CSOUND](http://www.csounds.com/),
-[SuperCollider](http://supercollider.sourceforge.net/) and (to a lesser
-extent) [JSyn](http://www.softsynth.com/jsyn/) and
-[Max/MSP](http://www.cycling74.com/products/max) -- they do
+**RTcmix** is a real-time software system for synthesizing and processing digital audio. It has two main parts: a front-end parsing system which reads ASCII scripts or “scores“ written using the [Minc language](reference/scorefile/Minc.html), and a powerful back-end audio rendering engine which performs the event scheduling, audio I/O, sound synthesis and processing. It is written in C/C++ and is distributed open-source, free of charge. In certain respects, it is similar in function to other extant unit-generator-based software packages such as [CSOUND](https://www.csounds.com/),
+[SuperCollider](https://supercollider.sourceforge.net/) and (to a lesser
+extent) [JSyn](https://www.softsynth.com/jsyn/) and
+[Max/MSP](https://www.cycling74.com/products/max) -- they do
 share a common heritage, after all. There are differences, however,
 between all these packages... and *variety is* of course *the spice of
 life\!*
@@ -74,11 +74,11 @@ RTcmix currently includes the following components:
     processes or machines
   - the physical model and PhISEM routines from Perry Cook and Gary
     Scavone's [Synthesis ToolKit
-    (STK)](http://www-ccrma.stanford.edu/software/stk/) as well as
+    (STK)](https://ccrma.stanford.edu/software/stk/) as well as
     affiliated RTcmix instruments using the stk routines
   - the ability to read/write most contemporary soundfile formats by via
     Bill Schottstaedt's
-    [sndlib](http://www-ccrma.stanford.edu/software/snd/snd/sndlib.html)
+    [sndlib](https://ccrma.stanford.edu/software/snd/snd/sndlib.html)
   - a package of examples showing RTcmix use with MIDI, X11/Motif,
     wxWindows, Lisp, Open Sound Control (OSC), OpenGL, etc.
   - a set of command-line utility programs for playing and manipulating
@@ -90,31 +90,31 @@ RTcmix currently includes the following components:
 
 RTcmix is derived from the original CMIX software, developed at
 Princeton University by [Paul
-Lansky](http://paul.mycpanel.princeton.edu/).
+Lansky](https://paul.mycpanel.princeton.edu/).
 
 ## Contributors
 
-[Brad Garton](http://bradgarton.com/)
+[Brad Garton](https://bradgarton.com/)
 
-[Dave Topper](http://www.davetopper.com/)
+[Dave Topper](https://www.davetopper.com/)
 
-[John Gibson](http://john-gibson.com/)
+[John Gibson](https://john-gibson.com/)
 
-[Doug Scott](http://music.columbia.edu/~doug)
+[Doug Scott](https://music.columbia.edu/~doug)
 
-[Mara Helmuth](http://www.marahelmuth.com/)
+[Mara Helmuth](https://www.marahelmuth.com/)
 
-[Luke DuBois](http://www.lukedubois.com/)
+[Luke DuBois](https://www.lukedubois.com/)
 
-[Chris Bailey](http://music.columbia.edu/~chris)
+[Chris Bailey](https://music.columbia.edu/~chris)
 
-[Stanko Juzbasic](http://music.columbia.edu/~stanko)
+[Stanko Juzbasic](https://music.columbia.edu/~stanko)
 
-[Ico Bukvic](http://ico.bukvic.net/)
+[Ico Bukvic](https://ico.bukvic.net/)
 
-[Joel Matthys](http://joel.matthysmusic.com/)
+[Joel Matthys](https://joel.matthysmusic.com/)
 
-[Damon Holzborn](http://damonholzborn.com/)
+[Damon Holzborn](https://damonholzborn.com/)
 
 ---
 

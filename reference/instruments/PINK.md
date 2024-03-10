@@ -43,7 +43,7 @@ Author: Neil Thornock (neilthornock at gmail), 11/12/16
 Algorithm by Andrew Simper (vellocet.com/dsp/noise/VRand.html), who
 credits these people, mainly from the music-dsp mailing list: Allan
 Herriman, James McCartney, Phil Burk and Paul Kellet, and the [web page
-by Robin Whittle](http://www.firstpr.com.au/dsp/pink-noise).
+by Robin Whittle](https://www.firstpr.com.au/dsp/pink-noise).
 
 ### Usage Notes
 

@@ -264,7 +264,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         output. The *audio\_device\_name* is a string referring to a
         particular device. For a discussion of device names used, see
         the [ALSA
-        Project](http://www.alsa-project.org/alsa-doc/doc-php/asoundrc.php?module=Generic)
+        Project](https://www.alsa-project.org/alsa-doc/doc-php/asoundrc.php?module=Generic)
         device name page. See also the discussion of input sources for
         the [rtinput](rtinput.html#item_input_source) command.
         
@@ -283,7 +283,7 @@ effects how [rtsetparams](rtsetparams.html) sets up the RTcmix process.
         These set the MIDI devices to use for MIDI input
         (*midi\_indevice*) and output (*midi\_outdevice*). As with the
         audio device, see the [ALSA
-        Project](http://www.alsa-project.org/alsa-doc/doc-php/asoundrc.php?module=Generic)
+        Project](https://www.alsa-project.org/alsa-doc/doc-php/asoundrc.php?module=Generic)
         device name page for a discussion of how the MIDI devices used
         are named.
         

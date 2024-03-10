@@ -184,7 +184,7 @@ by Thomas Campion* and his *Idle Chatter* pieces.
 
 To use **LPCPLAY**, you first need to create an LPC analysis. The best
 program for doing this is Doug Scott's
-[MiXViews](http://music.columbia.edu/~doug/MixViews/MiXViews.html) app.
+[MiXViews](https://music.columbia.edu/~doug/MixViews/MiXViews.html) app.
 MiXViews extracts the filter (formant) information and does a pitch
 analysis on your source (or model) file. The resulting file (using the
 ancient term "dataset") is then read by the **LPCPLAY** instrument and

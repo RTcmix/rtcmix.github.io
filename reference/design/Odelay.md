@@ -29,7 +29,7 @@ cycle.
 
 The second way of using the **Odelay/Odelayi** objects is based on
 approach used in the [Synthesis ToolKit
-(STK)](http://www.cs.princeton.edu/~prc/NewWork.php#STK) delay line
+(STK)](https://www.cs.princeton.edu/~prc/NewWork.php#STK) delay line
 implementation (DLineL). Samples are placed into and retrieved from the
 delay line simultaneously, with the length of the delay determined by a
 separate function call. It is prabably best not to mix the two different

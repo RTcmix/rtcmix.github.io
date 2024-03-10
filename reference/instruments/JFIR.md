@@ -50,7 +50,7 @@ Filter design code adapted from Bill Schottstaedt's Snd.
 **JFIR** creates an FIR filter based on a frequency response curve in a
 table referenced by p8 ("FREQTABLE"). The filter design code adapted
 from Bill Schottstaedt's
-[Snd](http://www-ccrma.stanford.edu/software/snd/) soundfile editor.
+[Snd](https://ccrma.stanford.edu/software/snd/) soundfile editor.
 
 ### Usage Notes
 

@@ -8,7 +8,7 @@ layout: ref
 *INSTRUMENT design -- DC-blocking filter object*  
   
 Based in a design from Perry Cook and Gary Scavone's [Synthesis ToolKit
-(STK)](http://www.cs.princeton.edu/~prc/NewWork.php#STK), the
+(STK)](https://www.cs.princeton.edu/~prc/NewWork.php#STK), the
 **Odcblock** object is a simple one-pole/one-zero filter set to remove a
 DC (0 Hz) offset component in the output signal. The recursive filter
 equation used for this object is:

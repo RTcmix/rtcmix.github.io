@@ -57,7 +57,7 @@ Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 **MBANDEDWG** is the "BandedWG" physical model in Perry Cook and Gary
-Scavone's [STK](http://www.cs.princeton.edu/~prc/NewWork.php#STK), the
+Scavone's [STK](https://www.cs.princeton.edu/~prc/NewWork.php#STK), the
 Synthesis ToolKit.
 
 ### Usage Notes

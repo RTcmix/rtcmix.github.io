@@ -44,7 +44,7 @@ Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 **MSITAR** the "Sitar" physical model in Perry Cook and Gary Scavone's
-[STK](http://www.cs.princeton.edu/~prc/NewWork.php#STK), the Synthesis
+[STK](https://www.cs.princeton.edu/~prc/NewWork.php#STK), the Synthesis
 ToolKit.
 
 ### Usage Notes

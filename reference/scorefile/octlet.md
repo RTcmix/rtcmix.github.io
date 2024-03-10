@@ -31,7 +31,7 @@ In text-string note letter representation, the note letter-name is given
 with a capital letter ("A", "B", "C", etc.) followed by an optional "\#"
 (sharp) or "b" (flat) modifier, and then an octave-specifier (octave "4"
 is middle C). See
-[pitch-reps](http://www.musiccog.ohio-state.edu/Humdrum/representations/pitch.rep.html)
+[pitch-reps](https://www.musiccog.ohio-state.edu/Humdrum/representations/pitch.rep.html)
 for more information about this method of represetation.
 
 If the pitch-specification is invalid or malformed, **octlet** will

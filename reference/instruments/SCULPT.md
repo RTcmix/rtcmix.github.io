@@ -50,8 +50,8 @@ As much fun as this instrument is, its functionality has largely been
 superceded by [WAVETABLE](WAVETABLE.html) and
 [MULTIWAVE](MULTIWAVE.html) using the pfield control mechanism. Stanko
 originally designed it so that output from analysis programs like
-IRCAM's [AudioSculpt](http://forumnet.ircam.fr/691.php?L=1) or Michael
-Klingbeil's [SPEAR](http://www.klingbeil.com/spear/) (which didn't even
+IRCAM's [AudioSculpt](https://forumnet.ircam.fr/691.php?L=1) or Michael
+Klingbeil's [SPEAR](https://www.klingbeil.com/spear/) (which didn't even
 exist when **SCULPT** was written).
 
 If you do use **SCULPT**, be sure not to normalize the values in the

@@ -8,12 +8,12 @@ layout: ref
 *INSTRUMENT design -- multi-purpose equalizer (filter) object*  
   
 The **Oequalizer** object uses a [biquad
-filter](http://peabody.sapp.org/class/350.838/lab/mybiquad/) algorithm
+filter](https://peabody.sapp.org/class/350.838/lab/mybiquad/) algorithm
 to instantiate a number of different filter types (low-pass, high-pass,
 band-pass, etc.). The code was based on work done by [Tom St.
-Denis](http://tomstdenis.home.dhs.org/), using formulas for the filter
+Denis](https://tomstdenis.home.dhs.org/), using formulas for the filter
 coeeficients from Robert Bristow-Johnson's on-line document [The
-Audio-EQ-Cookbook](http://www.musicdsp.org/files/Audio-EQ-Cookbook.txt).
+Audio-EQ-Cookbook](https://www.musicdsp.org/files/Audio-EQ-Cookbook.txt).
 
 The older functions [reson](reson.html) and [resonz](resonz.html) do
 similar signal-processing actions, but using different and somewhat less

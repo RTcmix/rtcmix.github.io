@@ -18,7 +18,7 @@ binvals = **pvgetbin**(*frame\_number*)
 ### Description
 
 **pvgetbin** will retrieve a list (array) containing alternating amplitude and frequency values for all bins in a specific frame in a **PVOC** analysis file, as created by the
-[MiXViews](http://music.columbia.edu/~doug/MixViews/MiXViews.html)
+[MiXViews](https://music.columbia.edu/~doug/MixViews/MiXViews.html)
 program.  There will be as many frequency values as there are points in the **PVOC** analysis.
 
 -----

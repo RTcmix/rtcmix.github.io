@@ -95,7 +95,7 @@ We then add a single line to our Start() ethod that will send a very
 simple (one line!) script to RTcmix:
 
 *\[note: we are assuming at least a basic grasp of the RTcmix language.
-See the [rtcmix.org](http://rtcmix.org) web site for tutorials and
+See the [rtcmix.org](https://rtcmix.org) web site for tutorials and
 information about RTcmix.\]*
 
 This sends the String (the score) in the double-quotes to RTcmix for
@@ -317,17 +317,17 @@ in RTcmix will occur.
 ## *links*
 
 [Sound: Advanced Topics I (Fall
-2019)](http://sites.music.columbia.edu/cmc/courses/g6610/fall2019/syl.html)  
+2019)](https://sites.music.columbia.edu/cmc/courses/g6610/fall2019/syl.html)  
 Each week of this syllabus links to class projects and resources showing
 various uses of Unity and RTcmix.  
   
 
 [Sound: Advanced Topics I (Fall
-2017)](http://sites.music.columbia.edu/cmc/courses/g6610/fall2017/syl.html)  
+2017)](https://sites.music.columbia.edu/cmc/courses/g6610/fall2017/syl.html)  
 An older version of the previous link, with somewhat simpler projects.
 These use an older version of uRTcmix, but the projects should still run
 and the general demonstrations might be useful.  
   
 
-[RTcmix.org](http://rtcmix.org)  
+[RTcmix.org](https://rtcmix.org)  
 The main RTcmix page. Tutorials, code, useful information.

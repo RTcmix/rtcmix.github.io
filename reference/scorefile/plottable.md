@@ -24,9 +24,9 @@ Parameters inside the \[brackets\] are optional.
 **plottable** is a useful utility that will create a graphics plot of a
 table associated with a particular table-handle. The plot appears in a
 separate window, and uses the public-domain
-[gnuplot](http://gnuplot.sourceforge.net/) program. MacOS users
+[gnuplot](https://gnuplot.sourceforge.net/) program. MacOS users
 will also need to have the public-domain
-[aquaterm](http://sourceforge.net/projects/aquaterm/) package installed
+[aquaterm](https://sourceforge.net/projects/aquaterm/) package installed
 for *gnuplot* to run correctly.
 
 -----
@@ -46,7 +46,7 @@ for *gnuplot* to run correctly.
       
     These optional string arguments are plotting commands that *gnuplot*
     may use to modify the generated graph. See the [gnuplot
-    documentation](http://gnuplot.sourceforge.net/documentation.html)
+    documentation](https://gnuplot.sourceforge.net/documentation.html)
     for more information about these commands. The default is *"with
     lines"*.
     

@@ -10,7 +10,7 @@ layout: ref
 The **Oonepole** object instantiates a simple one-pole IIR filter, based
 on designs found in *<u>Computer Music: Synthesis, Composition, and
 Performance</u> by Charles Dodge and Thomas Jerse and the [Synthesis
-ToolKit (STK)](http://www.cs.princeton.edu/~prc/NewWork.php#STK)
+ToolKit (STK)](https://www.cs.princeton.edu/~prc/NewWork.php#STK)
 authored by Perry Cook and Gary Scavone. The general recursive filter
 equation used for this object is:*
 

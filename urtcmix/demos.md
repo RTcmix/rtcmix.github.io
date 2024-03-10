@@ -47,11 +47,11 @@ audio.
 ***class demos***  
   
 Most all of these come from the 2017 [Sound: Advanced Topics
-II](http://sites.music.columbia.edu/cmc/courses/g6611/spring2017/)
+II](https://sites.music.columbia.edu/cmc/courses/g6611/spring2017/)
 graduate seminar at Columbia University (hence the "class\*" name on
 many of them). The projects listed below have been updated to reflect
 the current uRTcmix package, but the original
-[syllabus/week-listing](http://sites.music.columbia.edu/cmc/courses/g6611/spring2017/syl.html)
+[syllabus/week-listing](https://sites.music.columbia.edu/cmc/courses/g6611/spring2017/syl.html)
 for the class contains the work-ups done to produce the final projects.
 Although they use an older version of uRTcmix, they may be
 instructive.  
@@ -155,8 +155,8 @@ advanced uses.
   
 In addition to these examples, the work done in the 2019 [Sound:
 Advanced Topics
-I](http://sites.music.columbia.edu/cmc/courses/g6610/fall2019/) graduate
+I](https://sites.music.columbia.edu/cmc/courses/g6610/fall2019/) graduate
 seminar should be helpful. Check the weekly links on the [course
-syllabus](http://sites.music.columbia.edu/cmc/courses/g6610/fall2019/syl.html)
+syllabus](https://sites.music.columbia.edu/cmc/courses/g6610/fall2019/syl.html)
 for examples of developing a virtual environment with various uRTcmix
 features.

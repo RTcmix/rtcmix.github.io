@@ -48,7 +48,7 @@ Author:  Brad Garton, based on code from the Synthesis ToolKit
   
 **MSHAKERS** is the "Shakers" PhISEM and PhOLIES physical model in Perry
 Cook and Gary Scavone's
-[STK](http://www.cs.princeton.edu/~prc/NewWork.php#STK), the Synthesis
+[STK](https://www.cs.princeton.edu/~prc/NewWork.php#STK), the Synthesis
 ToolKit. <span id="usage_notes"></span>
 
 ### Usage Notes

@@ -44,7 +44,7 @@ Parameters labled as Dynamic can receive dynamic updates from a table or real-ti
 
 Author: John Gibson, 7 Dec 2003; rev for v4, 7/23/04
 Based on formulas by Robert Bristow-Johnson ("Audio-EQ-Cookbook") and code
-by Tom St Denis (see [musicdsp.org](http://musicdsp.org))
+by Tom St Denis (see [musicdsp.org](https://musicdsp.org))
 
   
 

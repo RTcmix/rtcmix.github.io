@@ -18,7 +18,7 @@ pchvals = **pvgetframefreqs**(*frame\_number*)
 ### Description
 
 **pvgetframefreqs** will retrieve a list (array) of frequency (hertz) values for a specific frame in a **PVOC** analysis file, as created by the
-[MiXViews](http://music.columbia.edu/~doug/MixViews/MiXViews.html)
+[MiXViews](https://music.columbia.edu/~doug/MixViews/MiXViews.html)
 program.  There will be half as many frequency values as there are points in the **PVOC** analysis.
 
 -----

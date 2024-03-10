@@ -46,7 +46,7 @@ based on several reverberators from the STK package (by Perry Cook, Gary Scavone
 
   
 **REV** processes input audio through a choice of three different reverb
-types (all from [CCRMA](http://www-ccrma.stanford.edu/) st Stanford
+types (all from [CCRMA](https://ccrma.stanford.edu/) st Stanford
 University). <span id="usage_notes"></span>
 
 ### Usage Notes

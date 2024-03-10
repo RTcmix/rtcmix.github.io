@@ -46,7 +46,7 @@ Author:  Brad Garton, based on code from the Synthesis ToolKit
 
   
 **MCLAR** is the "Clarinet" physical model in Perry Cook and Gary
-Scavone's [STK](http://www.cs.princeton.edu/~prc/NewWork.php#STK), the
+Scavone's [STK](https://www.cs.princeton.edu/~prc/NewWork.php#STK), the
 Synthesis ToolKit.
 
 ### Usage Notes
@@ -57,7 +57,7 @@ control parameters. Also check out [MBLOWHOLE](MBLOWHOLE.html) for a
 clarinet-like model with a tonehole and register vent included.
 
 It was originally adapted from Perry Cook and Gary Scavone's
-[STK](http://www.cs.princeton.edu/~prc/NewWork.php#STK), for doing
+[STK](https://www.cs.princeton.edu/~prc/NewWork.php#STK), for doing
 amazing physical model stuff.
 
 This is from the orginal STK source code for "Clarinet":

@@ -70,7 +70,7 @@ AudioListener receiving the sound (which means that p7/p8/p9 are usually
 set to 0.0). These relative coordinates can be ascertained using the
 *getMyTransform.cs* script as a component on the AudioListener (see
 [RTcmix/Unity
-demos](http://sites.music.columbia.edu/cmc/courses/g6610/fall2017/syl.html)
+demos](https://sites.music.columbia.edu/cmc/courses/g6610/fall2017/syl.html)
 for examples of this). This approach allows the instrument to take into
 account the 3-D rotation of the AudioListener as well as the location in
 3-space.

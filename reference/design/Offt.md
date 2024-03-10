@@ -15,15 +15,15 @@ functions to perform a forward- (real-to-complex) or backward-
 
 Using the **Offt** object requires a little basic knowledge of how the
 Fast Fourier Transform operates. Julius O. Smith has a [good math
-tutorial](http://ccrma.stanford.edu/~jos/mdft/Fast_Fourier_Transform_FFT.php#18450)
-about the FFT, and the [FFTW page](http://www.fftw.org/) is probably the
+tutorial](https://ccrma.stanford.edu/~jos/mdft/Fast_Fourier_Transform_FFT.php#18450)
+about the FFT, and the [FFTW page](https://www.fftw.org/) is probably the
 best source of FFT information currently on the web.
 
 The specific FFT code used by the **Offt** object depends upon how
 RTcmix was compiled. The default compilation uses older code written by
-Laurent de Soras (available at [musicdsp.org](http://musicdsp.org/) and
+Laurent de Soras (available at [musicdsp.org](https://musicdsp.org/) and
 other places). If RTcmix was compiled using the "--with-fftw" flag
-during configuration, then the [FFTW v. 3](http://www.fftw.org/) library
+during configuration, then the [FFTW v. 3](https://www.fftw.org/) library
 is used. *\[note: the FFTW library needs to be compiled with the
 "--enable-float" flag to work in this object.\]*
 

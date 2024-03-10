@@ -8,15 +8,15 @@ layout: ref
 RTcmix is a complete sound synthesis and signal processing language,
 including a robust scheduler and large set of pre-compiled
 "instruments". The rtcmix~ object completely encapsulates RTcmix within
-the [Max/MSP](http://cycling74.com/products/max/) and [Pure
-Data](http://puredata.info/) real-time music environments.
+the [Max/MSP](https://cycling74.com/products/max/) and [Pure
+Data](https://puredata.info/) real-time music environments.
 
 ## Installation Instructions for Max 7 and 8
 
 ### macOS
 
 1.  [Download
-    rtcmix~](http://rtcmix.org/rtcmix~/downloads/RTcmix-2.01.zip).
+    rtcmix~](https://rtcmix.org/rtcmix~/downloads/RTcmix-2.01.zip).
 2.  Unpack the archive.
 3.  Move the entire "RTcmix-2.01" folder intact to the directory
     "/Users/Sharer/Max 7/Library/" or "/Users/Sharer/Max 8/Library/"
@@ -29,12 +29,12 @@ get the Apple 'gatekeeper' message about the library/application not
 able to run because it isn't from a 'signed developer'. One of these
 days We'll wade through the impenetrable documentation about how to do
 this, but for now you can follow the instructions
-[here](http://rtcmix.org/rtcmix~/annoying.php) to get it going.*</span>
+[here](https://rtcmix.org/rtcmix~/annoying.php) to get it going.*</span>
 
 ### Windows 10
 
 1.  [Download
-    rtcmix~](http://rtcmix.org/rtcmix~/downloads/rtcmix~-for-windows-maxmsp.zip).
+    rtcmix~](https://rtcmix.org/rtcmix~/downloads/rtcmix~-for-windows-maxmsp.zip).
 2.  Unpack the archive.
 3.  Move the entire "rtcmix~-for-windows-maxmsp" folder intact to your
     "Documents\Max 7\Library\\ or your "Documents\Max 8\Library\\
@@ -58,7 +58,7 @@ archives](archives.html).
 ### macOS
 
 1.  [Download
-    rtcmix~](http://rtcmix.org/rtcmix~/downloads/rtcmix~-for-pd.zip).
+    rtcmix~](https://rtcmix.org/rtcmix~/downloads/rtcmix~-for-pd.zip).
 2.  Unpack the archive.
 3.  Inside the "rtcmix~-for-pd" folder is an "rtcmix~" folder. Copy/move
     that entire folder intact to your "Documents/pd/externals" folder.
@@ -70,7 +70,7 @@ get the Apple 'gatekeeper' message about the library/application not
 able to run because it isn't from a 'signed developer'. One of these
 days We'll wade through the impenetrable documentation about how to do
 this, but for now you can follow the instructions
-[here](http://rtcmix.org/rtcmix~/annoying.php) to get it going.*</span>
+[here](https://rtcmix.org/rtcmix~/annoying.php) to get it going.*</span>
 
 <span class="small">***Note on editing scorefiles on macOS:** At
 present, scorefile information is not stored with the pd patch when it
@@ -93,7 +93,7 @@ editor using the \[editor\] message does not function on OSX.*</span>
 ### Windows 10
 
 1.  [Download
-    rtcmix~](http://rtcmix.org/rtcmix~/downloads/rtcmix~-for-windows-maxmsp.zip).
+    rtcmix~](https://rtcmix.org/rtcmix~/downloads/rtcmix~-for-windows-maxmsp.zip).
 2.  Unpack the archive.
 3.  Move the entire "rtcmix~" folder intact to your
     "Documents\Pd\externals\\ folder.
@@ -161,7 +161,7 @@ crash.*</span>
   instruments are currently accessible in the rtcmix~ object, including
   a set of FFT/PVOC-based spectral manipulation tools, real-time Linear
   Prediction Coding (LPC) analysis/resynthesis, and most of the
-  [Synthesis ToolKit (STK)](http://www-ccrma.stanford.edu/software/stk/)
+  [Synthesis ToolKit (STK)](https://ccrma.stanford.edu/software/stk/)
   physical models created by Perry Cook and Gary Scavone.
 
 - In a similar fashion, the rtcmix~ object can schedule Max/MSP messages

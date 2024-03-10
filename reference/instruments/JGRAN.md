@@ -60,7 +60,7 @@ Bezkorowajny and Jean Piche.
 
   
 **JGRAN** was derived from a
-[Cecilia](http://sourceforge.net/projects/cecilia/) module
+[Cecilia](https://sourceforge.net/projects/cecilia/) module
 (StochasticGrains) by Mathieu Bezkorowajny and Jean Piche. See also Mara
 Helmuth's [SGRANR](SGRANR.html) or [STGRANR](STGRANR.html) for more
 control over randomness.

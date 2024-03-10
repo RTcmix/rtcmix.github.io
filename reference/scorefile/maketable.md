@@ -602,7 +602,7 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     
     *4 / "gaussian"* &mdash; randomly select numbers between *min* and *max*,
     but with the probability of choosing a value determined using a
-    [Gaussian](http://mathworld.wolfram.com/NormalDistribution.html)
+    [Gaussian](https://mathworld.wolfram.com/NormalDistribution.html)
     ('normal'; 'bell curve') probability distribution with the apex at
     the midpoint between the *min* and *max* values. Similar to how the
     *"triangle"* specifier operates.  
@@ -610,7 +610,7 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     
     *5 / "cauchy"* &mdash; randomly select numbers between *min* and *max*, but
     with the probability of choosing a value determined using a
-    [Cauchy](http://www.itl.nist.gov/div898/handbook/eda/section3/eda3663.htm)
+    [Cauchy](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3663.htm)
     function with the apex at the midpoint between the *min* and *max*
     values. Similar to how the *"triangle"* and *"gaussian"* specifiers
     operate.  
@@ -643,7 +643,7 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
   - <span id="window" class="internallink">*window*</span>  
       
     Fill a table using a
-    [window](http://en.wikipedia.org/wiki/Window_function/) function
+    [window](https://en.wikipedia.org/wiki/Window_function/) function
     curve. The syntax is:
 
     ```
@@ -656,11 +656,11 @@ of [makegen](old/makegen.html) constructs was dropped several years ago.
     function to use:
     
     *1 / "hanning"* &mdash; this will build a
-        [hanning](http://www.mathworks.com/access/helpdesk/help/toolbox/signal/hann.html)
+        [hanning](https://www.mathworks.com/access/helpdesk/help/toolbox/signal/hann.html)
         window function in the table.  
           
     *2 / "hamming"* &mdash; this will build a
-        [hamming](http://www.mathworks.com/access/helpdesk/help/toolbox/signal/hamming.html)
+        [hamming](https://www.mathworks.com/access/helpdesk/help/toolbox/signal/hamming.html)
         window function in the table.
     
     Either the numeric specifier or the string specifier may be used.

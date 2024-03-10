@@ -40,14 +40,14 @@ Perl and shell-script front-ends to RTcmix.
   - *table\_handle1*  
       
     The table-handle identifier for the first table (the
-    [dividends](http://www.math.com/school/glossary/defs/dividend.html)
+    [dividends](https://www.math.com/school/glossary/defs/dividend.html)
     to be used).
 
   - *table\_handle2*  
       
     The table-handle identifier for the second table to be divided into
     the first (the
-    [divisors](http://www.math.com/school/glossary/defs/divisor.html)),
+    [divisors](https://www.math.com/school/glossary/defs/divisor.html)),
     or
 
   - *constant*  

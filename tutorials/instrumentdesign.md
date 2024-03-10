@@ -633,7 +633,7 @@ Compiling this code will give you a versatile and powerful SIMPLEOSC,
 indeed. How versatile and powerful? Theoretically, armed with a sine
 wave and the amplitude controls in the modified SIMPLEOSC, you should be
 able to recreate [any sound
-imaginable\!](http://www.sosmath.com/fourier/fourier1/fourier1.html). Of
+imaginable\!](https://www.sosmath.com/fourier/fourier1/fourier1.html). Of
 course, theory and practice are two different things...
 
 Seriously, you can create some wonderful sounds using SIMPLEOSC. Used
