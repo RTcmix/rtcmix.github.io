@@ -45,7 +45,7 @@ run in interactive mode
 -       -n  
 no init script (interactive mode only)
 -       -o  
-interactive mode with [Open Sound System (OSC)](https://opensoundcontrol.stanford.edu) (if compiled in)
+interactive mode with [Open Sound Control (OSC)](https://opensoundcontrol.stanford.edu) (if compiled in)
 -       -S NUM  
 socket offset (interactive legacy socket mode only)
 -       -D DEV  
