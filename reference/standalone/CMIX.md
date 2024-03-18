@@ -7,8 +7,8 @@ layout: ref
 
 *INTERFACE -- the main commands used to invoke RTcmix*
 
-These commands are used to start and run RTcmix from the command-line;
-i.e. typed into a terminal. **CMIX** is the default command, it employs
+These commands are used to start and run RTcmix from the command-line,
+i.e. typed into a terminal. **CMIX** is the default command; it employs
 the included [Minc](../scorefile/Minc.html) parsing language to
 interpret scorefiles. **CMIX** can also be run interactively with
 scorefile commands typed directly into a terminal window running the
@@ -38,20 +38,28 @@ or:
 or, to use Python:
     PYCMIX [options] [arguments] < python_script.py
 
-    options:
+    Universal Options (CMIX, PCMIX, and PYCMIX)
        -i       run in interactive mode
        -n       no init script (interactive mode only)
-       -o NUM   socket offset (interactive mode only)
-       -c       enable continuous control (rtupdates)
-      NOTE: -s, -d, and -e are not yet implemented
-       -s NUM   start time (seconds)
-       -d NUM   duration (seconds)
-       -e NUM   end time (seconds)
-       -f NAME  read score from NAME instead of stdin
-                  (Minc and Python only)
-       --debug  enter parser debugger (Perl only)
-       -q       quiet -- suppress print to screen
+       -o		interactive mode with [Open Sound System (OSC)](https://opensoundcontrol.stanford.edu) (if compiled in)
+       -S NUM   socket offset (interactive legacy socket mode only)
+       -D DEV   use audio device DEV for playback
+       -r IPR   use remote IP address IPR for NetAudio (if compiled in)
+       -k NUM   use socket number NUM for NetAudio (if compiled in)
+       -s NUM   skip (start offset) time (seconds). Time offset before beginning playback (see [rtoffset](../scorefile/rtoffset.html))
+       -f NAME  read score from NAME instead of stdin (Minc and Python only)
+       -v NUM   set verbosity (print level) to NUM.  Range is currently 0-5
+       -q       quiet -- suppress print to screen.  Equivalent to -v 0
        -Q       really quiet -- not even clipping or peak stats
-       -h       this help blurb
+       -h       this help message
+    
+    CMIX-specific Options
+       --VARNAME=VALUE, --VARNAME2=VALUE2, ...
+                for any argument of this type, create a score variable named $VARNAME, $VARNAME2, etc., with
+                the associated value.  See [Command-line named arguments](../scorefile/Minc.html#command-line-named-args)
+    
+    PCMIX-specific Options
+           --debug  enter parser debugger
+    
     Other options, and arguments, passed on to parser.
 ```
