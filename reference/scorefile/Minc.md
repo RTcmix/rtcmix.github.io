@@ -197,7 +197,7 @@ for (i = 0; i < 10; i += 1) {
 ```
 For more information, see [More About Arrays](#more-about-arrays) below.
 
-#### <a name="struct"></a>handle
+#### <a name="handle"></a>handle
 
 **handles** are a type used to store references to special objects returned from other **Minc** functions such as maketable() and makeinstrument(). Quite often variables of this type will be handed to Instrument calls to set up dynamic p-fields.
 Handles to RTcmix tables have the extremely powerful ability to be combined with each other and with other arithmetic operators to create new tables which can then be accessed using functions like samptable():
@@ -240,7 +240,7 @@ struct MyData instrumentData;
 // You can auto-initialize a variable by assigning to it from the struct's built-in *constructor* function:
 initializedInstrumentData = MyData("Loud Instrument", 1, {});
 ```
-NOTE: The struct constructor is a new feature as of version 5.4.0.  Currently, you must provide arguments for all members in the struct - there are no default values.
+NOTE: The struct constructor is a new feature as of version 5.4.0.  The arguments to the constructor are the initial values for all members in the struct, in order that they are declared.  If there are fewer arguments than members, the remaining members will be set to 0 or NULL.
 
 If you chose the first option, you can assign to the struct variable's members using the "dot" syntax:
 
@@ -382,7 +382,24 @@ The purpose of the explicit declarations will be discussed later.
 	l.append("hello")
 	print(l)
 		[999, "hello"]
-```
+	```
+- Similarly, there is a 'remove' method which will allow an element to be deleted from an an array, decreasing its length:
+
+	```cpp
+	l = {11, 12, 13, 14}
+	l.remove(13)
+	print(l)
+		[11, 12, 14]
+	```
+- Also, there is an 'insert' method which will allow an element to be add into an array, increasing its length:
+
+	```cpp
+	l = {11, 12, 13, 14}
+	l.insert("poof!", atIndex=2);		// Local variables like 'atIndex' to help remember argument order
+	print(l)
+		[11, 12, "poof", 13, 14]
+	```
+
 
 - All the elements of an array can be modified via operators +, -, *, /, %, and ^ followed a float variable:
 
@@ -424,7 +441,7 @@ The purpose of the explicit declarations will be discussed later.
 	```cpp
 	autoStructData.name = "something" // cannot auto-declare 'autoStructData'!!
 	```
-
+   	
 - Struct variables may be used as arguments and return types for custom functions. This is a very convenient way to get lots of different variables into [custom function calls](#minc-functions) without having to create long lists of arguments. 
 
 	```cpp
@@ -476,8 +493,8 @@ The purpose of the explicit declarations will be discussed later.
     
       - The argument types can be any type supported by **Minc**
       - A function can have any number of arguments, including none.
-      - *A function must return a value of one type or another.* Use a dummy '0'
-        if nothing else (and have the function returns a float).
+      - *A function must return a value of one type or another.* Return a dummy '0'
+        if nothing else (and have the function returns a float type).
       - The type of the variable returned must match the return
 		type of the function.
       - Use the 'return' keyword to mark the place where the value
@@ -663,7 +680,7 @@ print(type(myList))
 
 The [index](index.html) command is also very useful with **Minc** arrays., and reports the particular index in the array which holds an item.
 
-```cpp`
+```cpp
 foo = "foo";
 bar = "bar"
 afloat = 1.2345;
@@ -679,6 +696,22 @@ print(idx)
 ```
 
 [index](index.html) returns -1 if the specified item is not found.
+
+#### contains()
+
+The contains command returns 1 if the specified item is being stored in the given container.  This also works for searching for substrings.
+
+```cpp
+mylist = { 1, 2, "hello" };
+print(contains(mylist, "hello"));
+	1
+print(contains(mylist, "world"));
+	0
+	
+mystring = "hello, world!";
+print(contains(mystring, "world"));
+	1
+```
 
 #### printf()
 
@@ -764,6 +797,28 @@ print(myCounter.increment())
 	102
 	103
 
+```
+
+If you define a method in your struct named "_init", this function will be called automatically after you create an instance of your struct using the constructor function (see above).  This allows you to do any other setup work you want to do in your struct before you use it:
+
+```cpp
+struct MyStruct {
+	float fMember,
+	string sMember,
+	list listMember,
+	method float _init() {		// must return float and take no arguments
+		for (n = 0; n < this.fMember; ++n) {
+			this.listMember[n] = n;
+		}
+		return 0;
+	}
+}
+// Create using the built-in constructor
+ms = MyStruct(5, "a string", {});		// this will call _init() internally
+   	
+// Note that the list has been initialized
+print(ms);
+	{ 5, "a string", [0, 1, 2, 3, 4] }
 ```
 
 ### Built-in Methods
