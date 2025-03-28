@@ -19,22 +19,22 @@ layout: ref
   - John Gibson's [Computer Music Seminar RTcmix
     Tutorial](https://cecm.indiana.edu/rtcmix/rtcmixtut.html)
   - Brad Gartons's Spring 2012 [Graduate Computer Music
-    Class](https://music.columbia.edu/cmc/courses/g6611/spring2012/syl.html)
+    Class](http://sites.music.columbia.edu/cmc/courses/g6611/spring2012/syl.html)
       - [Instrument Design:
-        Part 1](https://music.columbia.edu/cmc/courses/g6611/spring2012/week3/index.html)
+        Part 1](http://sites.music.columbia.edu/cmc/courses/g6611/spring2012/week3/index.html)
       - [Instrument Design:
-        Part 2](https://music.columbia.edu/cmc/courses/g6611/spring2012/week4/index.html)
+        Part 2](http://sites.music.columbia.edu/cmc/courses/g6611/spring2012/week4/index.html)
       - [Instrument Design:
-        Part 3](https://music.columbia.edu/cmc/courses/g6611/spring2012/week5/index.html)
+        Part 3](http://sites.music.columbia.edu/cmc/courses/g6611/spring2012/week5/index.html)
       - [Instrument Design:
-        Part 4](https://music.columbia.edu/cmc/courses/g6611/spring2012/week6/index.html)
+        Part 4](http://sites.music.columbia.edu/cmc/courses/g6611/spring2012/week6/index.html)
   - Brad Gartons's Spring 2003 [Graduate Computer Music
-    Class](https://music.columbia.edu/cmc/courses/g6611/spring2003/syl.html)
+    Class](http://sites.music.columbia.edu/cmc/courses/g6611/spring2003/syl.html)
     (good instrument tutorial, week2-3, interface tutorial week4-5)
   - Brad Gartons's Fall 2000 [Graduate Computer Music
-    Class](https://music.columbia.edu/cmc/courses/g6610/brad/syl.html)
+    Class](http://sites.music.columbia.edu/cmc/courses/g6610/fall2000/syl.html)
   - Brad Gartons's Fall 1999 [Graduate Computer Music
-    Class](https://music.columbia.edu/cmc/courses/g6610/brad/fall1999/syl.html)
+    Class](http://sites.music.columbia.edu/cmc/courses/g6610/fall1999/syl.html)
 
 ## More Resources
 
