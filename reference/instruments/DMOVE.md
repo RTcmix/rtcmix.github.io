@@ -76,7 +76,7 @@ p1 | input start time | seconds | no | no |
 p2 | duration (or endtime if negative) | seconds | no | no | 
 p3 | amplitude multiplier | relative multiplier of input signal | yes | no | 
 
-   NOTE: this associated instrument is required for MPLACE to function
+   NOTE: this associated instrument is required for DMOVE to function
 
   
 <span id="space"></span> **space**  
@@ -91,7 +91,7 @@ p4 | distance to ceiling of room | feet | no | no |
 p5 | wall absorption factor | 0-10 | no | no | 0 == more 'dead', 10 == more 'live'
 p6 | reverberation time | seconds | no | no | 0 - ~5 work best
 
-   NOTE: this subcommand is required for MPLACE to function
+   NOTE: this subcommand is required for DMOVE to function
 
   
 <span id="threshold"></span>**threshold**  
@@ -110,14 +110,14 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | microphone angle | degrees, 0 degrees is straight in front | no | no | 
 p1 | microphone pattern | 0-1 | no | no | 0 == omnidirectional, 1 == highly directional
 
-   NOTE: this subcommand is optional for MPLACE to function (the default is "mikes_off")
+   NOTE: this subcommand is optional for DMOVE to function (the default is "mikes_off")
 
   
 <span id="mikes_off"></span> **mikes\_off**  
 
 No pfields, this defeats the microphone angle and pattern settings for binaural simulation
 
-   NOTE: this subcommand is optional for MPLACE to function
+   NOTE: this subcommand is optional for DMOVE to function
 
   
 <span id="set_attenuation_params"></span> **set\_attenuation\_params**  
@@ -128,7 +128,7 @@ p0 | minimum distance | feet | no | no | default: 0
 p1 | maximum distance | feet | no | no | default: infinite
 p2 | distance attentuation exponent |  -  | no | no | default: 2
 
-   NOTE: this subcommand is optional for MPLACE to function
+   NOTE: this subcommand is optional for DMOVE to function
 
   
 <span id="matrix"></span> **matrix**  
@@ -138,7 +138,7 @@ Param Field	| Parameter | Units | Dynamic | Optional | Notes
 p0 | total matrix gain | relative multiplier of input signal | no | no | 
 p1-p145 | 12 x 12 matrix amp/feedback coefficients |  -  | no | yes | defaults to internal matrix | 
 
-   NOTE: this subcommand is optional for MPLACE to function
+   NOTE: this subcommand is optional for DMOVE to function
 
   
 
@@ -175,7 +175,7 @@ should probably be set, otherwise the data coming through the pfield
 will be normalized between 0.0 and 1.0 (or -1.0 and 1.0).
 
 The **RVB** subinstrument needs to be configured with the appropriate
-[bus\_config](../scorefile/bus_config.html) setup. **MPLACE/RVB**
+[bus\_config](../scorefile/bus_config.html) setup. **DMOVE/RVB**
 requires stereo output.
 
 ### Sample Scores

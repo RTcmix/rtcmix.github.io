@@ -265,7 +265,7 @@ independent of the [reset](../scorefile/reset.html) rate used for pfield
 updates.
 
 The **RVB** subinstrument needs to be configured with the appropriate
-[bus\_config](../scorefile/bus_config.html) setup. **MPLACE/RVB**
+[bus\_config](../scorefile/bus_config.html) setup. **MMOVE/RVB**
 requires stereo output.
 
 ### Sample Scores
