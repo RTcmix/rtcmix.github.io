@@ -17,7 +17,7 @@ Linear-predictive filter coding resynthesis.
 **LPCPLAY**(outsk, dur, AMP, PITCH, startframe, endframe\[, WARP,
 RESONCF, RESONBW\])  
   
-**LPCIN**(outsk, insk, dur, AMP, startframe, endframe\[, WARP, RESONCF,
+**LPCIN**(outsk, insk, dur, AMP, startframe, endframe\[, inchan, WARP, RESONCF,
 RESONBW\])  
   
 **dataset**(name \[, npoles\])  
@@ -83,9 +83,10 @@ p2 | duration | seconds | no | no |
 p3 | amplitude multiplier | relative multiplier of original signal | yes | no | 
 p4 | starting LPC frame |  -  | no | no | 
 p5 | ending LPC frame |  -  | no | no | 
-p6 | warp factor | -1.0 - 1.0 | yes | yes | default: 0 | 
-p7 | reson center frequency | Hz  | yes | yes | value of 0 bypasses filter | 
-p8 | reson bandwidth | multiple of center freq | yes | yes | used only if p7 is specified | 
+p6 | input channel |  -  | no | yes | audio channel from input file to read
+p7 | warp factor | -1.0 - 1.0 | yes | yes | default: 0 | 
+p8 | reson center frequency | Hz  | yes | yes | value of 0 bypasses filter | 
+p9 | reson bandwidth | multiple of center freq | yes | yes | used only if p8 is specified | 
   
 <span id="dataset"></span> **dataset**  
 
@@ -239,7 +240,8 @@ bit from the signal.
 Care should be taken in the original analysis to fix unstable filter
 frames (or turn on **use\_autocorrect**) and edit the pitch tracking data for best results.
 
-NOTE: **LPCPLAY** is a mono-output instrument.
+NOTE: **LPCPLAY** and **LPCIN** are mono-output instruments.
+NOTE: For calls to **LPCIN**,  p[6] is the input channel to read, so the warp factor is in p[7], etc.
 
 ### Sample Scores
 
@@ -290,7 +292,7 @@ an LPCIN example:
    lpcstuff(0.09, 0.1)
    set_thresh(0.09, 0.1)
 
-   LPCIN(0, 0.0, 4.5, 1.0, 0.0, 1, 890)
+   LPCIN(0, 0.0, 4.5, 1.0, 0.0, 1, 890, inchan=0)
 ```
 
   
