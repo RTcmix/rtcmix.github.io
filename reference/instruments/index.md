@@ -148,6 +148,7 @@ These recieve audio from either an input file or an aux bus and send audio out v
 - [MOVE](MOVE.html) &mdash; high-quality room simulation program for moving sources
 - [MROOM](MROOM.html) &mdash; room simulation program for moving sources
 - [PLACE](PLACE.html) &mdash; high-quality room simulation program for stationary sources
+- [QMOVE](QMOVE.html) &mdash; high-quality 4-channel room simulation program for moving sources with dynamic control
 - [REV](REV.html) &mdash; three different reverberation algorithms
 - [REVERBIT](REVERBIT.html) &mdash; Schroeder reverb
 - [ROOM](ROOM.html) &mdash; delay line room-simulation model
@@ -282,6 +283,7 @@ These perform special actions and neither generate nor process audio.
 - [PINK](PINK.html)
 - [PLACE](PLACE.html)
 - [PVOC](PVOC.html)
+- [QMOVE](QMOVE.html)
 - [QPAN](QPAN.html)
 - [REV](REV.html)
 - [REVERBIT](REVERBIT.html)
