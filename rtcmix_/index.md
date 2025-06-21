@@ -15,12 +15,11 @@ Data](https://puredata.info/) real-time music environments.
 
 ### macOS
 
-1.  [Download
-    rtcmix~](https://rtcmix.org/rtcmix~/downloads/RTcmix-2.01.zip).
+1.  Download [rtcmix~ for x86_64](https://sites.music.columbia.edu/brad/osx-windows-new-RTcmixes/archives/RTcmix-2.03.zip) or [for arm64](https://sites.music.columbia.edu/brad/osx-windows-new-RTcmixes/archives/RTcmix-2.05.zip) depending on your machine type.
 2.  Unpack the archive.
-3.  Move the entire "RTcmix-2.01" folder intact to the directory
+3.  Move the entire "RTcmix-2.0x" folder intact to the directory
     "/Users/Sharer/Max 7/Library/" or "/Users/Sharer/Max 8/Library/"
-    folder.
+    folder, depending on your version of Max.
 4.  Start (or restart) Max/MSP. \[rtcmix~\] should be working.
 
 <span class="small">***Note:** If you are installing \[rtcmix~\] on
@@ -34,7 +33,7 @@ this, but for now you can follow the instructions
 ### Windows 10
 
 1.  [Download
-    rtcmix~](https://rtcmix.org/rtcmix~/downloads/rtcmix~-for-windows-maxmsp.zip).
+    rtcmix~](https://sites.music.columbia.edu/brad/osx-windows-new-RTcmixes/archives/rtcmix~-for-windows-maxmsp.zip).
 2.  Unpack the archive.
 3.  Move the entire "rtcmix~-for-windows-maxmsp" folder intact to your
     "Documents\Max 7\Library\\ or your "Documents\Max 8\Library\\
@@ -57,8 +56,7 @@ archives](archives.html).
 
 ### macOS
 
-1.  [Download
-    rtcmix~](https://rtcmix.org/rtcmix~/downloads/rtcmix~-for-pd.zip).
+1.  [Download rtcmix~](https://sites.music.columbia.edu/brad/osx-windows-new-RTcmixes/archives/rtcmix~-for-pd.zip).
 2.  Unpack the archive.
 3.  Inside the "rtcmix~-for-pd" folder is an "rtcmix~" folder. Copy/move
     that entire folder intact to your "Documents/pd/externals" folder.
@@ -93,7 +91,7 @@ editor using the \[editor\] message does not function on OSX.*</span>
 ### Windows 10
 
 1.  [Download
-    rtcmix~](https://rtcmix.org/rtcmix~/downloads/rtcmix~-for-windows-maxmsp.zip).
+    rtcmix~](https://sites.music.columbia.edu/brad/osx-windows-new-RTcmixes/archives/rtcmix~-for-windows-pd.zip).
 2.  Unpack the archive.
 3.  Move the entire "rtcmix~" folder intact to your
     "Documents\Pd\externals\\ folder.
