@@ -353,6 +353,7 @@ The purpose of the explicit declarations will be discussed later.
 	// This next line is the same as calling maketable(“line", 1000, 0,0, 1,1, etc.
 	env = maketable("line", 1000, remaining_args)
 	```
+	Note, however, that if an array is passed to a [custom function call](#minc-functions), it is treeated as a single array-type argument with no special item breakout.
 
 - Array elements may also be other arrays, and can be of different lengths. To access the sub-arrays, you “double-index” the "parent" array:
 
@@ -760,6 +761,33 @@ The parsing of your score will stop at that point and FATAL\_ERROR will be retur
 ## Advanced Topics in **Minc**
 
 **Minc** has a set of extremely powerful and flexible features which may take a bit of extra work to understand if you do not have a programming background.  Some of these are adaptations of features found in the **C++** programming language.  There are an infinity of things you can do with the system as already described, so if you are interested in these, study the provided examples.
+
+### Postfix operator chaining
+We have seen above that elements are accessed from **lists** **(Minc arrays)** using the **[]** operator, and that members of a **struct** are accessed using the **.** (dot) operator.  In addition, a function or method (see next section) is called by applying the **()** operator.  These operators are known as *postfix* operators because they are always added at the end of an expression.  **Minc** allows these operators to be *chained*:
+
+```cpp
+// A simple struct with a float member
+Struct MyStruct {
+	float fValue
+};
+
+// A function which returns one of these structs
+struct MyStruct returnAStruct() {
+	ms = MyStruct(11);	// create an instance of the struct
+	return ms;			// return it
+};
+
+// We can chain the function call and the dot operator
+struct_value = returnAStruct().fValue;
+```
+
+There is no limit to the complexity of these. As of version 5.7.0, if the types of the variables returned by each link in an operator chain allow it, exciting statements of the form:
+
+```cpp
+y = a.b().c[d]().e;
+```
+
+are possible!
 
 ### Structs as "objects"
 For programmers, the term "object" usually refers to a chunk of information (the "state") which moves around together as a unit (like the structs discussed above), but also which provide a set of object-specific functions (often called "methods") which allow a user to get and modify that "state".  **Minc** supports the ability to expand the definition of a struct to include "method functions".  These functions are different than other "user-defined" function because:
