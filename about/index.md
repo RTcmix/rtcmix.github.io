@@ -5,8 +5,7 @@ layout: ref
 
 # <a name=history></a>The "Ancient" History of RTcmix
 
-Luke Dubois wrote a [brief history of RTcmix]
-(https://sites.music.columbia.edu/cmc/cmix_dir/cmix_docs/history.html)
+Luke Dubois wrote a [brief history of RTcmix](https://sites.music.columbia.edu/cmc/cmix_dir/cmix_docs/history.html)
 back in the mid-1990's, quoting from an earlier brief history of CMIX
 written by Brad Garton (me). The histories are in fact still historical, but a
 few recent (c. 2000-2003) RTcmix events worth noting -- if you are the
