@@ -5,10 +5,10 @@ layout: ref
 
 # <a name=history></a>The "Ancient" History of RTcmix
 
-Luke Dubois wrote a [brief history of
-RTcmix](https://music.columbia.edu/cmix/history.html) back in the
-mid-1990's, quoting from an earlier brief history of CMIX written by
-Brad Garton (me\!). The histories are in fact still historical, but a
+Luke Dubois wrote a [brief history of RTcmix]
+(https://sites.music.columbia.edu/cmc/cmix_dir/cmix_docs/history.html)
+back in the mid-1990's, quoting from an earlier brief history of CMIX
+written by Brad Garton (me). The histories are in fact still historical, but a
 few recent (c. 2000-2003) RTcmix events worth noting -- if you are the
 kind that likes noting these things.
 
@@ -132,4 +132,9 @@ Brad Garton
 	* Structs now have "class" behavior with method functions.
 	* Version 5.2
 - 2023
-	* Version 5.2.1
+	* Version 5.2.1 through 5.3
+- 2024
+	* Version 5.4 and 5.5
+- 2025
+	* Version 5.6 and 5.7
+
