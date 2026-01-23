@@ -111,7 +111,7 @@ with a semicolon (this is how the interpreter knows there is not more text to co
     // anything after two backslashes on a line will be construed as a comment
     ```
 
-### **Minc** Data Types
+###<a name="minc-data-types"></a>**Minc** Data Types
 
 Data types are different “flavors” of variables used to store different kinds of information. One of the other major differences between **C** and **Minc** is the set of built-in data types available. Variables of the following types can be created in your scores, either by declaring them directly or having them automatically declared.
 

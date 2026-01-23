@@ -13,6 +13,11 @@ layout: ref
   - [Using bus\_config to chain together RTcmix
     instruments](bus_config.html)
 
+## RTcmix and Open Sound Control (OSC)
+
+	-[Using RTcmix as an OSC server](osc.html)
+
+
 ## RTcmix in Other Environments
 
   - [Using Perl as the RTcmix command-language interface](perl.html)
