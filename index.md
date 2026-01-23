@@ -100,7 +100,7 @@ Lansky](https://paul.mycpanel.princeton.edu/).
 
 [John Gibson](http://john-gibson.com/)
 
-[Doug Scott](https://music.columbia.edu/~doug)
+[Doug Scott](https://sites.music.columbia.edu/doug)
 
 [Mara Helmuth](http://www.marahelmuth.com/)
 
