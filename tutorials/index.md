@@ -7,16 +7,13 @@ layout: ref
 
 ## Minc & RTcmix Features
 
-  - [Basic tutorial using Minc parsing language in standalone
-    RTCmix](standalone.html)
+  - [Basic tutorial using Minc parsing language in standalone RTCmix](standalone.html)
   - [Using PFields for real-time control](pfields.html)
-  - [Using bus\_config to chain together RTcmix
-    instruments](bus_config.html)
+  - [Using bus\_config to chain together RTcmix instruments](bus_config.html)
 
 ## RTcmix and Open Sound Control (OSC)
 
-	-[Using RTcmix as an OSC server](osc.html)
-
+  - [Using RTcmix as an OSC server](osc.html)
 
 ## RTcmix in Other Environments
 

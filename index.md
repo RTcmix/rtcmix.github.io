@@ -72,6 +72,7 @@ RTcmix currently includes the following components:
     seamlessly within other C/C++ applications
   - a TCP/IP socket interface for external control of RTcmix from other
     processes or machines
+  - a UDP Open Sound Control interface for external control of RTcmix via [OSC](https://ccrma.stanford.edu/groups/osc/index.html)
   - the physical model and PhISEM routines from Perry Cook and Gary
     Scavone's [Synthesis ToolKit
     (STK)](https://ccrma.stanford.edu/software/stk/) as well as
@@ -89,8 +90,7 @@ RTcmix currently includes the following components:
   - "pull" model for audio I/O (JACK, PortAudio, etc.)
 
 RTcmix is derived from the original CMIX software, developed at
-Princeton University by [Paul
-Lansky](https://paul.mycpanel.princeton.edu/).
+Princeton University by [Paul Lansky](https://paul.mycpanel.princeton.edu/).
 
 ## Contributors
 
