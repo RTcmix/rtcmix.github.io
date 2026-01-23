@@ -9,7 +9,7 @@ The default RTcmix application (invoked by the
 [CMIX](../reference/standalone/CMIX.html) command) reads from Minc score files, either via [stdin](https://pubs.opengroup.org/onlinepubs/007904975/functions/stdin.html) or passed-in via the -f option. If
 you configure the build of RTcmix with support for [Open Sound Control](https://ccrma.stanford.edu/groups/osc/index.html) (OSC) using the
 *--with-osc* flag (see the [installation
-guide](../referene/standalone/index.html) for information about this), then you can run RTcmix as an OSC server by using the -o option (see the full set of options [here](../reference/standalone/CMIX.html)).
+guide](../reference/standalone/index.html) for information about this), then you can run RTcmix as an OSC server by using the -o option (see the full set of options [here](../reference/standalone/CMIX.html)).
 
 ## Communicating with the CMIX OSC server
 
@@ -17,14 +17,14 @@ OSC servers are messaged via APIs which supports the OSC specification.  In the 
 ### OSC Message Basics
 The OSC specification supports the ability to send collections of data (e.g. floats, strings, large integers, etc.) tagged with string-based tags called *paths*.  Most of the time, these paths are used to group messages which the client wishes to be *handled* by the same server mechanism (usually called a *handler*).  The only rule for path formation is that the string must follow the form of a traditional UNIX path:  An initial forward slash (**/**) plus a string followed by zero or more additional sets of forward slashes followed by strings.  The following are legal paths:
 
-```C
+```cpp
 /myfirstpath
 /my/first/path
 /my/very/long/path
 ```
 and these are illegal:
 
-```C
+```cpp
 anillegalpath (missing opening /)
 /             (empty path)
 //mypath      (empty first path segment)
@@ -44,7 +44,7 @@ This is used to stop the CMIX audio process, which may have been previously star
 * **/RTcmix/\<Minc command\>**  
 This message allows you to call almost any built-in (i.e., not user-defined) CMIX Minc function call.  For example, to start audio via a call to [rtsetparams](../reference/scorefile/rtsetparams.md), you would send a message such as:
 
-	```C
+	```cpp
 	/RTcmix/rtsetparams "ddd" 44100 2 1024
 	```
 This would result in a direct, immediate call to **rtsetparams(44100, 2, 1024)** on the CMIX server.
@@ -89,7 +89,7 @@ All arguments passed in via an OSC message are converted into supported Minc typ
 **Note:** Before you read this section, make sure you are completely familiar with the use of user-defined Minc functions and function pointers as discussed in detail [here](../reference/scorefile/Minc.html#minc-functions) and [here](../reference/scorefile/Minc.html#mfunction).<br>
 The power and flexibility of RTcmix as an OSC server comes from the manner in which it binds OSC message paths to user-defined Minc functions.  Every standard OSC message can be associated with a unique message handler, and each handler is a Minc function defined by the client (you).  These handlers can be named anything you wish as long as it follows the Minc language rules.  Their function signature *must* match the following example:
 
-```C
+```cpp
 float myMessageHandler(list arglist)
 {
 	// look at arguments
@@ -104,7 +104,7 @@ And here lies the power and flexibility:  In this handler (or any other handler)
 #### Defining and Registering Minc message handlers
 So how do you get RTcmix to know about these handler functions and use them when messages come in?  When RTcmix is run in OSC server mode, it automatically loads a small set of Minc utility functions (see below) which you use to register your handlers.  To get this all to work together to set up your server, you create what we call a *training score*.  This is essentially a Minc score which *defines your handler functions* and *registers them to be called when specific OSC message paths are sent*.  This training score is itself sent to the RTcmix server using the custom /RTcmix/ScoreCommands path described [above](#native-messages).  Any number of handlers may be defined in these scores, and any number of training scores may be sent to the server.  The server may be "re-trained" at any time.
 #### Example of a training score
-```C++
+```cpp
 // First we define the Minc function we wish to register, following the rules above
 
 float myFirstMessageHandler(list args)
@@ -122,14 +122,14 @@ Once this score is sent to RTcmix, **any** OSC message with its path set to "/so
 
 If you wish to replace this handler with a new one, just repeat the above with a new function.  If you wish to un-register a handler, you would send a score with something like the following:
 
-```C++
+```cpp
 oscUnregisterMessageHandler(myFirstMessageHandler);
 
 ```
 #### Interpreting the contents of the argument list
 It will be useful to familiarize yourself with Minc lists/arrays [here](../reference/scorefile/Minc.html#list) and [here](../reference/scorefile/Minc.html#more-about-arrays).  Though there is an assumption that because you have registered a specific handler you know what order and type each passed argument is, it is possible to build error-checking into your handler system:
 
-```C++
+```cpp
 float myErrorCheckingHandler(list args)
 {
 	// This handler expects precisely 3 arguments
@@ -154,7 +154,7 @@ Here we have checked for argument count and an example of an argument type check
 #### The Default message handler
 Sometimes it is useful to have a catch-all handler which responds to any path that you have not specifically registered a handler for.  To do this in RTcmix, create and send a training score like the following:
 
-```C++
+```cpp
 float myDefaultMessageHandler(list args)
 {
 	// Do something with these args
@@ -166,6 +166,6 @@ oscRegisterDefaultMessageHandler(myDefaultMessageHandler);
 
 In similar fashion to other message handlers, you can unregister this function by sending a score like the following:
 
-```C++
+```cpp
 oscUnregisterDefaultMessageHandler();
 ```
