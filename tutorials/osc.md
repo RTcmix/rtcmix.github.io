@@ -36,7 +36,9 @@ For most OSC messages, the path is followed by a string indicating the format of
 RTcmix automatically handles several messages tagged with system-specific paths.  No other OSC server would be expected to understand these, and the paths are constructed accordingly:
 
 - **/RTcmix/ScoreCommands**  
-This is used to send a Minc score.  It uses a single "s" to indicate that a string follows.  This is very powerful and is used to send portions of or entire Minc scores to RTcmix, which is functionally identical to running "CMIX -f myMincScore.txt" from the command line in non-OSC mode. 
+This is used to send a Minc score.  It uses a single "s" to indicate that a string containing the score follows.  This is very powerful and is used to send portions of or entire Minc scores to RTcmix, which is functionally identical to running "CMIX -f myMincScore.txt" from the command line in non-OSC mode.
+- **/RTcmix/ScoreFile**
+This is used to load a Minc score by passing the path to the file.  It also uses a single "s" to indicate that the path string follows.  The path must be either absolute or relative to where **CMIX** was launched.  This command is very useful if your score is large, because the OSC system has size limits for transmission of data.
 * **/RTcmix/quit**  
 This is used to shut down the server entirely.  It will cause the **CMIX** executable to exit.  It takes no additional arguments.  Use this only for emergency situations!
 * **/RTcmix/stop**  
@@ -90,7 +92,7 @@ All arguments passed in via an OSC message are converted into supported Minc typ
 The power and flexibility of RTcmix as an OSC server comes from the manner in which it binds OSC message paths to user-defined Minc functions.  Every standard OSC message can be associated with a unique message handler, and each handler is a Minc function defined by the client (you).  These handlers can be named anything you wish as long as it follows the Minc language rules.  Their function signature *must* match the following example:
 
 ```cpp
-float myMessageHandler(list arglist)
+float myMessageHandler(string path, list arglist)
 {
 	// look at arguments
 	// do something
@@ -98,7 +100,7 @@ float myMessageHandler(list arglist)
 }
 ```
 1. Each must return a float value, usually set to the status of the operation (0 == success).
-2. Each must take a single list (array) as the sole argument.  This is the array mentioned above which contains all the possibly-converted arguments.  The *name* of the argument list variable can be anything you chose, of course.
+2. Each must take a string and a list (array) as the arguments.  The *path* argument is the path that was sent to the OSC server to trigger this handler. *arglist* is the array mentioned above which contains all the possibly-converted arguments.  The *name* of the argument list variable can be anything you chose, of course.
 
 And here lies the power and flexibility:  In this handler (or any other handler), *you can do whatever you want* that is legal Minc code.  You could generate an entire 20-minute composition if you chose to!  Whatever is possible within a Minc score file is possible here.
 #### Defining and Registering Minc message handlers
@@ -107,9 +109,10 @@ So how do you get RTcmix to know about these handler functions and use them when
 ```cpp
 // First we define the Minc function we wish to register, following the rules above
 
-float myFirstMessageHandler(list args)
+float myFirstMessageHandler(string path, list args)
 {
-	printf("myFirstMessageHandler was called with args %l\n", args);
+	printf("myFirstMessageHandler was called using path '%s' with args %l\n",
+	       path, args);
 	return 0;
 }
 
@@ -130,9 +133,9 @@ oscUnregisterMessageHandler(myFirstMessageHandler);
 It will be useful to familiarize yourself with Minc lists/arrays [here](../reference/scorefile/Minc.html#list) and [here](../reference/scorefile/Minc.html#more-about-arrays).  Though there is an assumption that because you have registered a specific handler you know what order and type each passed argument is, it is possible to build error-checking into your handler system:
 
 ```cpp
-float myErrorCheckingHandler(list args)
+float myErrorCheckingHandler(string path, list args)
 {
-	// This handler expects precisely 3 arguments
+	// This handler expects precisely 3 arguments in 'args'
 	if (args.len() != 3) {
 		printf("myErrorCheckingHandler: wrong number of args!\n");
 		return 1;		// signals an error
@@ -155,7 +158,7 @@ Here we have checked for argument count and an example of an argument type check
 Sometimes it is useful to have a catch-all handler which responds to any path that you have not specifically registered a handler for.  To do this in RTcmix, create and send a training score like the following:
 
 ```cpp
-float myDefaultMessageHandler(list args)
+float myDefaultMessageHandler(string path, list args)
 {
 	// Do something with these args
 	return 0;
