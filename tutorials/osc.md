@@ -70,8 +70,12 @@ T			| true			| float set to 'true' (1)
 F			| false		| float set to 'false' (0)
 N			| Nil			| **not supported**
 I			| Infinitum	| **not supported**
+[			| array start	| all following arguments will be put in a list
+]			| array end	| indicates the end of most recently started list
 
 The number of supported types is likely to expand as use cases are discovered.
+
+**Note:** array start/end are only supported when **RTcmix** is compiled with *--with-internal-liblo*.  Arrays/lists can be nested to any degree.
 
 **Note:** It is important to remember that what Minc calls a "float" is actually a double-precision floating point, and so has the accuracy and range of a double.
 
@@ -167,8 +171,32 @@ float myDefaultMessageHandler(string path, list args)
 oscRegisterDefaultMessageHandler(myDefaultMessageHandler);
 ```
 
-In similar fashion to other message handlers, you can unregister this function by sending a score like the following:
+In similar fashion to other message handlers, you can unregister this function by sending a score containing the following:
 
 ```cpp
 oscUnregisterDefaultMessageHandler();
 ```
+This will restore the built-in message handler.
+
+### RTcmix OSC error handling
+
+By default, if an action triggered by an OSC message handler generates an error, a message is printed indicating the returned error value, the path which generated the error, and the arguments that were passed.  This is done by the **default error handler**, which is called any time a non-zero return from a message handler is detected.  You can create and register your own error handler as follows:
+
+```cpp
+// A custom Minc function which will be called when a handler returns an error.
+
+float customErrorHandler(string messagePath, list messageArgs, float status)
+{
+	// Do something here
+	return 0;
+}
+
+oscRegisterDefaultErrorHandler(customErrorHandler);
+
+```
+If at any point you wish to restore the built-in error handler function, send a score containing:
+
+```cpp
+oscUnregisterDefaultErrorHandler();
+```
+For a detailed description of the OSC specification, read the **OpenSoundControl Specification 1.0** [here](https://ccrma.stanford.edu/groups/osc/spec-1_0.html).
