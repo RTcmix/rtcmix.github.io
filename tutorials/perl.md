@@ -6,13 +6,13 @@ layout: ref
 # Using Perl as the RTcmix Command-Language Interface
 
 The default RTcmix application (invoked by the
-[CMIX](../reference/interface/CMIX.html) command) uses the included
+[CMIX](../reference/standalone/CMIX.html) command) uses the included
 scorefile language [Minc](../reference/scorefile/Minc.html). However, if
 you configure the build of RTcmix for Perl support using the
 *--with-perl* flag (see the [installation
 guide](../standalone/index.html) for information about this), then
 compiling RTcmix will make a Perl-enabled command
-([PCMIX](../reference/interface/PCMIX.html)) that has a Perl parser as
+([PCMIX](../reference/standalone/CMIX.html)) that has a Perl parser as
 the 'front-end' instead of Minc.
 
 ## Using Perl/RTcmix

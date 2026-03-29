@@ -39,7 +39,7 @@ layout: ref
 ## More Resources
 
   - Doug Scott's
-    [MiXViews](https://music.columbia.edu/~doug/MixViews/MiXViews.html)
+    [MiXViews](https://sites.music.columbia.edu/doug/MixViews/MiXViews.html)
     sound editor (very useful for LPC analysis, among other things).
   - Neil Thornock's
     [CMixRun](https://sourceforge.net/projects/cmixrun/files/), an
@@ -49,7 +49,7 @@ layout: ref
 ## Music
 
   - [Lots and lots of music](https://music.columbia.edu/~brad/music/) by [Brad Garton](http://bradgarton.com/)
-  - [Several RTcmix Compositions](https://soundcloud.com/dascott/sets/my-electronic-compositions) by [Doug Scott](https://music.columbia.edu/~doug)
+  - [Several RTcmix Compositions](https://soundcloud.com/dascott/sets/my-electronic-compositions) by [Doug Scott](https://sites.music.columbia.edu/doug)
   - [Day Trip](https://johgibso.pages.iu.edu/pieces/daytrip.html) by [John Gibson](http://john-gibson.com/)
   - [Slumber](https://soundcloud.com/johgibso/slumber) by [John Gibson](http://john-gibson.com/)
   - [Thrum](https://johgibso.pages.iu.edu/pieces/thrum.html) by [John Gibson](http://john-gibson.com/)
