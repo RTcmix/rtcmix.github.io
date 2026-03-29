@@ -44,8 +44,6 @@ All three commands can be run with various options:
 run in interactive mode
 -       -n  
 no init script (interactive mode only)
--       -o  
-interactive mode with [Open Sound Control (OSC)](https://opensoundcontrol.stanford.edu) (if compiled in)
 -       -S NUM  
 socket offset (interactive legacy socket mode only)
 -       -D DEV  
@@ -57,7 +55,7 @@ use socket number NUM for NetAudio (if compiled in)
 -       -s NUM  
 skip (set start offset to) NUM seconds. Time offset before beginning playback (see [rtoffset](../scorefile/rtoffset.html))
 -       -f NAME  
-read score from NAME instead of stdin (Minc and Python only)
+read score from NAME instead of stdin (CMIX non-server mode and PYCMIX only)
 -       -v NUM  
 set verbosity (print level) to NUM.  Range is currently 0-5
 -       -q  
@@ -68,6 +66,10 @@ really quiet -- not even clipping or peak stats
 this help message
     
 ### CMIX-specific Options
+-		-P
+runs parser only, no rendering.  Useful for checking Minc scores.
+-       -o  
+interactive server mode with [Open Sound Control (OSC)](https://opensoundcontrol.stanford.edu) (if compiled in)
 -       --VARNAME=VALUE, --VARNAME2=VALUE2, ...  
 for any argument of this type, create a score variable named $VARNAME, $VARNAME2, etc., with the associated value.  See [Command-line named arguments](../scorefile/Minc.html#command-line-named-args)
     
