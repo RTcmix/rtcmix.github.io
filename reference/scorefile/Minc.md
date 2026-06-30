@@ -109,6 +109,9 @@ with a semicolon (this is how the interpreter knows there is not more text to co
     */
     
     // anything after two backslashes on a line will be construed as a comment
+    
+    #  and a hash mark in the first column does the same thing for the entire line
+    
     ```
 
 ###<a name="minc-data-types"></a>**Minc** Data Types
@@ -602,6 +605,40 @@ The purpose of the explicit declarations will be discussed later.
       
 ### More Useful Minc Commands and Features
 
+#### <a name="the-ternary-statement"></a>The Minc ternary statement
+
+The ternary statement is a great shortcut to avoid if/else statements.  As in other languages, the rule is:
+
+```cpp
+value = (boolean) ? result_if_true : result_if_false;
+```
+and an example:
+
+```cpp
+// set buffer size to 256 if the SR is 44.1k, otherwise 512
+buffer_size = (sampling_rate == 44100) ? 256 : 512;
+```
+
+#### <a name="the-switch-statement"></a>The Minc switch statement
+
+A new feature in **Minc** version 6 is a switch statement.  This is similar to the statement used in **C** and **C++**, but has some distinct differences:
+
+1. Both the object switched on and each of the case objects can be any **Minc** type, and the do not need to be constants.
+2. Cases must be either bare (see below) or followed by a block.
+3. Bare case statements cascade, so all bare cases OR with each other and execute the first block.
+
+
+Here is an example:
+
+```cpp
+switch(some_function()) {
+	case 1: { // any code can go here }
+	case 2:	// this case will be included with the case which follows
+	case "four": { // this code will run if some_function() returned **either** 2 or "four" }
+	default: { // this code will be called if none of the above cases match }
+}
+
+```
 #### <a name="the-include-statement"></a>The 'include' statement
 
 The include statement can be used to embed one (or more) **Minc** score files within another.  This can be very helpful in creating a single file where parameters (like sampling rate and audio device) are set and then included by multiple other scores.  Changing the values in the one file will then affect all files which include it.
