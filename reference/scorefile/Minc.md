@@ -94,8 +94,10 @@ with a semicolon (this is how the interpreter knows there is not more text to co
 	```cpp 
 	if ((val > 2.0) && (val2 != 0)) { ... }
 	```
+	
+	See the information about the new [ternary](#the-ternary-statement) and [switch](#the-switch-statement) statements below.
     
-    Note that the "do...while" and "switch" statements are not supported
+    Note that the "do...while" statement is not supported
     in **Minc**.  Postfix (x--) operators are also not supported.
       
 - Comments may be included in **Minc** scripts using **C** comment syntax:
@@ -623,7 +625,8 @@ buffer_size = (sampling_rate == 44100) ? 256 : 512;
 
 A new feature in **Minc** version 6 is a switch statement.  This is similar to the statement used in **C** and **C++**, but has some distinct differences:
 
-1. Both the object switched on and each of the case objects can be any **Minc** type, and the do not need to be constants.
+1. Both the object switched on and each of the case labels can be any **Minc** type, and the do not need to be constants or even variables (see below).
+2. If the label is an compound expression like "mumble + 7" or "x < 99", it must be enclosed in parentheses.
 2. Cases must be either bare (see below) or followed by a block.
 3. Bare case statements cascade, so all bare cases OR with each other and execute the first block.
 
@@ -634,8 +637,12 @@ Here is an example:
 switch(some_function()) {
 	case 1: { // any code can go here }
 	case 2:	// this case will be included with the case which follows
-	case "four": { // this code will run if some_function() returned **either** 2 or "four" }
-	default: { // this code will be called if none of the above cases match }
+	case "four": { // this block will run if some_function() returned **either** 2 or "four" }
+	case funcReturningSeven(): { 
+		// this block will run if the previous cases don't match
+		// and funcReturningSeven() == some_function()
+	}
+	default: { // this block will run if none of the above cases match }
 }
 
 ```
